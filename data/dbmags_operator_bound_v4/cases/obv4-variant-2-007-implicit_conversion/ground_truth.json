@@ -1,0 +1,37 @@
+{
+  "case_id": "obv4-variant-2-007-implicit_conversion",
+  "root_labels": [
+    "implicit_conversion"
+  ],
+  "template_variant": "variant-2",
+  "target_sql_ids": {
+    "implicit_conversion": "sql-84b4895c271502c1"
+  },
+  "target_operator_ids_by_root": {
+    "implicit_conversion": [
+      "op-68c7c151f497e028"
+    ]
+  },
+  "target_operator_ids": [
+    "op-68c7c151f497e028"
+  ],
+  "operator_evaluable": true,
+  "validation": {
+    "target_sql_was_injected_by_collector": true,
+    "candidate_pool_frozen_before_truth": true,
+    "target_annotation_isolated_from_candidates": true,
+    "target_annotation_source": "preregistered root-specific SQL/plan mechanism rule",
+    "mechanism_checks": {
+      "implicit_conversion": {
+        "passed": true,
+        "evidence": {
+          "implicit_numeric_comparison_in_condition": true,
+          "target_used_key_part_count": 2,
+          "string_control_used_key_part_count": 3,
+          "target_estimated_rows": 6036.0,
+          "string_control_estimated_rows": 3.0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "protocol": "dbmags-interaction-benchmark-v10-metric-only-frozen",
+  "dataset_role": "complementary_temporal_interaction_mechanism_stress_benchmark",
+  "sample_count": 660,
+  "scenario_count": 22,
+  "physical_collection_block_count": 132,
+  "replicate_index_count": 6,
+  "outer_evaluation": {
+    "name": "leave_one_replicate_index_out",
+    "group_field": "block_index"
+  },
+  "mechanism_stress_ready": false,
+  "cohort_policy": "all planned cases retained; interaction strata are reported without filtering",
+  "label_inventory": [
+    "group_by",
+    "implicit_conversion",
+    "missing_index",
+    "order_by",
+    "query_whole_table",
+    "query_with_too_much_join",
+    "record_lock"
+  ],
+  "predictor_input_fields": [
+    "case_id",
+    "metric_time_features"
+  ],
+  "predictor_excluded_fields": [
+    "source_case_id",
+    "scenario",
+    "condition",
+    "roots",
+    "case_metadata",
+    "sql",
+    "execution_plan",
+    "injection_events",
+    "adapter_events",
+    "mechanism_evidence"
+  ],
+  "feature_schema_sha256": "cef789d308cfbfb6d039ff7e4b0fde79cfa0a905a5e72340e424b83bec0de1a2",
+  "source_audit_sha256": "fa1995a92b451fb60c068c9ab3e03f046b69836c9cfeff6704cd4f4725dbb5fa",
+  "frozen_file_sha256": {
+    "frozen_inputs.json": "4cc767b228afaae389f23aab1905e685a24c34d08aacb2ffff3901463542a8dc",
+    "fold_manifest.json": "17f2fbb52395cbc6380f86de03b1293059417aab05b8e60fc46b442f96f7bc65",
+    "ground_truth.json": "863662c9d109785f5ca7f125cd8672e889d0f6d92d751bd29484539f89cc0c74",
+    "provenance_case_map.json": "b8e8311e26718a9297398094ac36a8a9fb9ade83e67d90ba8013cb583e299767",
+    "semantic_evidence.json": "725762953ccc7348146dcb3540f28ef02ff077c6633aac3e2ad65bf19ff75d6e"
+  }
+}

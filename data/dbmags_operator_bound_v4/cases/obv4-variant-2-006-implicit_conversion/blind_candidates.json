@@ -1,0 +1,3851 @@
+{
+  "candidates": [
+    {
+      "sql_id": "sql-9bcc043d95fae8eb",
+      "digest": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-544bfc899225ef26"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T12:49:46.439748+00:00",
+          "elapsed_seconds": 0.04685807228088379,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_w_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+            "TIMER_WAIT": 3132583000,
+            "ROWS_EXAMINED": 31040,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.501721+00:00",
+          "elapsed_seconds": 0.029104948043823242,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_w_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+            "TIMER_WAIT": 2448147000,
+            "ROWS_EXAMINED": 31040,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.547329+00:00",
+          "elapsed_seconds": 0.03133797645568848,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_w_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+            "TIMER_WAIT": 2123555000,
+            "ROWS_EXAMINED": 31040,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.597190+00:00",
+          "elapsed_seconds": 0.030227184295654297,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_w_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+            "TIMER_WAIT": 2249229000,
+            "ROWS_EXAMINED": 31040,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.644905+00:00",
+          "elapsed_seconds": 0.029676198959350586,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_w_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+            "TIMER_WAIT": 2137417000,
+            "ROWS_EXAMINED": 31040,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-cac1b486d230fc2a",
+      "digest": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-c49454bc28102f00"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T12:49:46.439159+00:00",
+          "elapsed_seconds": 0.042642831802368164,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+            "TIMER_WAIT": 1473624000,
+            "ROWS_EXAMINED": 0,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.496949+00:00",
+          "elapsed_seconds": 0.032662153244018555,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+            "TIMER_WAIT": 1445309000,
+            "ROWS_EXAMINED": 0,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.547245+00:00",
+          "elapsed_seconds": 0.02995586395263672,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+            "TIMER_WAIT": 1284509000,
+            "ROWS_EXAMINED": 0,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.596922+00:00",
+          "elapsed_seconds": 0.029468774795532227,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+            "TIMER_WAIT": 1309455000,
+            "ROWS_EXAMINED": 0,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.644364+00:00",
+          "elapsed_seconds": 0.03194379806518555,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+            "TIMER_WAIT": 1377768000,
+            "ROWS_EXAMINED": 0,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-6af98a52db33a4ec",
+      "digest": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-1d55712981c0e73b"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T12:49:46.440367+00:00",
+          "elapsed_seconds": 0.09951567649841309,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_credit` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+            "TIMER_WAIT": 72719058000,
+            "ROWS_EXAMINED": 120000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.550203+00:00",
+          "elapsed_seconds": 0.05649304389953613,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_credit` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+            "TIMER_WAIT": 35792429000,
+            "ROWS_EXAMINED": 120000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.619530+00:00",
+          "elapsed_seconds": 0.05114006996154785,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_credit` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+            "TIMER_WAIT": 34009584000,
+            "ROWS_EXAMINED": 120000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.684466+00:00",
+          "elapsed_seconds": 0.05403590202331543,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_credit` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+            "TIMER_WAIT": 36650425000,
+            "ROWS_EXAMINED": 120000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.748249+00:00",
+          "elapsed_seconds": 0.056498050689697266,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_credit` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+            "TIMER_WAIT": 36155613000,
+            "ROWS_EXAMINED": 120000,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-3ccace0117a48081",
+      "digest": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-f0705fa1a53aff21"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T12:49:46.441042+00:00",
+          "elapsed_seconds": 0.16132616996765137,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `stock` WHERE `s_quantity` < ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+            "TIMER_WAIT": 130875614000,
+            "ROWS_EXAMINED": 400000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.609832+00:00",
+          "elapsed_seconds": 0.11716604232788086,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `stock` WHERE `s_quantity` < ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+            "TIMER_WAIT": 94444277000,
+            "ROWS_EXAMINED": 400000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.741434+00:00",
+          "elapsed_seconds": 0.10426878929138184,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `stock` WHERE `s_quantity` < ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+            "TIMER_WAIT": 79486084000,
+            "ROWS_EXAMINED": 400000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.855124+00:00",
+          "elapsed_seconds": 0.08555102348327637,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `stock` WHERE `s_quantity` < ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+            "TIMER_WAIT": 66653911000,
+            "ROWS_EXAMINED": 400000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.947351+00:00",
+          "elapsed_seconds": 0.08140015602111816,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `stock` WHERE `s_quantity` < ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+            "TIMER_WAIT": 62882771000,
+            "ROWS_EXAMINED": 400000,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-ba7fb486729cde23",
+      "digest": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-0e2ab1cc62ececce",
+        "op-8d8416a82ab685f0",
+        "op-d88107ac31346ffe"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T12:49:46.440826+00:00",
+          "elapsed_seconds": 0.04033470153808594,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+            "TIMER_WAIT": 2329398000,
+            "ROWS_EXAMINED": 6162,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.501578+00:00",
+          "elapsed_seconds": 0.028828859329223633,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+            "TIMER_WAIT": 2173365000,
+            "ROWS_EXAMINED": 6162,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.547467+00:00",
+          "elapsed_seconds": 0.0306088924407959,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+            "TIMER_WAIT": 1941276000,
+            "ROWS_EXAMINED": 6162,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.597074+00:00",
+          "elapsed_seconds": 0.031269073486328125,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+            "TIMER_WAIT": 2149063000,
+            "ROWS_EXAMINED": 6162,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.644540+00:00",
+          "elapsed_seconds": 0.030473947525024414,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+            "TIMER_WAIT": 2149301000,
+            "ROWS_EXAMINED": 6162,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-fa8f85ac55822487",
+      "digest": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN ('BARBARBAR','ABLEABLE')",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-dafabe29044e6f86"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T12:49:46.442085+00:00",
+          "elapsed_seconds": 0.04942917823791504,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN ('BARBARBAR','ABLEABLE')",
+            "TIMER_WAIT": 90957000,
+            "ROWS_EXAMINED": 2,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.510740+00:00",
+          "elapsed_seconds": 0.022428035736083984,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN ('BARBARBAR','ABLEABLE')",
+            "TIMER_WAIT": 94625000,
+            "ROWS_EXAMINED": 2,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.547604+00:00",
+          "elapsed_seconds": 0.02995586395263672,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN ('BARBARBAR','ABLEABLE')",
+            "TIMER_WAIT": 79526000,
+            "ROWS_EXAMINED": 2,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.597309+00:00",
+          "elapsed_seconds": 0.02956223487854004,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN ('BARBARBAR','ABLEABLE')",
+            "TIMER_WAIT": 71059000,
+            "ROWS_EXAMINED": 2,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.645020+00:00",
+          "elapsed_seconds": 0.03038787841796875,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN ('BARBARBAR','ABLEABLE')",
+            "TIMER_WAIT": 66219000,
+            "ROWS_EXAMINED": 2,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-e97fd108bdc3c3a5",
+      "digest": "91247571a6dd281a2f81b9f588cd70e5466d435c82789bb413e3a5ecb4f5c7ed",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_amount >= 0",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-c3d5ca5d558246d3"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T12:49:46.457734+00:00",
+          "elapsed_seconds": 0.1552109718322754,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "91247571a6dd281a2f81b9f588cd70e5466d435c82789bb413e3a5ecb4f5c7ed",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `order_line` WHERE `ol_amount` >= ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_amount >= 0",
+            "TIMER_WAIT": 118765829000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.627056+00:00",
+          "elapsed_seconds": 0.1314098834991455,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "91247571a6dd281a2f81b9f588cd70e5466d435c82789bb413e3a5ecb4f5c7ed",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `order_line` WHERE `ol_amount` >= ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_amount >= 0",
+            "TIMER_WAIT": 103159336000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.773438+00:00",
+          "elapsed_seconds": 0.12334895133972168,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "91247571a6dd281a2f81b9f588cd70e5466d435c82789bb413e3a5ecb4f5c7ed",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `order_line` WHERE `ol_amount` >= ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_amount >= 0",
+            "TIMER_WAIT": 98834953000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.913419+00:00",
+          "elapsed_seconds": 0.11753010749816895,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "91247571a6dd281a2f81b9f588cd70e5466d435c82789bb413e3a5ecb4f5c7ed",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `order_line` WHERE `ol_amount` >= ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_amount >= 0",
+            "TIMER_WAIT": 95990005000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.047737+00:00",
+          "elapsed_seconds": 0.12405204772949219,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "91247571a6dd281a2f81b9f588cd70e5466d435c82789bb413e3a5ecb4f5c7ed",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `order_line` WHERE `ol_amount` >= ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_amount >= 0",
+            "TIMER_WAIT": 100427897000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-84b4895c271502c1",
+      "digest": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-68c7c151f497e028"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T12:49:46.441529+00:00",
+          "elapsed_seconds": 0.050399065017700195,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 1135068000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.500762+00:00",
+          "elapsed_seconds": 0.022833824157714844,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 1284245000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.533538+00:00",
+          "elapsed_seconds": 0.02272200584411621,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 1297006000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.565692+00:00",
+          "elapsed_seconds": 0.02515101432800293,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 1827445000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.602768+00:00",
+          "elapsed_seconds": 0.02491903305053711,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 1078517000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.634691+00:00",
+          "elapsed_seconds": 0.018619060516357422,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 788505000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.660051+00:00",
+          "elapsed_seconds": 0.018038034439086914,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 755976000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.684793+00:00",
+          "elapsed_seconds": 0.018071889877319336,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 696296000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.713457+00:00",
+          "elapsed_seconds": 0.017846107482910156,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 744132000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.737971+00:00",
+          "elapsed_seconds": 0.017107009887695312,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 702176000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.761739+00:00",
+          "elapsed_seconds": 0.01715993881225586,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 656594000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.785322+00:00",
+          "elapsed_seconds": 0.016901254653930664,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 681325000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.808810+00:00",
+          "elapsed_seconds": 0.017149925231933594,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 685203000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.832491+00:00",
+          "elapsed_seconds": 0.017114877700805664,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 640621000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.856002+00:00",
+          "elapsed_seconds": 0.016997814178466797,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 681659000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.879351+00:00",
+          "elapsed_seconds": 0.01676177978515625,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 623648000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.902625+00:00",
+          "elapsed_seconds": 0.017246007919311523,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 637910000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.926398+00:00",
+          "elapsed_seconds": 0.017019033432006836,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 640704000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.949958+00:00",
+          "elapsed_seconds": 0.016738176345825195,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 689332000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.973180+00:00",
+          "elapsed_seconds": 0.017216205596923828,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 643272000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:46.996769+00:00",
+          "elapsed_seconds": 0.0167539119720459,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 663916000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.020052+00:00",
+          "elapsed_seconds": 0.017013072967529297,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 645524000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.043423+00:00",
+          "elapsed_seconds": 0.016848087310791016,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 639728000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.066738+00:00",
+          "elapsed_seconds": 0.017238140106201172,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 656117000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.090421+00:00",
+          "elapsed_seconds": 0.01707911491394043,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 659287000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.113836+00:00",
+          "elapsed_seconds": 0.016969919204711914,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 699572000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.137218+00:00",
+          "elapsed_seconds": 0.016887187957763672,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 626341000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.160599+00:00",
+          "elapsed_seconds": 0.017163991928100586,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 696736000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.184134+00:00",
+          "elapsed_seconds": 0.016848087310791016,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 619502000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.207398+00:00",
+          "elapsed_seconds": 0.017112016677856445,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 700781000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.230888+00:00",
+          "elapsed_seconds": 0.01716017723083496,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 616374000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.254455+00:00",
+          "elapsed_seconds": 0.016836881637573242,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 653281000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.277821+00:00",
+          "elapsed_seconds": 0.017155170440673828,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 647985000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.301515+00:00",
+          "elapsed_seconds": 0.017306804656982422,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 673340000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.325359+00:00",
+          "elapsed_seconds": 0.01757979393005371,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 680055000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.349282+00:00",
+          "elapsed_seconds": 0.016756057739257812,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 640770000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.372530+00:00",
+          "elapsed_seconds": 0.01723790168762207,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 662832000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.396305+00:00",
+          "elapsed_seconds": 0.017339229583740234,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 675635000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.420119+00:00",
+          "elapsed_seconds": 0.01699209213256836,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 640937000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.443614+00:00",
+          "elapsed_seconds": 0.016993045806884766,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 667544000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.469280+00:00",
+          "elapsed_seconds": 0.017444133758544922,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 746780000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.501456+00:00",
+          "elapsed_seconds": 0.030147075653076172,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 734018000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.540135+00:00",
+          "elapsed_seconds": 0.02052927017211914,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 782269000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.567901+00:00",
+          "elapsed_seconds": 0.019077062606811523,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 721591000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.596015+00:00",
+          "elapsed_seconds": 0.018034934997558594,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 742359000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.626470+00:00",
+          "elapsed_seconds": 0.025223255157470703,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 788316000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.660859+00:00",
+          "elapsed_seconds": 0.020760059356689453,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 1204223000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.690590+00:00",
+          "elapsed_seconds": 0.02007126808166504,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 1042790000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.720050+00:00",
+          "elapsed_seconds": 0.021336078643798828,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 1137205000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.749637+00:00",
+          "elapsed_seconds": 0.02259993553161621,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 1022897000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.782242+00:00",
+          "elapsed_seconds": 0.01887202262878418,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 793946000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.811616+00:00",
+          "elapsed_seconds": 0.018200159072875977,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 752326000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.836463+00:00",
+          "elapsed_seconds": 0.017874717712402344,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 701698000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.860859+00:00",
+          "elapsed_seconds": 0.017979145050048828,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 851831000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.885535+00:00",
+          "elapsed_seconds": 0.018049955368041992,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 704785000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.910161+00:00",
+          "elapsed_seconds": 0.01788020133972168,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 726804000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.934496+00:00",
+          "elapsed_seconds": 0.017655134201049805,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 660371000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.960177+00:00",
+          "elapsed_seconds": 0.02085590362548828,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 680078000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.988351+00:00",
+          "elapsed_seconds": 0.017271041870117188,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 656266000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.012121+00:00",
+          "elapsed_seconds": 0.017149925231933594,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 660562000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.035634+00:00",
+          "elapsed_seconds": 0.016770124435424805,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 699345000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.058838+00:00",
+          "elapsed_seconds": 0.016952991485595703,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 663814000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.082364+00:00",
+          "elapsed_seconds": 0.016987085342407227,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 646508000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.105964+00:00",
+          "elapsed_seconds": 0.017228126525878906,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 653013000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.129648+00:00",
+          "elapsed_seconds": 0.016766786575317383,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 696008000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.152987+00:00",
+          "elapsed_seconds": 0.017098426818847656,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 665608000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.176537+00:00",
+          "elapsed_seconds": 0.017026901245117188,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 630077000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.200161+00:00",
+          "elapsed_seconds": 0.016911983489990234,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 676784000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.223265+00:00",
+          "elapsed_seconds": 0.016722917556762695,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 626283000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.246480+00:00",
+          "elapsed_seconds": 0.016974925994873047,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 659644000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.269973+00:00",
+          "elapsed_seconds": 0.016993045806884766,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 639127000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.293267+00:00",
+          "elapsed_seconds": 0.01680612564086914,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 633831000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.316462+00:00",
+          "elapsed_seconds": 0.01817607879638672,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 673864000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.341143+00:00",
+          "elapsed_seconds": 0.017049789428710938,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 652471000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.364645+00:00",
+          "elapsed_seconds": 0.016978025436401367,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 663814000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.387777+00:00",
+          "elapsed_seconds": 0.016710758209228516,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 657934000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.410934+00:00",
+          "elapsed_seconds": 0.016882896423339844,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 648468000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.434342+00:00",
+          "elapsed_seconds": 0.017056941986083984,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 675616000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.457763+00:00",
+          "elapsed_seconds": 0.017783164978027344,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 637667000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.482506+00:00",
+          "elapsed_seconds": 0.01732182502746582,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 682580000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.506104+00:00",
+          "elapsed_seconds": 0.0169370174407959,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 641003000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.529572+00:00",
+          "elapsed_seconds": 0.030662059783935547,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 657892000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.567382+00:00",
+          "elapsed_seconds": 0.0191800594329834,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 760522000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.593323+00:00",
+          "elapsed_seconds": 0.01726388931274414,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 685791000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.619415+00:00",
+          "elapsed_seconds": 0.018748998641967773,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 723824000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.645646+00:00",
+          "elapsed_seconds": 0.01894998550415039,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 787712000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.671871+00:00",
+          "elapsed_seconds": 0.017559051513671875,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 691463000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.695928+00:00",
+          "elapsed_seconds": 0.01706695556640625,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 663022000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.719459+00:00",
+          "elapsed_seconds": 0.017026901245117188,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 635207000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.743056+00:00",
+          "elapsed_seconds": 0.019773244857788086,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 749845000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.773288+00:00",
+          "elapsed_seconds": 0.019841909408569336,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 841674000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.803188+00:00",
+          "elapsed_seconds": 0.022185802459716797,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 865111000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.836480+00:00",
+          "elapsed_seconds": 0.02161121368408203,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 904603000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.866272+00:00",
+          "elapsed_seconds": 0.026168107986450195,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 913652000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.901080+00:00",
+          "elapsed_seconds": 0.01907181739807129,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 905686000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.929657+00:00",
+          "elapsed_seconds": 0.018174171447753906,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 803558000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.954563+00:00",
+          "elapsed_seconds": 0.017854928970336914,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 773283000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.979164+00:00",
+          "elapsed_seconds": 0.021009206771850586,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 692029000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.010024+00:00",
+          "elapsed_seconds": 0.018427133560180664,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 787899000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.035190+00:00",
+          "elapsed_seconds": 0.018019914627075195,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 799660000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.059817+00:00",
+          "elapsed_seconds": 0.017978906631469727,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 702621000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.084448+00:00",
+          "elapsed_seconds": 0.01776576042175293,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 693572000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.108711+00:00",
+          "elapsed_seconds": 0.017752885818481445,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 709960000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.132982+00:00",
+          "elapsed_seconds": 0.017579078674316406,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 712003000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.157078+00:00",
+          "elapsed_seconds": 0.017572879791259766,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 724973000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.181134+00:00",
+          "elapsed_seconds": 0.01806187629699707,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 681896000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.205843+00:00",
+          "elapsed_seconds": 0.017487049102783203,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 745948000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.229817+00:00",
+          "elapsed_seconds": 0.01717090606689453,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 662713000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.253434+00:00",
+          "elapsed_seconds": 0.017171859741210938,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 643238000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.277153+00:00",
+          "elapsed_seconds": 0.01707291603088379,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 650995000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.300703+00:00",
+          "elapsed_seconds": 0.017164945602416992,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 662087000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.324292+00:00",
+          "elapsed_seconds": 0.01710987091064453,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 642196000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.347794+00:00",
+          "elapsed_seconds": 0.01685619354248047,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 667425000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.371067+00:00",
+          "elapsed_seconds": 0.0170443058013916,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 640403000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.394597+00:00",
+          "elapsed_seconds": 0.01702404022216797,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 634648000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.417985+00:00",
+          "elapsed_seconds": 0.016895055770874023,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 655165000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.441247+00:00",
+          "elapsed_seconds": 0.017004966735839844,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 666424000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.464896+00:00",
+          "elapsed_seconds": 0.017013072967529297,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 653414000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.490766+00:00",
+          "elapsed_seconds": 0.018145084381103516,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 856289000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.515447+00:00",
+          "elapsed_seconds": 0.017099857330322266,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 677517000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.538922+00:00",
+          "elapsed_seconds": 0.016993045806884766,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 663255000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.562448+00:00",
+          "elapsed_seconds": 0.01708817481994629,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 654039000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.597476+00:00",
+          "elapsed_seconds": 0.030384063720703125,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 698785000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.636408+00:00",
+          "elapsed_seconds": 0.01728677749633789,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 752329000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.660229+00:00",
+          "elapsed_seconds": 0.019211769104003906,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 684648000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.685968+00:00",
+          "elapsed_seconds": 0.019041061401367188,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 780018000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.712144+00:00",
+          "elapsed_seconds": 0.018886089324951172,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 786940000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.737633+00:00",
+          "elapsed_seconds": 0.017835140228271484,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 784772000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.762156+00:00",
+          "elapsed_seconds": 0.01710796356201172,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 658460000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.785822+00:00",
+          "elapsed_seconds": 0.017148256301879883,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 674473000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.809394+00:00",
+          "elapsed_seconds": 0.017055988311767578,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 685940000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.832911+00:00",
+          "elapsed_seconds": 0.017293930053710938,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 660545000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.856744+00:00",
+          "elapsed_seconds": 0.018271923065185547,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 694906000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.882042+00:00",
+          "elapsed_seconds": 0.01905369758605957,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 764214000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.914019+00:00",
+          "elapsed_seconds": 0.022721052169799805,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 862169000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.947502+00:00",
+          "elapsed_seconds": 0.019673824310302734,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 872177000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.974541+00:00",
+          "elapsed_seconds": 0.019011974334716797,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 844342000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.001013+00:00",
+          "elapsed_seconds": 0.029584884643554688,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 764611000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.038695+00:00",
+          "elapsed_seconds": 0.018262147903442383,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 763903000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.063646+00:00",
+          "elapsed_seconds": 0.018004179000854492,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 704355000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.088510+00:00",
+          "elapsed_seconds": 0.018362998962402344,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 727957000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.113786+00:00",
+          "elapsed_seconds": 0.018451929092407227,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 848428000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.138802+00:00",
+          "elapsed_seconds": 0.017852306365966797,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 702478000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.163208+00:00",
+          "elapsed_seconds": 0.01774311065673828,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 707316000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.187910+00:00",
+          "elapsed_seconds": 0.02150702476501465,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 715071000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.219247+00:00",
+          "elapsed_seconds": 0.01773810386657715,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 731501000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.243549+00:00",
+          "elapsed_seconds": 0.017721176147460938,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 719241000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.267779+00:00",
+          "elapsed_seconds": 0.017819881439208984,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 672830000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.292029+00:00",
+          "elapsed_seconds": 0.017788171768188477,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 705731000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.316310+00:00",
+          "elapsed_seconds": 0.01763010025024414,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 662905000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.340532+00:00",
+          "elapsed_seconds": 0.017532825469970703,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 717073000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.364593+00:00",
+          "elapsed_seconds": 0.01759934425354004,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 703980000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.388920+00:00",
+          "elapsed_seconds": 0.017655134201049805,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 689884000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.413203+00:00",
+          "elapsed_seconds": 0.01802992820739746,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 723829000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.437760+00:00",
+          "elapsed_seconds": 0.01741194725036621,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 668076000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.461680+00:00",
+          "elapsed_seconds": 0.017364025115966797,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 660361000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.485610+00:00",
+          "elapsed_seconds": 0.018108844757080078,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 754604000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.510123+00:00",
+          "elapsed_seconds": 0.016956806182861328,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 667034000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.533384+00:00",
+          "elapsed_seconds": 0.016947031021118164,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 631297000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.556730+00:00",
+          "elapsed_seconds": 0.016915082931518555,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 685548000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.579965+00:00",
+          "elapsed_seconds": 0.017051219940185547,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 653147000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.603438+00:00",
+          "elapsed_seconds": 0.017000913619995117,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 658860000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.626826+00:00",
+          "elapsed_seconds": 0.030655860900878906,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 678292000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.664881+00:00",
+          "elapsed_seconds": 0.019018888473510742,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 713612000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.690804+00:00",
+          "elapsed_seconds": 0.017315149307250977,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 699851000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.714647+00:00",
+          "elapsed_seconds": 0.01710796356201172,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 651604000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.738226+00:00",
+          "elapsed_seconds": 0.020913124084472656,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 641554000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.766277+00:00",
+          "elapsed_seconds": 0.0189058780670166,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 689426000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.794372+00:00",
+          "elapsed_seconds": 0.017857074737548828,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 792717000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.818908+00:00",
+          "elapsed_seconds": 0.0175020694732666,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 676708000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.842957+00:00",
+          "elapsed_seconds": 0.017134904861450195,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 639761000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.866509+00:00",
+          "elapsed_seconds": 0.017082929611206055,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 664865000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.890155+00:00",
+          "elapsed_seconds": 0.016952991485595703,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 629086000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.913527+00:00",
+          "elapsed_seconds": 0.01682305335998535,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 677876000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.936884+00:00",
+          "elapsed_seconds": 0.020256996154785156,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 650228000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.964083+00:00",
+          "elapsed_seconds": 0.018758058547973633,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 774142000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.989904+00:00",
+          "elapsed_seconds": 0.01925492286682129,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 779855000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.017946+00:00",
+          "elapsed_seconds": 0.019092082977294922,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 700960000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.048654+00:00",
+          "elapsed_seconds": 0.019231081008911133,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 770347000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.075519+00:00",
+          "elapsed_seconds": 0.01932382583618164,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 940146000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.102725+00:00",
+          "elapsed_seconds": 0.019426822662353516,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 832479000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.132494+00:00",
+          "elapsed_seconds": 0.019953012466430664,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 869257000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.161607+00:00",
+          "elapsed_seconds": 0.017735004425048828,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 786818000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.186050+00:00",
+          "elapsed_seconds": 0.01725292205810547,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 681570000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.209910+00:00",
+          "elapsed_seconds": 0.020472049713134766,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 687074000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.237190+00:00",
+          "elapsed_seconds": 0.018061161041259766,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 699834000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.262062+00:00",
+          "elapsed_seconds": 0.018040895462036133,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 727063000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.287070+00:00",
+          "elapsed_seconds": 0.01827096939086914,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 754752000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.312112+00:00",
+          "elapsed_seconds": 0.018246889114379883,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 725396000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.336941+00:00",
+          "elapsed_seconds": 0.017837047576904297,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 741533000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.361685+00:00",
+          "elapsed_seconds": 0.020266056060791016,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 679860000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.388659+00:00",
+          "elapsed_seconds": 0.017567873001098633,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 689826000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.412943+00:00",
+          "elapsed_seconds": 0.017139911651611328,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "653904531dafd1bfaa8a708ab0a5f7c3812c4a539bcf096459ae5ff273ec96cb",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` IN (...)",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=2 AND c_d_id=3 AND c_last IN (0,1)",
+            "TIMER_WAIT": 674481000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-7ead87e0b5705c2a",
+      "digest": "b46a6026c670709df87f197a056ab15729cc4143b6e610d31a95ee1e5085463f",
+      "sql": "SELECT SUM(ol.ol_amount) FROM tpcc10_test.order_line ol JOIN tpcc10_test.orders o ON o.o_w_id=ol.ol_w_id AND o.o_d_id=ol.ol_d_id AND o.o_id=ol.ol_o_id JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id JOIN tpcc10_test.warehouse w ON w.w_id=o.o_w_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id WHERE o.o_w_id=2 AND o.o_d_id=3 AND ol.ol_quantity>0",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-0e2ab1cc62ececce",
+        "op-8dc1a0d60fbdbc00",
+        "op-7b8c494d778b39b3",
+        "op-1b2663aca744c1c8",
+        "op-cb08043c58efc9ed",
+        "op-28ff458db5f8a274",
+        "op-4efb0d9bc1de2edd"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T12:49:46.444712+00:00",
+          "elapsed_seconds": 0.1906750202178955,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b46a6026c670709df87f197a056ab15729cc4143b6e610d31a95ee1e5085463f",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_amount` ) FROM `tpcc10_test` . `order_line` `ol` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `ol` . `ol_w_id` AND `o` . `o_d_id` = `ol` . `ol_d_id` AND `o` . `o_id` = `ol` . `ol_o_id` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` JOIN `tpcc10_test` . `warehouse` `w` ON `w` . `w_id` = `o` . `o_w_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `ol` . `ol_quantity` > ?",
+            "SQL_TEXT": "SELECT SUM(ol.ol_amount) FROM tpcc10_test.order_line ol JOIN tpcc10_test.orders o ON o.o_w_id=ol.ol_w_id AND o.o_d_id=ol.ol_d_id AND o.o_id=ol.ol_o_id JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id JOIN tpcc10_test.warehouse w ON w.w_id=o.o_w_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id WHERE o.o_w_id=2 AND o.o_d_id=3 AND ol.ol_quantity>0",
+            "TIMER_WAIT": 159815370000,
+            "ROWS_EXAMINED": 67932,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.643826+00:00",
+          "elapsed_seconds": 0.14917588233947754,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b46a6026c670709df87f197a056ab15729cc4143b6e610d31a95ee1e5085463f",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_amount` ) FROM `tpcc10_test` . `order_line` `ol` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `ol` . `ol_w_id` AND `o` . `o_d_id` = `ol` . `ol_d_id` AND `o` . `o_id` = `ol` . `ol_o_id` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` JOIN `tpcc10_test` . `warehouse` `w` ON `w` . `w_id` = `o` . `o_w_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `ol` . `ol_quantity` > ?",
+            "SQL_TEXT": "SELECT SUM(ol.ol_amount) FROM tpcc10_test.order_line ol JOIN tpcc10_test.orders o ON o.o_w_id=ol.ol_w_id AND o.o_d_id=ol.ol_d_id AND o.o_id=ol.ol_o_id JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id JOIN tpcc10_test.warehouse w ON w.w_id=o.o_w_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id WHERE o.o_w_id=2 AND o.o_d_id=3 AND ol.ol_quantity>0",
+            "TIMER_WAIT": 127579458000,
+            "ROWS_EXAMINED": 67932,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.804807+00:00",
+          "elapsed_seconds": 0.13524818420410156,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b46a6026c670709df87f197a056ab15729cc4143b6e610d31a95ee1e5085463f",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_amount` ) FROM `tpcc10_test` . `order_line` `ol` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `ol` . `ol_w_id` AND `o` . `o_d_id` = `ol` . `ol_d_id` AND `o` . `o_id` = `ol` . `ol_o_id` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` JOIN `tpcc10_test` . `warehouse` `w` ON `w` . `w_id` = `o` . `o_w_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `ol` . `ol_quantity` > ?",
+            "SQL_TEXT": "SELECT SUM(ol.ol_amount) FROM tpcc10_test.order_line ol JOIN tpcc10_test.orders o ON o.o_w_id=ol.ol_w_id AND o.o_d_id=ol.ol_d_id AND o.o_id=ol.ol_o_id JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id JOIN tpcc10_test.warehouse w ON w.w_id=o.o_w_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id WHERE o.o_w_id=2 AND o.o_d_id=3 AND ol.ol_quantity>0",
+            "TIMER_WAIT": 111575119000,
+            "ROWS_EXAMINED": 67932,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.949642+00:00",
+          "elapsed_seconds": 0.08020806312561035,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b46a6026c670709df87f197a056ab15729cc4143b6e610d31a95ee1e5085463f",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_amount` ) FROM `tpcc10_test` . `order_line` `ol` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `ol` . `ol_w_id` AND `o` . `o_d_id` = `ol` . `ol_d_id` AND `o` . `o_id` = `ol` . `ol_o_id` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` JOIN `tpcc10_test` . `warehouse` `w` ON `w` . `w_id` = `o` . `o_w_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `ol` . `ol_quantity` > ?",
+            "SQL_TEXT": "SELECT SUM(ol.ol_amount) FROM tpcc10_test.order_line ol JOIN tpcc10_test.orders o ON o.o_w_id=ol.ol_w_id AND o.o_d_id=ol.ol_d_id AND o.o_id=ol.ol_o_id JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id JOIN tpcc10_test.warehouse w ON w.w_id=o.o_w_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id WHERE o.o_w_id=2 AND o.o_d_id=3 AND ol.ol_quantity>0",
+            "TIMER_WAIT": 48808697000,
+            "ROWS_EXAMINED": 67932,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.048104+00:00",
+          "elapsed_seconds": 0.09563589096069336,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b46a6026c670709df87f197a056ab15729cc4143b6e610d31a95ee1e5085463f",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_amount` ) FROM `tpcc10_test` . `order_line` `ol` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `ol` . `ol_w_id` AND `o` . `o_d_id` = `ol` . `ol_d_id` AND `o` . `o_id` = `ol` . `ol_o_id` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` JOIN `tpcc10_test` . `warehouse` `w` ON `w` . `w_id` = `o` . `o_w_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `ol` . `ol_quantity` > ?",
+            "SQL_TEXT": "SELECT SUM(ol.ol_amount) FROM tpcc10_test.order_line ol JOIN tpcc10_test.orders o ON o.o_w_id=ol.ol_w_id AND o.o_d_id=ol.ol_d_id AND o.o_id=ol.ol_o_id JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id JOIN tpcc10_test.warehouse w ON w.w_id=o.o_w_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id WHERE o.o_w_id=2 AND o.o_d_id=3 AND ol.ol_quantity>0",
+            "TIMER_WAIT": 77528519000,
+            "ROWS_EXAMINED": 67932,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-b270363e012188fa",
+      "digest": "5266928db15f7e6bcb4716b3ad782ac48c26fc1bd0e6da883523dcb166d44cc2",
+      "sql": "SELECT ol_o_id,ol_amount FROM tpcc10_test.order_line ORDER BY ol_amount DESC LIMIT 1000",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-eec88f3a94eb98eb",
+        "op-d0d141d966fb40db"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T12:49:46.443834+00:00",
+          "elapsed_seconds": 0.18333911895751953,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5266928db15f7e6bcb4716b3ad782ac48c26fc1bd0e6da883523dcb166d44cc2",
+            "DIGEST_TEXT": "SELECT `ol_o_id` , `ol_amount` FROM `tpcc10_test` . `order_line` ORDER BY `ol_amount` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT ol_o_id,ol_amount FROM tpcc10_test.order_line ORDER BY ol_amount DESC LIMIT 1000",
+            "TIMER_WAIT": 134860510000,
+            "ROWS_EXAMINED": 1244953,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.641019+00:00",
+          "elapsed_seconds": 0.18270015716552734,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5266928db15f7e6bcb4716b3ad782ac48c26fc1bd0e6da883523dcb166d44cc2",
+            "DIGEST_TEXT": "SELECT `ol_o_id` , `ol_amount` FROM `tpcc10_test` . `order_line` ORDER BY `ol_amount` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT ol_o_id,ol_amount FROM tpcc10_test.order_line ORDER BY ol_amount DESC LIMIT 1000",
+            "TIMER_WAIT": 159158984000,
+            "ROWS_EXAMINED": 1244953,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.837030+00:00",
+          "elapsed_seconds": 0.18507623672485352,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5266928db15f7e6bcb4716b3ad782ac48c26fc1bd0e6da883523dcb166d44cc2",
+            "DIGEST_TEXT": "SELECT `ol_o_id` , `ol_amount` FROM `tpcc10_test` . `order_line` ORDER BY `ol_amount` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT ol_o_id,ol_amount FROM tpcc10_test.order_line ORDER BY ol_amount DESC LIMIT 1000",
+            "TIMER_WAIT": 161197322000,
+            "ROWS_EXAMINED": 1244953,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.036932+00:00",
+          "elapsed_seconds": 0.17647194862365723,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5266928db15f7e6bcb4716b3ad782ac48c26fc1bd0e6da883523dcb166d44cc2",
+            "DIGEST_TEXT": "SELECT `ol_o_id` , `ol_amount` FROM `tpcc10_test` . `order_line` ORDER BY `ol_amount` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT ol_o_id,ol_amount FROM tpcc10_test.order_line ORDER BY ol_amount DESC LIMIT 1000",
+            "TIMER_WAIT": 154047280000,
+            "ROWS_EXAMINED": 1244953,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.221587+00:00",
+          "elapsed_seconds": 0.1763591766357422,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5266928db15f7e6bcb4716b3ad782ac48c26fc1bd0e6da883523dcb166d44cc2",
+            "DIGEST_TEXT": "SELECT `ol_o_id` , `ol_amount` FROM `tpcc10_test` . `order_line` ORDER BY `ol_amount` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT ol_o_id,ol_amount FROM tpcc10_test.order_line ORDER BY ol_amount DESC LIMIT 1000",
+            "TIMER_WAIT": 154422298000,
+            "ROWS_EXAMINED": 1244953,
+            "ROWS_SENT": 1000
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-6ee2b8385ed6275a",
+      "digest": "2e2bc0008eba4867ba66e4cd66dd3869f65d6f79ced37f0cf7112b93b8b63094",
+      "sql": "SELECT ol_supply_w_id,MOD(ol_i_id,500) AS bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY ol_supply_w_id,MOD(ol_i_id,500)",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-0261c1eb82c9bb82",
+        "op-b4adcd8786265a91"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T12:49:46.450994+00:00",
+          "elapsed_seconds": 0.27862119674682617,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "2e2bc0008eba4867ba66e4cd66dd3869f65d6f79ced37f0cf7112b93b8b63094",
+            "DIGEST_TEXT": "SELECT `ol_supply_w_id` , MOD ( `ol_i_id` , ? ) AS `bucket` , COUNT ( * ) FROM `tpcc10_test` . `order_line` GROUP BY `ol_supply_w_id` , MOD ( `ol_i_id` , ? )",
+            "SQL_TEXT": "SELECT ol_supply_w_id,MOD(ol_i_id,500) AS bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY ol_supply_w_id,MOD(ol_i_id,500)",
+            "TIMER_WAIT": 238535983000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 2000
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.747610+00:00",
+          "elapsed_seconds": 0.23379278182983398,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "2e2bc0008eba4867ba66e4cd66dd3869f65d6f79ced37f0cf7112b93b8b63094",
+            "DIGEST_TEXT": "SELECT `ol_supply_w_id` , MOD ( `ol_i_id` , ? ) AS `bucket` , COUNT ( * ) FROM `tpcc10_test` . `order_line` GROUP BY `ol_supply_w_id` , MOD ( `ol_i_id` , ? )",
+            "SQL_TEXT": "SELECT ol_supply_w_id,MOD(ol_i_id,500) AS bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY ol_supply_w_id,MOD(ol_i_id,500)",
+            "TIMER_WAIT": 205755637000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 2000
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.989627+00:00",
+          "elapsed_seconds": 0.22525405883789062,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "2e2bc0008eba4867ba66e4cd66dd3869f65d6f79ced37f0cf7112b93b8b63094",
+            "DIGEST_TEXT": "SELECT `ol_supply_w_id` , MOD ( `ol_i_id` , ? ) AS `bucket` , COUNT ( * ) FROM `tpcc10_test` . `order_line` GROUP BY `ol_supply_w_id` , MOD ( `ol_i_id` , ? )",
+            "SQL_TEXT": "SELECT ol_supply_w_id,MOD(ol_i_id,500) AS bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY ol_supply_w_id,MOD(ol_i_id,500)",
+            "TIMER_WAIT": 201094628000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 2000
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:50.224241+00:00",
+          "elapsed_seconds": 0.2227163314819336,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "2e2bc0008eba4867ba66e4cd66dd3869f65d6f79ced37f0cf7112b93b8b63094",
+            "DIGEST_TEXT": "SELECT `ol_supply_w_id` , MOD ( `ol_i_id` , ? ) AS `bucket` , COUNT ( * ) FROM `tpcc10_test` . `order_line` GROUP BY `ol_supply_w_id` , MOD ( `ol_i_id` , ? )",
+            "SQL_TEXT": "SELECT ol_supply_w_id,MOD(ol_i_id,500) AS bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY ol_supply_w_id,MOD(ol_i_id,500)",
+            "TIMER_WAIT": 198648395000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 2000
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-00bfc2a338f7a26b",
+      "digest": "e1b0d5333458a4ac717145a51fd9c3776f74779d66b0631751a5633be5edfd13",
+      "sql": "SELECT SUM(ol_amount) FROM tpcc10_test.order_line",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-634a4df9f2a16d8c"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T12:49:46.454569+00:00",
+          "elapsed_seconds": 0.15748810768127441,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "e1b0d5333458a4ac717145a51fd9c3776f74779d66b0631751a5633be5edfd13",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_amount` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_amount) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 119507583000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:47.626932+00:00",
+          "elapsed_seconds": 0.13211917877197266,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "e1b0d5333458a4ac717145a51fd9c3776f74779d66b0631751a5633be5edfd13",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_amount` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_amount) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 103358886000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:48.773191+00:00",
+          "elapsed_seconds": 0.12408709526062012,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "e1b0d5333458a4ac717145a51fd9c3776f74779d66b0631751a5633be5edfd13",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_amount` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_amount) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 99020360000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:49.913904+00:00",
+          "elapsed_seconds": 0.11760473251342773,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "e1b0d5333458a4ac717145a51fd9c3776f74779d66b0631751a5633be5edfd13",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_amount` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_amount) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 95917100000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T12:49:51.048370+00:00",
+          "elapsed_seconds": 0.12386512756347656,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "e1b0d5333458a4ac717145a51fd9c3776f74779d66b0631751a5633be5edfd13",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_amount` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_amount) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 99700250000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    }
+  ]
+}

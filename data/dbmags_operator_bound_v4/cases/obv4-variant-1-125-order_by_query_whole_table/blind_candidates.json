@@ -1,0 +1,3176 @@
+{
+  "candidates": [
+    {
+      "sql_id": "sql-9bcc043d95fae8eb",
+      "digest": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-544bfc899225ef26"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:16:56.843637+00:00",
+          "elapsed_seconds": 0.04521608352661133,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_w_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+            "TIMER_WAIT": 2495946000,
+            "ROWS_EXAMINED": 31040,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.913678+00:00",
+          "elapsed_seconds": 0.04206681251525879,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_w_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+            "TIMER_WAIT": 1954721000,
+            "ROWS_EXAMINED": 31040,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.976485+00:00",
+          "elapsed_seconds": 0.0377650260925293,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_w_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+            "TIMER_WAIT": 1809910000,
+            "ROWS_EXAMINED": 31040,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.037840+00:00",
+          "elapsed_seconds": 0.036466121673583984,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_w_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+            "TIMER_WAIT": 1771020000,
+            "ROWS_EXAMINED": 31040,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.095986+00:00",
+          "elapsed_seconds": 0.04136919975280762,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_w_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+            "TIMER_WAIT": 1822018000,
+            "ROWS_EXAMINED": 31040,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-cac1b486d230fc2a",
+      "digest": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-c49454bc28102f00"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:16:56.841931+00:00",
+          "elapsed_seconds": 0.04219484329223633,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+            "TIMER_WAIT": 1803922000,
+            "ROWS_EXAMINED": 0,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.913145+00:00",
+          "elapsed_seconds": 0.03890109062194824,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+            "TIMER_WAIT": 1095392000,
+            "ROWS_EXAMINED": 0,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.975992+00:00",
+          "elapsed_seconds": 0.03594207763671875,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+            "TIMER_WAIT": 1138268000,
+            "ROWS_EXAMINED": 0,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.037149+00:00",
+          "elapsed_seconds": 0.03609108924865723,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+            "TIMER_WAIT": 1086172000,
+            "ROWS_EXAMINED": 0,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.095468+00:00",
+          "elapsed_seconds": 0.04076385498046875,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+            "TIMER_WAIT": 1250931000,
+            "ROWS_EXAMINED": 0,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-6af98a52db33a4ec",
+      "digest": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-1d55712981c0e73b"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:16:56.843789+00:00",
+          "elapsed_seconds": 0.10069894790649414,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_credit` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+            "TIMER_WAIT": 75364377000,
+            "ROWS_EXAMINED": 120000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.962523+00:00",
+          "elapsed_seconds": 0.06559610366821289,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_credit` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+            "TIMER_WAIT": 41222072000,
+            "ROWS_EXAMINED": 120000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.046699+00:00",
+          "elapsed_seconds": 0.06072282791137695,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_credit` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+            "TIMER_WAIT": 39275168000,
+            "ROWS_EXAMINED": 120000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.117814+00:00",
+          "elapsed_seconds": 0.06041073799133301,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_credit` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+            "TIMER_WAIT": 38527561000,
+            "ROWS_EXAMINED": 120000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.192918+00:00",
+          "elapsed_seconds": 0.06165504455566406,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_credit` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+            "TIMER_WAIT": 39764325000,
+            "ROWS_EXAMINED": 120000,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-3ccace0117a48081",
+      "digest": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-f0705fa1a53aff21"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:16:56.843443+00:00",
+          "elapsed_seconds": 0.17504525184631348,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `stock` WHERE `s_quantity` < ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+            "TIMER_WAIT": 140029654000,
+            "ROWS_EXAMINED": 400000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.041319+00:00",
+          "elapsed_seconds": 0.13972806930541992,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `stock` WHERE `s_quantity` < ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+            "TIMER_WAIT": 115178499000,
+            "ROWS_EXAMINED": 400000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.189805+00:00",
+          "elapsed_seconds": 0.1266498565673828,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `stock` WHERE `s_quantity` < ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+            "TIMER_WAIT": 99121875000,
+            "ROWS_EXAMINED": 400000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.331191+00:00",
+          "elapsed_seconds": 0.11939883232116699,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `stock` WHERE `s_quantity` < ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+            "TIMER_WAIT": 100086918000,
+            "ROWS_EXAMINED": 400000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.464917+00:00",
+          "elapsed_seconds": 0.11154794692993164,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `stock` WHERE `s_quantity` < ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+            "TIMER_WAIT": 91737147000,
+            "ROWS_EXAMINED": 400000,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-ba7fb486729cde23",
+      "digest": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-0e2ab1cc62ececce",
+        "op-8d8416a82ab685f0",
+        "op-d88107ac31346ffe"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:16:56.847309+00:00",
+          "elapsed_seconds": 0.049102783203125,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+            "TIMER_WAIT": 2182582000,
+            "ROWS_EXAMINED": 6162,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.914208+00:00",
+          "elapsed_seconds": 0.042913198471069336,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+            "TIMER_WAIT": 1934427000,
+            "ROWS_EXAMINED": 6162,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.976592+00:00",
+          "elapsed_seconds": 0.03605031967163086,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+            "TIMER_WAIT": 1963298000,
+            "ROWS_EXAMINED": 6162,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.041581+00:00",
+          "elapsed_seconds": 0.03422379493713379,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+            "TIMER_WAIT": 2019915000,
+            "ROWS_EXAMINED": 6162,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.096885+00:00",
+          "elapsed_seconds": 0.03827404975891113,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+            "TIMER_WAIT": 1893315000,
+            "ROWS_EXAMINED": 6162,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-5e0ad3cd2b6a5da4",
+      "digest": "a45c53b61b2d146758835d636d5ecc9d4ec0f856cf1c2d6fc43966bb7215cf0f",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=1 AND c_d_id=1 AND c_last='BARBARBAR'",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-08d351b461db3cc0"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:16:56.846001+00:00",
+          "elapsed_seconds": 0.0422818660736084,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a45c53b61b2d146758835d636d5ecc9d4ec0f856cf1c2d6fc43966bb7215cf0f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=1 AND c_d_id=1 AND c_last='BARBARBAR'",
+            "TIMER_WAIT": 294111000,
+            "ROWS_EXAMINED": 3,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.913501+00:00",
+          "elapsed_seconds": 0.04319190979003906,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a45c53b61b2d146758835d636d5ecc9d4ec0f856cf1c2d6fc43966bb7215cf0f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=1 AND c_d_id=1 AND c_last='BARBARBAR'",
+            "TIMER_WAIT": 117053000,
+            "ROWS_EXAMINED": 3,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.976246+00:00",
+          "elapsed_seconds": 0.034030914306640625,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a45c53b61b2d146758835d636d5ecc9d4ec0f856cf1c2d6fc43966bb7215cf0f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=1 AND c_d_id=1 AND c_last='BARBARBAR'",
+            "TIMER_WAIT": 93800000,
+            "ROWS_EXAMINED": 3,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.036072+00:00",
+          "elapsed_seconds": 0.036611080169677734,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a45c53b61b2d146758835d636d5ecc9d4ec0f856cf1c2d6fc43966bb7215cf0f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=1 AND c_d_id=1 AND c_last='BARBARBAR'",
+            "TIMER_WAIT": 77339000,
+            "ROWS_EXAMINED": 3,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.095223+00:00",
+          "elapsed_seconds": 0.04138612747192383,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a45c53b61b2d146758835d636d5ecc9d4ec0f856cf1c2d6fc43966bb7215cf0f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=1 AND c_d_id=1 AND c_last='BARBARBAR'",
+            "TIMER_WAIT": 77423000,
+            "ROWS_EXAMINED": 3,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-2eb36cb4c7ea18b6",
+      "digest": "c013c62485c3f0ab6493b26aa7874b002b9d277c4ca6c91e384413502e2c0a89",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_quantity = 7",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-7ec18c0a4767e64b"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:16:56.844941+00:00",
+          "elapsed_seconds": 0.1339108943939209,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "c013c62485c3f0ab6493b26aa7874b002b9d277c4ca6c91e384413502e2c0a89",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `order_line` WHERE `ol_quantity` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_quantity = 7",
+            "TIMER_WAIT": 105357897000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.990031+00:00",
+          "elapsed_seconds": 0.10698413848876953,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "c013c62485c3f0ab6493b26aa7874b002b9d277c4ca6c91e384413502e2c0a89",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `order_line` WHERE `ol_quantity` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_quantity = 7",
+            "TIMER_WAIT": 84573802000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.105196+00:00",
+          "elapsed_seconds": 0.09376311302185059,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "c013c62485c3f0ab6493b26aa7874b002b9d277c4ca6c91e384413502e2c0a89",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `order_line` WHERE `ol_quantity` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_quantity = 7",
+            "TIMER_WAIT": 66647159000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.206420+00:00",
+          "elapsed_seconds": 0.08802199363708496,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "c013c62485c3f0ab6493b26aa7874b002b9d277c4ca6c91e384413502e2c0a89",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `order_line` WHERE `ol_quantity` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_quantity = 7",
+            "TIMER_WAIT": 68278947000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.309351+00:00",
+          "elapsed_seconds": 0.08869290351867676,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "c013c62485c3f0ab6493b26aa7874b002b9d277c4ca6c91e384413502e2c0a89",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `order_line` WHERE `ol_quantity` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_quantity = 7",
+            "TIMER_WAIT": 69464652000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-bce82880d93a9773",
+      "digest": "a45c53b61b2d146758835d636d5ecc9d4ec0f856cf1c2d6fc43966bb7215cf0f",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=1 AND c_d_id=1 AND c_last=0",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-d86cdafc6bace4a8"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:16:56.844130+00:00",
+          "elapsed_seconds": 0.040647029876708984,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a45c53b61b2d146758835d636d5ecc9d4ec0f856cf1c2d6fc43966bb7215cf0f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=1 AND c_d_id=1 AND c_last=0",
+            "TIMER_WAIT": 760864000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.913350+00:00",
+          "elapsed_seconds": 0.042817115783691406,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a45c53b61b2d146758835d636d5ecc9d4ec0f856cf1c2d6fc43966bb7215cf0f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=1 AND c_d_id=1 AND c_last=0",
+            "TIMER_WAIT": 599013000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.976389+00:00",
+          "elapsed_seconds": 0.034897804260253906,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a45c53b61b2d146758835d636d5ecc9d4ec0f856cf1c2d6fc43966bb7215cf0f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=1 AND c_d_id=1 AND c_last=0",
+            "TIMER_WAIT": 721105000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.038008+00:00",
+          "elapsed_seconds": 0.03822898864746094,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a45c53b61b2d146758835d636d5ecc9d4ec0f856cf1c2d6fc43966bb7215cf0f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=1 AND c_d_id=1 AND c_last=0",
+            "TIMER_WAIT": 603175000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.095910+00:00",
+          "elapsed_seconds": 0.042246103286743164,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a45c53b61b2d146758835d636d5ecc9d4ec0f856cf1c2d6fc43966bb7215cf0f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND `c_last` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=1 AND c_d_id=1 AND c_last=0",
+            "TIMER_WAIT": 609590000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-481e35923ba313e8",
+      "digest": "5b720e54d96351d28a1c4569085190daaa95c920bb3277edbc05e337c64b63d1",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id JOIN tpcc10_test.warehouse w ON w.w_id=o.o_w_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id WHERE o.o_w_id=1 AND o.o_d_id=1 AND ol.ol_quantity>0",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-0e2ab1cc62ececce",
+        "op-8dc1a0d60fbdbc00",
+        "op-7b8c494d778b39b3",
+        "op-1b2663aca744c1c8",
+        "op-cb08043c58efc9ed",
+        "op-28ff458db5f8a274",
+        "op-4efb0d9bc1de2edd"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:16:56.846983+00:00",
+          "elapsed_seconds": 0.17686009407043457,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5b720e54d96351d28a1c4569085190daaa95c920bb3277edbc05e337c64b63d1",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` JOIN `tpcc10_test` . `warehouse` `w` ON `w` . `w_id` = `o` . `o_w_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `ol` . `ol_quantity` > ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id JOIN tpcc10_test.warehouse w ON w.w_id=o.o_w_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id WHERE o.o_w_id=1 AND o.o_d_id=1 AND ol.ol_quantity>0",
+            "TIMER_WAIT": 146222290000,
+            "ROWS_EXAMINED": 67956,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.042763+00:00",
+          "elapsed_seconds": 0.16524291038513184,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5b720e54d96351d28a1c4569085190daaa95c920bb3277edbc05e337c64b63d1",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` JOIN `tpcc10_test` . `warehouse` `w` ON `w` . `w_id` = `o` . `o_w_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `ol` . `ol_quantity` > ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id JOIN tpcc10_test.warehouse w ON w.w_id=o.o_w_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id WHERE o.o_w_id=1 AND o.o_d_id=1 AND ol.ol_quantity>0",
+            "TIMER_WAIT": 138762664000,
+            "ROWS_EXAMINED": 67956,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.216093+00:00",
+          "elapsed_seconds": 0.12630414962768555,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5b720e54d96351d28a1c4569085190daaa95c920bb3277edbc05e337c64b63d1",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` JOIN `tpcc10_test` . `warehouse` `w` ON `w` . `w_id` = `o` . `o_w_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `ol` . `ol_quantity` > ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id JOIN tpcc10_test.warehouse w ON w.w_id=o.o_w_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id WHERE o.o_w_id=1 AND o.o_d_id=1 AND ol.ol_quantity>0",
+            "TIMER_WAIT": 104418866000,
+            "ROWS_EXAMINED": 67956,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.361301+00:00",
+          "elapsed_seconds": 0.1381819248199463,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5b720e54d96351d28a1c4569085190daaa95c920bb3277edbc05e337c64b63d1",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` JOIN `tpcc10_test` . `warehouse` `w` ON `w` . `w_id` = `o` . `o_w_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `ol` . `ol_quantity` > ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id JOIN tpcc10_test.warehouse w ON w.w_id=o.o_w_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id WHERE o.o_w_id=1 AND o.o_d_id=1 AND ol.ol_quantity>0",
+            "TIMER_WAIT": 114501137000,
+            "ROWS_EXAMINED": 67956,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.518490+00:00",
+          "elapsed_seconds": 0.09814095497131348,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5b720e54d96351d28a1c4569085190daaa95c920bb3277edbc05e337c64b63d1",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` JOIN `tpcc10_test` . `warehouse` `w` ON `w` . `w_id` = `o` . `o_w_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `ol` . `ol_quantity` > ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id JOIN tpcc10_test.warehouse w ON w.w_id=o.o_w_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id WHERE o.o_w_id=1 AND o.o_d_id=1 AND ol.ol_quantity>0",
+            "TIMER_WAIT": 77127210000,
+            "ROWS_EXAMINED": 67956,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-f97cc60defbb9721",
+      "digest": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+      "sql": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-eec88f3a94eb98eb",
+        "op-a240515d74e68e8c"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:16:56.846649+00:00",
+          "elapsed_seconds": 0.054663896560668945,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 16950988000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:56.910858+00:00",
+          "elapsed_seconds": 0.04042816162109375,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 15183986000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:56.963727+00:00",
+          "elapsed_seconds": 0.042932987213134766,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 15366045000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.014254+00:00",
+          "elapsed_seconds": 0.0368189811706543,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13455817000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.058488+00:00",
+          "elapsed_seconds": 0.034188032150268555,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12356716000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.099935+00:00",
+          "elapsed_seconds": 0.038220882415771484,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12478602000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.145410+00:00",
+          "elapsed_seconds": 0.03407692909240723,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12467560000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.186975+00:00",
+          "elapsed_seconds": 0.03463912010192871,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12571319000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.228488+00:00",
+          "elapsed_seconds": 0.0357050895690918,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12631700000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.271107+00:00",
+          "elapsed_seconds": 0.03568601608276367,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12575861000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.315137+00:00",
+          "elapsed_seconds": 0.03907895088195801,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12908184000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.362280+00:00",
+          "elapsed_seconds": 0.03604722023010254,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12841218000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.406432+00:00",
+          "elapsed_seconds": 0.03607606887817383,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12917101000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.450159+00:00",
+          "elapsed_seconds": 0.03588104248046875,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13024403000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.492987+00:00",
+          "elapsed_seconds": 0.0337519645690918,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12491020000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.533617+00:00",
+          "elapsed_seconds": 0.039019107818603516,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12430140000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.579301+00:00",
+          "elapsed_seconds": 0.033503055572509766,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12321088000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.619562+00:00",
+          "elapsed_seconds": 0.03322005271911621,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12280209000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.665045+00:00",
+          "elapsed_seconds": 0.047250986099243164,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 16374792000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.722548+00:00",
+          "elapsed_seconds": 0.040338993072509766,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13826643000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.771025+00:00",
+          "elapsed_seconds": 0.03719806671142578,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12731126000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.816771+00:00",
+          "elapsed_seconds": 0.03524208068847656,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12864346000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.861379+00:00",
+          "elapsed_seconds": 0.04520702362060547,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12579653000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.915438+00:00",
+          "elapsed_seconds": 0.059250831604003906,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13158081000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.985708+00:00",
+          "elapsed_seconds": 0.04275989532470703,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 14444585000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.042568+00:00",
+          "elapsed_seconds": 0.049494028091430664,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13971441000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.102080+00:00",
+          "elapsed_seconds": 0.04114389419555664,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 14979447000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.152788+00:00",
+          "elapsed_seconds": 0.04758024215698242,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 16049208000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.211941+00:00",
+          "elapsed_seconds": 0.036891937255859375,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13307716000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.256833+00:00",
+          "elapsed_seconds": 0.03697395324707031,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13730545000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.303610+00:00",
+          "elapsed_seconds": 0.039096832275390625,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13092864000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.349814+00:00",
+          "elapsed_seconds": 0.0352170467376709,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12478726000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.392722+00:00",
+          "elapsed_seconds": 0.03954911231994629,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12650075000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.439215+00:00",
+          "elapsed_seconds": 0.03386282920837402,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12658659000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.479809+00:00",
+          "elapsed_seconds": 0.03498482704162598,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12217912000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.521559+00:00",
+          "elapsed_seconds": 0.03413701057434082,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12453141000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.562404+00:00",
+          "elapsed_seconds": 0.03384089469909668,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12382760000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.603062+00:00",
+          "elapsed_seconds": 0.03632712364196777,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12439098000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.649056+00:00",
+          "elapsed_seconds": 0.033041954040527344,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12202535000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.688787+00:00",
+          "elapsed_seconds": 0.03248000144958496,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 11876507000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.730295+00:00",
+          "elapsed_seconds": 0.035491228103637695,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12279917000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.772567+00:00",
+          "elapsed_seconds": 0.03313302993774414,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12412721000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.812338+00:00",
+          "elapsed_seconds": 0.037672996520996094,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12008060000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.856767+00:00",
+          "elapsed_seconds": 0.036158084869384766,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12422263000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.899411+00:00",
+          "elapsed_seconds": 0.03258013725280762,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12093693000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.938655+00:00",
+          "elapsed_seconds": 0.05369305610656738,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12345840000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.001170+00:00",
+          "elapsed_seconds": 0.035362958908081055,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 14013065000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.045930+00:00",
+          "elapsed_seconds": 0.03754305839538574,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12278876000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.093440+00:00",
+          "elapsed_seconds": 0.03501391410827637,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13154075000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.135496+00:00",
+          "elapsed_seconds": 0.036518096923828125,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12320005000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.187514+00:00",
+          "elapsed_seconds": 0.03726601600646973,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12533981000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.233049+00:00",
+          "elapsed_seconds": 0.038246870040893555,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 14239667000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.281900+00:00",
+          "elapsed_seconds": 0.04340219497680664,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 14128741000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.332562+00:00",
+          "elapsed_seconds": 0.03434014320373535,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13129073000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.374134+00:00",
+          "elapsed_seconds": 0.03448295593261719,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13168993000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.418009+00:00",
+          "elapsed_seconds": 0.03384876251220703,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12740832000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.458672+00:00",
+          "elapsed_seconds": 0.03674793243408203,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12388468000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.502682+00:00",
+          "elapsed_seconds": 0.04137873649597168,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13573944000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.550741+00:00",
+          "elapsed_seconds": 0.033247947692871094,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12247456000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.590744+00:00",
+          "elapsed_seconds": 0.036248207092285156,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12598903000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.636944+00:00",
+          "elapsed_seconds": 0.03274416923522949,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12276876000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.676243+00:00",
+          "elapsed_seconds": 0.033074378967285156,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12540773000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.718452+00:00",
+          "elapsed_seconds": 0.03525805473327637,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12182826000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.760458+00:00",
+          "elapsed_seconds": 0.033307790756225586,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12378634000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.800463+00:00",
+          "elapsed_seconds": 0.036257028579711914,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 11963307000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.846300+00:00",
+          "elapsed_seconds": 0.03300905227661133,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12482601000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.888012+00:00",
+          "elapsed_seconds": 0.033335208892822266,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12258499000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.928046+00:00",
+          "elapsed_seconds": 0.03386402130126953,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12892345000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.968516+00:00",
+          "elapsed_seconds": 0.033116817474365234,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12645324000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.008233+00:00",
+          "elapsed_seconds": 0.07532882690429688,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12890552000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.090380+00:00",
+          "elapsed_seconds": 0.03638505935668945,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12734164000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.134259+00:00",
+          "elapsed_seconds": 0.03843498229980469,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13128655000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.180088+00:00",
+          "elapsed_seconds": 0.03627490997314453,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12760041000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.223742+00:00",
+          "elapsed_seconds": 0.03617501258850098,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13335088000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.266823+00:00",
+          "elapsed_seconds": 0.03449440002441406,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12391762000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.308387+00:00",
+          "elapsed_seconds": 0.037960052490234375,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13257082000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.359681+00:00",
+          "elapsed_seconds": 0.042279720306396484,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 15454719000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.410182+00:00",
+          "elapsed_seconds": 0.039830923080444336,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 14151947000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.457932+00:00",
+          "elapsed_seconds": 0.04086613655090332,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13975516000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.511957+00:00",
+          "elapsed_seconds": 0.033442020416259766,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12534857000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.552114+00:00",
+          "elapsed_seconds": 0.03373599052429199,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12713371000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.592621+00:00",
+          "elapsed_seconds": 0.0367588996887207,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13121112000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.636143+00:00",
+          "elapsed_seconds": 0.03432965278625488,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12718038000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.677966+00:00",
+          "elapsed_seconds": 0.03680109977722168,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13799501000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.721795+00:00",
+          "elapsed_seconds": 0.03660392761230469,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12565192000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.765374+00:00",
+          "elapsed_seconds": 0.033402204513549805,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12391178000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.808339+00:00",
+          "elapsed_seconds": 0.03521609306335449,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12537898000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.850413+00:00",
+          "elapsed_seconds": 0.03351092338562012,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12348216000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.890685+00:00",
+          "elapsed_seconds": 0.03613638877868652,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12453599000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.936856+00:00",
+          "elapsed_seconds": 0.03299903869628906,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12417972000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.976858+00:00",
+          "elapsed_seconds": 0.03345894813537598,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12404554000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.019452+00:00",
+          "elapsed_seconds": 0.03624129295349121,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12416348000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.062649+00:00",
+          "elapsed_seconds": 0.07880496978759766,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12318257000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.151442+00:00",
+          "elapsed_seconds": 0.03595328330993652,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12396138000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.194452+00:00",
+          "elapsed_seconds": 0.03593277931213379,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12787669000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.242527+00:00",
+          "elapsed_seconds": 0.036412954330444336,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13359964000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.285785+00:00",
+          "elapsed_seconds": 0.03742694854736328,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12447183000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.330499+00:00",
+          "elapsed_seconds": 0.03741288185119629,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12876301000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.378554+00:00",
+          "elapsed_seconds": 0.03410792350769043,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12616155000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.419454+00:00",
+          "elapsed_seconds": 0.0331263542175293,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12285755000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.464370+00:00",
+          "elapsed_seconds": 0.03741312026977539,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12654950000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.509346+00:00",
+          "elapsed_seconds": 0.03707385063171387,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 14233240000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.554962+00:00",
+          "elapsed_seconds": 0.03639388084411621,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 14180611000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.603721+00:00",
+          "elapsed_seconds": 0.03389430046081543,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12820046000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.644366+00:00",
+          "elapsed_seconds": 0.034204959869384766,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12491312000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.686189+00:00",
+          "elapsed_seconds": 0.04053378105163574,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 13546061000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.734108+00:00",
+          "elapsed_seconds": 0.040194034576416016,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 12900011000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.785175+00:00",
+          "elapsed_seconds": 0.04613685607910156,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6384fa51138faff1ab602d12a85effec43fedeb0ab7e226a681bdd613be6c443",
+            "DIGEST_TEXT": "SELECT `o_id` , `o_entry_d` FROM `tpcc10_test` . `orders` ORDER BY `o_entry_d` DESC LIMIT ?",
+            "SQL_TEXT": "SELECT o_id,o_entry_d FROM tpcc10_test.orders ORDER BY o_entry_d DESC LIMIT 1000",
+            "TIMER_WAIT": 15964376000,
+            "ROWS_EXAMINED": 125321,
+            "ROWS_SENT": 1000
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-b0319ab5f59815dd",
+      "digest": "d4aee358023b22171bc53a6a749b74957323c371544acd63ee25fa1716ff19ea",
+      "sql": "SELECT MOD(ol_i_id,1000) AS bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY MOD(ol_i_id,1000)",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-0261c1eb82c9bb82",
+        "op-b4adcd8786265a91"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:16:56.847525+00:00",
+          "elapsed_seconds": 0.20895075798034668,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "d4aee358023b22171bc53a6a749b74957323c371544acd63ee25fa1716ff19ea",
+            "DIGEST_TEXT": "SELECT MOD ( `ol_i_id` , ? ) AS `bucket` , COUNT ( * ) FROM `tpcc10_test` . `order_line` GROUP BY MOD ( `ol_i_id` , ? )",
+            "SQL_TEXT": "SELECT MOD(ol_i_id,1000) AS bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY MOD(ol_i_id,1000)",
+            "TIMER_WAIT": 179848957000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.070704+00:00",
+          "elapsed_seconds": 0.21605992317199707,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "d4aee358023b22171bc53a6a749b74957323c371544acd63ee25fa1716ff19ea",
+            "DIGEST_TEXT": "SELECT MOD ( `ol_i_id` , ? ) AS `bucket` , COUNT ( * ) FROM `tpcc10_test` . `order_line` GROUP BY MOD ( `ol_i_id` , ? )",
+            "SQL_TEXT": "SELECT MOD(ol_i_id,1000) AS bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY MOD(ol_i_id,1000)",
+            "TIMER_WAIT": 190905683000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.303865+00:00",
+          "elapsed_seconds": 0.19552087783813477,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "d4aee358023b22171bc53a6a749b74957323c371544acd63ee25fa1716ff19ea",
+            "DIGEST_TEXT": "SELECT MOD ( `ol_i_id` , ? ) AS `bucket` , COUNT ( * ) FROM `tpcc10_test` . `order_line` GROUP BY MOD ( `ol_i_id` , ? )",
+            "SQL_TEXT": "SELECT MOD(ol_i_id,1000) AS bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY MOD(ol_i_id,1000)",
+            "TIMER_WAIT": 171015521000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.512477+00:00",
+          "elapsed_seconds": 0.18755102157592773,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "d4aee358023b22171bc53a6a749b74957323c371544acd63ee25fa1716ff19ea",
+            "DIGEST_TEXT": "SELECT MOD ( `ol_i_id` , ? ) AS `bucket` , COUNT ( * ) FROM `tpcc10_test` . `order_line` GROUP BY MOD ( `ol_i_id` , ? )",
+            "SQL_TEXT": "SELECT MOD(ol_i_id,1000) AS bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY MOD(ol_i_id,1000)",
+            "TIMER_WAIT": 164547679000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.711610+00:00",
+          "elapsed_seconds": 0.21742606163024902,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "d4aee358023b22171bc53a6a749b74957323c371544acd63ee25fa1716ff19ea",
+            "DIGEST_TEXT": "SELECT MOD ( `ol_i_id` , ? ) AS `bucket` , COUNT ( * ) FROM `tpcc10_test` . `order_line` GROUP BY MOD ( `ol_i_id` , ? )",
+            "SQL_TEXT": "SELECT MOD(ol_i_id,1000) AS bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY MOD(ol_i_id,1000)",
+            "TIMER_WAIT": 195872183000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1000
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-58413b55c4d70049",
+      "digest": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+      "sql": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-634a4df9f2a16d8c"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:16:56.847876+00:00",
+          "elapsed_seconds": 0.17015886306762695,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 123010285000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.026404+00:00",
+          "elapsed_seconds": 0.10773873329162598,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 83979989000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.144472+00:00",
+          "elapsed_seconds": 0.09429597854614258,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 72476185000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.251012+00:00",
+          "elapsed_seconds": 0.09906578063964844,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 74907699000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.360290+00:00",
+          "elapsed_seconds": 0.09947490692138672,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 75755152000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.472977+00:00",
+          "elapsed_seconds": 0.09584617614746094,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 72968522000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.578691+00:00",
+          "elapsed_seconds": 0.10094809532165527,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 75887164000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.696177+00:00",
+          "elapsed_seconds": 0.10766410827636719,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 82543941000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.814620+00:00",
+          "elapsed_seconds": 0.11635017395019531,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 73847395000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:57.940200+00:00",
+          "elapsed_seconds": 0.11411619186401367,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 86459140000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.070879+00:00",
+          "elapsed_seconds": 0.12992501258850098,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 102701148000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.211846+00:00",
+          "elapsed_seconds": 0.10662603378295898,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 87735536000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.330616+00:00",
+          "elapsed_seconds": 0.09772086143493652,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 74159545000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.437584+00:00",
+          "elapsed_seconds": 0.09401202201843262,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 73054073000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.542047+00:00",
+          "elapsed_seconds": 0.09687018394470215,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 74727845000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.648960+00:00",
+          "elapsed_seconds": 0.0930337905883789,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 72202831000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.752260+00:00",
+          "elapsed_seconds": 0.0939798355102539,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 71680577000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.855124+00:00",
+          "elapsed_seconds": 0.09328794479370117,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 72573905000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:58.972334+00:00",
+          "elapsed_seconds": 0.09302401542663574,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 72748406000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.072386+00:00",
+          "elapsed_seconds": 0.10008883476257324,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 81842991000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.187594+00:00",
+          "elapsed_seconds": 0.10876321792602539,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 88152276000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.309629+00:00",
+          "elapsed_seconds": 0.10481810569763184,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 86358333000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.421247+00:00",
+          "elapsed_seconds": 0.09969496726989746,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 81038173000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.531369+00:00",
+          "elapsed_seconds": 0.09599804878234863,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 74540246000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.637039+00:00",
+          "elapsed_seconds": 0.09285283088684082,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 73335769000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.740675+00:00",
+          "elapsed_seconds": 0.09557104110717773,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 72702298000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.846209+00:00",
+          "elapsed_seconds": 0.09148907661437988,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 70944023000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:16:59.948242+00:00",
+          "elapsed_seconds": 0.10676026344299316,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 70548734000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.068683+00:00",
+          "elapsed_seconds": 0.0939788818359375,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 73362071000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.169458+00:00",
+          "elapsed_seconds": 0.10002517700195312,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 81550280000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.279300+00:00",
+          "elapsed_seconds": 0.09513592720031738,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 74028250000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.387758+00:00",
+          "elapsed_seconds": 0.1113729476928711,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 89270535000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.512036+00:00",
+          "elapsed_seconds": 0.10114097595214844,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 82809008000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.619897+00:00",
+          "elapsed_seconds": 0.10102295875549316,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 82280965000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.727632+00:00",
+          "elapsed_seconds": 0.09211325645446777,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 74244600000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.830172+00:00",
+          "elapsed_seconds": 0.09697222709655762,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 73887988000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:00.936944+00:00",
+          "elapsed_seconds": 0.09410786628723145,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 73399176000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.042530+00:00",
+          "elapsed_seconds": 0.09796690940856934,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 74613722000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.151354+00:00",
+          "elapsed_seconds": 0.10274481773376465,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 78804300000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.265592+00:00",
+          "elapsed_seconds": 0.10284686088562012,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 84576670000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.378628+00:00",
+          "elapsed_seconds": 0.09762215614318848,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 74858533000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.487282+00:00",
+          "elapsed_seconds": 0.11275577545166016,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 92456496000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.606808+00:00",
+          "elapsed_seconds": 0.11270999908447266,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 90755737000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:17:01.731095+00:00",
+          "elapsed_seconds": 0.12858176231384277,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "a5e87cb0b0eccef35c58dcb47dac259cb8a396b14afde3118af3a190920ec429",
+            "DIGEST_TEXT": "SELECT SUM ( `ol_quantity` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT SUM(ol_quantity) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 104440892000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    }
+  ]
+}

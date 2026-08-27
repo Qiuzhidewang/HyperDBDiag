@@ -1,0 +1,35 @@
+{
+  "case_id": "obv4-variant-4-014-order_by",
+  "root_labels": [
+    "order_by"
+  ],
+  "template_variant": "variant-4",
+  "target_sql_ids": {
+    "order_by": "sql-ed61a8dc273bc592"
+  },
+  "target_operator_ids_by_root": {
+    "order_by": [
+      "op-eec88f3a94eb98eb"
+    ]
+  },
+  "target_operator_ids": [
+    "op-eec88f3a94eb98eb"
+  ],
+  "operator_evaluable": true,
+  "validation": {
+    "target_sql_was_injected_by_collector": true,
+    "candidate_pool_frozen_before_truth": true,
+    "target_annotation_isolated_from_candidates": true,
+    "target_annotation_source": "preregistered root-specific SQL/plan mechanism rule",
+    "mechanism_checks": {
+      "order_by": {
+        "passed": true,
+        "evidence": {
+          "has_ordering_operator": true,
+          "uses_filesort": true,
+          "mean_rows_examined": 401000.0
+        }
+      }
+    }
+  }
+}

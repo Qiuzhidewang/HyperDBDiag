@@ -1,0 +1,67 @@
+{
+  "case_id": "obv4-variant-1-415-implicit_conversion_query_whole_table_query_with_too_much_join",
+  "root_labels": [
+    "implicit_conversion",
+    "query_whole_table",
+    "query_with_too_much_join"
+  ],
+  "template_variant": "variant-1",
+  "target_sql_ids": {
+    "implicit_conversion": "sql-bce82880d93a9773",
+    "query_whole_table": "sql-58413b55c4d70049",
+    "query_with_too_much_join": "sql-481e35923ba313e8"
+  },
+  "target_operator_ids_by_root": {
+    "implicit_conversion": [
+      "op-d86cdafc6bace4a8"
+    ],
+    "query_whole_table": [
+      "op-634a4df9f2a16d8c"
+    ],
+    "query_with_too_much_join": [
+      "op-0e2ab1cc62ececce"
+    ]
+  },
+  "target_operator_ids": [
+    "op-0e2ab1cc62ececce",
+    "op-634a4df9f2a16d8c",
+    "op-d86cdafc6bace4a8"
+  ],
+  "operator_evaluable": true,
+  "validation": {
+    "target_sql_was_injected_by_collector": true,
+    "candidate_pool_frozen_before_truth": true,
+    "target_annotation_isolated_from_candidates": true,
+    "target_annotation_source": "preregistered root-specific SQL/plan mechanism rule",
+    "mechanism_checks": {
+      "implicit_conversion": {
+        "passed": true,
+        "evidence": {
+          "implicit_numeric_comparison_in_condition": true,
+          "target_used_key_part_count": 2,
+          "string_control_used_key_part_count": 3,
+          "target_estimated_rows": 5260.0,
+          "string_control_estimated_rows": 3.0
+        }
+      },
+      "query_whole_table": {
+        "passed": true,
+        "evidence": {
+          "has_full_scan": true,
+          "mean_rows_examined": 1243953.0,
+          "minimum_rows_examined": 1000000
+        }
+      },
+      "query_with_too_much_join": {
+        "passed": true,
+        "evidence": {
+          "has_nested_loop": true,
+          "plan_table_count": 6,
+          "minimum_table_count": 6,
+          "mean_rows_examined": 67956.0,
+          "minimum_rows_examined": 10000
+        }
+      }
+    }
+  }
+}

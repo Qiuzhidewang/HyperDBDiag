@@ -1,0 +1,63 @@
+{
+  "case_id": "obv4-variant-1-407-group_by_order_by_query_whole_table",
+  "root_labels": [
+    "group_by",
+    "order_by",
+    "query_whole_table"
+  ],
+  "template_variant": "variant-1",
+  "target_sql_ids": {
+    "group_by": "sql-b0319ab5f59815dd",
+    "order_by": "sql-f97cc60defbb9721",
+    "query_whole_table": "sql-58413b55c4d70049"
+  },
+  "target_operator_ids_by_root": {
+    "group_by": [
+      "op-0261c1eb82c9bb82"
+    ],
+    "order_by": [
+      "op-eec88f3a94eb98eb"
+    ],
+    "query_whole_table": [
+      "op-634a4df9f2a16d8c"
+    ]
+  },
+  "target_operator_ids": [
+    "op-0261c1eb82c9bb82",
+    "op-634a4df9f2a16d8c",
+    "op-eec88f3a94eb98eb"
+  ],
+  "operator_evaluable": true,
+  "validation": {
+    "target_sql_was_injected_by_collector": true,
+    "candidate_pool_frozen_before_truth": true,
+    "target_annotation_isolated_from_candidates": true,
+    "target_annotation_source": "preregistered root-specific SQL/plan mechanism rule",
+    "mechanism_checks": {
+      "group_by": {
+        "passed": true,
+        "evidence": {
+          "has_grouping_operator": true,
+          "uses_temporary_table": true,
+          "created_tmp_tables_delta": 41.0
+        }
+      },
+      "order_by": {
+        "passed": true,
+        "evidence": {
+          "has_ordering_operator": true,
+          "uses_filesort": true,
+          "mean_rows_examined": 125321.0
+        }
+      },
+      "query_whole_table": {
+        "passed": true,
+        "evidence": {
+          "has_full_scan": true,
+          "mean_rows_examined": 1243953.0,
+          "minimum_rows_examined": 1000000
+        }
+      }
+    }
+  }
+}

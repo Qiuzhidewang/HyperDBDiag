@@ -1,0 +1,67 @@
+{
+  "case_id": "obv4-variant-1-403-group_by_implicit_conversion_query_with_too_much_join",
+  "root_labels": [
+    "group_by",
+    "implicit_conversion",
+    "query_with_too_much_join"
+  ],
+  "template_variant": "variant-1",
+  "target_sql_ids": {
+    "group_by": "sql-b0319ab5f59815dd",
+    "implicit_conversion": "sql-bce82880d93a9773",
+    "query_with_too_much_join": "sql-481e35923ba313e8"
+  },
+  "target_operator_ids_by_root": {
+    "group_by": [
+      "op-0261c1eb82c9bb82"
+    ],
+    "implicit_conversion": [
+      "op-d86cdafc6bace4a8"
+    ],
+    "query_with_too_much_join": [
+      "op-0e2ab1cc62ececce"
+    ]
+  },
+  "target_operator_ids": [
+    "op-0261c1eb82c9bb82",
+    "op-0e2ab1cc62ececce",
+    "op-d86cdafc6bace4a8"
+  ],
+  "operator_evaluable": true,
+  "validation": {
+    "target_sql_was_injected_by_collector": true,
+    "candidate_pool_frozen_before_truth": true,
+    "target_annotation_isolated_from_candidates": true,
+    "target_annotation_source": "preregistered root-specific SQL/plan mechanism rule",
+    "mechanism_checks": {
+      "group_by": {
+        "passed": true,
+        "evidence": {
+          "has_grouping_operator": true,
+          "uses_temporary_table": true,
+          "created_tmp_tables_delta": 41.0
+        }
+      },
+      "implicit_conversion": {
+        "passed": true,
+        "evidence": {
+          "implicit_numeric_comparison_in_condition": true,
+          "target_used_key_part_count": 2,
+          "string_control_used_key_part_count": 3,
+          "target_estimated_rows": 5260.0,
+          "string_control_estimated_rows": 3.0
+        }
+      },
+      "query_with_too_much_join": {
+        "passed": true,
+        "evidence": {
+          "has_nested_loop": true,
+          "plan_table_count": 6,
+          "minimum_table_count": 6,
+          "mean_rows_examined": 67956.0,
+          "minimum_rows_examined": 10000
+        }
+      }
+    }
+  }
+}

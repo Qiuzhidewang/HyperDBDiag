@@ -1,0 +1,35 @@
+{
+  "case_id": "obv4-variant-2-005-query_whole_table",
+  "root_labels": [
+    "query_whole_table"
+  ],
+  "template_variant": "variant-2",
+  "target_sql_ids": {
+    "query_whole_table": "sql-00bfc2a338f7a26b"
+  },
+  "target_operator_ids_by_root": {
+    "query_whole_table": [
+      "op-634a4df9f2a16d8c"
+    ]
+  },
+  "target_operator_ids": [
+    "op-634a4df9f2a16d8c"
+  ],
+  "operator_evaluable": true,
+  "validation": {
+    "target_sql_was_injected_by_collector": true,
+    "candidate_pool_frozen_before_truth": true,
+    "target_annotation_isolated_from_candidates": true,
+    "target_annotation_source": "preregistered root-specific SQL/plan mechanism rule",
+    "mechanism_checks": {
+      "query_whole_table": {
+        "passed": true,
+        "evidence": {
+          "has_full_scan": true,
+          "mean_rows_examined": 1243953.0,
+          "minimum_rows_examined": 1000000
+        }
+      }
+    }
+  }
+}

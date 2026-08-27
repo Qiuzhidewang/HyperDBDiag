@@ -1,0 +1,51 @@
+{
+  "case_id": "obv4-variant-4-233-implicit_conversion_order_by",
+  "root_labels": [
+    "implicit_conversion",
+    "order_by"
+  ],
+  "template_variant": "variant-4",
+  "target_sql_ids": {
+    "implicit_conversion": "sql-5b137fd03585ac0c",
+    "order_by": "sql-ed61a8dc273bc592"
+  },
+  "target_operator_ids_by_root": {
+    "implicit_conversion": [
+      "op-41e498a265e255df"
+    ],
+    "order_by": [
+      "op-eec88f3a94eb98eb"
+    ]
+  },
+  "target_operator_ids": [
+    "op-41e498a265e255df",
+    "op-eec88f3a94eb98eb"
+  ],
+  "operator_evaluable": true,
+  "validation": {
+    "target_sql_was_injected_by_collector": true,
+    "candidate_pool_frozen_before_truth": true,
+    "target_annotation_isolated_from_candidates": true,
+    "target_annotation_source": "preregistered root-specific SQL/plan mechanism rule",
+    "mechanism_checks": {
+      "implicit_conversion": {
+        "passed": true,
+        "evidence": {
+          "implicit_numeric_comparison_in_condition": true,
+          "target_used_key_part_count": 2,
+          "string_control_used_key_part_count": 3,
+          "target_estimated_rows": 6034.0,
+          "string_control_estimated_rows": 4.0
+        }
+      },
+      "order_by": {
+        "passed": true,
+        "evidence": {
+          "has_ordering_operator": true,
+          "uses_filesort": true,
+          "mean_rows_examined": 401000.0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1233 @@
+{
+  "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1": {
+    "status": "ok",
+    "sql": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "6397.72"
+        },
+        "table": {
+          "table_name": "orders",
+          "access_type": "ref",
+          "possible_keys": [
+            "PRIMARY",
+            "o_w_id"
+          ],
+          "key": "PRIMARY",
+          "used_key_parts": [
+            "o_w_id"
+          ],
+          "key_length": "4",
+          "ref": [
+            "const"
+          ],
+          "rows_examined_per_scan": 62150,
+          "rows_produced_per_join": 62150,
+          "filtered": "100.00",
+          "using_index": true,
+          "cost_info": {
+            "read_cost": "182.72",
+            "eval_cost": "6215.00",
+            "prefix_cost": "6397.72",
+            "data_read_per_join": "2M"
+          },
+          "used_columns": [
+            "o_w_id"
+          ]
+        }
+      }
+    },
+    "operators": [
+      {
+        "operator_id": "op-544bfc899225ef26",
+        "path": "root.query_block.table",
+        "operator_type": "REF",
+        "table_name": "orders",
+        "access_type": "ref",
+        "key": "PRIMARY",
+        "possible_keys": [
+          "PRIMARY",
+          "o_w_id"
+        ],
+        "used_key_parts": [
+          "o_w_id"
+        ],
+        "rows_examined_per_scan": 62150,
+        "rows_produced_per_join": 62150,
+        "filtered": "100.00",
+        "cost_info": {
+          "read_cost": "182.72",
+          "eval_cost": "6215.00",
+          "prefix_cost": "6397.72",
+          "data_read_per_join": "2M"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": null
+      }
+    ]
+  },
+  "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1": {
+    "status": "ok",
+    "sql": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "3150.87"
+        },
+        "table": {
+          "table_name": "orders",
+          "access_type": "range",
+          "possible_keys": [
+            "PRIMARY",
+            "o_w_id"
+          ],
+          "key": "PRIMARY",
+          "used_key_parts": [
+            "o_w_id",
+            "o_d_id"
+          ],
+          "key_length": "8",
+          "rows_examined_per_scan": 12430,
+          "rows_produced_per_join": 12430,
+          "filtered": "100.00",
+          "using_index_for_skip_scan": true,
+          "cost_info": {
+            "read_cost": "1907.87",
+            "eval_cost": "1243.00",
+            "prefix_cost": "3150.87",
+            "data_read_per_join": "485K"
+          },
+          "used_columns": [
+            "o_d_id"
+          ],
+          "attached_condition": "(`tpcc10_test`.`orders`.`o_d_id` = 1)"
+        }
+      }
+    },
+    "operators": [
+      {
+        "operator_id": "op-c49454bc28102f00",
+        "path": "root.query_block.table",
+        "operator_type": "RANGE",
+        "table_name": "orders",
+        "access_type": "range",
+        "key": "PRIMARY",
+        "possible_keys": [
+          "PRIMARY",
+          "o_w_id"
+        ],
+        "used_key_parts": [
+          "o_w_id",
+          "o_d_id"
+        ],
+        "rows_examined_per_scan": 12430,
+        "rows_produced_per_join": 12430,
+        "filtered": "100.00",
+        "cost_info": {
+          "read_cost": "1907.87",
+          "eval_cost": "1243.00",
+          "prefix_cost": "3150.87",
+          "data_read_per_join": "485K"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": "(`tpcc10_test`.`orders`.`o_d_id` = 1)"
+      }
+    ]
+  },
+  "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'": {
+    "status": "ok",
+    "sql": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "16271.61"
+        },
+        "table": {
+          "table_name": "customer",
+          "access_type": "ALL",
+          "rows_examined_per_scan": 115286,
+          "rows_produced_per_join": 11528,
+          "filtered": "10.00",
+          "cost_info": {
+            "read_cost": "15118.76",
+            "eval_cost": "1152.86",
+            "prefix_cost": "16271.62",
+            "data_read_per_join": "27M"
+          },
+          "used_columns": [
+            "c_credit"
+          ],
+          "attached_condition": "(`tpcc10_test`.`customer`.`c_credit` = 'GC')"
+        }
+      }
+    },
+    "operators": [
+      {
+        "operator_id": "op-1d55712981c0e73b",
+        "path": "root.query_block.table",
+        "operator_type": "ALL",
+        "table_name": "customer",
+        "access_type": "ALL",
+        "key": null,
+        "possible_keys": null,
+        "used_key_parts": null,
+        "rows_examined_per_scan": 115286,
+        "rows_produced_per_join": 11528,
+        "filtered": "10.00",
+        "cost_info": {
+          "read_cost": "15118.76",
+          "eval_cost": "1152.86",
+          "prefix_cost": "16271.62",
+          "data_read_per_join": "27M"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": "(`tpcc10_test`.`customer`.`c_credit` = 'GC')"
+      }
+    ]
+  },
+  "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50": {
+    "status": "ok",
+    "sql": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "47935.30"
+        },
+        "table": {
+          "table_name": "stock",
+          "access_type": "ALL",
+          "rows_examined_per_scan": 390891,
+          "rows_produced_per_join": 130283,
+          "filtered": "33.33",
+          "cost_info": {
+            "read_cost": "34906.91",
+            "eval_cost": "13028.40",
+            "prefix_cost": "47935.30",
+            "data_read_per_join": "148M"
+          },
+          "used_columns": [
+            "s_quantity"
+          ],
+          "attached_condition": "(`tpcc10_test`.`stock`.`s_quantity` < 50)"
+        }
+      }
+    },
+    "operators": [
+      {
+        "operator_id": "op-f0705fa1a53aff21",
+        "path": "root.query_block.table",
+        "operator_type": "ALL",
+        "table_name": "stock",
+        "access_type": "ALL",
+        "key": null,
+        "possible_keys": null,
+        "used_key_parts": null,
+        "rows_examined_per_scan": 390891,
+        "rows_produced_per_join": 130283,
+        "filtered": "33.33",
+        "cost_info": {
+          "read_cost": "34906.91",
+          "eval_cost": "13028.40",
+          "prefix_cost": "47935.30",
+          "data_read_per_join": "148M"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": "(`tpcc10_test`.`stock`.`s_quantity` < 50)"
+      }
+    ]
+  },
+  "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1": {
+    "status": "ok",
+    "sql": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "3645.27"
+        },
+        "nested_loop": [
+          {
+            "table": {
+              "table_name": "o",
+              "access_type": "ref",
+              "possible_keys": [
+                "PRIMARY",
+                "o_w_id"
+              ],
+              "key": "o_w_id",
+              "used_key_parts": [
+                "o_w_id",
+                "o_d_id"
+              ],
+              "key_length": "8",
+              "ref": [
+                "const",
+                "const"
+              ],
+              "rows_examined_per_scan": 3081,
+              "rows_produced_per_join": 3081,
+              "filtered": "100.00",
+              "using_index": true,
+              "cost_info": {
+                "read_cost": "11.06",
+                "eval_cost": "308.10",
+                "prefix_cost": "319.16",
+                "data_read_per_join": "120K"
+              },
+              "used_columns": [
+                "o_w_id",
+                "o_d_id",
+                "o_c_id"
+              ]
+            }
+          },
+          {
+            "table": {
+              "table_name": "c",
+              "access_type": "eq_ref",
+              "possible_keys": [
+                "PRIMARY",
+                "idx_customer_name"
+              ],
+              "key": "PRIMARY",
+              "used_key_parts": [
+                "c_w_id",
+                "c_d_id",
+                "c_id"
+              ],
+              "key_length": "12",
+              "ref": [
+                "const",
+                "const",
+                "tpcc10_test.o.o_c_id"
+              ],
+              "rows_examined_per_scan": 1,
+              "rows_produced_per_join": 3081,
+              "filtered": "100.00",
+              "using_index": true,
+              "cost_info": {
+                "read_cost": "3018.02",
+                "eval_cost": "308.10",
+                "prefix_cost": "3645.27",
+                "data_read_per_join": "7M"
+              },
+              "used_columns": [
+                "c_w_id",
+                "c_d_id",
+                "c_id"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "operators": [
+      {
+        "operator_id": "op-0e2ab1cc62ececce",
+        "path": "root.query_block",
+        "operator_type": "NESTED_LOOP",
+        "table_name": null,
+        "access_type": null,
+        "key": null,
+        "possible_keys": null,
+        "used_key_parts": null,
+        "rows_examined_per_scan": null,
+        "rows_produced_per_join": null,
+        "filtered": null,
+        "cost_info": {
+          "query_cost": "3645.27"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": null
+      },
+      {
+        "operator_id": "op-8d8416a82ab685f0",
+        "path": "root.query_block.nested_loop[0].table",
+        "operator_type": "REF",
+        "table_name": "o",
+        "access_type": "ref",
+        "key": "o_w_id",
+        "possible_keys": [
+          "PRIMARY",
+          "o_w_id"
+        ],
+        "used_key_parts": [
+          "o_w_id",
+          "o_d_id"
+        ],
+        "rows_examined_per_scan": 3081,
+        "rows_produced_per_join": 3081,
+        "filtered": "100.00",
+        "cost_info": {
+          "read_cost": "11.06",
+          "eval_cost": "308.10",
+          "prefix_cost": "319.16",
+          "data_read_per_join": "120K"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": null
+      },
+      {
+        "operator_id": "op-d88107ac31346ffe",
+        "path": "root.query_block.nested_loop[1].table",
+        "operator_type": "EQ_REF",
+        "table_name": "c",
+        "access_type": "eq_ref",
+        "key": "PRIMARY",
+        "possible_keys": [
+          "PRIMARY",
+          "idx_customer_name"
+        ],
+        "used_key_parts": [
+          "c_w_id",
+          "c_d_id",
+          "c_id"
+        ],
+        "rows_examined_per_scan": 1,
+        "rows_produced_per_join": 3081,
+        "filtered": "100.00",
+        "cost_info": {
+          "read_cost": "3018.02",
+          "eval_cost": "308.10",
+          "prefix_cost": "3645.27",
+          "data_read_per_join": "7M"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": null
+      }
+    ]
+  },
+  "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last='BARBARBAR' OR c_last='ABLEABLE')": {
+    "status": "ok",
+    "sql": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last='BARBARBAR' OR c_last='ABLEABLE')",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "1.83"
+        },
+        "table": {
+          "table_name": "customer",
+          "access_type": "range",
+          "possible_keys": [
+            "PRIMARY",
+            "idx_customer_name"
+          ],
+          "key": "idx_customer_name",
+          "used_key_parts": [
+            "c_w_id",
+            "c_d_id",
+            "c_last"
+          ],
+          "key_length": "74",
+          "rows_examined_per_scan": 4,
+          "rows_produced_per_join": 4,
+          "filtered": "100.00",
+          "using_index": true,
+          "cost_info": {
+            "read_cost": "1.43",
+            "eval_cost": "0.40",
+            "prefix_cost": "1.83",
+            "data_read_per_join": "9K"
+          },
+          "used_columns": [
+            "c_w_id",
+            "c_d_id",
+            "c_last"
+          ],
+          "attached_condition": "((`tpcc10_test`.`customer`.`c_d_id` = 7) and (`tpcc10_test`.`customer`.`c_w_id` = 4) and ((`tpcc10_test`.`customer`.`c_last` = 'BARBARBAR') or (`tpcc10_test`.`customer`.`c_last` = 'ABLEABLE')))"
+        }
+      }
+    },
+    "operators": [
+      {
+        "operator_id": "op-a0a82dfc5b9a4bf9",
+        "path": "root.query_block.table",
+        "operator_type": "RANGE",
+        "table_name": "customer",
+        "access_type": "range",
+        "key": "idx_customer_name",
+        "possible_keys": [
+          "PRIMARY",
+          "idx_customer_name"
+        ],
+        "used_key_parts": [
+          "c_w_id",
+          "c_d_id",
+          "c_last"
+        ],
+        "rows_examined_per_scan": 4,
+        "rows_produced_per_join": 4,
+        "filtered": "100.00",
+        "cost_info": {
+          "read_cost": "1.43",
+          "eval_cost": "0.40",
+          "prefix_cost": "1.83",
+          "data_read_per_join": "9K"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": "((`tpcc10_test`.`customer`.`c_d_id` = 7) and (`tpcc10_test`.`customer`.`c_w_id` = 4) and ((`tpcc10_test`.`customer`.`c_last` = 'BARBARBAR') or (`tpcc10_test`.`customer`.`c_last` = 'ABLEABLE')))"
+      }
+    ]
+  },
+  "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_delivery_d IS NOT NULL": {
+    "status": "ok",
+    "sql": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_delivery_d IS NOT NULL",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "125482.30"
+        },
+        "table": {
+          "table_name": "order_line",
+          "access_type": "ALL",
+          "rows_examined_per_scan": 1239023,
+          "rows_produced_per_join": 1115120,
+          "filtered": "90.00",
+          "cost_info": {
+            "read_cost": "13970.23",
+            "eval_cost": "111512.06",
+            "prefix_cost": "125482.30",
+            "data_read_per_join": "144M"
+          },
+          "used_columns": [
+            "ol_delivery_d"
+          ],
+          "attached_condition": "(`tpcc10_test`.`order_line`.`ol_delivery_d` is not null)"
+        }
+      }
+    },
+    "operators": [
+      {
+        "operator_id": "op-f59b880ca7332868",
+        "path": "root.query_block.table",
+        "operator_type": "ALL",
+        "table_name": "order_line",
+        "access_type": "ALL",
+        "key": null,
+        "possible_keys": null,
+        "used_key_parts": null,
+        "rows_examined_per_scan": 1239023,
+        "rows_produced_per_join": 1115120,
+        "filtered": "90.00",
+        "cost_info": {
+          "read_cost": "13970.23",
+          "eval_cost": "111512.06",
+          "prefix_cost": "125482.30",
+          "data_read_per_join": "144M"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": "(`tpcc10_test`.`order_line`.`ol_delivery_d` is not null)"
+      }
+    ]
+  },
+  "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last=0 OR c_last=1)": {
+    "status": "ok",
+    "sql": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last=0 OR c_last=1)",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "617.74"
+        },
+        "table": {
+          "table_name": "customer",
+          "access_type": "ref",
+          "possible_keys": [
+            "PRIMARY",
+            "idx_customer_name"
+          ],
+          "key": "PRIMARY",
+          "used_key_parts": [
+            "c_w_id",
+            "c_d_id"
+          ],
+          "key_length": "8",
+          "ref": [
+            "const",
+            "const"
+          ],
+          "rows_examined_per_scan": 6034,
+          "rows_produced_per_join": 1146,
+          "filtered": "19.00",
+          "cost_info": {
+            "read_cost": "14.34",
+            "eval_cost": "114.65",
+            "prefix_cost": "617.74",
+            "data_read_per_join": "2M"
+          },
+          "used_columns": [
+            "c_w_id",
+            "c_d_id",
+            "c_last"
+          ],
+          "attached_condition": "((`tpcc10_test`.`customer`.`c_last` = 0) or (`tpcc10_test`.`customer`.`c_last` = 1))"
+        }
+      }
+    },
+    "operators": [
+      {
+        "operator_id": "op-41e498a265e255df",
+        "path": "root.query_block.table",
+        "operator_type": "REF",
+        "table_name": "customer",
+        "access_type": "ref",
+        "key": "PRIMARY",
+        "possible_keys": [
+          "PRIMARY",
+          "idx_customer_name"
+        ],
+        "used_key_parts": [
+          "c_w_id",
+          "c_d_id"
+        ],
+        "rows_examined_per_scan": 6034,
+        "rows_produced_per_join": 1146,
+        "filtered": "19.00",
+        "cost_info": {
+          "read_cost": "14.34",
+          "eval_cost": "114.65",
+          "prefix_cost": "617.74",
+          "data_read_per_join": "2M"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": "((`tpcc10_test`.`customer`.`c_last` = 0) or (`tpcc10_test`.`customer`.`c_last` = 1))"
+      }
+    ]
+  },
+  "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')": {
+    "status": "ok",
+    "sql": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "16818.44"
+        },
+        "nested_loop": [
+          {
+            "table": {
+              "table_name": "d",
+              "access_type": "const",
+              "possible_keys": [
+                "PRIMARY"
+              ],
+              "key": "PRIMARY",
+              "used_key_parts": [
+                "d_w_id",
+                "d_id"
+              ],
+              "key_length": "8",
+              "ref": [
+                "const",
+                "const"
+              ],
+              "rows_examined_per_scan": 1,
+              "rows_produced_per_join": 1,
+              "filtered": "100.00",
+              "using_index": true,
+              "cost_info": {
+                "read_cost": "0.00",
+                "eval_cost": "0.10",
+                "prefix_cost": "0.00",
+                "data_read_per_join": "352"
+              },
+              "used_columns": [
+                "d_w_id",
+                "d_id"
+              ]
+            }
+          },
+          {
+            "table": {
+              "table_name": "o",
+              "access_type": "ref",
+              "possible_keys": [
+                "PRIMARY",
+                "o_w_id"
+              ],
+              "key": "o_w_id",
+              "used_key_parts": [
+                "o_w_id",
+                "o_d_id"
+              ],
+              "key_length": "8",
+              "ref": [
+                "const",
+                "const"
+              ],
+              "rows_examined_per_scan": 3124,
+              "rows_produced_per_join": 3124,
+              "filtered": "100.00",
+              "using_index": true,
+              "cost_info": {
+                "read_cost": "11.20",
+                "eval_cost": "312.40",
+                "prefix_cost": "323.60",
+                "data_read_per_join": "122K"
+              },
+              "used_columns": [
+                "o_w_id",
+                "o_d_id",
+                "o_id",
+                "o_c_id"
+              ]
+            }
+          },
+          {
+            "table": {
+              "table_name": "c",
+              "access_type": "eq_ref",
+              "possible_keys": [
+                "PRIMARY",
+                "idx_customer_name"
+              ],
+              "key": "PRIMARY",
+              "used_key_parts": [
+                "c_w_id",
+                "c_d_id",
+                "c_id"
+              ],
+              "key_length": "12",
+              "ref": [
+                "const",
+                "const",
+                "tpcc10_test.o.o_c_id"
+              ],
+              "rows_examined_per_scan": 1,
+              "rows_produced_per_join": 624,
+              "filtered": "20.00",
+              "cost_info": {
+                "read_cost": "3054.65",
+                "eval_cost": "62.48",
+                "prefix_cost": "3690.65",
+                "data_read_per_join": "1M"
+              },
+              "used_columns": [
+                "c_w_id",
+                "c_d_id",
+                "c_id",
+                "c_credit"
+              ],
+              "attached_condition": "(`tpcc10_test`.`c`.`c_credit` in ('GC','BC'))"
+            }
+          },
+          {
+            "table": {
+              "table_name": "ol",
+              "access_type": "ref",
+              "possible_keys": [
+                "PRIMARY",
+                "ol_supply_w_id"
+              ],
+              "key": "PRIMARY",
+              "used_key_parts": [
+                "ol_w_id",
+                "ol_d_id",
+                "ol_o_id"
+              ],
+              "key_length": "12",
+              "ref": [
+                "const",
+                "const",
+                "tpcc10_test.o.o_id"
+              ],
+              "rows_examined_per_scan": 10,
+              "rows_produced_per_join": 6566,
+              "filtered": "100.00",
+              "cost_info": {
+                "read_cost": "158.86",
+                "eval_cost": "656.68",
+                "prefix_cost": "4506.19",
+                "data_read_per_join": "872K"
+              },
+              "used_columns": [
+                "ol_w_id",
+                "ol_d_id",
+                "ol_o_id",
+                "ol_i_id",
+                "ol_supply_w_id",
+                "ol_quantity"
+              ]
+            }
+          },
+          {
+            "table": {
+              "table_name": "i",
+              "access_type": "eq_ref",
+              "possible_keys": [
+                "PRIMARY"
+              ],
+              "key": "PRIMARY",
+              "used_key_parts": [
+                "i_id"
+              ],
+              "key_length": "4",
+              "ref": [
+                "tpcc10_test.ol.ol_i_id"
+              ],
+              "rows_examined_per_scan": 1,
+              "rows_produced_per_join": 6566,
+              "filtered": "100.00",
+              "using_index": true,
+              "cost_info": {
+                "read_cost": "4550.03",
+                "eval_cost": "656.68",
+                "prefix_cost": "9712.90",
+                "data_read_per_join": "1M"
+              },
+              "used_columns": [
+                "i_id"
+              ]
+            }
+          },
+          {
+            "table": {
+              "table_name": "s",
+              "access_type": "eq_ref",
+              "possible_keys": [
+                "PRIMARY",
+                "s_i_id"
+              ],
+              "key": "PRIMARY",
+              "used_key_parts": [
+                "s_w_id",
+                "s_i_id"
+              ],
+              "key_length": "8",
+              "ref": [
+                "tpcc10_test.ol.ol_supply_w_id",
+                "tpcc10_test.ol.ol_i_id"
+              ],
+              "rows_examined_per_scan": 1,
+              "rows_produced_per_join": 6566,
+              "filtered": "100.00",
+              "using_index": true,
+              "cost_info": {
+                "read_cost": "6448.86",
+                "eval_cost": "656.68",
+                "prefix_cost": "16818.44",
+                "data_read_per_join": "7M"
+              },
+              "used_columns": [
+                "s_w_id",
+                "s_i_id"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "operators": [
+      {
+        "operator_id": "op-0e2ab1cc62ececce",
+        "path": "root.query_block",
+        "operator_type": "NESTED_LOOP",
+        "table_name": null,
+        "access_type": null,
+        "key": null,
+        "possible_keys": null,
+        "used_key_parts": null,
+        "rows_examined_per_scan": null,
+        "rows_produced_per_join": null,
+        "filtered": null,
+        "cost_info": {
+          "query_cost": "16818.44"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": null
+      },
+      {
+        "operator_id": "op-8dc1a0d60fbdbc00",
+        "path": "root.query_block.nested_loop[0].table",
+        "operator_type": "CONST",
+        "table_name": "d",
+        "access_type": "const",
+        "key": "PRIMARY",
+        "possible_keys": [
+          "PRIMARY"
+        ],
+        "used_key_parts": [
+          "d_w_id",
+          "d_id"
+        ],
+        "rows_examined_per_scan": 1,
+        "rows_produced_per_join": 1,
+        "filtered": "100.00",
+        "cost_info": {
+          "read_cost": "0.00",
+          "eval_cost": "0.10",
+          "prefix_cost": "0.00",
+          "data_read_per_join": "352"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": null
+      },
+      {
+        "operator_id": "op-c79296cfaac84a2a",
+        "path": "root.query_block.nested_loop[1].table",
+        "operator_type": "REF",
+        "table_name": "o",
+        "access_type": "ref",
+        "key": "o_w_id",
+        "possible_keys": [
+          "PRIMARY",
+          "o_w_id"
+        ],
+        "used_key_parts": [
+          "o_w_id",
+          "o_d_id"
+        ],
+        "rows_examined_per_scan": 3124,
+        "rows_produced_per_join": 3124,
+        "filtered": "100.00",
+        "cost_info": {
+          "read_cost": "11.20",
+          "eval_cost": "312.40",
+          "prefix_cost": "323.60",
+          "data_read_per_join": "122K"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": null
+      },
+      {
+        "operator_id": "op-1a9283c0ef592293",
+        "path": "root.query_block.nested_loop[2].table",
+        "operator_type": "EQ_REF",
+        "table_name": "c",
+        "access_type": "eq_ref",
+        "key": "PRIMARY",
+        "possible_keys": [
+          "PRIMARY",
+          "idx_customer_name"
+        ],
+        "used_key_parts": [
+          "c_w_id",
+          "c_d_id",
+          "c_id"
+        ],
+        "rows_examined_per_scan": 1,
+        "rows_produced_per_join": 624,
+        "filtered": "20.00",
+        "cost_info": {
+          "read_cost": "3054.65",
+          "eval_cost": "62.48",
+          "prefix_cost": "3690.65",
+          "data_read_per_join": "1M"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": "(`tpcc10_test`.`c`.`c_credit` in ('GC','BC'))"
+      },
+      {
+        "operator_id": "op-7b5308a83020d20a",
+        "path": "root.query_block.nested_loop[3].table",
+        "operator_type": "REF",
+        "table_name": "ol",
+        "access_type": "ref",
+        "key": "PRIMARY",
+        "possible_keys": [
+          "PRIMARY",
+          "ol_supply_w_id"
+        ],
+        "used_key_parts": [
+          "ol_w_id",
+          "ol_d_id",
+          "ol_o_id"
+        ],
+        "rows_examined_per_scan": 10,
+        "rows_produced_per_join": 6566,
+        "filtered": "100.00",
+        "cost_info": {
+          "read_cost": "158.86",
+          "eval_cost": "656.68",
+          "prefix_cost": "4506.19",
+          "data_read_per_join": "872K"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": null
+      },
+      {
+        "operator_id": "op-eafac349775b6d21",
+        "path": "root.query_block.nested_loop[4].table",
+        "operator_type": "EQ_REF",
+        "table_name": "i",
+        "access_type": "eq_ref",
+        "key": "PRIMARY",
+        "possible_keys": [
+          "PRIMARY"
+        ],
+        "used_key_parts": [
+          "i_id"
+        ],
+        "rows_examined_per_scan": 1,
+        "rows_produced_per_join": 6566,
+        "filtered": "100.00",
+        "cost_info": {
+          "read_cost": "4550.03",
+          "eval_cost": "656.68",
+          "prefix_cost": "9712.90",
+          "data_read_per_join": "1M"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": null
+      },
+      {
+        "operator_id": "op-4efb0d9bc1de2edd",
+        "path": "root.query_block.nested_loop[5].table",
+        "operator_type": "EQ_REF",
+        "table_name": "s",
+        "access_type": "eq_ref",
+        "key": "PRIMARY",
+        "possible_keys": [
+          "PRIMARY",
+          "s_i_id"
+        ],
+        "used_key_parts": [
+          "s_w_id",
+          "s_i_id"
+        ],
+        "rows_examined_per_scan": 1,
+        "rows_produced_per_join": 6566,
+        "filtered": "100.00",
+        "cost_info": {
+          "read_cost": "6448.86",
+          "eval_cost": "656.68",
+          "prefix_cost": "16818.44",
+          "data_read_per_join": "7M"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": null
+      }
+    ]
+  },
+  "SELECT s_i_id,s_quantity FROM tpcc10_test.stock ORDER BY s_quantity,s_i_id LIMIT 1000": {
+    "status": "ok",
+    "sql": "SELECT s_i_id,s_quantity FROM tpcc10_test.stock ORDER BY s_quantity,s_i_id LIMIT 1000",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "47935.30"
+        },
+        "ordering_operation": {
+          "using_filesort": true,
+          "table": {
+            "table_name": "stock",
+            "access_type": "ALL",
+            "rows_examined_per_scan": 390891,
+            "rows_produced_per_join": 390891,
+            "filtered": "100.00",
+            "cost_info": {
+              "read_cost": "8846.20",
+              "eval_cost": "39089.10",
+              "prefix_cost": "47935.30",
+              "data_read_per_join": "444M"
+            },
+            "used_columns": [
+              "s_w_id",
+              "s_i_id",
+              "s_quantity"
+            ]
+          }
+        }
+      }
+    },
+    "operators": [
+      {
+        "operator_id": "op-eec88f3a94eb98eb",
+        "path": "root.query_block",
+        "operator_type": "ORDERING_OPERATION",
+        "table_name": null,
+        "access_type": null,
+        "key": null,
+        "possible_keys": null,
+        "used_key_parts": null,
+        "rows_examined_per_scan": null,
+        "rows_produced_per_join": null,
+        "filtered": null,
+        "cost_info": {
+          "query_cost": "47935.30"
+        },
+        "using_filesort": true,
+        "using_temporary_table": null,
+        "attached_condition": null
+      },
+      {
+        "operator_id": "op-4b6365a8f81a3089",
+        "path": "root.query_block.ordering_operation.table",
+        "operator_type": "ALL",
+        "table_name": "stock",
+        "access_type": "ALL",
+        "key": null,
+        "possible_keys": null,
+        "used_key_parts": null,
+        "rows_examined_per_scan": 390891,
+        "rows_produced_per_join": 390891,
+        "filtered": "100.00",
+        "cost_info": {
+          "read_cost": "8846.20",
+          "eval_cost": "39089.10",
+          "prefix_cost": "47935.30",
+          "data_read_per_join": "444M"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": null
+      }
+    ]
+  },
+  "SELECT FLOOR(ol_amount) AS amount_bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY FLOOR(ol_amount)": {
+    "status": "ok",
+    "sql": "SELECT FLOOR(ol_amount) AS amount_bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY FLOOR(ol_amount)",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "125482.30"
+        },
+        "grouping_operation": {
+          "using_temporary_table": true,
+          "using_filesort": false,
+          "table": {
+            "table_name": "order_line",
+            "access_type": "ALL",
+            "rows_examined_per_scan": 1239023,
+            "rows_produced_per_join": 1239023,
+            "filtered": "100.00",
+            "cost_info": {
+              "read_cost": "1580.00",
+              "eval_cost": "123902.30",
+              "prefix_cost": "125482.30",
+              "data_read_per_join": "160M"
+            },
+            "used_columns": [
+              "ol_w_id",
+              "ol_d_id",
+              "ol_o_id",
+              "ol_number",
+              "ol_amount"
+            ]
+          }
+        }
+      }
+    },
+    "operators": [
+      {
+        "operator_id": "op-0261c1eb82c9bb82",
+        "path": "root.query_block",
+        "operator_type": "GROUPING_OPERATION",
+        "table_name": null,
+        "access_type": null,
+        "key": null,
+        "possible_keys": null,
+        "used_key_parts": null,
+        "rows_examined_per_scan": null,
+        "rows_produced_per_join": null,
+        "filtered": null,
+        "cost_info": {
+          "query_cost": "125482.30"
+        },
+        "using_filesort": false,
+        "using_temporary_table": true,
+        "attached_condition": null
+      },
+      {
+        "operator_id": "op-ffd3d3425ac7f382",
+        "path": "root.query_block.grouping_operation.table",
+        "operator_type": "ALL",
+        "table_name": "order_line",
+        "access_type": "ALL",
+        "key": null,
+        "possible_keys": null,
+        "used_key_parts": null,
+        "rows_examined_per_scan": 1239023,
+        "rows_produced_per_join": 1239023,
+        "filtered": "100.00",
+        "cost_info": {
+          "read_cost": "1580.00",
+          "eval_cost": "123902.30",
+          "prefix_cost": "125482.30",
+          "data_read_per_join": "160M"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": null
+      }
+    ]
+  },
+  "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line": {
+    "status": "ok",
+    "sql": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "125482.30"
+        },
+        "table": {
+          "table_name": "order_line",
+          "access_type": "ALL",
+          "rows_examined_per_scan": 1239023,
+          "rows_produced_per_join": 1239023,
+          "filtered": "100.00",
+          "cost_info": {
+            "read_cost": "1580.00",
+            "eval_cost": "123902.30",
+            "prefix_cost": "125482.30",
+            "data_read_per_join": "160M"
+          },
+          "used_columns": [
+            "ol_delivery_d"
+          ]
+        }
+      }
+    },
+    "operators": [
+      {
+        "operator_id": "op-634a4df9f2a16d8c",
+        "path": "root.query_block.table",
+        "operator_type": "ALL",
+        "table_name": "order_line",
+        "access_type": "ALL",
+        "key": null,
+        "possible_keys": null,
+        "used_key_parts": null,
+        "rows_examined_per_scan": 1239023,
+        "rows_produced_per_join": 1239023,
+        "filtered": "100.00",
+        "cost_info": {
+          "read_cost": "1580.00",
+          "eval_cost": "123902.30",
+          "prefix_cost": "125482.30",
+          "data_read_per_join": "160M"
+        },
+        "using_filesort": null,
+        "using_temporary_table": null,
+        "attached_condition": null
+      }
+    ]
+  }
+}

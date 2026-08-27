@@ -1,0 +1,123 @@
+{
+  "schema_version": "hyperdbdiag-root-mechanism-cards-v4",
+  "cards": [
+    {
+      "root_label": "group_by",
+      "summary": "SQL grouping or aggregation work can require aggregation or temporary-work resources and is distinct from a lock primitive.",
+      "registered_metric_discriminability": "none",
+      "observables": [
+        {"metric_family": "execution-pressure", "role": "compatible_only", "expected_direction": "elevated"}
+      ],
+      "semantic_observables": [
+        {"atom": "aggregation_clause", "role": "direct"}
+      ],
+      "source_refs": ["MySQL 8.0 Reference Manual: optimization and temporary-table execution"]
+    },
+    {
+      "root_label": "implicit_conversion",
+      "summary": "A runtime type conversion in a predicate or join can make a selective condition non-sargable and increase access work; it is not a lock primitive.",
+      "registered_metric_discriminability": "none",
+      "observables": [
+        {"metric_family": "execution-pressure", "role": "compatible_only", "expected_direction": "elevated"}
+      ],
+      "semantic_observables": [
+        {"atom": "predicate_type_conversion", "role": "direct"}
+      ],
+      "source_refs": ["MySQL 8.0 Reference Manual: optimization and index use"]
+    },
+    {
+      "root_label": "index_missing",
+      "summary": "An absent useful index can make a selective predicate use a broad access path and increase query work; it is not a lock primitive.",
+      "registered_metric_discriminability": "none",
+      "observables": [
+        {"metric_family": "execution-pressure", "role": "compatible_only", "expected_direction": "elevated"}
+      ],
+      "semantic_observables": [],
+      "source_refs": ["MySQL 8.0 Reference Manual: optimization and index use"]
+    },
+    {
+      "root_label": "lock_waits",
+      "summary": "Transaction or row-lock contention blocks work and causes lock waits. It can coexist with an independent query-work mechanism.",
+      "registered_metric_discriminability": "partial",
+      "observables": [
+        {"metric_family": "lock-wait", "role": "direct", "expected_direction": "elevated"},
+        {"metric_family": "lock-occupancy", "role": "contextual", "expected_direction": "elevated"},
+        {"metric_family": "execution-pressure", "role": "contextual", "expected_direction": "elevated"}
+      ],
+      "semantic_observables": [
+        {"atom": "row_locking_clause", "role": "contextual"}
+      ],
+      "source_refs": ["MySQL 8.0 Reference Manual: Performance Schema data_lock_waits"]
+    },
+    {
+      "root_label": "missing_index",
+      "summary": "An absent useful index can make a selective predicate use a broad access path and increase query work; it is not a lock primitive.",
+      "registered_metric_discriminability": "none",
+      "observables": [
+        {"metric_family": "execution-pressure", "role": "compatible_only", "expected_direction": "elevated"}
+      ],
+      "semantic_observables": [],
+      "source_refs": ["MySQL 8.0 Reference Manual: optimization and index use"]
+    },
+    {
+      "root_label": "order_by",
+      "summary": "Ordering or sorting work can require sort or temporary-work resources and is distinct from a lock primitive.",
+      "registered_metric_discriminability": "none",
+      "observables": [
+        {"metric_family": "execution-pressure", "role": "compatible_only", "expected_direction": "elevated"}
+      ],
+      "semantic_observables": [
+        {"atom": "ordering_clause", "role": "direct"}
+      ],
+      "source_refs": ["MySQL 8.0 Reference Manual: optimization and filesort"]
+    },
+    {
+      "root_label": "query_whole_table",
+      "summary": "A broad full-table read or scan increases read and execution work but is not a lock primitive.",
+      "registered_metric_discriminability": "none",
+      "observables": [
+        {"metric_family": "execution-pressure", "role": "compatible_only", "expected_direction": "elevated"}
+      ],
+      "semantic_observables": [
+        {"atom": "unrestricted_relation_read", "role": "direct"}
+      ],
+      "source_refs": ["MySQL 8.0 Reference Manual: optimization and table scans"]
+    },
+    {
+      "root_label": "query_with_too_much_join",
+      "summary": "An overly large multi-table join can increase cardinality and join work; it is not a lock primitive.",
+      "registered_metric_discriminability": "none",
+      "observables": [
+        {"metric_family": "execution-pressure", "role": "compatible_only", "expected_direction": "elevated"}
+      ],
+      "semantic_observables": [
+        {"atom": "multi_table_join", "role": "direct"}
+      ],
+      "source_refs": ["MySQL 8.0 Reference Manual: optimization and nested-loop joins"]
+    },
+    {
+      "root_label": "record_lock",
+      "summary": "Conflicting record updates or transactions create lock contention. It can coexist with an independent read or query-work mechanism.",
+      "registered_metric_discriminability": "partial",
+      "observables": [
+        {"metric_family": "lock-wait", "role": "direct", "expected_direction": "elevated"},
+        {"metric_family": "lock-occupancy", "role": "contextual", "expected_direction": "elevated"},
+        {"metric_family": "execution-pressure", "role": "contextual", "expected_direction": "elevated"}
+      ],
+      "semantic_observables": [
+        {"atom": "row_locking_clause", "role": "contextual"}
+      ],
+      "source_refs": ["MySQL 8.0 Reference Manual: InnoDB locking and Performance Schema data_lock_waits"]
+    },
+    {
+      "root_label": "table_bloats",
+      "summary": "Physical table or relation bloat increases storage and scan overhead and is distinct from direct lock contention.",
+      "registered_metric_discriminability": "none",
+      "observables": [
+        {"metric_family": "execution-pressure", "role": "compatible_only", "expected_direction": "elevated"}
+      ],
+      "semantic_observables": [],
+      "source_refs": ["Database operations reference: table and relation storage bloat"]
+    }
+  ]
+}

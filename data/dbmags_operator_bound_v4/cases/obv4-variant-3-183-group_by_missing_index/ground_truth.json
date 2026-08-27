@@ -1,0 +1,49 @@
+{
+  "case_id": "obv4-variant-3-183-group_by_missing_index",
+  "root_labels": [
+    "group_by",
+    "missing_index"
+  ],
+  "template_variant": "variant-3",
+  "target_sql_ids": {
+    "group_by": "sql-f0c2f4bd652b1eb2",
+    "missing_index": "sql-b33067c31d9d256a"
+  },
+  "target_operator_ids_by_root": {
+    "group_by": [
+      "op-0261c1eb82c9bb82"
+    ],
+    "missing_index": [
+      "op-b741b6a26beed10d"
+    ]
+  },
+  "target_operator_ids": [
+    "op-0261c1eb82c9bb82",
+    "op-b741b6a26beed10d"
+  ],
+  "operator_evaluable": true,
+  "validation": {
+    "target_sql_was_injected_by_collector": true,
+    "candidate_pool_frozen_before_truth": true,
+    "target_annotation_isolated_from_candidates": true,
+    "target_annotation_source": "preregistered root-specific SQL/plan mechanism rule",
+    "mechanism_checks": {
+      "group_by": {
+        "passed": true,
+        "evidence": {
+          "has_grouping_operator": true,
+          "uses_temporary_table": true,
+          "created_tmp_tables_delta": 53.0
+        }
+      },
+      "missing_index": {
+        "passed": true,
+        "evidence": {
+          "has_full_scan": true,
+          "mean_rows_examined": 1243953.0,
+          "minimum_rows_examined": 500000
+        }
+      }
+    }
+  }
+}

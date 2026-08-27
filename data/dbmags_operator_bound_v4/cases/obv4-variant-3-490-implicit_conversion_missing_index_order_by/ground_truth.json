@@ -1,0 +1,65 @@
+{
+  "case_id": "obv4-variant-3-490-implicit_conversion_missing_index_order_by",
+  "root_labels": [
+    "implicit_conversion",
+    "missing_index",
+    "order_by"
+  ],
+  "template_variant": "variant-3",
+  "target_sql_ids": {
+    "implicit_conversion": "sql-052467c2c8f6b409",
+    "missing_index": "sql-b33067c31d9d256a",
+    "order_by": "sql-b14b2accf9ae81b3"
+  },
+  "target_operator_ids_by_root": {
+    "implicit_conversion": [
+      "op-450c7ba61a27cbe5"
+    ],
+    "missing_index": [
+      "op-b741b6a26beed10d"
+    ],
+    "order_by": [
+      "op-eec88f3a94eb98eb"
+    ]
+  },
+  "target_operator_ids": [
+    "op-450c7ba61a27cbe5",
+    "op-b741b6a26beed10d",
+    "op-eec88f3a94eb98eb"
+  ],
+  "operator_evaluable": true,
+  "validation": {
+    "target_sql_was_injected_by_collector": true,
+    "candidate_pool_frozen_before_truth": true,
+    "target_annotation_isolated_from_candidates": true,
+    "target_annotation_source": "preregistered root-specific SQL/plan mechanism rule",
+    "mechanism_checks": {
+      "implicit_conversion": {
+        "passed": true,
+        "evidence": {
+          "implicit_numeric_comparison_in_condition": true,
+          "target_used_key_part_count": 2,
+          "string_control_used_key_part_count": 3,
+          "target_estimated_rows": 5398.0,
+          "string_control_estimated_rows": 2.0
+        }
+      },
+      "missing_index": {
+        "passed": true,
+        "evidence": {
+          "has_full_scan": true,
+          "mean_rows_examined": 1243953.0,
+          "minimum_rows_examined": 500000
+        }
+      },
+      "order_by": {
+        "passed": true,
+        "evidence": {
+          "has_ordering_operator": true,
+          "uses_filesort": true,
+          "mean_rows_examined": 121000.0
+        }
+      }
+    }
+  }
+}

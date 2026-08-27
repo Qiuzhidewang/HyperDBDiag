@@ -1,0 +1,2411 @@
+{
+  "candidates": [
+    {
+      "sql_id": "sql-9bcc043d95fae8eb",
+      "digest": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-544bfc899225ef26"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:42:27.614682+00:00",
+          "elapsed_seconds": 0.04426288604736328,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_w_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+            "TIMER_WAIT": 4109799000,
+            "ROWS_EXAMINED": 31040,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.678804+00:00",
+          "elapsed_seconds": 0.0338590145111084,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_w_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+            "TIMER_WAIT": 2190059000,
+            "ROWS_EXAMINED": 31040,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.737834+00:00",
+          "elapsed_seconds": 0.03793215751647949,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_w_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+            "TIMER_WAIT": 2375896000,
+            "ROWS_EXAMINED": 31040,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.803576+00:00",
+          "elapsed_seconds": 0.03666496276855469,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_w_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+            "TIMER_WAIT": 2841933000,
+            "ROWS_EXAMINED": 31040,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.860866+00:00",
+          "elapsed_seconds": 0.03806805610656738,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "831f4f543c988f9d0cff0767a7a180eaf0e8b7701bbaa470fe42f70750c5b35b",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_w_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_w_id = 1",
+            "TIMER_WAIT": 2918263000,
+            "ROWS_EXAMINED": 31040,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-cac1b486d230fc2a",
+      "digest": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-c49454bc28102f00"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:42:27.615692+00:00",
+          "elapsed_seconds": 0.04471087455749512,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+            "TIMER_WAIT": 2849737000,
+            "ROWS_EXAMINED": 0,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.678520+00:00",
+          "elapsed_seconds": 0.03265690803527832,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+            "TIMER_WAIT": 1386370000,
+            "ROWS_EXAMINED": 0,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.737146+00:00",
+          "elapsed_seconds": 0.038237810134887695,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+            "TIMER_WAIT": 1548274000,
+            "ROWS_EXAMINED": 0,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.803673+00:00",
+          "elapsed_seconds": 0.04447484016418457,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+            "TIMER_WAIT": 1890429000,
+            "ROWS_EXAMINED": 0,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.863491+00:00",
+          "elapsed_seconds": 0.039613962173461914,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "eb37fc33d86ce9353dc9eb5dc5c2e3396afbe25cb91d1d4a26dc0e97e9cc4622",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` WHERE `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders WHERE o_d_id = 1",
+            "TIMER_WAIT": 1422182000,
+            "ROWS_EXAMINED": 0,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-6af98a52db33a4ec",
+      "digest": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-1d55712981c0e73b"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:42:27.611951+00:00",
+          "elapsed_seconds": 0.0926058292388916,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_credit` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+            "TIMER_WAIT": 72695715000,
+            "ROWS_EXAMINED": 120000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.724107+00:00",
+          "elapsed_seconds": 0.06688213348388672,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_credit` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+            "TIMER_WAIT": 40942039000,
+            "ROWS_EXAMINED": 120000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.809700+00:00",
+          "elapsed_seconds": 0.060513973236083984,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_credit` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+            "TIMER_WAIT": 41226227000,
+            "ROWS_EXAMINED": 120000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.887492+00:00",
+          "elapsed_seconds": 0.062146663665771484,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_credit` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+            "TIMER_WAIT": 43939055000,
+            "ROWS_EXAMINED": 120000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.964044+00:00",
+          "elapsed_seconds": 0.06492805480957031,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "5fd6f89e59ef080117b0f28307a7c41bff3f4b0d8ec13bb77d5966a4e40ea8e2",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_credit` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_credit = 'GC'",
+            "TIMER_WAIT": 47173341000,
+            "ROWS_EXAMINED": 120000,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-3ccace0117a48081",
+      "digest": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-f0705fa1a53aff21"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:42:27.612592+00:00",
+          "elapsed_seconds": 0.14053988456726074,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `stock` WHERE `s_quantity` < ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+            "TIMER_WAIT": 113678584000,
+            "ROWS_EXAMINED": 400000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.778879+00:00",
+          "elapsed_seconds": 0.10668611526489258,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `stock` WHERE `s_quantity` < ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+            "TIMER_WAIT": 81343686000,
+            "ROWS_EXAMINED": 400000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.903021+00:00",
+          "elapsed_seconds": 0.10245680809020996,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `stock` WHERE `s_quantity` < ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+            "TIMER_WAIT": 75298589000,
+            "ROWS_EXAMINED": 400000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.030549+00:00",
+          "elapsed_seconds": 0.09992003440856934,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `stock` WHERE `s_quantity` < ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+            "TIMER_WAIT": 77830518000,
+            "ROWS_EXAMINED": 400000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:32.145590+00:00",
+          "elapsed_seconds": 0.10576891899108887,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "b0a2f9408f8a305db9e5799ca4287a02f59f0a60ec4f3ab1d098d09d27a45569",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `stock` WHERE `s_quantity` < ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.stock WHERE s_quantity < 50",
+            "TIMER_WAIT": 83178577000,
+            "ROWS_EXAMINED": 400000,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-ba7fb486729cde23",
+      "digest": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-0e2ab1cc62ececce",
+        "op-8d8416a82ab685f0",
+        "op-d88107ac31346ffe"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:42:27.612748+00:00",
+          "elapsed_seconds": 0.04108786582946777,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+            "TIMER_WAIT": 2426644000,
+            "ROWS_EXAMINED": 6162,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.678262+00:00",
+          "elapsed_seconds": 0.03344106674194336,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+            "TIMER_WAIT": 2263018000,
+            "ROWS_EXAMINED": 6162,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.736920+00:00",
+          "elapsed_seconds": 0.035531044006347656,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+            "TIMER_WAIT": 2273887000,
+            "ROWS_EXAMINED": 6162,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.803877+00:00",
+          "elapsed_seconds": 0.037413835525512695,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+            "TIMER_WAIT": 2865675000,
+            "ROWS_EXAMINED": 6162,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.861401+00:00",
+          "elapsed_seconds": 0.03484392166137695,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "275b97f4895b340737194fa859e1df50bc59affbf8f74a94494809f460498aaa",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `orders` `o` JOIN `tpcc10_test` . `customer` `c` ON `c` . `c_w_id` = `o` . `o_w_id` AND `c` . `c_d_id` = `o` . `o_d_id` AND `c` . `c_id` = `o` . `o_c_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ?",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.orders o JOIN tpcc10_test.customer c ON c.c_w_id=o.o_w_id AND c.c_d_id=o.o_d_id AND c.c_id=o.o_c_id WHERE o.o_w_id=1 AND o.o_d_id=1",
+            "TIMER_WAIT": 2930279000,
+            "ROWS_EXAMINED": 6162,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-2e9016e6fe06db66",
+      "digest": "36c8d1886fabfeed5affc834967e6989884c1c76cfe9087b6ccdc061b1e65e1f",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last='BARBARBAR' OR c_last='ABLEABLE')",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-a0a82dfc5b9a4bf9"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:42:27.614440+00:00",
+          "elapsed_seconds": 0.03999614715576172,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "36c8d1886fabfeed5affc834967e6989884c1c76cfe9087b6ccdc061b1e65e1f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND ( `c_last` = ? OR `c_last` = ? )",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last='BARBARBAR' OR c_last='ABLEABLE')",
+            "TIMER_WAIT": 1733434000,
+            "ROWS_EXAMINED": 3,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.678910+00:00",
+          "elapsed_seconds": 0.03566098213195801,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "36c8d1886fabfeed5affc834967e6989884c1c76cfe9087b6ccdc061b1e65e1f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND ( `c_last` = ? OR `c_last` = ? )",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last='BARBARBAR' OR c_last='ABLEABLE')",
+            "TIMER_WAIT": 137757000,
+            "ROWS_EXAMINED": 3,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.737684+00:00",
+          "elapsed_seconds": 0.03558492660522461,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "36c8d1886fabfeed5affc834967e6989884c1c76cfe9087b6ccdc061b1e65e1f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND ( `c_last` = ? OR `c_last` = ? )",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last='BARBARBAR' OR c_last='ABLEABLE')",
+            "TIMER_WAIT": 72245000,
+            "ROWS_EXAMINED": 3,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.803248+00:00",
+          "elapsed_seconds": 0.03842282295227051,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "36c8d1886fabfeed5affc834967e6989884c1c76cfe9087b6ccdc061b1e65e1f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND ( `c_last` = ? OR `c_last` = ? )",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last='BARBARBAR' OR c_last='ABLEABLE')",
+            "TIMER_WAIT": 89325000,
+            "ROWS_EXAMINED": 3,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.862185+00:00",
+          "elapsed_seconds": 0.034567832946777344,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "36c8d1886fabfeed5affc834967e6989884c1c76cfe9087b6ccdc061b1e65e1f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND ( `c_last` = ? OR `c_last` = ? )",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last='BARBARBAR' OR c_last='ABLEABLE')",
+            "TIMER_WAIT": 79778000,
+            "ROWS_EXAMINED": 3,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-e60702bb955ebcff",
+      "digest": "273be91250e693cafc01d1013afd9795ba4afd337f5f62725f1751bf473f3024",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_delivery_d IS NOT NULL",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-f59b880ca7332868"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:42:27.613094+00:00",
+          "elapsed_seconds": 0.14885616302490234,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "273be91250e693cafc01d1013afd9795ba4afd337f5f62725f1751bf473f3024",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `order_line` WHERE `ol_delivery_d` IS NOT NULL",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_delivery_d IS NOT NULL",
+            "TIMER_WAIT": 127468856000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.778571+00:00",
+          "elapsed_seconds": 0.11710596084594727,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "273be91250e693cafc01d1013afd9795ba4afd337f5f62725f1751bf473f3024",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `order_line` WHERE `ol_delivery_d` IS NOT NULL",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_delivery_d IS NOT NULL",
+            "TIMER_WAIT": 98733356000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.905551+00:00",
+          "elapsed_seconds": 0.10576772689819336,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "273be91250e693cafc01d1013afd9795ba4afd337f5f62725f1751bf473f3024",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `order_line` WHERE `ol_delivery_d` IS NOT NULL",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_delivery_d IS NOT NULL",
+            "TIMER_WAIT": 81562886000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.030426+00:00",
+          "elapsed_seconds": 0.11556315422058105,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "273be91250e693cafc01d1013afd9795ba4afd337f5f62725f1751bf473f3024",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `order_line` WHERE `ol_delivery_d` IS NOT NULL",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_delivery_d IS NOT NULL",
+            "TIMER_WAIT": 98099658000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:32.158492+00:00",
+          "elapsed_seconds": 0.11522316932678223,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "273be91250e693cafc01d1013afd9795ba4afd337f5f62725f1751bf473f3024",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `order_line` WHERE `ol_delivery_d` IS NOT NULL",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_delivery_d IS NOT NULL",
+            "TIMER_WAIT": 95930252000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-5b137fd03585ac0c",
+      "digest": "36c8d1886fabfeed5affc834967e6989884c1c76cfe9087b6ccdc061b1e65e1f",
+      "sql": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last=0 OR c_last=1)",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-41e498a265e255df"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:42:27.615011+00:00",
+          "elapsed_seconds": 0.04343008995056152,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "36c8d1886fabfeed5affc834967e6989884c1c76cfe9087b6ccdc061b1e65e1f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND ( `c_last` = ? OR `c_last` = ? )",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last=0 OR c_last=1)",
+            "TIMER_WAIT": 1347502000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.678447+00:00",
+          "elapsed_seconds": 0.03560519218444824,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "36c8d1886fabfeed5affc834967e6989884c1c76cfe9087b6ccdc061b1e65e1f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND ( `c_last` = ? OR `c_last` = ? )",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last=0 OR c_last=1)",
+            "TIMER_WAIT": 1338101000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.737292+00:00",
+          "elapsed_seconds": 0.03684496879577637,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "36c8d1886fabfeed5affc834967e6989884c1c76cfe9087b6ccdc061b1e65e1f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND ( `c_last` = ? OR `c_last` = ? )",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last=0 OR c_last=1)",
+            "TIMER_WAIT": 1205143000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.803497+00:00",
+          "elapsed_seconds": 0.03931474685668945,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "36c8d1886fabfeed5affc834967e6989884c1c76cfe9087b6ccdc061b1e65e1f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND ( `c_last` = ? OR `c_last` = ? )",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last=0 OR c_last=1)",
+            "TIMER_WAIT": 907683000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.863305+00:00",
+          "elapsed_seconds": 0.04112815856933594,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "36c8d1886fabfeed5affc834967e6989884c1c76cfe9087b6ccdc061b1e65e1f",
+            "DIGEST_TEXT": "SELECT COUNT ( * ) FROM `tpcc10_test` . `customer` WHERE `c_w_id` = ? AND `c_d_id` = ? AND ( `c_last` = ? OR `c_last` = ? )",
+            "SQL_TEXT": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last=0 OR c_last=1)",
+            "TIMER_WAIT": 912917000,
+            "ROWS_EXAMINED": 3000,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-8b38e1e6571b83e3",
+      "digest": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+      "sql": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-0e2ab1cc62ececce",
+        "op-8dc1a0d60fbdbc00",
+        "op-c79296cfaac84a2a",
+        "op-1a9283c0ef592293",
+        "op-7b5308a83020d20a",
+        "op-eafac349775b6d21",
+        "op-4efb0d9bc1de2edd"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:42:27.617405+00:00",
+          "elapsed_seconds": 0.13993120193481445,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 112544708000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:27.766217+00:00",
+          "elapsed_seconds": 0.05552792549133301,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 37919508000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:27.830010+00:00",
+          "elapsed_seconds": 0.05619668960571289,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 38165879000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:27.893538+00:00",
+          "elapsed_seconds": 0.060925960540771484,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 43053385000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:27.961757+00:00",
+          "elapsed_seconds": 0.05467796325683594,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 36458292000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.023720+00:00",
+          "elapsed_seconds": 0.0558629035949707,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 37851240000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.086732+00:00",
+          "elapsed_seconds": 0.06215500831604004,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 41596566000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.158725+00:00",
+          "elapsed_seconds": 0.052066802978515625,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 33708661000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.217835+00:00",
+          "elapsed_seconds": 0.05662202835083008,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 38674536000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.281533+00:00",
+          "elapsed_seconds": 0.05649614334106445,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 39362339000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.345152+00:00",
+          "elapsed_seconds": 0.052659034729003906,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 34753949000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.404904+00:00",
+          "elapsed_seconds": 0.05668210983276367,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 38330122000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.471119+00:00",
+          "elapsed_seconds": 0.05110788345336914,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 33089416000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.529416+00:00",
+          "elapsed_seconds": 0.05561327934265137,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 37395382000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.592205+00:00",
+          "elapsed_seconds": 0.06525397300720215,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 43390911000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.677536+00:00",
+          "elapsed_seconds": 0.05888986587524414,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 40405064000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.744354+00:00",
+          "elapsed_seconds": 0.09441494941711426,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 75365371000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.851307+00:00",
+          "elapsed_seconds": 0.06517815589904785,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 47050352000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.923809+00:00",
+          "elapsed_seconds": 0.05844402313232422,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 40085756000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.989796+00:00",
+          "elapsed_seconds": 0.05127096176147461,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 33578054000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.048395+00:00",
+          "elapsed_seconds": 0.056008100509643555,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 38217640000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.111585+00:00",
+          "elapsed_seconds": 0.05810403823852539,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 39795441000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.179111+00:00",
+          "elapsed_seconds": 0.0521697998046875,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 33375426000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.238338+00:00",
+          "elapsed_seconds": 0.05717301368713379,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 38742906000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.303229+00:00",
+          "elapsed_seconds": 0.062474966049194336,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 43697772000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.372551+00:00",
+          "elapsed_seconds": 0.05043292045593262,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 31362090000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.430236+00:00",
+          "elapsed_seconds": 0.05558514595031738,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 36621219000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.493157+00:00",
+          "elapsed_seconds": 0.052182674407958984,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 32560230000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.552366+00:00",
+          "elapsed_seconds": 0.05412101745605469,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 35309479000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.613721+00:00",
+          "elapsed_seconds": 0.05720400810241699,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 34792638000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.680477+00:00",
+          "elapsed_seconds": 0.07357001304626465,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 34048015000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.762922+00:00",
+          "elapsed_seconds": 0.05879807472229004,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 39759661000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.829936+00:00",
+          "elapsed_seconds": 0.06236100196838379,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 40783173000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.904939+00:00",
+          "elapsed_seconds": 0.07940411567687988,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 57431368000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.998974+00:00",
+          "elapsed_seconds": 0.05567526817321777,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 37856239000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.061978+00:00",
+          "elapsed_seconds": 0.054129838943481445,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 33391360000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.123670+00:00",
+          "elapsed_seconds": 0.05948996543884277,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 38765972000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.192579+00:00",
+          "elapsed_seconds": 0.05826091766357422,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 40065210000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.258358+00:00",
+          "elapsed_seconds": 0.0553438663482666,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 35611682000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.324782+00:00",
+          "elapsed_seconds": 0.05566287040710449,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 34430164000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.387538+00:00",
+          "elapsed_seconds": 0.05423617362976074,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 36611922000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.448963+00:00",
+          "elapsed_seconds": 0.050012826919555664,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 31908300000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.505889+00:00",
+          "elapsed_seconds": 0.06034708023071289,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 42956956000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.573646+00:00",
+          "elapsed_seconds": 0.05439114570617676,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 36338561000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.635053+00:00",
+          "elapsed_seconds": 0.05963277816772461,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 41205190000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.701878+00:00",
+          "elapsed_seconds": 0.05578279495239258,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 37963773000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.764707+00:00",
+          "elapsed_seconds": 0.07848787307739258,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 45310381000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.854299+00:00",
+          "elapsed_seconds": 0.07381033897399902,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 55329841000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.938004+00:00",
+          "elapsed_seconds": 0.06034994125366211,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 41295546000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.005264+00:00",
+          "elapsed_seconds": 0.06673812866210938,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 46611907000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.080974+00:00",
+          "elapsed_seconds": 0.07813882827758789,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 59882057000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.165991+00:00",
+          "elapsed_seconds": 0.052207231521606445,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 34095890000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.225258+00:00",
+          "elapsed_seconds": 0.05829215049743652,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 40112655000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.290646+00:00",
+          "elapsed_seconds": 0.05126595497131348,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 33566542000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.348862+00:00",
+          "elapsed_seconds": 0.06357312202453613,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 45563423000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.419336+00:00",
+          "elapsed_seconds": 0.058791160583496094,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 40500987000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.487871+00:00",
+          "elapsed_seconds": 0.05909609794616699,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 40699853000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.555255+00:00",
+          "elapsed_seconds": 0.05932807922363281,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 40449619000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.621742+00:00",
+          "elapsed_seconds": 0.0653221607208252,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 42659623000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.694077+00:00",
+          "elapsed_seconds": 0.06100201606750488,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 43390926000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.762254+00:00",
+          "elapsed_seconds": 0.05783510208129883,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 39563781000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.826953+00:00",
+          "elapsed_seconds": 0.07154297828674316,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 49546820000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.907081+00:00",
+          "elapsed_seconds": 0.06683802604675293,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 45917787000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.981621+00:00",
+          "elapsed_seconds": 0.08253312110900879,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 65106281000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:32.071205+00:00",
+          "elapsed_seconds": 0.06220602989196777,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 44379552000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:32.145850+00:00",
+          "elapsed_seconds": 0.12354087829589844,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 103603073000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:32.277309+00:00",
+          "elapsed_seconds": 0.06008505821228027,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 40339534000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:32.347142+00:00",
+          "elapsed_seconds": 0.05665302276611328,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 38690115000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:32.410688+00:00",
+          "elapsed_seconds": 0.06580209732055664,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 47836351000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:32.486009+00:00",
+          "elapsed_seconds": 0.054270029067993164,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 36081779000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:32.547367+00:00",
+          "elapsed_seconds": 0.06461429595947266,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "682042b5a9b3612f9c249f8e4536f036f5607d1d13e05d7938df7c4e505abbab",
+            "DIGEST_TEXT": "SELECT SUM ( `ol` . `ol_quantity` ) FROM `tpcc10_test` . `customer` `c` JOIN `tpcc10_test` . `orders` `o` ON `o` . `o_w_id` = `c` . `c_w_id` AND `o` . `o_d_id` = `c` . `c_d_id` AND `o` . `o_c_id` = `c` . `c_id` JOIN `tpcc10_test` . `order_line` `ol` ON `ol` . `ol_w_id` = `o` . `o_w_id` AND `ol` . `ol_d_id` = `o` . `o_d_id` AND `ol` . `ol_o_id` = `o` . `o_id` JOIN `tpcc10_test` . `stock` `s` ON `s` . `s_w_id` = `ol` . `ol_supply_w_id` AND `s` . `s_i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `item` `i` ON `i` . `i_id` = `ol` . `ol_i_id` JOIN `tpcc10_test` . `district` `d` ON `d` . `d_w_id` = `o` . `o_w_id` AND `d` . `d_id` = `o` . `o_d_id` WHERE `o` . `o_w_id` = ? AND `o` . `o_d_id` = ? AND `c` . `c_credit` IN (...)",
+            "SQL_TEXT": "SELECT SUM(ol.ol_quantity) FROM tpcc10_test.customer c JOIN tpcc10_test.orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN tpcc10_test.order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN tpcc10_test.stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN tpcc10_test.item i ON i.i_id=ol.ol_i_id JOIN tpcc10_test.district d ON d.d_w_id=o.o_w_id AND d.d_id=o.o_d_id WHERE o.o_w_id=4 AND o.o_d_id=7 AND c.c_credit IN ('GC','BC')",
+            "TIMER_WAIT": 43611051000,
+            "ROWS_EXAMINED": 99872,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-ed61a8dc273bc592",
+      "digest": "c9d7c2258e15ee867256261fb0392906cdd943041b9bb1b78204ed7a65bfdc41",
+      "sql": "SELECT s_i_id,s_quantity FROM tpcc10_test.stock ORDER BY s_quantity,s_i_id LIMIT 1000",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-eec88f3a94eb98eb",
+        "op-4b6365a8f81a3089"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:42:27.617082+00:00",
+          "elapsed_seconds": 0.14532470703125,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "c9d7c2258e15ee867256261fb0392906cdd943041b9bb1b78204ed7a65bfdc41",
+            "DIGEST_TEXT": "SELECT `s_i_id` , `s_quantity` FROM `tpcc10_test` . `stock` ORDER BY `s_quantity` , `s_i_id` LIMIT ?",
+            "SQL_TEXT": "SELECT s_i_id,s_quantity FROM tpcc10_test.stock ORDER BY s_quantity,s_i_id LIMIT 1000",
+            "TIMER_WAIT": 108104355000,
+            "ROWS_EXAMINED": 401000,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.780027+00:00",
+          "elapsed_seconds": 0.11112809181213379,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "c9d7c2258e15ee867256261fb0392906cdd943041b9bb1b78204ed7a65bfdc41",
+            "DIGEST_TEXT": "SELECT `s_i_id` , `s_quantity` FROM `tpcc10_test` . `stock` ORDER BY `s_quantity` , `s_i_id` LIMIT ?",
+            "SQL_TEXT": "SELECT s_i_id,s_quantity FROM tpcc10_test.stock ORDER BY s_quantity,s_i_id LIMIT 1000",
+            "TIMER_WAIT": 80565326000,
+            "ROWS_EXAMINED": 401000,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.904748+00:00",
+          "elapsed_seconds": 0.11063313484191895,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "c9d7c2258e15ee867256261fb0392906cdd943041b9bb1b78204ed7a65bfdc41",
+            "DIGEST_TEXT": "SELECT `s_i_id` , `s_quantity` FROM `tpcc10_test` . `stock` ORDER BY `s_quantity` , `s_i_id` LIMIT ?",
+            "SQL_TEXT": "SELECT s_i_id,s_quantity FROM tpcc10_test.stock ORDER BY s_quantity,s_i_id LIMIT 1000",
+            "TIMER_WAIT": 74240184000,
+            "ROWS_EXAMINED": 401000,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.030960+00:00",
+          "elapsed_seconds": 0.10083794593811035,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "c9d7c2258e15ee867256261fb0392906cdd943041b9bb1b78204ed7a65bfdc41",
+            "DIGEST_TEXT": "SELECT `s_i_id` , `s_quantity` FROM `tpcc10_test` . `stock` ORDER BY `s_quantity` , `s_i_id` LIMIT ?",
+            "SQL_TEXT": "SELECT s_i_id,s_quantity FROM tpcc10_test.stock ORDER BY s_quantity,s_i_id LIMIT 1000",
+            "TIMER_WAIT": 78009470000,
+            "ROWS_EXAMINED": 401000,
+            "ROWS_SENT": 1000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:32.145526+00:00",
+          "elapsed_seconds": 0.10718703269958496,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "c9d7c2258e15ee867256261fb0392906cdd943041b9bb1b78204ed7a65bfdc41",
+            "DIGEST_TEXT": "SELECT `s_i_id` , `s_quantity` FROM `tpcc10_test` . `stock` ORDER BY `s_quantity` , `s_i_id` LIMIT ?",
+            "SQL_TEXT": "SELECT s_i_id,s_quantity FROM tpcc10_test.stock ORDER BY s_quantity,s_i_id LIMIT 1000",
+            "TIMER_WAIT": 83499200000,
+            "ROWS_EXAMINED": 401000,
+            "ROWS_SENT": 1000
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-2eed9951dab8ec4a",
+      "digest": "4ec428147b2d550497e5ffb47b4d128a40557f6eeba34b4699b9c89f28cf82c4",
+      "sql": "SELECT FLOOR(ol_amount) AS amount_bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY FLOOR(ol_amount)",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-0261c1eb82c9bb82",
+        "op-ffd3d3425ac7f382"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:42:27.616288+00:00",
+          "elapsed_seconds": 0.24519705772399902,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "4ec428147b2d550497e5ffb47b4d128a40557f6eeba34b4699b9c89f28cf82c4",
+            "DIGEST_TEXT": "SELECT `FLOOR` ( `ol_amount` ) AS `amount_bucket` , COUNT ( * ) FROM `tpcc10_test` . `order_line` GROUP BY `FLOOR` ( `ol_amount` )",
+            "SQL_TEXT": "SELECT FLOOR(ol_amount) AS amount_bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY FLOOR(ol_amount)",
+            "TIMER_WAIT": 206567584000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 10000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.873835+00:00",
+          "elapsed_seconds": 0.21999883651733398,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "4ec428147b2d550497e5ffb47b4d128a40557f6eeba34b4699b9c89f28cf82c4",
+            "DIGEST_TEXT": "SELECT `FLOOR` ( `ol_amount` ) AS `amount_bucket` , COUNT ( * ) FROM `tpcc10_test` . `order_line` GROUP BY `FLOOR` ( `ol_amount` )",
+            "SQL_TEXT": "SELECT FLOOR(ol_amount) AS amount_bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY FLOOR(ol_amount)",
+            "TIMER_WAIT": 186075340000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 10000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.104865+00:00",
+          "elapsed_seconds": 0.25643181800842285,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "4ec428147b2d550497e5ffb47b4d128a40557f6eeba34b4699b9c89f28cf82c4",
+            "DIGEST_TEXT": "SELECT `FLOOR` ( `ol_amount` ) AS `amount_bucket` , COUNT ( * ) FROM `tpcc10_test` . `order_line` GROUP BY `FLOOR` ( `ol_amount` )",
+            "SQL_TEXT": "SELECT FLOOR(ol_amount) AS amount_bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY FLOOR(ol_amount)",
+            "TIMER_WAIT": 213198519000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 10000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.371998+00:00",
+          "elapsed_seconds": 0.2192981243133545,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "4ec428147b2d550497e5ffb47b4d128a40557f6eeba34b4699b9c89f28cf82c4",
+            "DIGEST_TEXT": "SELECT `FLOOR` ( `ol_amount` ) AS `amount_bucket` , COUNT ( * ) FROM `tpcc10_test` . `order_line` GROUP BY `FLOOR` ( `ol_amount` )",
+            "SQL_TEXT": "SELECT FLOOR(ol_amount) AS amount_bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY FLOOR(ol_amount)",
+            "TIMER_WAIT": 186014192000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 10000
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:32.600459+00:00",
+          "elapsed_seconds": 0.2242438793182373,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "4ec428147b2d550497e5ffb47b4d128a40557f6eeba34b4699b9c89f28cf82c4",
+            "DIGEST_TEXT": "SELECT `FLOOR` ( `ol_amount` ) AS `amount_bucket` , COUNT ( * ) FROM `tpcc10_test` . `order_line` GROUP BY `FLOOR` ( `ol_amount` )",
+            "SQL_TEXT": "SELECT FLOOR(ol_amount) AS amount_bucket,COUNT(*) FROM tpcc10_test.order_line GROUP BY FLOOR(ol_amount)",
+            "TIMER_WAIT": 193264689000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 10000
+          }
+        }
+      ]
+    },
+    {
+      "sql_id": "sql-b2d23a9e2de01dbc",
+      "digest": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+      "sql": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+      "plan_status": "ok",
+      "operator_ids": [
+        "op-634a4df9f2a16d8c"
+      ],
+      "events": [
+        {
+          "started_at": "2026-08-13T13:42:27.617656+00:00",
+          "elapsed_seconds": 0.19503498077392578,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 163189061000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:27.819970+00:00",
+          "elapsed_seconds": 0.16102981567382812,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 145486849000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:27.987692+00:00",
+          "elapsed_seconds": 0.16078686714172363,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 144275767000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.158525+00:00",
+          "elapsed_seconds": 0.15804004669189453,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 142571765000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.325129+00:00",
+          "elapsed_seconds": 0.15752696990966797,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 142597821000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.489303+00:00",
+          "elapsed_seconds": 0.16436100006103516,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 144597029000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.675049+00:00",
+          "elapsed_seconds": 0.1715240478515625,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 153853064000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:28.854552+00:00",
+          "elapsed_seconds": 0.1629040241241455,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 147178600000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.026785+00:00",
+          "elapsed_seconds": 0.16402673721313477,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 146226707000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.197667+00:00",
+          "elapsed_seconds": 0.16117095947265625,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 6732906000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.365802+00:00",
+          "elapsed_seconds": 0.15833282470703125,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 136848181000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.533313+00:00",
+          "elapsed_seconds": 0.15892982482910156,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 138887451000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.699070+00:00",
+          "elapsed_seconds": 0.1616041660308838,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 141876069000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:29.867601+00:00",
+          "elapsed_seconds": 0.15157818794250488,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 132195064000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.026116+00:00",
+          "elapsed_seconds": 0.16093087196350098,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 145456453000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.193967+00:00",
+          "elapsed_seconds": 0.15044593811035156,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 134003531000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.351233+00:00",
+          "elapsed_seconds": 0.1566760540008545,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 142822039000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.514574+00:00",
+          "elapsed_seconds": 0.1589341163635254,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 144836177000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.682978+00:00",
+          "elapsed_seconds": 0.1657400131225586,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 146098315000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:30.855655+00:00",
+          "elapsed_seconds": 0.15953516960144043,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 143078519000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.030668+00:00",
+          "elapsed_seconds": 0.13937783241271973,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 124265188000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.176730+00:00",
+          "elapsed_seconds": 0.15675973892211914,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 141827505000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.340488+00:00",
+          "elapsed_seconds": 0.15950894355773926,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 145281940000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.506908+00:00",
+          "elapsed_seconds": 0.15694808959960938,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 141961054000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.673081+00:00",
+          "elapsed_seconds": 0.15863776206970215,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 143708828000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:31.838598+00:00",
+          "elapsed_seconds": 0.16322827339172363,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 147947802000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:32.009249+00:00",
+          "elapsed_seconds": 0.16203022003173828,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 143145713000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:32.180237+00:00",
+          "elapsed_seconds": 0.15662002563476562,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 138759802000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:32.346893+00:00",
+          "elapsed_seconds": 0.15408897399902344,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 138889753000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        },
+        {
+          "started_at": "2026-08-13T13:42:32.507735+00:00",
+          "elapsed_seconds": 0.15548014640808105,
+          "status": "ok",
+          "error": null,
+          "performance_schema": {
+            "EVENT_ID": 7,
+            "DIGEST": "6ab245508e077f3becdc9d19db24f52b318db115fa327c724702595f0aca002d",
+            "DIGEST_TEXT": "SELECT MIN ( `ol_delivery_d` ) , MAX ( `ol_delivery_d` ) FROM `tpcc10_test` . `order_line`",
+            "SQL_TEXT": "SELECT MIN(ol_delivery_d),MAX(ol_delivery_d) FROM tpcc10_test.order_line",
+            "TIMER_WAIT": 139901008000,
+            "ROWS_EXAMINED": 1243953,
+            "ROWS_SENT": 1
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "case_id": "obv4-variant-2-144-group_by_order_by",
+  "root_labels": [
+    "group_by",
+    "order_by"
+  ],
+  "template_variant": "variant-2",
+  "target_sql_ids": {
+    "group_by": "sql-6ee2b8385ed6275a",
+    "order_by": "sql-b270363e012188fa"
+  },
+  "target_operator_ids_by_root": {
+    "group_by": [
+      "op-0261c1eb82c9bb82"
+    ],
+    "order_by": [
+      "op-eec88f3a94eb98eb"
+    ]
+  },
+  "target_operator_ids": [
+    "op-0261c1eb82c9bb82",
+    "op-eec88f3a94eb98eb"
+  ],
+  "operator_evaluable": true,
+  "validation": {
+    "target_sql_was_injected_by_collector": true,
+    "candidate_pool_frozen_before_truth": true,
+    "target_annotation_isolated_from_candidates": true,
+    "target_annotation_source": "preregistered root-specific SQL/plan mechanism rule",
+    "mechanism_checks": {
+      "group_by": {
+        "passed": true,
+        "evidence": {
+          "has_grouping_operator": true,
+          "uses_temporary_table": true,
+          "created_tmp_tables_delta": 37.0
+        }
+      },
+      "order_by": {
+        "passed": true,
+        "evidence": {
+          "has_ordering_operator": true,
+          "uses_filesort": true,
+          "mean_rows_examined": 1244953.0
+        }
+      }
+    }
+  }
+}

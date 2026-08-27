@@ -1,0 +1,2676 @@
+{
+  "source_protocol": "dbmags-interaction-v9-homogeneous-sql-temporal-hyperedges",
+  "raw_root": "data/dbmags_interaction_v9_homogeneous",
+  "readiness_artifact": "interaction_audit.json",
+  "readiness_sha256": "2320cc3fec77070c2a8f19cdbdd37fa359990fa83dd8942133da139a6d52b420",
+  "manifest_sha256": "db17f88bdea07305098e24bb49cf2c1daffe50b026b4c22fefa5a4db0b6246bc",
+  "protocol_sha256": "a54718616f1cb56fd1150c1697bee3135fbb7c4955161012a28e97bc849f49ff",
+  "case_count": 660,
+  "protocol_complete": true,
+  "mechanism_stress_ready": false,
+  "interaction_audit_summary": {
+    "physical_block_count": 132,
+    "pair_count": 396,
+    "interaction_positive": 305,
+    "interaction_negative_or_incomplete": 91,
+    "expected_pair_count": 396
+  },
+  "cohort_policy": "all planned cases retained; interaction strata are reported without filtering",
+  "feature_source": "only cases/<source_case_id>/live_metrics.json",
+  "truth_source": "only manifest condition plus roots",
+  "fold_source": "only manifest block_index",
+  "predictor_excluded": [
+    "source_case_id",
+    "scenario",
+    "condition",
+    "roots",
+    "case_metadata",
+    "sql",
+    "execution_plan",
+    "injection_events",
+    "adapter_events",
+    "mechanism_evidence"
+  ],
+  "live_metrics_sha256": [
+    {
+      "source_case_id": "customer_missing_index_group_by__block_01__a_then_b",
+      "sha256": "06a6caddf84f25f5847ebcd7e8bf69a1c95dddaffbee349838da2bb7e498e28f"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_01__b_then_a",
+      "sha256": "ec5902c92a6bd4ecd7ec4b1e188dcca1211f10e240edfd1dde5d11fcf79fb791"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_01__overlap",
+      "sha256": "d6bec6ae7eb677754d7aac4d640cf273ac454cbcd0a4a2a23532ea75a3266f44"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_01__single_a",
+      "sha256": "3e75eaec35ac78a7dabde5f0f41ce8c27d7e6d59652dd72e3513bfb4a86bf0d9"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_01__single_b",
+      "sha256": "090de4dc9b09b4a25e84775121768ef2eff171842d6583b05cdcdc5bfe53dd00"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_02__a_then_b",
+      "sha256": "ae247f938e3f9632a78644c722930362382419a2d624026f03e872d53a770a26"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_02__b_then_a",
+      "sha256": "7eb57ddbf68ffb5a689067c190d3d1cc0df22b1d76dc400365ecb2b851c752e1"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_02__overlap",
+      "sha256": "f197d7cee5cebfd442751e7943a0c90f8b6e891e34be474b620a8f61ed3b2e8a"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_02__single_a",
+      "sha256": "f431f97a30151951b4bc3f696ffeecc539a076005c34274a91583f2bf85a2da2"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_02__single_b",
+      "sha256": "a23a805e6ad95a5679664a1d6088ca855e99cf3ae91a5c3d75adf59d2a0b4988"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_03__a_then_b",
+      "sha256": "cad6a89873f020f7c437549ef97ca20dcc4198d255a31f53881be7804a16c8ae"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_03__b_then_a",
+      "sha256": "1b4fb886f8230f9b8f19d0f22376a244fd4194017b87fa0c7f0447b419c7b3e1"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_03__overlap",
+      "sha256": "023ed80285b897d66b60c46f5bd2484ac3d1c2bb5109c8a5a3d09e987b6be0be"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_03__single_a",
+      "sha256": "e725d53a95b8e6bef383bcec2bc51a5fc0864eb05a6a44c84c4a588a331e58d6"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_03__single_b",
+      "sha256": "b615cdb52d14309c86fd0d96e7c55606a8a24cd7a99dec517cc3d36d327978a6"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_04__a_then_b",
+      "sha256": "098d77f090a5dd8b07cf8291d7a8d886997e35c7c85019c60c58c5226c84caf1"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_04__b_then_a",
+      "sha256": "d561f8a4c87d382e016e708106f4b61d6fe42f6495f4f37cf55b0f7e6f9b0b85"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_04__overlap",
+      "sha256": "b25a16afaf200422214e171f7032a46f6cdab08f096b1cfaed6c0fabe753bc28"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_04__single_a",
+      "sha256": "6ba08babdacc12e9124a884375e84c360e56dc2491c796f858b276f53a0c7d41"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_04__single_b",
+      "sha256": "e4f3969f506de9bc4fdf526f48c6da8bad0d8041e10634f098cb32f570904361"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_05__a_then_b",
+      "sha256": "84e96141dc467aff99ccf539e2e7627f9c7f33d4faf161c06094d21a4540b32f"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_05__b_then_a",
+      "sha256": "0cba9badfb07346ed5b8439b36caea5ede85efeafa2ab6ce71ff77b5ba8cfcd6"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_05__overlap",
+      "sha256": "40b1551a79f744de9b5d82dd585756454930420558c400e9c172dd6fd2a78dee"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_05__single_a",
+      "sha256": "87e8c9356b1a1970f676114eab4247549ff27786fadabfe95f887275573e50cf"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_05__single_b",
+      "sha256": "a4cfc5d1f47ef59c615f087b4cc3b8a4d9135159023b9f2465f993ec608e2ecf"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_06__a_then_b",
+      "sha256": "c26068dc9602010622ca41735ccc83c9ec1c0c6966a08c1cf162b93a49cb2553"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_06__b_then_a",
+      "sha256": "265b13458d97d0d2bfc69744eaeae879153d5c2b90971b623c57d2e5d61ae30f"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_06__overlap",
+      "sha256": "14b234542bc113fad6f9a6ca5a7935c8e46c92b1df2121508f2031da50079117"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_06__single_a",
+      "sha256": "2ffd0c4c87fb506eb08f351cf3f3d3792073d16b13d735ea74f429375cf6e137"
+    },
+    {
+      "source_case_id": "customer_missing_index_group_by__block_06__single_b",
+      "sha256": "b6feba00e5524a62544c2d23d2590464388e1141d6cb29cecd97444efb4ec58c"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_01__a_then_b",
+      "sha256": "5502e1f4033aed4feac5ef5b8a9397344a175c308436aa83123902cbf6f19868"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_01__b_then_a",
+      "sha256": "b9bd1d46e324fe1bfbd07e3130bedb1db045377d495d33c7f56ce37a8896045b"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_01__overlap",
+      "sha256": "d60978af7fd082540028be0ff43b94a5c592100b607e3a511c2ffd829481f229"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_01__single_a",
+      "sha256": "f12fdcd7d432e61bc6a837aa84e0d68cdd20ffbb8eb056b409f3d4d7ae88b5d6"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_01__single_b",
+      "sha256": "6e4b195ce171dedafbf63c4f1651a9a55fb9bf7ddeef8087c1e6feaff894ea0c"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_02__a_then_b",
+      "sha256": "9d071df065d210a9bc4f471abf9fba72cb01067f86b465bf4fc21593b81e2a84"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_02__b_then_a",
+      "sha256": "d3229b3aa0fc22ed13e2f425f97f7d53ca3b1207b0e81828e32d8b4190d30e2b"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_02__overlap",
+      "sha256": "f0632f543d29a599a5a7d2cbaceaf4209bdbe07528965b7bb6c9c7d85ec33b45"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_02__single_a",
+      "sha256": "6c24f88d7c99cfdcae53cf73aa07d4d2414eeac1c2aa4d9362ed7ce40a7384c1"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_02__single_b",
+      "sha256": "b2f03d3f1fe9c76507adc47713b4e57b7715a73103712f1606bb5fac6e7aa9d4"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_03__a_then_b",
+      "sha256": "bede0fadfcb791d1936e4aaabd152d0c5fb5db25300fbe17d618aef38e9f8c1e"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_03__b_then_a",
+      "sha256": "630a0e006909ffc5ec054b3c1222013f2a3109aa6e23104ada2b2f7d307f622f"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_03__overlap",
+      "sha256": "acb021f783690716548f2a7030da46653a723cb54bfda60e3da3e6d821a38a61"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_03__single_a",
+      "sha256": "cec95fd6f221af5f8403d4be13927c49b28f9dfebbba13a3459ba6c90f20b822"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_03__single_b",
+      "sha256": "b7593346ad91e3b226b97d5aca5e737172e9c002c2340307657a16c8bcdacd3f"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_04__a_then_b",
+      "sha256": "329ff75c69c2cb7fe338c58beb6698917c311110439b98bd67ef0b8b2d90505e"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_04__b_then_a",
+      "sha256": "b19589da06a5c88935963f61828f46815029b125a67698506cfdb7ec1ef11f8d"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_04__overlap",
+      "sha256": "e46679c49f4ecc467d3c863bf7023bc9882fa7ecac0a5ae55bd60da9c5cf7152"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_04__single_a",
+      "sha256": "ddc33a8633b7a801403981022d0c9c510de6e61085f90c00598670f0d86ea996"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_04__single_b",
+      "sha256": "7c60cf4f7c71b456c59391c6e085dc9769dacadb394ba9614eb429bf98f84e3f"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_05__a_then_b",
+      "sha256": "7e4f8f613e74c9a7f45fbab293654221b12631788af7dd1a2fa6db7a1f2adc53"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_05__b_then_a",
+      "sha256": "e8c4281408e08074ead9401bbdde34861183c517bb5a597ab8c6fbc737cc40ec"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_05__overlap",
+      "sha256": "bb761215e89e7c7345558c99c1fef1944ff92a05fe6a6ee9cbc52b5ade60aab1"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_05__single_a",
+      "sha256": "cfeeb1742355483faf5680f0bfbef22ebe0a50a3edfe2b166dc72b7d33a01647"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_05__single_b",
+      "sha256": "048bd42b6b5d4ccdabfd7c699a3424c95da295815b278c29ef9a50fdad5e108d"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_06__a_then_b",
+      "sha256": "68f379ab34ef5aeab610241f4d13c18b7d0f4e6b1d96fc8a5abe0fc7c5fc4854"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_06__b_then_a",
+      "sha256": "ea772a55f7fba8dcee3230ede0362cb4cf8acabb89830c92bd4c768b2a908965"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_06__overlap",
+      "sha256": "ec032b2bb7d375684e3c92f7a49562828ba40cbfc5dcabe39b82cd2387566dea"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_06__single_a",
+      "sha256": "8b3257c3c1d576e94a7fe1d8fda76b0b8f282c3b1592cab2a04235e29eb623c4"
+    },
+    {
+      "source_case_id": "customer_missing_index_implicit_conversion__block_06__single_b",
+      "sha256": "164f5ec9a8250031be8a200aeda93c91aa0094ed92d93f2d64b1a837becc5e0c"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_01__a_then_b",
+      "sha256": "c46f124a833b4052f90cb209b925acfe61d7be57ed46a120f7492e82dac04cc3"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_01__b_then_a",
+      "sha256": "804d3f316c2b0fdd68a8610af4691325c2fa53072c67705200e27b2d950d4a80"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_01__overlap",
+      "sha256": "537e73daa17b6eaca0fa03095c775cbe99f8ec2d4cb447e0675d39208517ce9f"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_01__single_a",
+      "sha256": "c790a3c192732f00502d8d55b378d7fcd59cfce7b2d2cf7945d6ec0f2b1697b8"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_01__single_b",
+      "sha256": "91d4a6faad036bd0a1b0a68fa96abfedb42261ab1cd572c1cd105fb81bffd420"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_02__a_then_b",
+      "sha256": "9c548413975528b3c438f5667d18611cc9725379feb2fef663ad176c8d4ba77d"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_02__b_then_a",
+      "sha256": "71bda1beee27944ac225ca51bbadc2dae17f59ad03640bba7fba118ed388b6ef"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_02__overlap",
+      "sha256": "f5a2701f3b6adec7d9238c731c9018799fd5e4ec47b161586a1012cf43d5445c"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_02__single_a",
+      "sha256": "fbfa400fbcf69287ae84a042cedd46d8e4b0d92e9193c5ad9d45a5efc269cf01"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_02__single_b",
+      "sha256": "af9df6a4be4966ef63589416b834d15a90bd136ab6328217bf3b8ebc41916e81"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_03__a_then_b",
+      "sha256": "3abbacc1e65d466b5510a721ce780241d807628528bbe4149d1e892c250a2da3"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_03__b_then_a",
+      "sha256": "bd973fafc4ae365312617c630c2270a08ce6c5cc74298f2df657991104e543c6"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_03__overlap",
+      "sha256": "b8bb59544dd666f649b31374534101d86f2d1a47061820f710ccc301cdc379fa"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_03__single_a",
+      "sha256": "74a25e2d32e7be908d27388ca6d6c9adf51de9ab7b56df3a8351b9d08078d646"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_03__single_b",
+      "sha256": "3b96027e0a4b1ee8220aece50dc0d85b02bd436b6fe139f1447607c67e404393"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_04__a_then_b",
+      "sha256": "ba98d1a2ccb03976074ef5ca13443dabd5951322383aa2cd510e1448ab77d58a"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_04__b_then_a",
+      "sha256": "3f5215c30e022ca2f8c6df2adcc4ab6b92954baff71c8d4bf68df1461d3eec1d"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_04__overlap",
+      "sha256": "ea8588595739a4a6a65370c7644aac25551aa54018b7fd563247e133b8279416"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_04__single_a",
+      "sha256": "eee836d97f42c11323de527d3cdcd98ca7bf07f9db9a0d1cc4e77e60fbd2cae0"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_04__single_b",
+      "sha256": "99b753551a0737217e4539263601fd7e8e97012e22bb7a444112661f39fe1f24"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_05__a_then_b",
+      "sha256": "c4dbe573b414635bec38a880df798079895657d467f74a0b77db002e008c4fd1"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_05__b_then_a",
+      "sha256": "71ac190b9f3d2f6c2768cf7ac2878dd27e9d3839f121d97408cab4997eed5c79"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_05__overlap",
+      "sha256": "635cc340d48e63c026139c5ff640d63d17943a58332d81c8c6a7b9ed4204c720"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_05__single_a",
+      "sha256": "ab383b5835d955b417e2f8547a3e9eb469a8598b35f83f590cc651ba69c4097f"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_05__single_b",
+      "sha256": "1906bb6883c4c5dfc014a0a3770c7218db142598dcf7114d35acf5963d7a13ca"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_06__a_then_b",
+      "sha256": "9618b52c64dc3db3ec8d610bd083275a3ba3b12a50dfc1de7bdd0a8edb4cbe49"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_06__b_then_a",
+      "sha256": "50f3980e4c08a68fbdef0fef95d5210adecbeed93a16c0c32b16a0912b51423f"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_06__overlap",
+      "sha256": "2f160aeecf08c38ead51407958539fb831177b50b7eb25ba7dc3769b7726411e"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_06__single_a",
+      "sha256": "cfa1c470e474e2ca4fa8a29a7b594e5843f0c774bdcae80dd555079a6622f357"
+    },
+    {
+      "source_case_id": "customer_missing_index_order_by__block_06__single_b",
+      "sha256": "4a525ceac18a42daa0b2668d1ffcfa3262f51ebf8c20d2c2a7a9741171765a9f"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_01__a_then_b",
+      "sha256": "9379a0cc827b2746ddd1bfd2216e4cad312d4342481706539bbc92c7eab74548"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_01__b_then_a",
+      "sha256": "53814ba54b77b13018f97f4590af3b3d98b980e29c76a1899d76d7b38c115512"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_01__overlap",
+      "sha256": "da4345dd63f1761bcefd1759746a59fd36740eadcdd9361964562192d71ace3e"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_01__single_a",
+      "sha256": "0ff0ee10775c89aebde952af6b9bd9f3d4e5214cd001f7104d6299bce4b8c9c6"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_01__single_b",
+      "sha256": "277d1e92ff6b0671a0b736381b9b3e7cdaaf50fed27ffd6176be08be29ebab30"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_02__a_then_b",
+      "sha256": "2e24c9d172b30ab2ff4fae712adc6051d04a45da8a2ec936cee652ee16d0b393"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_02__b_then_a",
+      "sha256": "38b81273be5f0b7684abca6a871f177d6fc9df8d60acfb66c89620e83d0ba6f9"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_02__overlap",
+      "sha256": "be8f274f7f1208fbc50e01f551ac38ea0b6ee6eb958dcd250076cf6d766999e1"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_02__single_a",
+      "sha256": "7ce488e4e22b1d924d5b6f946ad342686da41e283f51768687aa49247ca58353"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_02__single_b",
+      "sha256": "a6a34af866c39a95710313638b836be6ac76e8ce742c439b6fba0acb46849e62"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_03__a_then_b",
+      "sha256": "27a579987a2ed694f6ff338fba1d9ec129902fd26b6fb63b6c0225e4f169eebe"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_03__b_then_a",
+      "sha256": "b9c3698572f68402268c0794e74961ad5698980026497d5ba7858ab4a57cda45"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_03__overlap",
+      "sha256": "48a32c213604e3113a1524335b8a7ccc6adc766b46fc5c16c4b06a5d81a1367f"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_03__single_a",
+      "sha256": "6a8866436051510949c79dbf6e25a939c7f91bf1488c870a4d4b9c01de17c779"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_03__single_b",
+      "sha256": "8fe996c32fcfb827a6c0d66c8997b388110f571582408186fc8cbf9a2c81446e"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_04__a_then_b",
+      "sha256": "8d64427f0a71c7b6aba001515a1f72a6e219127fb83636e739776acb0beb2437"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_04__b_then_a",
+      "sha256": "134da8fddf7f08167c92742e4b4c6db6d8eab408fe53a4ce9a8977dd663f6248"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_04__overlap",
+      "sha256": "a29cc1e41198963cb034d2c1a773a5b89c31bf43e19d050b2f1c0e797bcd037e"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_04__single_a",
+      "sha256": "5bc326eaa3d49a0e8469f1b075fc450a420d49d053902b840a6efcd0bef8284e"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_04__single_b",
+      "sha256": "4c6edd8d0f478663d00df159367d8b64babf5c3f4af9ac1b6043ddfdca883fff"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_05__a_then_b",
+      "sha256": "627f3e2458b72514660e0d961c0079bf19336eae7187490810fa465f0fa8621f"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_05__b_then_a",
+      "sha256": "62469d42eea8b184cb1e06a14d01925a66fe44b9cfe0fe0acaa720f3c0ff934a"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_05__overlap",
+      "sha256": "357525910b30681b217d3b9d84a014ae922d177c51aeefbdc3450ec5cf3f250c"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_05__single_a",
+      "sha256": "3ee87d8b583d5a6dd95eb1a8f2843ec1c0a6d09c0a061da8caa4bb3107ca7047"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_05__single_b",
+      "sha256": "97e3bae6c981d7923ef21eaa900f4fb638372a30102b6e390c40504d3e2bf62f"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_06__a_then_b",
+      "sha256": "616831b62e381e4fa0646e8ba8008c618e091d7a632979c245b7f954ff66cd9c"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_06__b_then_a",
+      "sha256": "61da1f12826d12862e149f95b1ecc403a1523c15d7c0facdcda956595ebe6604"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_06__overlap",
+      "sha256": "19d11d20e190fc43757bdb24065d43db3e991d09e561c4e4fd5f92f667e51e7e"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_06__single_a",
+      "sha256": "9f166a9576dd0400b5b47985f19fcbf1ec8f487fbccd0f431821e112c878c709"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_join__block_06__single_b",
+      "sha256": "44184f8c9a84fd767999541227ce5d9a1631e7e346b275f06507372cf471987f"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_01__a_then_b",
+      "sha256": "a88ab57dea5a33a2f4e828d1c8d1f7ac2af72e1981531722b2264d248a3e05c3"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_01__b_then_a",
+      "sha256": "c3a63a4daff331576a09025af256760f10dab8fe990f290a8c2cb8c149ecf44e"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_01__overlap",
+      "sha256": "702631979df457caa2c96c4e83e03dc9d5718634ca1bde713b5d2e3af05b158a"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_01__single_a",
+      "sha256": "025b4c6c721deb0b9a455e2d99f39639d0a2ffb1d3ea6933f8fbb917054b5187"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_01__single_b",
+      "sha256": "e38faa33a4a7230b19b03daf84c4d6cfe22104d738eafd426bb63e1a4e0cc9e2"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_02__a_then_b",
+      "sha256": "68613f3613617e11f0a68b6685a4464e9db8955877781edf42259a9cc214a706"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_02__b_then_a",
+      "sha256": "0189693e61d48b95c3130fe5c1d578bdbba21c4bcc3e3b86e65edaa8d6b64ce5"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_02__overlap",
+      "sha256": "9b40bcc00bc8ecd806a98f69cbb729e1028f0c9a3e7fd3e21aa9d864a5a5271f"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_02__single_a",
+      "sha256": "3c57f4758e6c65b2bfc7ef39718cb9d1fd449b2c81944cdaa8da697f19d50f01"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_02__single_b",
+      "sha256": "08d50fb5e5dfe5b8d522f780c0c18a91e52315d558763fff412e76e46a3253eb"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_03__a_then_b",
+      "sha256": "da267e4e5abf0976ba4bfba53253ad887b4f02df64b4cae02560fa1b5279cb0d"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_03__b_then_a",
+      "sha256": "f1214b4740c53317e7183547263d4e020dad0b25b63486d327f3991200cfe957"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_03__overlap",
+      "sha256": "67133b3b2ff8aeda62e18d04f58f795890560fd50658d7905d5a2128a76498d1"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_03__single_a",
+      "sha256": "fa8f182690cf96c003a815b4b8cad857511e7b4c92d3bf67e0f86ac93fc8f52e"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_03__single_b",
+      "sha256": "4ae1aedfffd9dc419f8845433e36f1130ec2007ef7015a882fdd2bf52c66e000"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_04__a_then_b",
+      "sha256": "aaaafbaf61e6fb19ddf2abe6d453288fa35d15cad631bc1893b18b99f64bc61e"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_04__b_then_a",
+      "sha256": "158bf2ae9a1d312a8db447945ac7654876bb024e5750d63d341f1250e3ca16d2"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_04__overlap",
+      "sha256": "12eb1582a724492dd73ba01d93763fea63882cf3352bf3ae85a5cfd9b5928373"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_04__single_a",
+      "sha256": "10e3c7c43895394508c51d7341ac97023526f9b6843c1e75d3d801224f7a7ca9"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_04__single_b",
+      "sha256": "fe74ac07fc0afee62ceb63e3ee592fa3b62a48ea0baa7bbc6c7efb6a469e20f6"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_05__a_then_b",
+      "sha256": "7f201d90eea3b0730154de164d76ef655e6f2f8db7af3c9f5979aa885e601fd0"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_05__b_then_a",
+      "sha256": "db4b9d9c290311fd0fee55e10fd461873d6467f49814b6b7792c85958e8e5442"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_05__overlap",
+      "sha256": "1176341468328dfe88e2921e41fd81f2139fe8ba565e6a3bed4927e629718d61"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_05__single_a",
+      "sha256": "0f5b388733760b23907e35c9b4c575608dcc5651c23dc8610bfb6b31730db9fc"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_05__single_b",
+      "sha256": "434cc599f7aac4b1b9862866d3286ee97d52b5b284928f18ea6c1a7835c6504e"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_06__a_then_b",
+      "sha256": "5b7ed43b097ee51584cd42d92298d085cea44fc55eb3e059fbd67db3eeb32e9a"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_06__b_then_a",
+      "sha256": "e33077e6cc58c2690b9d889fde72b87d784eb9954e93833cfdcaff3b7ad2d76b"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_06__overlap",
+      "sha256": "343825c8b21fb38a0da7f3840b1e56769f68dbf35475318119dd12fe6353e499"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_06__single_a",
+      "sha256": "921ca0c86bd11ae3c6d2093c2a6a6f26a8c2c163f860edabedfb01b97c7805f7"
+    },
+    {
+      "source_case_id": "customer_missing_index_query_whole_table__block_06__single_b",
+      "sha256": "47d645709b6f056573e79940bb3e6ca00b8c50190c41d8c4b7e352bd2fc7c240"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_01__a_then_b",
+      "sha256": "013692cee56b3bb0fc9724c001e648d6177c6de16b82f727f092f292ddaf696f"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_01__b_then_a",
+      "sha256": "88791967a29dc5ef40bf06b60795e6edae73117bf7f39bc842765ee4ae6f6b36"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_01__overlap",
+      "sha256": "9de06b12d3206eb8d2a0a1542c306d388aadd5af23712c8c808e19d1000a69c9"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_01__single_a",
+      "sha256": "b612176dcbd87d823a785ed16d44e7c0d9b42ec206a7f29570c22d7f7ed1247c"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_01__single_b",
+      "sha256": "d37a564bd84f6940217d68d6065722e3b7f4849d05ff310cde517c16d4ba8573"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_02__a_then_b",
+      "sha256": "2247064da558a1b73db1247d2d369d2961860d44007c690dc05329e131385002"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_02__b_then_a",
+      "sha256": "68c92bf3a514cb78cdc183256816e0d9c27a47a9c0b1da25cfdba7638934704d"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_02__overlap",
+      "sha256": "6c1714d8d9324611f68fdaacae297be8ce2bf32ff6c7b983bf34dda77f086e62"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_02__single_a",
+      "sha256": "237f7695ee819c94b2937dcdf4571201bd40e61a4fced6147c3c3d1a3a9176c5"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_02__single_b",
+      "sha256": "16ef7766097ddfa3669587531903cb0c1838a356380a9d7afcdfdc42236be30a"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_03__a_then_b",
+      "sha256": "8c177a64bf5d294c51505574ac8ef8c632f59e729b2a913be3903fa44669993f"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_03__b_then_a",
+      "sha256": "1c8cbdaeeed4d87c60934ecddc2ad9132b4a1ac3679e3475bb7480836793dd10"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_03__overlap",
+      "sha256": "46e8c5c4931d36fb1deafde79609a2ede5eaef80e3b6757c8d90ad73e94a4b69"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_03__single_a",
+      "sha256": "010d75d4cbaa4dc08257646594f50b0a7ef599fcd664f4a8bf06a58884ccb5a9"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_03__single_b",
+      "sha256": "e78c156a9e32546f829e2058d6e924d771e23b226f1b6a14e5c89546ce6858d3"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_04__a_then_b",
+      "sha256": "c92cbe28f55685e476098844cb12c9a7b9eff056ac760d1bfecae6a5d0e7f2e6"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_04__b_then_a",
+      "sha256": "562c23b294f1cf78de1344f67260b61ec035dc67c305157277884ba618816930"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_04__overlap",
+      "sha256": "03310f3048bc54fb000a3be326f9bd0ee9e01fb9e57cb6a3bbc959beaa82c866"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_04__single_a",
+      "sha256": "e466bdff83181a861c518575467518a4a6037f50463b80fff878fda96b3f6075"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_04__single_b",
+      "sha256": "3042ae07333773ea38672b948d0299e028bc400c73ab745f0376957e59c93a3f"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_05__a_then_b",
+      "sha256": "7e5f7bfc9ccf9ca5b2d2bd5e41bba7ca0beec5d443a767e35f01df37ab0b5efd"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_05__b_then_a",
+      "sha256": "cba78974f98e71e2555e7cce7aa931fbeb1e4ce7585ac681131da9f55b5520c1"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_05__overlap",
+      "sha256": "e4e5ab7a316674c70aeb46fea27fff553f0bbe2a706bcf55d0f4edcb43af9e56"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_05__single_a",
+      "sha256": "39f792828cc78b9f155e07815f29cda4b5750af3367073260c42c6229d69e86e"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_05__single_b",
+      "sha256": "9ed6c2266b03dc5a14b722043c35104079d1287e4c23a9f96f313757094618d8"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_06__a_then_b",
+      "sha256": "ff1163ff158aa675571105f9143a56ffec9db48db8b2d40f5cf61ffcc0f7db08"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_06__b_then_a",
+      "sha256": "0f43e60cf22840f2bafb4be3a319db2ab44f50445b86ed4a8dbaaeeff605cf60"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_06__overlap",
+      "sha256": "1eb4dd468751aed6b684e533807afa6af2e75fea9dcfdaacf14677f1c08f100f"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_06__single_a",
+      "sha256": "91d587e26d60ebf21198c73e7eaa733a84ec3846efdaf29c3e87bfde72d79b15"
+    },
+    {
+      "source_case_id": "customer_record_lock_group_by__block_06__single_b",
+      "sha256": "6ead1ff3242aea0a84928a597ed5787c98fa3f150958bc57fa3b8ea89060070a"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_01__a_then_b",
+      "sha256": "306d5e8f92b2cdd6b85816730ee3c360847b83e0f63d8fe29ae52d5f784671f6"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_01__b_then_a",
+      "sha256": "ebc9bf78b9ef7cc1a1495c9b7d8d8ddfe21c8829c3a99f56a3e3d4f535dee260"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_01__overlap",
+      "sha256": "704bb056977277ec09c5a39c6ad68433b2bba1f8149523980786e3f99cd4eb21"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_01__single_a",
+      "sha256": "df9d3d1e10dac16ae26def2f5288757f26ff84b13fb5a4feacc1e813f3a252e4"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_01__single_b",
+      "sha256": "107d24bcdc26b8cc6cec6c8749b8462a97500a563cb0d33f1d04a7620aa40194"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_02__a_then_b",
+      "sha256": "31cf2ec6c646a52bc736964a9fa4613b3a03a5d4a2f7be85c0c0f0a84999c494"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_02__b_then_a",
+      "sha256": "5d2f18a524d030b0eb0ddd700477530796172c8c0ebe3dd432b532010c2594c1"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_02__overlap",
+      "sha256": "f39ef1794ce31612170399cece2c8e3c09cddf443fa3c05d47d199ba3f6d260f"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_02__single_a",
+      "sha256": "9994dd13bc64d404148a96b0bab6261c5fa4b2c5277915fd2782decf28a6bac0"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_02__single_b",
+      "sha256": "fbaf600f575416c9561886c425b956bc0d4120732fb04b20537f95d4e81fbd69"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_03__a_then_b",
+      "sha256": "8e13cc76293d6744b69d032f6d99918c5bb9f9a30ede3eb3178c7a5cc013fd8c"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_03__b_then_a",
+      "sha256": "23cb5c0d99621c8cfa32fb4812f0380ba3a93f5582ff6c419056805737e6cfc6"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_03__overlap",
+      "sha256": "4958745b5fcca97e23241fce6a8ae5ac6314c57ae389df43172870690118df40"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_03__single_a",
+      "sha256": "79b29bd1de2635c77c899be33eec181387418f802a8f49cf029fff7db2677905"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_03__single_b",
+      "sha256": "a7a4e137b1e9f4f138b126c85ff75e4f215c862830df8e9cd2304215c677358d"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_04__a_then_b",
+      "sha256": "bf6c46559b6f14dd54c2f7141926778f5ada9bc141403135f6a7a0e6b386b37e"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_04__b_then_a",
+      "sha256": "b93e6951d0255634e861b273880e4838166f8e502368e78c385c7b5441a3cf10"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_04__overlap",
+      "sha256": "d361b70a20f2f8c662e6a2bfcd66e3e39491e448e453bc6c14181527b66641a7"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_04__single_a",
+      "sha256": "01542990bee69fdcf068ece6d383cf4f1201f7de7d3bb170a2cd8f2ec5ce4f4f"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_04__single_b",
+      "sha256": "41a38cac67a7616bc302e1e5209a35fafe01cabbfd70187902e878df85cc6e81"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_05__a_then_b",
+      "sha256": "57a621f84045559934e37128047fcabd280e8f87b0df3dd3bcbdbf18ef1ff394"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_05__b_then_a",
+      "sha256": "dfd56d3629fdd32838fce516d558d4079a5cdafd5fd7952815d17e738e579256"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_05__overlap",
+      "sha256": "a42b90b24f509fb7193350c8c89f7bff7d8e63b924ea7fadf37f4121280de977"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_05__single_a",
+      "sha256": "74bf1055d4f01c3b00a6babed75af83badd5d4d7272232136ca0dac2172893a5"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_05__single_b",
+      "sha256": "395310fec306e0d0aab5ce3ea3cf02359209b7c9f2bc1e5e6500e4799f35e828"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_06__a_then_b",
+      "sha256": "de204136285dd5a461409bfd91dd6d364c6054bac08e1d4391c6d851d5379741"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_06__b_then_a",
+      "sha256": "bed8f478f5e01610e3051719b3a28715de1835d5fc93690e39eeba56a1663720"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_06__overlap",
+      "sha256": "c7affce73ef969b604f92286ef54255761d8f24268d52c1811d5da73dab662d3"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_06__single_a",
+      "sha256": "79e5cc54c22a58c3485d0c43bbc230a3c341be5bc856ebaeb982d655f7c7ecd3"
+    },
+    {
+      "source_case_id": "customer_record_lock_implicit_conversion__block_06__single_b",
+      "sha256": "f0ffa8396fea3ebbd344ebad498d9abd6a8b6986fc4430e1f8d3b7fed4de15ff"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_01__a_then_b",
+      "sha256": "6a64f6b0bc172696324c4cb77b8bf9c7b4e2780dc9f9c5019cd0bdfaad98303c"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_01__b_then_a",
+      "sha256": "e2843ea0a8ced857a58b64798008657b73db47bed243f692ff30702cbaee6ab0"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_01__overlap",
+      "sha256": "9552ca395037061293b6996a8110d2fd47233301db592a215f50d15d47cb7e3b"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_01__single_a",
+      "sha256": "ffbfa1a5754287de15b754709e393556cc14d2dbb38f019e6f0862a7ea511da5"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_01__single_b",
+      "sha256": "57eae84bea28753368080144d9be950034082eb3d7aedd04fa25f03b43d7ced4"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_02__a_then_b",
+      "sha256": "41debd5ec3e85a0eb4d4f8a2b12c962cee7271f07aa2e7ab3f8453fe6e28a2d4"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_02__b_then_a",
+      "sha256": "3f80d92d00655e0d5b871a76f35fc608a40627601aaecce151a6dae32c187a4e"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_02__overlap",
+      "sha256": "bc7868c55ac1806cfc3da3b91f29a4155ea7abf52d18f3eb99f3481fbc5f7419"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_02__single_a",
+      "sha256": "8dc3395fed5e597b6c911241b18f5a0ac05907fe99110c9d57a074012f0c94f1"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_02__single_b",
+      "sha256": "922398591cb457883cebd72484eb314cd64028fb0d427b5ea44ad91dce235314"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_03__a_then_b",
+      "sha256": "99e6775ce8baf8e907e49593c68f74d3ab1292320511d79f2ee65fb945bbf935"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_03__b_then_a",
+      "sha256": "44b49e7b38f0c98d1fbbfa219b8f2d9192242eb797046ad146910692b16dea51"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_03__overlap",
+      "sha256": "92ce3981925b621704023c2b1698f5e814c8ed739d7dd3191d70a90a91ff08bc"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_03__single_a",
+      "sha256": "197c145725ae64206389d632c6601455ca80a0e0dff86339a057e0278ffbe346"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_03__single_b",
+      "sha256": "2d98fdb212d5520ab2ca67f926574fa84e7b7218c174c8617ccfcde9b1ce370b"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_04__a_then_b",
+      "sha256": "f7923c05fe7c6033b302ea7303e8c038b018fd6f56f88356ac422f8643920fbd"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_04__b_then_a",
+      "sha256": "b816a109ad9e7bb1425e7da9152fe8c87c96415805962224f48f027ef942dcb4"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_04__overlap",
+      "sha256": "27ceca9dc26286bc5d4a1632bdcd20267d4a58c87988ce870f6c35d7f98d8988"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_04__single_a",
+      "sha256": "e4d93c81702d8a8f0a8d2721532fb0246bd709acf8b69f9461d5f79757e4bac0"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_04__single_b",
+      "sha256": "8a8241bb5f8081c6e158980c3b689d580a9baa13fc92b15a5da36c4da5366971"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_05__a_then_b",
+      "sha256": "30ad281e18eb62da056186a2ff9cee782fdc15903e2afafb4f560b33aafa4e37"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_05__b_then_a",
+      "sha256": "ce31cd766edd4f7afaa59625a19998c0f1ab9eda8e049c50a75df24e27c4fa54"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_05__overlap",
+      "sha256": "22c193c7c36cc3b274f47eaac62f8508f977105328ca34ea376f2dbdffd7d4f6"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_05__single_a",
+      "sha256": "295d241ca6118ca0db91257d79eefc08beccee76b153fddee8b7c30cd940eba0"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_05__single_b",
+      "sha256": "332ecafb06cecbd2f7e63ec2445e8f6c25c3c406bb69f516f51e0a106fb0a95f"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_06__a_then_b",
+      "sha256": "790670ecb9dba16eaa4002ff6c9dd62cb835e9efeeef1f40356e66b83e445b5c"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_06__b_then_a",
+      "sha256": "e0614657d3a6677c4728cfc5929871720b21cc87aefca081e11bdfa899cf5aaa"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_06__overlap",
+      "sha256": "683e0186c3459f2ce4fb7954842fbff794f360dafe1e16d4912d87d2e6348153"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_06__single_a",
+      "sha256": "d444c4deb36e5f207e2ad599ca82815001e76c6473d1ee24ef606b407d2350fc"
+    },
+    {
+      "source_case_id": "customer_record_lock_missing_index__block_06__single_b",
+      "sha256": "74ac26acba103e773ac419a0dff2f8aa325d85ee36197b245fdd80560809dc1b"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_01__a_then_b",
+      "sha256": "438c372411ffba4581b1392028246a4d802de28defad9e8982a19889ead0268b"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_01__b_then_a",
+      "sha256": "ee9ad8019d85c1c6e39e585484c20f2392ea96f117054ecae6e6bf116ab9d254"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_01__overlap",
+      "sha256": "6a7fb1c5877538369aba420fecb5cb0d3ef41e66cd5d96649350371bc0476771"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_01__single_a",
+      "sha256": "b3dcd23b625f939580b03f6fb768f92d0e5ce6a3a9870560fca06253cc92dc51"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_01__single_b",
+      "sha256": "ac015a84de105d3b5f703976e0aeac1afacbf9afc152ea67be8f5120f77aaa10"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_02__a_then_b",
+      "sha256": "b84e62c33e8d26826072d37f4174437efd30c95e7f4d38d0cf37ec6222b1191d"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_02__b_then_a",
+      "sha256": "ab47d5b9259cca939a772cecb0731c3709ef6d2934ea666f1f51454de4ea8b56"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_02__overlap",
+      "sha256": "d81cbdc00a577e964b01553ca1d1de50cd6182c2618e9a8811e375e0f65582dc"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_02__single_a",
+      "sha256": "0a2883ffc48210f15a92c7fc9c1ba4035faf9b964a3cf492faea36d79ff3b517"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_02__single_b",
+      "sha256": "0946c3ad7852ce79aec119c10186968f09528141c5823f74b70a388ef7df9753"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_03__a_then_b",
+      "sha256": "b89517e2b34c1e96e3c7ad26a907419b726cf7b08367c76ae5b2a0efaae72377"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_03__b_then_a",
+      "sha256": "653679c80a87c78ef4c460dbb4492234bdb82edf8afb7e2c73abbfb06e4b5181"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_03__overlap",
+      "sha256": "586d721e49222811d0b439e39d61b32cd2b0f162b372a2f8cf3b4e564907df1f"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_03__single_a",
+      "sha256": "998566fafff95d06a92117661a8f6406d88526f64bafad4d8fc6e10415ce6c99"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_03__single_b",
+      "sha256": "a71b8e33136b52d043c3228532453008669c89bd7120674137d22a1aa94aae45"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_04__a_then_b",
+      "sha256": "a6bf1a1b1bdcc1315b08820b4b4ba8160c4da2e00d5356796643430e87d019b9"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_04__b_then_a",
+      "sha256": "4bbac08fe2a4f38cfa552c329b5cebbbe5ed863041f32c43fff42e21be6c8978"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_04__overlap",
+      "sha256": "bd9db070913d88b62fa29ca73c1ff9ed50fd0d5c5a4e0274bbb3cbbe09910629"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_04__single_a",
+      "sha256": "542befe091ac7b83bdb26546cd2786031a5cabd87bc928329ff6a6050968750a"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_04__single_b",
+      "sha256": "90803edabc0b17f5607f70c06d5d04fc4db9b9bb894881738c44dbf85091adb6"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_05__a_then_b",
+      "sha256": "3b0e07671dc998a661a26afc4ef13ff6bfcc4cb175681e5de44a67189293940e"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_05__b_then_a",
+      "sha256": "11295f4efa1d44aeb8e1fde15b8ed3744299e6bb52e0ea50e10eed25b4209fc8"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_05__overlap",
+      "sha256": "8a7a3f630df06d1eedc3562624e168a5fc1de40e8d331b24560d4c1f2a1ba760"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_05__single_a",
+      "sha256": "38e5d95bfd47bab6c327d227ee29bb3daf3b8228f9395ada123493d3e2e231e1"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_05__single_b",
+      "sha256": "c8228a46c937d40bb54c51e172b8a7f81d44e8cdeb6d8d6be779820c4117e2f9"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_06__a_then_b",
+      "sha256": "d9c9fffd1013e97c19a6bebeac468f5fdc2d3a2604f0accd0ae337a4dd53a2ba"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_06__b_then_a",
+      "sha256": "69ab4bfb0e17acb2ec75b4e4ed25122bb158294f968aa22dd37e6f05cdc256e7"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_06__overlap",
+      "sha256": "11a6309186f24fe6638d0d5b25c633b7c1777e201378f784314f12dbf5781a95"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_06__single_a",
+      "sha256": "b11bad220cd48acc790fbfb7194d9188c568406717ba52116ad80a139a380d3e"
+    },
+    {
+      "source_case_id": "customer_record_lock_order_by__block_06__single_b",
+      "sha256": "b626bfd9e7af7beeb2cff607a4ccf5a5b389a6434b1867a670d08c8509e91fc2"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_01__a_then_b",
+      "sha256": "39da477cf14436643af37553673662926244f12ae8da737e03733714e327acc4"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_01__b_then_a",
+      "sha256": "036cdeb4a6a2e6d2e4c9c67318fb69b6321b5dd262440c42cf66205267c6ff77"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_01__overlap",
+      "sha256": "0301db9e2ca793c4f829727dbe68a75b1995cdf306d13e73b83223deda9dfd09"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_01__single_a",
+      "sha256": "414d900a955caf37e5b3325d37f9a51d8a8c852c0ce94d739280192e71c0e6a3"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_01__single_b",
+      "sha256": "efe85c7bcdb88390f6755a4f6b344915957b90fa4ee52e7549fb95efee59e7ba"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_02__a_then_b",
+      "sha256": "e51f5c9e14e22082c9b1b404602f21f83b7838156ef3bc75b8be519a4a047993"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_02__b_then_a",
+      "sha256": "deba8d0d21cdc69ad87b9916f41f625498fc0be53ec82b0087710347ce5003fd"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_02__overlap",
+      "sha256": "f31ed00ce6a9db0555f20c0c0b7c290220f346b86be50a6c13c67a7abb312e72"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_02__single_a",
+      "sha256": "e6bb58a5f8314a1d88c25be907372032515f9f05bb1399de9f923eba8d07f3f3"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_02__single_b",
+      "sha256": "7c798a803dd0dce6f0bba082a21b92277dd0196c87e51dd9a527964e80ced439"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_03__a_then_b",
+      "sha256": "2bd39f343f97f46470fc78d91490bfa47c30be8d29b0b7c920fd0dbe46555321"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_03__b_then_a",
+      "sha256": "0c57e820c5de67839c9a7d1c9ab788ef8185bc9d39a4f4f1e2f9326e0a2a10c7"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_03__overlap",
+      "sha256": "50ed5be6d5e403bcad01a11f495a557312bc8619a4fa27e532aa0a84228034fc"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_03__single_a",
+      "sha256": "98b1610ba3a06785676c9b0b9ab35e23ad7f126d8978794b355df6e4ccd5c614"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_03__single_b",
+      "sha256": "f36d65f6d9162063ffe7473ddc9bca826e9dd132f4c984337677fc7a8b8c7081"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_04__a_then_b",
+      "sha256": "40d3159f7229b08a7a08ae9a782f108b3ee49c7e33c5b100fb7b1523dcdeb2ab"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_04__b_then_a",
+      "sha256": "25bfd6d6127ea6acc07c1cd46aef7048fa8609ebc0bf5fc22eac9fa5f2a28d0a"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_04__overlap",
+      "sha256": "02a8302c495157c83f9ac8e38a6a0ab8e4f4504ce4fddefdb161babe529318c9"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_04__single_a",
+      "sha256": "10c0ee6434f779685cdf181f8a344a4f576512496696cd449994eb1ea0a17414"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_04__single_b",
+      "sha256": "93cbae1fe02bd805c596d2ec23921f707ed0067be955fbe91d58baa7de17ed31"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_05__a_then_b",
+      "sha256": "5e34591e5fda352016c18c4bcfeb4dff84a9d376a7bb60025540186b639369e2"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_05__b_then_a",
+      "sha256": "448e962d86677b7e9c4f5deb3caeccabf57ac71f1e6164c176303986f36e2cb5"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_05__overlap",
+      "sha256": "3de5b7b55823a27905dc0424f53a9cbfd68153ec80efa06559504358c05f514b"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_05__single_a",
+      "sha256": "9161e49d391654aa1adbf73e114c086c779f8d930cae5cbd8caa1a269da74482"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_05__single_b",
+      "sha256": "d2c83b8b99f75a04125407d4225de78e4d029bbf191877ff3b327aff3fa511d0"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_06__a_then_b",
+      "sha256": "ab3d8b8d947813467e6d1c99f3b7ce4914a125da3a98a48a37af638dfb56ba84"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_06__b_then_a",
+      "sha256": "74316abbff990c9b5757982f13ef509630209d4621d5cf37d07e0d43f9a4554f"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_06__overlap",
+      "sha256": "16cb803b9132882ab5b55c180a7e2f8c78bfc7289e0675f282dd94a0f791846b"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_06__single_a",
+      "sha256": "0c53d631382372f99e1dfdf03b7d573158be858e446310401741d825f24aab7c"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_join__block_06__single_b",
+      "sha256": "1d3a8d76b32c26e1480d9d1514766e1f77dae1062f3e9479d14af0eef30bfed3"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_01__a_then_b",
+      "sha256": "f333e54e2568161c627035610c645856f7cc1ba43313abf78bad35b33baf4b39"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_01__b_then_a",
+      "sha256": "f05384a184fffd01d5af7ad8fbb81e058e9150cf4e0053029a08fe6075b91b51"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_01__overlap",
+      "sha256": "4fbbbba1b29b540128f5bd4e0fa34715f881a4d7675807c24fdf3d3200aa6efd"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_01__single_a",
+      "sha256": "f8a912f49b1fa8eee578fc7de70a149148597a1de826840b9aecc95ec266e9f6"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_01__single_b",
+      "sha256": "72afab211d46eeb09a7b9d2de1b0b31d7c44f6c9fef0922b019b761f3dfdc7dd"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_02__a_then_b",
+      "sha256": "703e777c6ee52585b9efb2c1b1793aca92e071de21b0cb24a90d75eecafcca20"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_02__b_then_a",
+      "sha256": "e5de20ba87e114cbc918885eec069c878aece2c8cc83a2321c0ae9115979addd"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_02__overlap",
+      "sha256": "d698ea737af47abeab1f652424af8b89fd016ed32303ec5668af643efaa52228"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_02__single_a",
+      "sha256": "465f2ba799f7c96b2570c085f0473f6ab9bcc0368c1af010d8b74566000aed62"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_02__single_b",
+      "sha256": "1ed242362676ea86b922b8373c6e74509448f85185c645d256db559417e9bfe6"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_03__a_then_b",
+      "sha256": "bce0ab3417370eef1d582ac0f4bafb4a2cb519aa86e80dba8cfa0af206dcc93f"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_03__b_then_a",
+      "sha256": "e4ca928c4ef9490008342fcd54cce509a4afa51f98482f258e905c3c94ecaac6"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_03__overlap",
+      "sha256": "a6f6d226e49ac17787653d700cc09fb002d8c57f641c255aff47cf840b5a8c19"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_03__single_a",
+      "sha256": "5bb2365f558c6c3f349aa7f89a9d985102c1f6a8969d76001b5ed915699e3f06"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_03__single_b",
+      "sha256": "9584c28af684716503ad39a14c72942d8b9d98bc49ed49224084f415407fda83"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_04__a_then_b",
+      "sha256": "862897625c84192d418b4080221fc94faee889472eb42b37d00417425086912f"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_04__b_then_a",
+      "sha256": "6b692df71b97fe616e34b15c55ada369b56259257f76ebfeb66417a771eb6b42"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_04__overlap",
+      "sha256": "dec0faf13b564f915eb0143a92c7e14f89704370bb1f0ad62dfd535a76ff38ff"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_04__single_a",
+      "sha256": "f07476fd71c815e6935d209f53ec52f2b3085ecf65ac5d69298d5bfa5d2e2c1a"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_04__single_b",
+      "sha256": "2788acaf4d06296d724df786524a49146d9cfa0987402ece93557b172d2b12a0"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_05__a_then_b",
+      "sha256": "1a665a77bdab85bc93d9392a232729f58874defc1723eb4164ea2a7ea8dd0808"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_05__b_then_a",
+      "sha256": "dda651df5ef39c4a93bd2618fba1cf0988a8e7c408cf5df9d61d72a52faef325"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_05__overlap",
+      "sha256": "3aefa8c18c6d79d7790e629f81376c07fef37b2a026bdb87fcd8a1e7abe5c4e5"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_05__single_a",
+      "sha256": "101e014f960ad81641fd90ed3ca79088431df28b980d7e4639af958a3ffc3dcf"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_05__single_b",
+      "sha256": "6b01c805719dbd77e61409482a759c13586781793ea3c3a220568d9b024b3fa9"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_06__a_then_b",
+      "sha256": "0a8b2167285d9d36e08d613049923ed28dfb7369d7d46f5b54e188d13ee5e581"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_06__b_then_a",
+      "sha256": "082394ee90ce7c3fd9950aeb3a9062f58ea3c584acba76303782020db1502ae2"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_06__overlap",
+      "sha256": "2071a521109a2c62607b6b55ab2373108f25a0584b1439ba260be2aa5f0daf38"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_06__single_a",
+      "sha256": "22c0e6505febf9c66bd0618f21a7f5d85820baf0c6cea448cf8f68da76286b0c"
+    },
+    {
+      "source_case_id": "customer_record_lock_query_whole_table__block_06__single_b",
+      "sha256": "820ae31de5bf32b1a825083a7a912696103443b9bf910c79c4caac46319c943d"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_01__a_then_b",
+      "sha256": "eb6249bd31fc40bdf979d7c60395fee2fbfd6e001388ac613d27b57d607fc522"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_01__b_then_a",
+      "sha256": "89cbe25c5cdbfde7ab5cd7baef57fa7ef17972a0518dae1354bc9dda95e9e4fd"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_01__overlap",
+      "sha256": "285d22b0c91c338a38de1527665c9b2bb5cc27e1af40bfeafd6557ec8c244c17"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_01__single_a",
+      "sha256": "e4358fbb4070a1d52a11f4865c23aeed93ea927c7c3ab866df5d89b8a7e30536"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_01__single_b",
+      "sha256": "25a0c097f8f0d69fa59e6dcac8a7d63ee402b59d74af4e7f884eff51755d7281"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_02__a_then_b",
+      "sha256": "1937e121029021e1be4d5d7ab3cf0d3961cc262e8dcf63a1cf09cf9296763e72"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_02__b_then_a",
+      "sha256": "de1087062a4e563fd2fb0e9d349c8241f7163ba2267830b9c5edcbe3a4b7460f"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_02__overlap",
+      "sha256": "4ef86783c9b34e958f42bfd4f0ed6f27b1b0b46cd7d4d09f093e03c87a0c03eb"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_02__single_a",
+      "sha256": "a2bfb97297955132bd7116f4a96679d5f7a1f543f04e9282d7b89d4ea449193d"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_02__single_b",
+      "sha256": "78a22bea9697b5861199faf285ba89a432a963721a219d620f64008fdb92df4c"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_03__a_then_b",
+      "sha256": "f86f6f71f33e50f19452eecd829588f8e0a60268ff8dc9412daef41594521f4a"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_03__b_then_a",
+      "sha256": "de08ed8741dae26eba0c49d02ee53a936204cd2505594f5b43a46ef1373d122a"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_03__overlap",
+      "sha256": "178aef7eaadd5c4f7b491b52faacc983a8d2ac6c3cd1c2d098633ac00cb93e63"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_03__single_a",
+      "sha256": "a5aa0da156867cd397f29a34795a22e5bc75b6ad51a92a06dd18c2e850db41dd"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_03__single_b",
+      "sha256": "4389d31045f1f9e7e84308aed98f41568a2360b61b35a739fede1b05f6dbe7da"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_04__a_then_b",
+      "sha256": "83346e8d845ca1148905d09a8f1342ec8d6d5b49f6a976f35e33862b11f7f399"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_04__b_then_a",
+      "sha256": "d36f901167f2ba0ff29571a490d8e7dec0c5cc6075eae15ad9eaa9bda4ba247d"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_04__overlap",
+      "sha256": "6f42286022d9daf2a33a08c5b21603bdfd19f1be74330bf8e2de54a995911f18"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_04__single_a",
+      "sha256": "33c5ac38b1cff265c0107fe232330fb5ad812eb6aae2b4fe72ad2caea8a4db11"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_04__single_b",
+      "sha256": "d6093c9d72b7d45d97141c99750375582899110e5b7b4df3ac9571c603c81070"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_05__a_then_b",
+      "sha256": "e994da29ebe4f8b03ee8f1b813bc6fb8f156e466570faf5e5fb29d0e2ba0292a"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_05__b_then_a",
+      "sha256": "11057fa440f881d3ff0e064d3d91cb88c1d43dd433436066f1a290064e7cce5c"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_05__overlap",
+      "sha256": "147174ce0666ba814484fd53aafa7810e14669dedacbd9a8ad5e096bef39f7eb"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_05__single_a",
+      "sha256": "23f59baa2f7c95b8424280f7bb2ae4d0cb719664065e3bcffc30045c9dee8a84"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_05__single_b",
+      "sha256": "ecff3480c23e8b8f5c2e85d7d24fa04adbf4bfc4df38719f9bb9632cb9162fc7"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_06__a_then_b",
+      "sha256": "75d46d357c3640c5877b2b76ee2c99c2d39f36fc02d995486418b89caff20d51"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_06__b_then_a",
+      "sha256": "f90b868525c0d0837f4c0f867b9973f15add4f0124b8af7fb376a56a751d4907"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_06__overlap",
+      "sha256": "4138486a6b306cde1650570b5ed14e2c26ec38c6cb38289af0569b27140bc2ac"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_06__single_a",
+      "sha256": "0d4e055b402deb4c07cf57b029ee34f747eae67debfda76ae7ff23022feaabf5"
+    },
+    {
+      "source_case_id": "orders_missing_index_group_by__block_06__single_b",
+      "sha256": "3eb5ee9b4e681a4a0fa09b75f84741b21e9c38c77ec7329f382c16964b59c4fa"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_01__a_then_b",
+      "sha256": "c996c65dae3c21b929a59a0ac0339149febf3b62ae659ffa87015daa0b890b6d"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_01__b_then_a",
+      "sha256": "d8a7152439d9898503ef45b511d9e5fed51c32c9585538652167415955325deb"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_01__overlap",
+      "sha256": "84fa4ad2de05f6cd605ea99a0871ad792139fd3d942c1455ef8cade3b5dde58e"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_01__single_a",
+      "sha256": "dc7c97c887d5e8c33867b2e7ad21ff9c82e99f380863abf42966b5c5dbf2f8fc"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_01__single_b",
+      "sha256": "ff731e059c82ea2b617d1419034ca1681cdfc57d9f7aa13505f3ded371dba18a"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_02__a_then_b",
+      "sha256": "c98118ee5c12890efcb120a220fdab6203f02253060e5d8790ef107581b6d817"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_02__b_then_a",
+      "sha256": "8e73eb3c24a8514a6173d074d9d035695dbcf2a9ca009b340b1591cd9cbc57b7"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_02__overlap",
+      "sha256": "af4380ec37d15d07e65bb97353a4ee045038b39dcb27c1ffa32a20c91ed2588d"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_02__single_a",
+      "sha256": "a8d013472e0fb69aa73222f375d36a423e9d9782bf4f6d0c2c791456bc43f805"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_02__single_b",
+      "sha256": "5e5ddc40e83ad372a84c491462c5bbc888880249b32f88b2958dccc348a5027a"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_03__a_then_b",
+      "sha256": "4cf0b15b681d359571762ffe6ba861a28d306717c369c8c5edb872aa8f2bd9f7"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_03__b_then_a",
+      "sha256": "9c3adb015a0eae8cf54a08a5358798a448d38748bba4fd3dd042f3a2f48bcb61"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_03__overlap",
+      "sha256": "5e3e5b352e15c727c1acbecfef531628807ac761435e54c28d0d6710aad5867c"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_03__single_a",
+      "sha256": "fdbc523e056ae6ab718584f4703ab7600a74f7eb5de4abf899788c65fe8f51f0"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_03__single_b",
+      "sha256": "fa211f1f75f1e8bee35ab941fb5d2e4b99c0cee9ad20c8976f8790887a154f17"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_04__a_then_b",
+      "sha256": "ab71ba7c65a0476e31d47aa00d734ccca8f51b3338657d74db20fd381c5755b8"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_04__b_then_a",
+      "sha256": "995f46dcb990775a6346a6d68d4bd079968dbc26f7ac96cdaf4bc932bbbdc575"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_04__overlap",
+      "sha256": "9222c58aa7fa816df35d6b3e2357ceca3a2924b699471c40d240f6c030d7f0d8"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_04__single_a",
+      "sha256": "115e622746529d504b175fc1abc78633d14dce24e43ae084f545ad9e55f131e9"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_04__single_b",
+      "sha256": "721f10f78cc6bbc248a45eb40f3420b12a627714b9ba8fcc937ab0d984542700"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_05__a_then_b",
+      "sha256": "c14abeaa74989249bf0e6454d57304a4de64ec72c3822b250a46ba148facd372"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_05__b_then_a",
+      "sha256": "a9677b323bca62998d78c3967a49ae94cd971aa1d148d9efec71ea459c7ef91b"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_05__overlap",
+      "sha256": "cf45807669ba4fdf260d90693e6c47e9f8c8aa7466f047800f3a9e9f88594c69"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_05__single_a",
+      "sha256": "d59c8730371708d8ecb65a3ade1f30284f556ac5aab75939c72872c84b6f17bf"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_05__single_b",
+      "sha256": "aa6ed0dbcf55c9ef05174da715b4433c8dc41130b4c75126d0100cc593cbad58"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_06__a_then_b",
+      "sha256": "09f723fcb9b1ded80b48cb937a63a5488d2a9f652e06e5a94bc1c2bc7acb80eb"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_06__b_then_a",
+      "sha256": "59b0fedf622503365c90e6ee0bcc433cfd95d4cadc2eff9f413a031c0b4edea3"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_06__overlap",
+      "sha256": "99f5851a77240441046a69aa43a72a46589d362b5a331b75405a9ca25e4375b5"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_06__single_a",
+      "sha256": "a34df5606b30871bf25eea64cc39f309c62f5d47b7ad7f732f9a796d8465ceb9"
+    },
+    {
+      "source_case_id": "orders_missing_index_implicit_conversion__block_06__single_b",
+      "sha256": "50a7ae3e43e7de42e49b67d2f95f04de1385ce892f0bb15893c68ccff1b77ed8"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_01__a_then_b",
+      "sha256": "5ca93ebe2862d0d491c3c83eec9e1ee3eb3bf73791eb829693ee4fd3a932629d"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_01__b_then_a",
+      "sha256": "216001cdc17a2e28156bd49a88f4d914483362673d813c3be20e622274778e63"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_01__overlap",
+      "sha256": "f4284613d2ee0000aefc56bde96846a794e4d9a66c2e97291f76b2c3d8037a2b"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_01__single_a",
+      "sha256": "fa48d7e73ee2b276ef4043b6fae84fabe1618ae31ae00e70b154babdb0b0c0c4"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_01__single_b",
+      "sha256": "65f3fc452e3680ec83f037b0bf40b335cdb4a79ceedab0db30dc132fc00bacb3"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_02__a_then_b",
+      "sha256": "dbb55975d76340dc06e1c4cefe13855f586dc147e1bce4a16d5a60d63a4cad03"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_02__b_then_a",
+      "sha256": "8726d0bc0d510673e7989a78faff3b6d85aeb934ed454ad7ffd16ff4119c772b"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_02__overlap",
+      "sha256": "47ba695092f2f300a72de2363c08ee672b08df326e52d063322a833ff8441ced"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_02__single_a",
+      "sha256": "a4a243cdc81aa5afdd5182a8e915c31376b74ff8840b391b140f57d06a1e29b1"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_02__single_b",
+      "sha256": "7ce8b30c66c8f9b1a23877a0466762221dbaf5c177a7933a4bb0ec140b897092"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_03__a_then_b",
+      "sha256": "43834c9ce13a681cfe471a18c3206721a6677699ff908318ad9174acc2022ec2"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_03__b_then_a",
+      "sha256": "3274f5a91b7d5d01d6691583a0f8531509560b79809821c52fff88f5f1d61851"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_03__overlap",
+      "sha256": "a7b74e6f4e3b440ba3ea8e924af6156f663ad693a50b477d9c703b5648be353e"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_03__single_a",
+      "sha256": "6e12ff3625693e6c552ecb94e2d99e4ba2667867ddced5a53c9bcd22bd4b99b1"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_03__single_b",
+      "sha256": "bc63c8fcc1ab4f93d81f355aa391d018ca3e7381e0e6a7e8302b53cf3fed4acb"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_04__a_then_b",
+      "sha256": "91eeb11fdddcdee8f1beec677eaa150d6a3576401cff82bef1761a3e8714e4a9"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_04__b_then_a",
+      "sha256": "3511751124e57d304932bd8eef893677c986778a56d8efd7022766e4ff399f4a"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_04__overlap",
+      "sha256": "b11514ee2a76b9421ba9b9dfb12b530ff4ebb069399ba08f58c06aefbab6103a"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_04__single_a",
+      "sha256": "3a8596b37ff8042f4159e0c8bf53a014f8f8be7735c59a001d6708a4bf84435f"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_04__single_b",
+      "sha256": "8f249c1d9880e96140925c383974a3e04a6c5a6bf196d29656732874ffbc29fa"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_05__a_then_b",
+      "sha256": "598f941dd404f6e97191b1f1dd5b6ffdec2becab48b793f5b092c872529423d7"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_05__b_then_a",
+      "sha256": "86f34265cf05df5d0e62a643b196acec36abeb9e9132f8eb35fd3e26628a32d1"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_05__overlap",
+      "sha256": "bc12c14b2ac419255fd34ffd30ca31af5ff78e0b48eb00a512e011a724143099"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_05__single_a",
+      "sha256": "81525047a22c3dfbf3ec74f4ef3836f21048c2e518b2e3f9caaff948d59c6faf"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_05__single_b",
+      "sha256": "16768f30ad02e4cde68183bf27a09725e3cb62d58de4c6303dbfc9a11f7adfd7"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_06__a_then_b",
+      "sha256": "4932e0572f3dda76d2738f9d0c43cc2578d3c12e7910b048b4daac2d823aa1a8"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_06__b_then_a",
+      "sha256": "0b419aeab2690222199d5532468239f6bdc2bdb30e4ff2f041f0b401da44f384"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_06__overlap",
+      "sha256": "48a8fc7dbb6f7acd0280f01fafac1d7300c51d3f7430491c672edd0740a48141"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_06__single_a",
+      "sha256": "96ba9a0d6a9c9bf2b25df889419d687ba02cc3ee62d7e4392b8ca5fa8061b9a5"
+    },
+    {
+      "source_case_id": "orders_missing_index_order_by__block_06__single_b",
+      "sha256": "a2cd3bdefcd9c64eac55ec305513965fdb66f270313b20c943e10bcf8ed5712f"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_01__a_then_b",
+      "sha256": "b0ed1eeb5dca1d767f40cd24adae6b729a38b362069b4046fb7255bdd7df1878"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_01__b_then_a",
+      "sha256": "876e4f91fd4429b957071cc6496e1e6fc35d112c512928a6eef2e1408c89c9ce"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_01__overlap",
+      "sha256": "24bc6911e9cb1df3e1b870f49e739b8dbe7ed112bdae2e980ed71a0dd4937bdf"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_01__single_a",
+      "sha256": "1c4af97e49919051a8043039902f4855231c099c672f041a7dff8d31c2340a95"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_01__single_b",
+      "sha256": "42021ec0c6781ede1419383c726f9a338b719aee5944b48f78780255f4e85258"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_02__a_then_b",
+      "sha256": "3cb48db6d331a2bfcd7bfc09306cf18f122f3d0a5a10559becda008536215c4d"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_02__b_then_a",
+      "sha256": "25175e17ae52c58a707e89e24a9d5aeffc5cd00a0471e6c3ecba6bd52d8f91ba"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_02__overlap",
+      "sha256": "8b60b5cb267ed70c1ef93b984a4012b383ccf3900e98c9737d5d4a9078b1d8ae"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_02__single_a",
+      "sha256": "766b2b04d0778bd1552c889b297f8dae6677c207cc7e8db31a0644caf2567f09"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_02__single_b",
+      "sha256": "593541c8aa804861ae5dd35933288b1b18110a99c7a6e8cf2108fa3ba1b63ce5"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_03__a_then_b",
+      "sha256": "696f0b8cef680b060a2eccc8af88c9a6f775844dfb022c89dc5e6168ec91ef74"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_03__b_then_a",
+      "sha256": "a5f66d3ddc6286be93ad326d2fbd16bbf59c7509f09367e551bbeea86cc89a8b"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_03__overlap",
+      "sha256": "98a8e59bfcb62aa7a5c1d4172d02a95ddc6107f3ac25867d81b2e3dbab63a2ed"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_03__single_a",
+      "sha256": "c95f28fc24d5c92254a32f0d732143a841661a961ef125ee0851f3182e49d78b"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_03__single_b",
+      "sha256": "a8520b16e85a3e330232045168afa38cd33e9c1f0c5a5742e9e5e34c68408995"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_04__a_then_b",
+      "sha256": "49dd0de7fcc2a19b1cd99b665a732f7e55d4d2cc7a27f9ff069ae96a04fc1c32"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_04__b_then_a",
+      "sha256": "e3bf96ef665ca86dd4a6ac9d588fcbdae1d746204aa0578256ee507b2c1934db"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_04__overlap",
+      "sha256": "57d96e6e84e69cee0285746e9df2a48604c6eb46f4f827d0f3119ea792e82261"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_04__single_a",
+      "sha256": "da16aaea5d2d3692adad8b6088cd0f1dd3e38fc441d66a0d1f913a3df2785da8"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_04__single_b",
+      "sha256": "6de29f35e873fae97ebc5e56f7b8025929027b68dda5d9b99c2d121630a18daa"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_05__a_then_b",
+      "sha256": "5b5ff587b5cec4078ffd03bea74384717eff9af00795de5e65f6e3102c518955"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_05__b_then_a",
+      "sha256": "b55471d899598830e4bf436e7c6abde83056dc969cc7a4995dd11b04ebabad0b"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_05__overlap",
+      "sha256": "31cf838af0fbe206f4faf83cc850729e80f83358df494816dbad1aee3f252a55"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_05__single_a",
+      "sha256": "a8f7f17074f7c0569ff9ecf628e95ff280bcdecf495ce7b1093707a4e3942320"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_05__single_b",
+      "sha256": "cc71de0a860124bd392e318af03946db5080f7062dbb358fcf99d6449c2041e6"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_06__a_then_b",
+      "sha256": "ab3732925723e7e1bce89977bd609d3376ce319d562177abf9d034f765e97087"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_06__b_then_a",
+      "sha256": "677916aaa8a79106ee0bbe2e5cbc4ce4acc5a0de5ff28cbba7bddc60b4ab6715"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_06__overlap",
+      "sha256": "131ce4b989667aa4bf2a7a8ee19438a49913cce8801c25685d43fd4eda746b57"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_06__single_a",
+      "sha256": "03cfc1a4640cfc79352caeb6552dfb53c8db1908300b1f8bea39c51982521051"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_join__block_06__single_b",
+      "sha256": "804b283e50dd061b7c64f6b62aa2e3b88036fdb626661dd159f141d056d25874"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_01__a_then_b",
+      "sha256": "9295fc4963f69def23a307d8eb34f360fcc441fce10eab2e9cfe1058caa7c2e2"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_01__b_then_a",
+      "sha256": "704db934e1dd983f7a06345590307fdc8f88384eb0611abf99115c810f6608d1"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_01__overlap",
+      "sha256": "b63b47bff46111fe22883c5ae5e0c73fc6eba498c0d3ea5c57718ec0ed21cf9c"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_01__single_a",
+      "sha256": "b2c404fe82326fcda25e099fdf3c0c58190accbb42496b2df7fe07eb353d9a45"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_01__single_b",
+      "sha256": "0fdad534778cfebca19c1958f228bf888767a2c3d422008eab45660b6ac8a590"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_02__a_then_b",
+      "sha256": "91b9b301779c691a359811e7d30a36233f58623e144c45ef95b751f1f1e341b1"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_02__b_then_a",
+      "sha256": "44fd54fab0d423da72fa932114d4474679e3fd0323185e37b70f712a5967ca6a"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_02__overlap",
+      "sha256": "ffe459ee7e6635e5277ebe531accfe0551007a821b950aa47bcbb44ea88cfa67"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_02__single_a",
+      "sha256": "4af11756578316f6ca5716a28e6d46da3a2caa4f4e76005644d455f484f2f1bf"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_02__single_b",
+      "sha256": "9729e86a5a7961814a9d10a7299be1b7cffbf98b1d57081df44c30442891e653"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_03__a_then_b",
+      "sha256": "1bab87a43cabba36a48f51e8860cc20a786ee59e60343a3a34ddf2ebdbe5560c"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_03__b_then_a",
+      "sha256": "6ed6e7a26a71746f64760de4a9006989ff70002af2eb0a0a1b51d7f921f3da30"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_03__overlap",
+      "sha256": "38a15174e81e0f9eb9853e0248e061dc3ab0b7c0d7b180c3d72825c57e457208"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_03__single_a",
+      "sha256": "c98ac8015a9662a45933b16f45e1c17468043c13c4c55e5d85765db310539953"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_03__single_b",
+      "sha256": "0e66efdbbd9ee5e9f2e31c947ce084bf71ce0781356ef932e25c915652c6a1c0"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_04__a_then_b",
+      "sha256": "031c012fc897ca9c579aee140ec8f509ae5b74afbed6c0be0a9af0c39b6bdec3"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_04__b_then_a",
+      "sha256": "c1a1f6e6f6e6523b0fcaa05af677ad8a11506430fb2b42b6056a65f3eaf759ed"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_04__overlap",
+      "sha256": "5280a41d2d4e6a71dd625df9f56c0487b62b65cb5b26ed6cda318c9dac3a4da2"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_04__single_a",
+      "sha256": "5f0528546c81ca33bcb3266fea5d30df15c0a78de2bef40356fee6cf6e903eb4"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_04__single_b",
+      "sha256": "aec2bcec38d3839405956e63f82c0292c5b1d2c419e8616c555c462acdf8cb23"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_05__a_then_b",
+      "sha256": "76fa972ef5b523f9cbb55de117f17037ea2e5b4bf3f9a477f1785128edfe6115"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_05__b_then_a",
+      "sha256": "c270d9a65d3def21b99a5fb943100455e76eb9c575118ce4e4ffc42c93d1f624"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_05__overlap",
+      "sha256": "c4ed72940a385ae49ae79f1a1991d91f37db76b312551de3345430acfbe31df8"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_05__single_a",
+      "sha256": "751bed92a454d4fc7c215feabb73c83349664e224d83853e3f73fd1773519aa0"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_05__single_b",
+      "sha256": "d23bf2e872f5b3b6528a56ba4f5ef5440586f7e7b1df0a78a210c957eb72cc16"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_06__a_then_b",
+      "sha256": "0475dd7f8b7ac0000c6ca6ad6c750785820f44ac664493867c20fa4beb858001"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_06__b_then_a",
+      "sha256": "4591c91a90e797cde4059348cb66c29dbef7ecb8cafb74de0fca5847eed10efe"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_06__overlap",
+      "sha256": "039408f3945b9fd85093ac694a97418ea4f7698e2297959999abed809d7fe1fc"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_06__single_a",
+      "sha256": "9e3e75917d5b7ad0cd79432766e97cb2e725b31ef724e8682d3af9b0d5816202"
+    },
+    {
+      "source_case_id": "orders_missing_index_query_whole_table__block_06__single_b",
+      "sha256": "6905a263019008b4f4f2d9c1657f79c94e77fb0ea18942978144151302ca82a4"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_01__a_then_b",
+      "sha256": "e29947c3c545870c4e7c30e05ff4391a2fbc07871becef0330cdbc5d2c29c063"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_01__b_then_a",
+      "sha256": "e1e05f3f60f21e07bf3674b195ec74c378f50b0d75fbf714b5107364550e49db"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_01__overlap",
+      "sha256": "ffd3dd85ae9dd0b1829a2dbd5568e23814fde0cbee60ca830534b889fd16090e"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_01__single_a",
+      "sha256": "d18d8d78a0c72b5f3a9b9c6b1f0b80a04fc31ad793345a639f15f9a5f83c1bc5"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_01__single_b",
+      "sha256": "b5bf1483cec17d5c85af1e4a419ce89d9be54e29f909180c2bdd5c623a28ae40"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_02__a_then_b",
+      "sha256": "e97ed29ca9fef51c33be6561c5baa9d225bf80e260f29f96463c6451a7edcd6e"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_02__b_then_a",
+      "sha256": "9c142b2c1252b880d16d8f23e4ac2d306b44a17e5fed491602997a967418ea40"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_02__overlap",
+      "sha256": "7838cf6b1e06cb1d798540dae60e83bdcbf8fca582a5377a26ddbf5fa2ac7601"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_02__single_a",
+      "sha256": "f9335d057d5a00158965c1b17a252d0d6f561f877e2991074bff4b1b27a218a4"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_02__single_b",
+      "sha256": "6fc69b7864d7c3610055e4637eed6d8d53d12bf90c4f883dfa22b6ae8f57f758"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_03__a_then_b",
+      "sha256": "4877a0f553c7dfe062d1a494c85e37135ddab81049957a9e7af897db946bd547"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_03__b_then_a",
+      "sha256": "d352e1187ddea19b00ff69c253b800765fed71fc8ba2f1796d4c7d5c5685e603"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_03__overlap",
+      "sha256": "c87b9206ae927f9190a87b238bcf8193ee92b0b635a30d0effd66cc2801e97c4"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_03__single_a",
+      "sha256": "2b0feca393ef55957ea01bad11aa69d18f10cf0f8b7e4fa9776fc325e697dc0f"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_03__single_b",
+      "sha256": "6b187f56cb97d15df4a94d42f98249402dffb5eac27b80a826c5191e91801525"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_04__a_then_b",
+      "sha256": "34839b99e1bb63a3b4019a658f648cc8fd0337364ea28f9f3a60bcec149dafa4"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_04__b_then_a",
+      "sha256": "2431816721b57bba739c180bcac57729519e81605ca3fa6ba8b9b8c0e7dc47b0"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_04__overlap",
+      "sha256": "14dd0e4e4c52d290453931939d88fb5866d3d02b10a5c7133010fa6fcd19b258"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_04__single_a",
+      "sha256": "899f2598d8643c446540f902a27424d50cb76beae0265b9eb44f447ff6b627f1"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_04__single_b",
+      "sha256": "cd9ff6a31a119562ce89d3c71fa5c3dd986425149a2c4e531aa67f162da8b341"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_05__a_then_b",
+      "sha256": "c931e99fd99468538b9c7a671cf19766a4aae167a3bc05fa5c41df48e702d4ba"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_05__b_then_a",
+      "sha256": "389a1d6691ea3b7601268985dc072cd75f651baece4d86c4f8c8f19e96f6661c"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_05__overlap",
+      "sha256": "a9df3f64263da994a55da906a708144c04415b83cc0ab31490d4d42dc0cbafd9"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_05__single_a",
+      "sha256": "cda47076ecba958df1e82ace4850b867a04c515795b87d413afe6fbbc1ea1c9c"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_05__single_b",
+      "sha256": "31a219fd3378982a56a3a76beb99b17abc559b42b3fe1ab0a0bd4602c1a2ea7e"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_06__a_then_b",
+      "sha256": "1ee8a370c3b39496aff969560509452b7ae5e15017a54886bc885d726ab3bdc6"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_06__b_then_a",
+      "sha256": "273abb980d55925103b2f25b7e7a86d9033daf450ade7b1ce204103c33bbc99d"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_06__overlap",
+      "sha256": "94b04745179083bdc4f3b6f17ea8126257911707f3fda4e1facea9262a83b09d"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_06__single_a",
+      "sha256": "d1c092d1255c26ee58950add75e4e0a65b3986806472a56d93857eff2f08e0ae"
+    },
+    {
+      "source_case_id": "orders_record_lock_group_by__block_06__single_b",
+      "sha256": "d781e50e8b154280677a2174c894e9f3bdd8ea5efbc667e29a491f6af700b685"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_01__a_then_b",
+      "sha256": "871b9e9cff488955c4c8cef6df6ef3559f2ef3883d589fd36950c2f26d3ac29d"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_01__b_then_a",
+      "sha256": "ea1d24b6a4194bb8172a80e8df86a79efe057419e9b83db4cd9810f0e83d74e6"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_01__overlap",
+      "sha256": "3687b15648728f6adbce023a634a00af730f24f718bba82bd89bc0fa28f24e4d"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_01__single_a",
+      "sha256": "866c8cbac8ea8d7c4194d4ae4f6500f5f30e004c24b4c65b55e637b0f30e614b"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_01__single_b",
+      "sha256": "8abf90880b00d7d35d7f28f012edebc1601f3f759f4c12c570cff30522927694"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_02__a_then_b",
+      "sha256": "42641f6fd5558e00eab5a0d5e9c9d59c7cd3917003c5cf252705fe5b44ef1002"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_02__b_then_a",
+      "sha256": "b58bb3d96a2a39b004a12a7ba8396fc9c71dc078011d4bc4e09c2ce49bf90d8b"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_02__overlap",
+      "sha256": "d84f31059645e3197b5f8dafa2045d5745cbce904b8a169b94826677fc3f888c"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_02__single_a",
+      "sha256": "c7a1d591f8338643ce8d45fbaef3e6da75d3134494602b24f1a6381a27137908"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_02__single_b",
+      "sha256": "7dada318373d01b9c35a08245639660bed0c8d8de3348b44c04e443cb104bec8"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_03__a_then_b",
+      "sha256": "30501f1fc53e3367486028f311bd9b2c38026c14e999868a1d8cb3b3dc0c29b3"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_03__b_then_a",
+      "sha256": "0a8ba15004849644ecaf22190be83c818f144480b37570b4d202bcee4585ac6f"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_03__overlap",
+      "sha256": "523f4061f833cdd459502b0214e2086439dd4c1f72c33bf1a372df0a6ab47c85"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_03__single_a",
+      "sha256": "db130362a12d67d845dcd0e76f48181bb1d2634a7d0e7b7fa7c6d2dbb73426a7"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_03__single_b",
+      "sha256": "d235666471b59054a276854960138bab70ff35713323ca574a168844cff0198a"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_04__a_then_b",
+      "sha256": "8fcaf87917da0652914fda88a33c93746a85a361a9bd10378667889e85cfb26d"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_04__b_then_a",
+      "sha256": "82422fd8d203d81d93bda5d4b000007b72f16c34cfbc2da2e6aee66b431c1e95"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_04__overlap",
+      "sha256": "7e11eeb01527428567f39c187ba95c104b299773bb80f59844a5f5bd3f89521a"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_04__single_a",
+      "sha256": "ab4cbc07cc5ce63560568d645a9f2cdb2c2d1da5f6bead88e0b93ca53a1ea037"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_04__single_b",
+      "sha256": "5a47e378cd5fb64796af15d3e4e92c88816ba9aaa04533da4ea9b019eeac5153"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_05__a_then_b",
+      "sha256": "b68a19b5868dc120ba10adecba8abe63c6cddd96ea1e04f0d7f2b18f66408b41"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_05__b_then_a",
+      "sha256": "1400f37785faebd2ac2678a6a4fe1a132f39e679daf4c2cfe05dd7df44f953a5"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_05__overlap",
+      "sha256": "9b9bee3788dfd168d212dc6628d9d3f16d291ea295dcd4e5a3bb9f09965831c7"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_05__single_a",
+      "sha256": "20d3eb4f50e872a3bdf2c868a0173041f68a343f3e406fa6cd66b087ebfff22f"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_05__single_b",
+      "sha256": "bb812c8357b7cbd7e300edbbd9465f3dc3e0475333a92321d43070f067352e8e"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_06__a_then_b",
+      "sha256": "06c7dcd901ef2993e982f17ac24e6f983d592eb5cad3538ecb0314d775242104"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_06__b_then_a",
+      "sha256": "38f6c5d362d33fcfbdfae26e66897357d5f47832c5e0a3a64a8af4815cad4619"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_06__overlap",
+      "sha256": "dad532c823754f494cd8963f425dd0fe395c4f47564b4c5d78692982e6bcc020"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_06__single_a",
+      "sha256": "24861da22b4fa55c37f1709765f5f76fe22ac9bda99e1d18537e9bafdf65233f"
+    },
+    {
+      "source_case_id": "orders_record_lock_implicit_conversion__block_06__single_b",
+      "sha256": "861a04f5985548821161b191a7814671317098bdcccfb021d477a9d2ebf0cb6a"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_01__a_then_b",
+      "sha256": "14e8020283ed131c19ad2cbadc21feae0090f4548dd5e305d8fb71983a6e55f0"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_01__b_then_a",
+      "sha256": "2882eb4dc571dcd906a82e372f51e392024325a98b5dda9a661d8e7dba63ea2f"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_01__overlap",
+      "sha256": "ae8e72e842fda5dcaf3d83099c249041733faca55706b1b791457ce1601d1bed"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_01__single_a",
+      "sha256": "3566e37179fb1c038a76a0852b1dcc9d7d3aeb4ededb8504602b31bde1d67417"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_01__single_b",
+      "sha256": "ffdf13f82ee7da2bac8a0be0e9385cc5a823dc71d9f664ddbc93724a82c0ff06"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_02__a_then_b",
+      "sha256": "6643fede4a7c28dcce21d40333d60999532c615e74203dbc24ed9733b5874e55"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_02__b_then_a",
+      "sha256": "edf9502573ce3d1552c62f6dab161008d6669436d33bc9a5f7423cfded289208"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_02__overlap",
+      "sha256": "1194fb9c2be9629bf0d3052fbd6540bbfa322d4c86bf679ef1ca80b7bfdce97d"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_02__single_a",
+      "sha256": "13f741f3109d8bce1e2e1363256c20516c3835cd1e9343ca26b768c589c4d4fc"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_02__single_b",
+      "sha256": "112b1b7fd2a438f2c8824ca87a0b350f93553ce0d14a723af2cd6c2279927c63"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_03__a_then_b",
+      "sha256": "12971621361f23b4931f9d63bd3bc9de31b1ee3e7653cce6f5d70f57de2a3fec"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_03__b_then_a",
+      "sha256": "8b6b6dcaed259ac7fa601ad3d547f582961575c50402acafa85c540101f5d130"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_03__overlap",
+      "sha256": "471a5cae232282eb9fd673eb2fb760cdae90ed53d5720e21537fb2f248ea02ec"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_03__single_a",
+      "sha256": "d4bf645d3505935ecc44cd054ca6e23cb76740c820c3bbe69b22ccad188859df"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_03__single_b",
+      "sha256": "6388638f149d12c3307e9fe415bf976609d5de1736f3fdee1fd81eb26c7508eb"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_04__a_then_b",
+      "sha256": "987620454dc584e6c52c7af059d0f240703989e019e909534cddc0dbac5b62e0"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_04__b_then_a",
+      "sha256": "1ab9901ee9563dcc393b16343fc09813d293765010bcf85c48307884ffb5b1bd"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_04__overlap",
+      "sha256": "7c50fd93e8cdbcf3e879ffe5bf8146456530ff99c17f913b5588f1a3e6bc802b"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_04__single_a",
+      "sha256": "dbb403cd62d0f3caf264c2d216f6af4d1b95f806f831cb372497808d3c0d1454"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_04__single_b",
+      "sha256": "9bf435b7aabeb6f21199b6d8d58702fb9fa167403324c367872e0da26debc9b7"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_05__a_then_b",
+      "sha256": "dd371e9d09c129f460af713d253692b88759f1018d19ea1c1fcee670a84e3974"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_05__b_then_a",
+      "sha256": "6df191ede8e1a42f22901cb1d7489ab5b81ec7f515344b158d996a4dfac13d6f"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_05__overlap",
+      "sha256": "aa2642a19a26cfaa3dd3e01f84cb8986fff52bad9dfefc45ff8791befa248a34"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_05__single_a",
+      "sha256": "31ab0f1c9864c26bd165106354fdf70b238b9e572cbca6c9112ec90652a100a5"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_05__single_b",
+      "sha256": "2bf73a26828f7539f1be3ae2eae8413e9512fc85194ac4ec1f65ac7e0e967c8c"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_06__a_then_b",
+      "sha256": "824887813ce3902cea4e783aea6bebf0fa1548a647519c7a899156d7bffda10b"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_06__b_then_a",
+      "sha256": "b8bd3296d45f22bbaea1958802319062af590acec124152f08c10f05729733c9"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_06__overlap",
+      "sha256": "a1d878caac48e716d91379226cf900f6eb5d2156c8c4f70f7ed567a24222ff38"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_06__single_a",
+      "sha256": "c96c75d01f99404ef10524acb85e0f6c01ada45e8d86edc81d0dd5ae0dc3f28d"
+    },
+    {
+      "source_case_id": "orders_record_lock_missing_index__block_06__single_b",
+      "sha256": "ac3fe01ab1c92bb5154254d08eb035da90657c0b121b9f629af4ec136a190e7a"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_01__a_then_b",
+      "sha256": "4ef9c09cb3a33f9bcb618afff45dd06f959a8e5c34eb745438a367345eed7ff8"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_01__b_then_a",
+      "sha256": "940a5f46c6135f32e3b62ff9ebbb6bcb8b673b87d5842210f746362dfd2beced"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_01__overlap",
+      "sha256": "25d20dd3e8a2bb724d0a1fd8fd785c5f3c538b1d84ad1a9094b9a9db80b638f7"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_01__single_a",
+      "sha256": "f0aaa9f0c9b842d0c250b5549134d644664445b2e2c86f71fee38bebd7e88ecd"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_01__single_b",
+      "sha256": "d5ff5bef432988f769dae0c865f6a1be5e52f76b8f95c5e022cd67d5221481a5"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_02__a_then_b",
+      "sha256": "b32e10e6f626f22b69404e6b91bfca81b7069603f204087411232059f9043d2d"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_02__b_then_a",
+      "sha256": "403f56e1cb830e79a9d2bce8c9cf4043baf93627a8393270ce6279f396cf4f44"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_02__overlap",
+      "sha256": "df8b401caa9efa5df69bcfcf0c32c483b94c330ed3f7043e245503da13d3ca22"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_02__single_a",
+      "sha256": "45c57a7dacbf5d89f72594705b922cccfdc62de625aa3fc7c9e19de62b31c99e"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_02__single_b",
+      "sha256": "14ff52d4b50175c51faf33b9748c94d03dc214bc7f78c4615c98c19075fd2752"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_03__a_then_b",
+      "sha256": "e4b2ad1915d3e33bbc80c2cf9cdb3ef172bd1db77f2113b7b3745e65c7959899"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_03__b_then_a",
+      "sha256": "10f00df983f8c11c8c1ddb2ccb549f95d87d7a31b3a2fb5eaec7c99bdb619c6a"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_03__overlap",
+      "sha256": "0822d029e66f43442fc58ccbd123cb3ccbe1e4478dcf5b1a5721b1e3d96b95d0"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_03__single_a",
+      "sha256": "bf26473a6d01c625585be02dec286febffd960b2adfeed990d0f7a0139ef1f35"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_03__single_b",
+      "sha256": "41ada00ac60d0bebe4a0744765c5ca2cef7505fa1a262cc8a26ffca981982dd7"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_04__a_then_b",
+      "sha256": "3179b832a262748e73110501e2fe523dafb68dd6947485d2e09902af92dbfe89"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_04__b_then_a",
+      "sha256": "ae015d9e24c95c5c75ee540306e5da6fb3c797ee4e372b4f48ea583b2fc9ca8a"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_04__overlap",
+      "sha256": "019aaf796529b51669636536a4d9b2ed1daf135209da93eb90d57ccdc5c75400"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_04__single_a",
+      "sha256": "42978e771a4892cdff44f4a040be56178b4856df8b7b5b7e8dec7e2b2333f338"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_04__single_b",
+      "sha256": "0139d72f57adf96e67360f0c3d99f4f9fbb56e3e2b9f29c632b407f38953418e"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_05__a_then_b",
+      "sha256": "bccecd899b5363ab39b041e7ca44b2223315b1cae2ab1cbc329de5b886205e8f"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_05__b_then_a",
+      "sha256": "bd66b53089e04fd2bdd32b422ad4be0075581110918ed5756e8796fbd6ccbe76"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_05__overlap",
+      "sha256": "cac8bd70672bf70fada3a1392eed7f042bd728077be57802798ccd88c88cfb1a"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_05__single_a",
+      "sha256": "548b8c9361bbece585f13ed2c1e9458e208cef7b4b113feb0a59218961d9e517"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_05__single_b",
+      "sha256": "a630aa54269fc6d39f0c1d920e52256a70c9e3c96c12f30e6c866f97654bee60"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_06__a_then_b",
+      "sha256": "ac40d260dcd91bf7dc3e92a3c00f4d64986c70b4d4154c9c81222e801431e730"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_06__b_then_a",
+      "sha256": "afc85a076737f6c20802729358f3314b6b60051d5c1b1f59370c1830a9e8f0c8"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_06__overlap",
+      "sha256": "c2d5ba9df117147973a93b41919adab14e686b1401340a2541f3ca076b35ac20"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_06__single_a",
+      "sha256": "cdb84cd1819fee8e4df38b6be14ad2d131b0a065e5466b11db1aeb1dfa642bb0"
+    },
+    {
+      "source_case_id": "orders_record_lock_order_by__block_06__single_b",
+      "sha256": "5f3c9fc6992893ad2e4dfc3945d167906e6e936055d1e3e91ca207308aa1f1e7"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_01__a_then_b",
+      "sha256": "38a1e0dfd679f3fceccb47134d8bfc06349b6628f7c4a9d014e5319d751ba4a9"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_01__b_then_a",
+      "sha256": "d4eef0b9177ef9b62368f491ddd35443b24daa694874c1b270a19eb0d18b2502"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_01__overlap",
+      "sha256": "35f9cc4b61ff1c7be470b1cec2dcf394cffa9d61305c44622ac446aae2e18769"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_01__single_a",
+      "sha256": "7ed24795f1cce0285de3a4b61f25e3c31872d5f13f174ec281f660ef4e96dced"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_01__single_b",
+      "sha256": "661cd626ab2d089c7673339c77bf363fe56ec01515130cb98ac9d44fb1f453f6"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_02__a_then_b",
+      "sha256": "0a3e185cc0279e813bff13393e0edf2d3142f9fe54c1104c13be50eefa1158e8"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_02__b_then_a",
+      "sha256": "396d3cfbd0876364d37b380b15ecca288ca6867b54c65724258e06b8f852881f"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_02__overlap",
+      "sha256": "dd92c2f0095043a6deda7dd89ff855fee93200abc5999b9743801a3eb6ee99ef"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_02__single_a",
+      "sha256": "9fa493af4bc7ef64da70bc44ff5ddd04c18413c1c1f03c8499c0b7943732fbd5"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_02__single_b",
+      "sha256": "4a85f601bc8f944d9251820f4dc1bbd205dca3a419337ad95435d2186fd6a6f3"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_03__a_then_b",
+      "sha256": "4849c3b3ebffc66dca9290aea0f5190866849c92ca89e40f68599ee05fb275f4"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_03__b_then_a",
+      "sha256": "a4c4437bf43806ec6673667cfc468a53a37d2b5077a870b8bbfecdbfbc21a0fd"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_03__overlap",
+      "sha256": "7ce1fc3ddb92b3594bdc8026d146f8881212949bf28122e0558e4d0611e2c789"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_03__single_a",
+      "sha256": "933c898a6e30610b852334b4c9c6592f8e1f9729b839a42835e9d44514d270a8"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_03__single_b",
+      "sha256": "a87c37282fc9dcbd8fb04f701b1240a71629fc26d8001f4a41b36bcc5ba2b761"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_04__a_then_b",
+      "sha256": "24ffe97fd041b678aa0300a202eee41abf00164d3c51fb12fd04c435513d4233"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_04__b_then_a",
+      "sha256": "4233d6c61ecb9237630ab947bdc8be5055767967f951f2722e762e02c88b5e5c"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_04__overlap",
+      "sha256": "f4dbeed5e757004721bca65e9213becc240c5fddc4827b9760eb235c6cdf8368"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_04__single_a",
+      "sha256": "082f1261292bf0a5cc219403b642ab29270b2dff5b7cb6959b4576b50259a667"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_04__single_b",
+      "sha256": "4b29aca8d3d5a553e5c63e32cb4d51c0b3c05582eca8157856280138bcb0a1b9"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_05__a_then_b",
+      "sha256": "b7ddf9a22896d87afc04e5d925f5bdf1ce66cfd5e4ba7708000e09bfc790b4ac"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_05__b_then_a",
+      "sha256": "febdad0b8e3200b7b31af937548ff2dde275f3c09811071d7917de4cf6960f3d"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_05__overlap",
+      "sha256": "f7cee29e4964251ecdfbd79a2988a89471c5b9bb17f48b3f3f892b611718c544"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_05__single_a",
+      "sha256": "4a4509cbacfadc70eb54722511fb23378071d97cd510757b0a79306e798c9468"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_05__single_b",
+      "sha256": "b7fcadd11d1a6bc3a69ec2b8cdeb5d586f014082924dbb03daf1686319efaa9d"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_06__a_then_b",
+      "sha256": "c482d246b5d3b43a20864733bd3e11c92885f8eed4996e868629165779e0265e"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_06__b_then_a",
+      "sha256": "e9a889de778ef30ea3d496309b4a8d1a5a8af5d03e299a0fc82c57c4379e7cb2"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_06__overlap",
+      "sha256": "86856e83e6615cf89213ce90dd13ef35cbe981cb14404a13e23a31bcc8eaab26"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_06__single_a",
+      "sha256": "077f6ccf4764dc6b396f33009f3ae85a22807f8d7d0b7bb23d968f5334ea6133"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_join__block_06__single_b",
+      "sha256": "aec91006739d4993faca221955a86424b1ff6bcf5b1dcab63d3c3038821f53d7"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_01__a_then_b",
+      "sha256": "223991cbb00746d60a446ba8478501c8db6f4007edce99f7e80c88f3ceb4c8bc"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_01__b_then_a",
+      "sha256": "a2158a87c9efbd91c7b17dc5e5752c58b5ba208a96f32ce617b02fb58943a018"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_01__overlap",
+      "sha256": "5fefc6f901335d2ed0f9ff44ace0ffb9b94c68625b5f9e0d7ac9ba89f7199c2b"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_01__single_a",
+      "sha256": "c312f8f9aca648168e8a36292477fad2e2d80ce45a6c514df58061a1fce98c15"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_01__single_b",
+      "sha256": "1d5d7fd28d89e982a234a7efb7a18bec38ddc7fccd5bc353a886d867cc2e5029"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_02__a_then_b",
+      "sha256": "37b92a28c7be4c1eb865613e19a30df0b88553d4ce3cd5b97bbdddb9407c7c83"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_02__b_then_a",
+      "sha256": "95e3a30eac7377fea8b54024e469706d2058ea76933ac133ce562cf5f0dc71b8"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_02__overlap",
+      "sha256": "3cb69e4fe5edba6e17965b372c338b71f0f3cb46ae6e537208b7c7e6d3e9b2af"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_02__single_a",
+      "sha256": "cebe52a08ea6bd49789d1613c672ab0422f556e954807e235a310edb80b00c9c"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_02__single_b",
+      "sha256": "4dda729b4a5fd29fc263d89aa6644347ecfdce7e0d05735d062487b652c96536"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_03__a_then_b",
+      "sha256": "391b782e439fd287246d85130d0c97707a65a222001d8a3afd6238f41c023fe6"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_03__b_then_a",
+      "sha256": "f8b31ab55aa215fa9b75971dd21f3ba268cc251b1b841319e75b2f6506d93082"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_03__overlap",
+      "sha256": "a6f70582b03cc0dc7bf9195d7a4b166c82fe7057841b1b05f3b4146b7a629c80"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_03__single_a",
+      "sha256": "cc2a75040aa1de5a4fea1a52f8763afb1f3ed92b351bcacafb0b4e9881932a27"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_03__single_b",
+      "sha256": "91c26267fab9ec70586bfaaf338dd94679cd65c2ed6816622ad6cb73d3adfbf2"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_04__a_then_b",
+      "sha256": "8237084ebc2d152af14f16b0d6c472c320e09cf85068195997cf44c3aebde912"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_04__b_then_a",
+      "sha256": "5b9e1234a5938ea5f7709a624ce22f735dabcf6e9290ff25e6dc024a01bd9954"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_04__overlap",
+      "sha256": "f1706bb40b9c6e92338ad588011a7472277bf698308ac0806a62a3bd879559c9"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_04__single_a",
+      "sha256": "cb742b8b332579ba0d0046929f55e188428b92ab553b0ee3ee4b53170b1e392e"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_04__single_b",
+      "sha256": "37cd23fca18d1c61a878d2ed26c8dfcbf95b09292a77e69e3c1040ca6418d6b5"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_05__a_then_b",
+      "sha256": "75ed848ef490a68757c080180399b93c24c659ed3c193de13aee70257ac60dd3"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_05__b_then_a",
+      "sha256": "1ea635fc00d107609135499f0f8c4a48fccdb8ea3eaac36c76ece077a02bddbb"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_05__overlap",
+      "sha256": "9639ba8746a1db996ddf6280a7f37899fac05158b0d3576090b9fc96c13fadec"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_05__single_a",
+      "sha256": "ae95addec7f1c72a9be03cc922955b49f209829f114d2c614b047a4ba08b3a74"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_05__single_b",
+      "sha256": "cdf1de879b012a072cf835bd2b077f232a8639e0d7ff972b10e2ecfe1be3ef9b"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_06__a_then_b",
+      "sha256": "073c17c4b623c557c6228304b4a2c049016215f7524678627b5d1a42e5582780"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_06__b_then_a",
+      "sha256": "0f55433b94819abc6494d11c764c4e05b0f0aaa3a2c3850105a03aba0c3cbf06"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_06__overlap",
+      "sha256": "03470a9124a551aaba711ef1304f5f9aafc39f55b812d3f393d46692b421b47e"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_06__single_a",
+      "sha256": "babc5b82db01ff3bbf0f8a912be0b36900c14c17630888ec92badcb320630766"
+    },
+    {
+      "source_case_id": "orders_record_lock_query_whole_table__block_06__single_b",
+      "sha256": "e8da25bcf0a79f9ed239e792dabb151645e4736bcfbc586134dc71003ae0d256"
+    }
+  ]
+}

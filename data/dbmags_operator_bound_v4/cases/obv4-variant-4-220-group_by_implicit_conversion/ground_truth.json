@@ -1,0 +1,51 @@
+{
+  "case_id": "obv4-variant-4-220-group_by_implicit_conversion",
+  "root_labels": [
+    "group_by",
+    "implicit_conversion"
+  ],
+  "template_variant": "variant-4",
+  "target_sql_ids": {
+    "group_by": "sql-2eed9951dab8ec4a",
+    "implicit_conversion": "sql-5b137fd03585ac0c"
+  },
+  "target_operator_ids_by_root": {
+    "group_by": [
+      "op-0261c1eb82c9bb82"
+    ],
+    "implicit_conversion": [
+      "op-41e498a265e255df"
+    ]
+  },
+  "target_operator_ids": [
+    "op-0261c1eb82c9bb82",
+    "op-41e498a265e255df"
+  ],
+  "operator_evaluable": true,
+  "validation": {
+    "target_sql_was_injected_by_collector": true,
+    "candidate_pool_frozen_before_truth": true,
+    "target_annotation_isolated_from_candidates": true,
+    "target_annotation_source": "preregistered root-specific SQL/plan mechanism rule",
+    "mechanism_checks": {
+      "group_by": {
+        "passed": true,
+        "evidence": {
+          "has_grouping_operator": true,
+          "uses_temporary_table": true,
+          "created_tmp_tables_delta": 36.0
+        }
+      },
+      "implicit_conversion": {
+        "passed": true,
+        "evidence": {
+          "implicit_numeric_comparison_in_condition": true,
+          "target_used_key_part_count": 2,
+          "string_control_used_key_part_count": 3,
+          "target_estimated_rows": 6034.0,
+          "string_control_estimated_rows": 4.0
+        }
+      }
+    }
+  }
+}

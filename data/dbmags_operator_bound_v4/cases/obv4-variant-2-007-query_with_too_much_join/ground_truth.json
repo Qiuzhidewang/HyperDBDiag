@@ -1,0 +1,37 @@
+{
+  "case_id": "obv4-variant-2-007-query_with_too_much_join",
+  "root_labels": [
+    "query_with_too_much_join"
+  ],
+  "template_variant": "variant-2",
+  "target_sql_ids": {
+    "query_with_too_much_join": "sql-7ead87e0b5705c2a"
+  },
+  "target_operator_ids_by_root": {
+    "query_with_too_much_join": [
+      "op-0e2ab1cc62ececce"
+    ]
+  },
+  "target_operator_ids": [
+    "op-0e2ab1cc62ececce"
+  ],
+  "operator_evaluable": true,
+  "validation": {
+    "target_sql_was_injected_by_collector": true,
+    "candidate_pool_frozen_before_truth": true,
+    "target_annotation_isolated_from_candidates": true,
+    "target_annotation_source": "preregistered root-specific SQL/plan mechanism rule",
+    "mechanism_checks": {
+      "query_with_too_much_join": {
+        "passed": true,
+        "evidence": {
+          "has_nested_loop": true,
+          "plan_table_count": 6,
+          "minimum_table_count": 6,
+          "mean_rows_examined": 67932.0,
+          "minimum_rows_examined": 10000
+        }
+      }
+    }
+  }
+}

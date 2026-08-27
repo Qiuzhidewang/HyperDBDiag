@@ -1,0 +1,53 @@
+{
+  "case_id": "obv4-variant-4-237-implicit_conversion_query_with_too_much_join",
+  "root_labels": [
+    "implicit_conversion",
+    "query_with_too_much_join"
+  ],
+  "template_variant": "variant-4",
+  "target_sql_ids": {
+    "implicit_conversion": "sql-5b137fd03585ac0c",
+    "query_with_too_much_join": "sql-8b38e1e6571b83e3"
+  },
+  "target_operator_ids_by_root": {
+    "implicit_conversion": [
+      "op-41e498a265e255df"
+    ],
+    "query_with_too_much_join": [
+      "op-0e2ab1cc62ececce"
+    ]
+  },
+  "target_operator_ids": [
+    "op-0e2ab1cc62ececce",
+    "op-41e498a265e255df"
+  ],
+  "operator_evaluable": true,
+  "validation": {
+    "target_sql_was_injected_by_collector": true,
+    "candidate_pool_frozen_before_truth": true,
+    "target_annotation_isolated_from_candidates": true,
+    "target_annotation_source": "preregistered root-specific SQL/plan mechanism rule",
+    "mechanism_checks": {
+      "implicit_conversion": {
+        "passed": true,
+        "evidence": {
+          "implicit_numeric_comparison_in_condition": true,
+          "target_used_key_part_count": 2,
+          "string_control_used_key_part_count": 3,
+          "target_estimated_rows": 6034.0,
+          "string_control_estimated_rows": 4.0
+        }
+      },
+      "query_with_too_much_join": {
+        "passed": true,
+        "evidence": {
+          "has_nested_loop": true,
+          "plan_table_count": 6,
+          "minimum_table_count": 6,
+          "mean_rows_examined": 99872.0,
+          "minimum_rows_examined": 10000
+        }
+      }
+    }
+  }
+}
