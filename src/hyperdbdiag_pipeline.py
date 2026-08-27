@@ -739,20 +739,6 @@ class HyperDBDiagPipeline:
             )
         ]
 
-    def recommend_remediation(
-        self,
-        selected_roots: Sequence[str],
-        mechanism_items: Sequence[EvidenceItem],
-        observation_items: Sequence[EvidenceItem],
-    ) -> Any:
-        """Request optional post-diagnosis advice without touching predictions."""
-
-        from hyperdbdiag_llm import PostDiagnosisLLMAdvisor
-
-        return PostDiagnosisLLMAdvisor(self.llm_reviewer.client).advise(
-            selected_roots, mechanism_items, observation_items
-        )
-
     def metadata(self) -> Dict[str, Any]:
         return {
             "metric_candidate_source": "training-fold lightweight hypergraph",

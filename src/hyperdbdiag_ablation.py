@@ -1487,16 +1487,11 @@ def _binomial_greater_p_value(successes: int, trials: int) -> float:
 def _llm_policy_from_oof(
     group_outcomes: Sequence[Mapping[str, int]],
     *,
-    minimum_decisions: int = 2,
-    minimum_active_groups: int = 2,
-    sign_test_alpha: Optional[float] = None,
+    minimum_decisions: int,
+    minimum_active_groups: int,
+    sign_test_alpha: float,
 ) -> Dict[str, Any]:
-    """Gate overrides using training-only paired OOF outcomes.
-
-    The default keeps the original small-fixture contract.  The registered
-    runner passes a larger minimum and an exact sign test so a few lucky
-    revisions cannot activate the online stage on a real outer fold.
-    """
+    """Gate overrides using training-only paired OOF outcomes."""
 
     corrected = int(sum(int(row.get("corrected", 0)) for row in group_outcomes))
     harmed = int(sum(int(row.get("harmed", 0)) for row in group_outcomes))
@@ -1506,7 +1501,6 @@ def _llm_policy_from_oof(
         for row in group_outcomes
         if int(row.get("corrected", 0)) + int(row.get("harmed", 0)) > 0
     ]
-    group_nets = [int(row.get("corrected", 0)) - int(row.get("harmed", 0)) for row in active]
     net = corrected - harmed
     decisions = corrected + harmed
     sign_p_value = (
@@ -1514,22 +1508,13 @@ def _llm_policy_from_oof(
         if decisions == 0
         else _binomial_greater_p_value(corrected, decisions)
     )
-    if sign_test_alpha is None:
-        # Backward-compatible rule for tiny unit fixtures.
-        stable = bool(
-            len(active) >= int(minimum_active_groups)
-            and corrected > harmed
-            and all(value > 0 for value in group_nets)
-            and all(net - value > 0 for value in group_nets)
-        )
-    else:
-        stable = bool(
-            len(active) >= int(minimum_active_groups)
-            and decisions >= int(minimum_decisions)
-            and net > 0
-            and sign_p_value is not None
-            and sign_p_value <= float(sign_test_alpha)
-        )
+    stable = bool(
+        len(active) >= int(minimum_active_groups)
+        and decisions >= int(minimum_decisions)
+        and net > 0
+        and sign_p_value is not None
+        and sign_p_value <= float(sign_test_alpha)
+    )
     return {
         "allow_override": stable,
         "corrected": corrected,
@@ -1542,11 +1527,7 @@ def _llm_policy_from_oof(
         "minimum_decisions": int(minimum_decisions),
         "minimum_active_groups": int(minimum_active_groups),
         "sign_test_alpha": sign_test_alpha,
-        "stability_rule": (
-            "paired exact sign test over OOF corrections versus harms, with minimum decision and group coverage"
-            if sign_test_alpha is not None
-            else "each active OOF group has positive net gain and positive net gain remains after omitting any active group"
-        ),
+        "stability_rule": "paired exact sign test over OOF corrections versus harms, with minimum decision and group coverage",
         "status": "enabled_stable_positive_oof" if stable else "fail_closed_no_stable_positive_oof",
     }
 

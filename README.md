@@ -1,7 +1,8 @@
 # HyperDBDiag Reproducibility Artifact
 
-This folder contains the implementation, frozen DB-MAGS-derived data,
-registered reports, and tests used for the experiments in the paper.
+This repository is the reproducibility artifact prepared for the HyperDBDiag
+VLDB 2027 submission. It contains the implementation, frozen DB-MAGS-derived
+data, registered reports, and tests used for the experiments in the paper.
 
 ## Environment
 

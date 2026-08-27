@@ -28,22 +28,15 @@ def _sha256(path: Path) -> str:
 
 @dataclass(frozen=True)
 class FrozenMetricDataset:
-    root: Path
-    role: str
     case_ids: Tuple[str, ...]
     features: Mapping[str, np.ndarray]
     labels_by_case: Mapping[str, Tuple[str, ...]]
     labels: Tuple[str, ...]
     replicate_by_case: Mapping[str, int]
     scenario_by_case: Mapping[str, str]
-    table_by_case: Mapping[str, str]
-    source_case_by_case: Mapping[str, str]
     scenario_count: int
     physical_collection_block_count: int
     replicate_count: int
-    mechanism_stress_ready: bool
-    source_audit_sha256: str
-    frozen_file_sha256: Mapping[str, str]
 
     @property
     def feature_count(self) -> int:
@@ -195,20 +188,13 @@ def load_frozen_metric_dataset(root: Path) -> FrozenMetricDataset:
         raise ValueError("each scenario replicate must contain five planned conditions")
 
     return FrozenMetricDataset(
-        root=root,
-        role=str(manifest.get("dataset_role") or ""),
         case_ids=case_ids,
         features=features,
         labels_by_case=labels_by_case,
         labels=labels,
         replicate_by_case=replicate_by_case,
         scenario_by_case=scenario_by_case,
-        table_by_case=table_by_case,
-        source_case_by_case=source_case_by_case,
         scenario_count=scenario_count,
         physical_collection_block_count=physical_block_count,
         replicate_count=replicate_count,
-        mechanism_stress_ready=bool(manifest.get("mechanism_stress_ready")),
-        source_audit_sha256=source_audit_sha256,
-        frozen_file_sha256=frozen_hashes,
     )

@@ -28,7 +28,7 @@ class OperatorBoundExperimentTests(unittest.TestCase):
         self.assertEqual(report["collected_by_root_cardinality"], {"1": 96, "2": 120, "3": 80})
         self.assertEqual(report["distinct_root_combinations"], {"1": 6, "2": 15, "3": 20})
 
-    def test_repeated_collections_are_balanced_across_two_folds(self):
+    def test_template_variants_are_balanced_across_two_folds(self):
         cases, _ = load_cases(self.SOURCE)
         by_combination = {}
         for case in cases:
@@ -92,15 +92,21 @@ class OperatorBoundExperimentTests(unittest.TestCase):
             source_case = self.SOURCE / "cases" / "obv4-variant-1-001-missing_index"
             case_dir = target / "cases" / source_case.name
             case_dir.mkdir(parents=True)
-            for name in ("case.json", "plans.json", "metrics.json", "ground_truth.json"):
+            for name in ("plans.json", "metrics.json", "ground_truth.json"):
                 (case_dir / name).write_bytes((source_case / name).read_bytes())
             blind = json.loads((source_case / "blind_candidates.json").read_text())
             blind["target"] = True
             (case_dir / "blind_candidates.json").write_text(json.dumps(blind))
             manifest = {
-                "protocol": "dbmags-operator-bound-extension-v2",
+                "protocol": "dbmags-operator-bound-extension-v3",
                 "sample_schedule_count": 1,
-                "results": [{"status": "collected", "labels": ["missing_index"]}],
+                "results": [{
+                    "case_id": source_case.name,
+                    "status": "collected",
+                    "labels": ["missing_index"],
+                    "template_variant": "variant-1",
+                    "recovery": {"clean": True},
+                }],
                 "counts": {"collected": 1},
             }
             (target / "dataset_manifest.json").write_text(json.dumps(manifest))

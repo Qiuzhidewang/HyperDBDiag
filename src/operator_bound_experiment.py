@@ -165,13 +165,28 @@ class OperatorBoundCase(BlindOperatorCase):
 def load_cases(dataset_root: Path) -> Tuple[List[OperatorBoundCase], Dict[str, Any]]:
     root = Path(dataset_root)
     manifest = _read_json(root / "dataset_manifest.json")
+    manifest_results = list(manifest.get("results") or [])
+    if int(manifest.get("sample_schedule_count", 0)) != len(manifest_results):
+        raise ValueError("operator-bound collection manifest is incomplete")
+    collected_ids = [
+        str(row.get("case_id") or "")
+        for row in manifest_results
+        if row.get("status") == "collected"
+    ]
+    if not collected_ids or any(not case_id for case_id in collected_ids):
+        raise ValueError("operator-bound manifest contains an invalid collected case")
+    if len(collected_ids) != len(set(collected_ids)):
+        raise ValueError("operator-bound manifest contains duplicate collected cases")
+    cases_root = root / "cases"
+    case_directories = {path.name for path in cases_root.iterdir() if path.is_dir()}
+    if case_directories != set(collected_ids):
+        raise ValueError("operator-bound case directories differ from the manifest")
     cases = []
-    for path in sorted((root / "cases").iterdir()):
-        status = _read_json(path / "case.json")
-        if status.get("status") != "collected":
-            continue
-        required = ("blind_candidates.json", "plans.json", "metrics.json", "ground_truth.json")
-        if any(not (path / name).is_file() for name in required):
+    required = {"blind_candidates.json", "plans.json", "metrics.json", "ground_truth.json"}
+    for case_id in sorted(collected_ids):
+        path = cases_root / case_id
+        present = {item.name for item in path.iterdir() if item.is_file()}
+        if present != required:
             raise ValueError(f"collected case is incomplete: {path.name}")
         cases.append(
             OperatorBoundCase(
@@ -184,8 +199,6 @@ def load_cases(dataset_root: Path) -> Tuple[List[OperatorBoundCase], Dict[str, A
         )
     if not cases:
         raise ValueError("operator-bound dataset contains no collected cases")
-    if int(manifest.get("sample_schedule_count", 0)) != len(manifest.get("results") or []):
-        raise ValueError("operator-bound collection manifest is incomplete")
     return cases, manifest
 
 
@@ -308,10 +321,7 @@ def audit_dataset(dataset_root: Path = DEFAULT_DATASET_ROOT) -> Dict[str, Any]:
     cases, manifest = load_cases(dataset_root)
     errors: List[str] = []
     source_protocol = str(manifest.get("protocol") or "")
-    if source_protocol not in {
-        "dbmags-operator-bound-extension-v2",
-        "dbmags-operator-bound-extension-v3",
-    }:
+    if source_protocol != "dbmags-operator-bound-extension-v3":
         errors.append("dataset manifest uses an unexpected protocol")
     phase_counts: Counter[str] = Counter()
     cardinalities: Counter[int] = Counter()
@@ -325,7 +335,9 @@ def audit_dataset(dataset_root: Path = DEFAULT_DATASET_ROOT) -> Dict[str, Any]:
         combinations[len(case.roots)].add(tuple(sorted(case.roots)))
         root_counts.update(case.roots)
         candidates = list(case.blind.get("candidates") or [])
-        variant = str(case.truth.get("template_variant") or "legacy-fixed-pool")
+        variant = str(case.truth.get("template_variant") or "")
+        if not re.fullmatch(r"variant-[1-4]", variant):
+            errors.append(f"{case.case_id}: template variant is invalid")
         variant_counts[variant] += 1
         if "template_variant" in case.blind:
             errors.append(f"{case.case_id}: template variant leaked into blind ranker input")
@@ -447,26 +459,16 @@ def audit_dataset(dataset_root: Path = DEFAULT_DATASET_ROOT) -> Dict[str, Any]:
             "not an independent second-annotator adjudication"
         ),
         "operator_identity": "(sql_id, operator_id) composite; plan-node fingerprints are SQL-local",
-        "generalization_scope": (
-            "held-out root-target SQL templates" if len(variant_counts) > 1 else
-            "repeated physical collection with a fixed SQL-template inventory"
-        ),
+        "generalization_scope": "held-out root-target SQL templates",
     }
 
 
 def _case_fold(case: OperatorBoundCase) -> int:
     template_variant = str(case.truth.get("template_variant") or "")
-    if template_variant.startswith("variant-"):
-        return (int(template_variant.rsplit("-", 1)[1]) - 1) % 2
-    repeat = int(case.case_id.split("-", 2)[1])
-    cardinality = len(case.roots)
-    if cardinality == 1:
-        return (repeat - 1) % 2
-    if cardinality == 2:
-        return 0 if repeat < 50 else 1
-    if cardinality == 3:
-        return 0 if repeat < 100 else 1
-    raise ValueError("unsupported root cardinality")
+    match = re.fullmatch(r"variant-([1-4])", template_variant)
+    if match is None:
+        raise ValueError("operator-bound case has no registered template variant")
+    return (int(match.group(1)) - 1) % 2
 
 
 def _tables_and_operators(case: BlindOperatorCase) -> Tuple[Dict[str, List[Mapping[str, Any]]], Dict[str, str]]:
@@ -1140,7 +1142,6 @@ def run(
     audit = audit_dataset(dataset_root)
     if audit["status"] != "valid":
         raise ValueError("operator-bound dataset failed integrity audit")
-    template_holdout = len(audit.get("collected_by_template_variant") or {}) > 1
     opdiag = _evaluate("opdiag_reproduction", cases, seed)
     unconditioned = _evaluate("unconditioned_binder", cases, seed)
     hyperdbdiag = _evaluate("hyperdbdiag", cases, seed)
@@ -1161,14 +1162,9 @@ def run(
             "split": (
                 "two-fold root-target SQL-template holdout (variants 1/3 versus 2/4), "
                 "balanced within every root combination"
-                if template_holdout else
-                "two-fold repeated-collection holdout stratified by root combination; "
-                "each single root has 3/3, each pair 2/2, and each triple 1/1 train/test cases"
             ),
             "generalization_scope": (
                 "held-out target SQL templates within the same schema; shared controls remain"
-                if template_holdout else
-                "repeated physical collections of a fixed SQL-template inventory"
             ),
             "scope": (
                 "SQL/operator attribution after root detection; this 5-second extension is not "
