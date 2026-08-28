@@ -186,20 +186,23 @@ def run(
         hyperedge_degrees = np.bincount(
             hyperedge_ids, minlength=hyperedge_count
         ).astype(np.float64)
-        hypergraph = lambda: _hypergraph_traversal(
-            query_signals,
-            vertex_ids,
-            hyperedge_ids,
-            hyperedge_degrees,
-            vertex_count,
-            hyperedge_count,
-        )
-        pairwise = lambda: _pairwise_traversal(
-            query_signals,
-            pair_left,
-            pair_right,
-            vertex_count,
-        )
+        def hypergraph() -> float:
+            return _hypergraph_traversal(
+                query_signals,
+                vertex_ids,
+                hyperedge_ids,
+                hyperedge_degrees,
+                vertex_count,
+                hyperedge_count,
+            )
+
+        def pairwise() -> float:
+            return _pairwise_traversal(
+                query_signals,
+                pair_left,
+                pair_right,
+                vertex_count,
+            )
         timing = _benchmark_pair(
             hypergraph,
             pairwise,

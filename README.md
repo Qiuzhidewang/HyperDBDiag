@@ -32,6 +32,13 @@ evaluation, and graph-structure comparison. New files are written to
 `reproduced/`; the registered reports in `runs/` are left unchanged. Use
 `--skip-tests` when repeating the experiments after the first successful run.
 
+To run only the test suite:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python \
+  -m unittest discover -s tests -v
+```
+
 The main registered results are:
 
 | Experiment | Result |
