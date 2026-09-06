@@ -22,7 +22,7 @@ def _copy_files(source, destination):
 
 
 class FrozenMetricDatasetTests(unittest.TestCase):
-    SOURCE = Path("data/dbmags_interaction_v10_metric_only")
+    SOURCE = Path("data/dbmags_interaction_v11_frozen")
 
     def test_registered_artifact_is_complete_and_uses_one_outer_protocol(self):
         dataset = load_frozen_metric_dataset(self.SOURCE)

@@ -16,7 +16,7 @@ from hypergraph_core import HypergraphDiffusionResidualEncoder
 from metric_frozen_dataset import load_frozen_metric_dataset
 
 
-DEFAULT_DBMAGS_ROOT = Path("data/dbmags_interaction_v10_metric_only")
+DEFAULT_DBMAGS_ROOT = Path("data/dbmags_interaction_v11_frozen")
 DEFAULT_OUTPUT = Path("runs/dbmags-structure-efficiency/full_report.json")
 DEFAULT_WARMUP_ROUNDS = 10
 DEFAULT_MEASURED_REPETITIONS = 15
@@ -186,23 +186,20 @@ def run(
         hyperedge_degrees = np.bincount(
             hyperedge_ids, minlength=hyperedge_count
         ).astype(np.float64)
-        def hypergraph() -> float:
-            return _hypergraph_traversal(
-                query_signals,
-                vertex_ids,
-                hyperedge_ids,
-                hyperedge_degrees,
-                vertex_count,
-                hyperedge_count,
-            )
-
-        def pairwise() -> float:
-            return _pairwise_traversal(
-                query_signals,
-                pair_left,
-                pair_right,
-                vertex_count,
-            )
+        hypergraph = lambda: _hypergraph_traversal(
+            query_signals,
+            vertex_ids,
+            hyperedge_ids,
+            hyperedge_degrees,
+            vertex_count,
+            hyperedge_count,
+        )
+        pairwise = lambda: _pairwise_traversal(
+            query_signals,
+            pair_left,
+            pair_right,
+            vertex_count,
+        )
         timing = _benchmark_pair(
             hypergraph,
             pairwise,

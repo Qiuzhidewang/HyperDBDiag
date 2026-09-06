@@ -1,5 +1,5 @@
 {
-  "schema_version": "hyperdbdiag-root-mechanism-cards-v4",
+  "schema_version": "hyperdbdiag-root-mechanism-cards-v5",
   "cards": [
     {
       "root_label": "group_by",
@@ -32,7 +32,9 @@
       "observables": [
         {"metric_family": "execution-pressure", "role": "compatible_only", "expected_direction": "elevated"}
       ],
-      "semantic_observables": [],
+      "semantic_observables": [
+        {"atom": "broad_filtered_scan", "role": "contextual"}
+      ],
       "source_refs": ["MySQL 8.0 Reference Manual: optimization and index use"]
     },
     {
@@ -45,6 +47,7 @@
         {"metric_family": "execution-pressure", "role": "contextual", "expected_direction": "elevated"}
       ],
       "semantic_observables": [
+        {"atom": "row_lock_wait", "role": "direct"},
         {"atom": "row_locking_clause", "role": "contextual"}
       ],
       "source_refs": ["MySQL 8.0 Reference Manual: Performance Schema data_lock_waits"]
@@ -56,7 +59,9 @@
       "observables": [
         {"metric_family": "execution-pressure", "role": "compatible_only", "expected_direction": "elevated"}
       ],
-      "semantic_observables": [],
+      "semantic_observables": [
+        {"atom": "broad_filtered_scan", "role": "contextual"}
+      ],
       "source_refs": ["MySQL 8.0 Reference Manual: optimization and index use"]
     },
     {
@@ -105,6 +110,7 @@
         {"metric_family": "execution-pressure", "role": "contextual", "expected_direction": "elevated"}
       ],
       "semantic_observables": [
+        {"atom": "row_lock_wait", "role": "direct"},
         {"atom": "row_locking_clause", "role": "contextual"}
       ],
       "source_refs": ["MySQL 8.0 Reference Manual: InnoDB locking and Performance Schema data_lock_waits"]

@@ -57,10 +57,10 @@ def _verify(output: Path) -> Mapping[str, Any]:
     ablation = _load(output / "ablation.json")
     ablation_methods = next(iter(ablation["datasets"].values()))["methods"]
     expected_ablation = {
-        "ordinary_binary_graph": (0.42424242424242425, 0.6965394853593612),
-        "hypergraph_without_epdg": (0.8560606060606061, 0.9100378787878788),
-        "hypergraph": (0.9060606060606060, 0.9412878787878788),
-        "hypergraph_local_judge": (0.9060606060606060, 0.9412878787878788),
+        "ordinary_binary_graph": (0.28484848484848485, 0.640076886112446),
+        "hypergraph_without_epdg": (0.40606060606060607, 0.630820931349016),
+        "hypergraph": (0.5757575757575758, 0.7417345471969333),
+        "hypergraph_local_judge": (0.5757575757575758, 0.7417345471969333),
     }
     for method, (exact, f1) in expected_ablation.items():
         overall = ablation_methods[method]["overall"]
@@ -73,9 +73,9 @@ def _verify(output: Path) -> Mapping[str, Any]:
 
     main = _load(output / "main_registered_llm.json")["methods"]
     expected_main = {
-        "opdiag": (0.8484848484848485, 0.9053030303030303),
-        "dbaiops": (0.8500000000000000, 0.9067676289635589),
-        "hyperdbdiag": (0.9196969696969697, 0.9498106060606061),
+        "opdiag": (0.4257575757575758, 0.6539196940726577),
+        "dbaiops": (0.3333333333333333, 0.6067522586780789),
+        "hyperdbdiag": (0.6545454545454545, 0.7927237912876974),
     }
     for method, (exact, f1) in expected_main.items():
         overall = main[method]["overall"]
@@ -95,9 +95,9 @@ def _verify(output: Path) -> Mapping[str, Any]:
     )
 
     structure = _load(output / "structure.json")["aggregate"]
-    _check("structure/hypergraph_relations", structure["mean_hypergraph_incidence_count"], 2879.1666666666665)
-    _check("structure/pairwise_relations", structure["mean_equivalent_pairwise_occurrence_count"], 7584.0)
-    _check("structure/relation_reduction", structure["relation_item_reduction"], 0.6203630450070323)
+    _check("structure/hypergraph_relations", structure["mean_hypergraph_incidence_count"], 3783.1666666666665)
+    _check("structure/pairwise_relations", structure["mean_equivalent_pairwise_occurrence_count"], 18825.833333333332)
+    _check("structure/relation_reduction", structure["relation_item_reduction"], 0.7990438670266921)
 
     return {
         "status": "verified",

@@ -1,0 +1,47 @@
+{
+  "protocol": "dbmags-interaction-benchmark-v11-window-complete-frozen",
+  "dataset_role": "window_complete_temporal_root_interaction_benchmark",
+  "sample_count": 660,
+  "scenario_count": 22,
+  "physical_collection_block_count": 132,
+  "replicate_index_count": 6,
+  "outer_evaluation": {
+    "name": "leave_one_replicate_index_out",
+    "group_field": "block_index"
+  },
+  "mechanism_stress_ready": true,
+  "cohort_policy": "all planned cases retained; no post-collection filtering",
+  "label_inventory": [
+    "group_by",
+    "implicit_conversion",
+    "missing_index",
+    "order_by",
+    "query_whole_table",
+    "query_with_too_much_join",
+    "record_lock"
+  ],
+  "predictor_input_fields": [
+    "case_id",
+    "metric_time_features"
+  ],
+  "predictor_excluded_fields": [
+    "source_case_id",
+    "scenario",
+    "condition",
+    "root labels",
+    "raw SQL",
+    "execution plans",
+    "statement signatures",
+    "anomaly scores",
+    "injection and audit records"
+  ],
+  "feature_schema_sha256": "cef789d308cfbfb6d039ff7e4b0fde79cfa0a905a5e72340e424b83bec0de1a2",
+  "source_audit_sha256": "ad28f41d04141be81613ba27c97c56cea79577e67e59d98a1ae9bf927bf92807",
+  "frozen_file_sha256": {
+    "frozen_inputs.json": "a2759e752a42995b72d8dee12fbb509961b5a3787eebe4fedfbeb68cd76d0dac",
+    "fold_manifest.json": "8a9dba37bde2c1429bd1c5ca951715afe46d7108cc49fe13bb1f2b46c0e2dc51",
+    "ground_truth.json": "19b075b9d20192f669cfee5be0da3bcd70ba63bdcd8386277be5503250cc15e0",
+    "provenance_case_map.json": "3134c49e5c4ec97c67a2aa8dd7f244d30ef12c9d09030fbb222b36f3d752df8c",
+    "semantic_evidence.json": "f2e561605bd73649a0a8ba72b27473712962da62b6ae92d78229404e250e4b88"
+  }
+}

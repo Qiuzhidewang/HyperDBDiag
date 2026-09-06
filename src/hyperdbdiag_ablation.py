@@ -58,7 +58,7 @@ from structured_evidence_judge import (
     StructuredEvidenceJudge,
 )
 DEFAULT_OUTPUT = Path("runs/dbmags-ablation/full_report.json")
-DEFAULT_DBMAGS_ROOT = Path("data/dbmags_interaction_v10_metric_only")
+DEFAULT_DBMAGS_ROOT = Path("data/dbmags_interaction_v11_frozen")
 DEFAULT_SEED = 20260802
 ROOT_MECHANISM_CARD_PATH = (
     Path(__file__).resolve().parents[1] / "data" / "root_mechanism_cards.json"
@@ -1487,11 +1487,16 @@ def _binomial_greater_p_value(successes: int, trials: int) -> float:
 def _llm_policy_from_oof(
     group_outcomes: Sequence[Mapping[str, int]],
     *,
-    minimum_decisions: int,
-    minimum_active_groups: int,
-    sign_test_alpha: float,
+    minimum_decisions: int = 2,
+    minimum_active_groups: int = 2,
+    sign_test_alpha: Optional[float] = None,
 ) -> Dict[str, Any]:
-    """Gate overrides using training-only paired OOF outcomes."""
+    """Gate overrides using training-only paired OOF outcomes.
+
+    The default keeps the original small-fixture contract.  The registered
+    runner passes a larger minimum and an exact sign test so a few lucky
+    revisions cannot activate the online stage on a real outer fold.
+    """
 
     corrected = int(sum(int(row.get("corrected", 0)) for row in group_outcomes))
     harmed = int(sum(int(row.get("harmed", 0)) for row in group_outcomes))
@@ -1501,6 +1506,7 @@ def _llm_policy_from_oof(
         for row in group_outcomes
         if int(row.get("corrected", 0)) + int(row.get("harmed", 0)) > 0
     ]
+    group_nets = [int(row.get("corrected", 0)) - int(row.get("harmed", 0)) for row in active]
     net = corrected - harmed
     decisions = corrected + harmed
     sign_p_value = (
@@ -1508,13 +1514,22 @@ def _llm_policy_from_oof(
         if decisions == 0
         else _binomial_greater_p_value(corrected, decisions)
     )
-    stable = bool(
-        len(active) >= int(minimum_active_groups)
-        and decisions >= int(minimum_decisions)
-        and net > 0
-        and sign_p_value is not None
-        and sign_p_value <= float(sign_test_alpha)
-    )
+    if sign_test_alpha is None:
+        # Backward-compatible rule for tiny unit fixtures.
+        stable = bool(
+            len(active) >= int(minimum_active_groups)
+            and corrected > harmed
+            and all(value > 0 for value in group_nets)
+            and all(net - value > 0 for value in group_nets)
+        )
+    else:
+        stable = bool(
+            len(active) >= int(minimum_active_groups)
+            and decisions >= int(minimum_decisions)
+            and net > 0
+            and sign_p_value is not None
+            and sign_p_value <= float(sign_test_alpha)
+        )
     return {
         "allow_override": stable,
         "corrected": corrected,
@@ -1527,7 +1542,11 @@ def _llm_policy_from_oof(
         "minimum_decisions": int(minimum_decisions),
         "minimum_active_groups": int(minimum_active_groups),
         "sign_test_alpha": sign_test_alpha,
-        "stability_rule": "paired exact sign test over OOF corrections versus harms, with minimum decision and group coverage",
+        "stability_rule": (
+            "paired exact sign test over OOF corrections versus harms, with minimum decision and group coverage"
+            if sign_test_alpha is not None
+            else "each active OOF group has positive net gain and positive net gain remains after omitting any active group"
+        ),
         "status": "enabled_stable_positive_oof" if stable else "fail_closed_no_stable_positive_oof",
     }
 
@@ -2699,7 +2718,9 @@ def _load_dbmags(
             )
         )
     source_audit = json.loads((root / "source_audit.json").read_text(encoding="utf-8"))
-    interaction = dict(source_audit.get("interaction_audit_summary") or {})
+    evidence_completeness = dict(
+        source_audit.get("evidence_completeness_summary") or {}
+    )
     return AblationDataset(
         name="dbmags_sql_interaction_subset",
         labels=tuple(frozen.labels),
@@ -2716,9 +2737,12 @@ def _load_dbmags(
             "replicate_index_count": frozen.replicate_count,
             "covered_atomic_root_count": len(frozen.labels),
             "official_atomic_root_count": 18,
-            "interaction_positive_pair_cases": interaction.get("interaction_positive"),
-            "interaction_negative_or_incomplete_pair_cases": interaction.get(
-                "interaction_negative_or_incomplete"
+            "mixed_case_count": evidence_completeness.get("mixed_case_count"),
+            "mixed_cases_with_complete_root_evidence": evidence_completeness.get(
+                "mixed_cases_with_complete_root_evidence"
+            ),
+            "mixed_cases_missing_root_evidence": evidence_completeness.get(
+                "mixed_cases_missing_root_evidence"
             ),
             "completeness_status": "complete_collected_SQL_interaction_cohort_but_not_full_DBMAGS",
             "semantic_evidence": semantic_metadata,
@@ -2753,7 +2777,7 @@ def run(
     requested = (_load_dbmags(Path(dbmags_root), mechanism_cards),)
     report = {
         "protocol": {
-            "name": "hyperdbdiag_dbmags_retrieve_contract_arbitrate_v10_epdg",
+            "name": "hyperdbdiag_dbmags_retrieve_contract_arbitrate_v11_epdg",
             "seed": int(seed),
             "stage_order": [
                 "ordinary_binary_graph",

@@ -22,11 +22,18 @@ from metric_frozen_schema import (
 from opdiag_baseline import OpDiagRootCauseClassifier
 
 
-DEFAULT_DBMAGS_ROOT = Path("data/dbmags_interaction_v10_metric_only")
+DEFAULT_DBMAGS_ROOT = Path("data/dbmags_interaction_v11_frozen")
 DEFAULT_ABLATION_REPORT = Path("runs/dbmags-ablation/full_report_llm_xhigh.json")
 DEFAULT_OUTPUT = Path("runs/dbmags-main-comparison/full_report_llm_xhigh.json")
 DEFAULT_SEED = 20260802
 OPDIAG_SEED = 42
+OCCURRENCE_PATTERN_BY_CONDITION = {
+    "single_a": "single_root",
+    "single_b": "single_root",
+    "a_then_b": "sequential",
+    "b_then_a": "sequential",
+    "overlap": "overlap",
+}
 CANONICAL_METHODS: Mapping[str, Mapping[str, str]] = {
     "hyperdbdiag": {
         "ablation_method": "hyperdbdiag",
@@ -61,10 +68,15 @@ def _case_rows(
     for index, (case_id, prediction) in enumerate(zip(case_ids, predicted)):
         replicate = int(frozen.replicate_by_case[case_id])
         scenario = str(frozen.scenario_by_case[case_id])
+        condition = str(frozen.source_case_by_case[case_id]).rsplit("__", 1)[-1]
+        if condition not in OCCURRENCE_PATTERN_BY_CONDITION:
+            raise ValueError(f"unknown DB-MAGS collection condition: {condition}")
         row = {
             "case_id": case_id,
             "block_id": f"replicate-{replicate:02d}:{scenario}",
             "scenario": scenario,
+            "collection_condition": condition,
+            "occurrence_pattern": OCCURRENCE_PATTERN_BY_CONDITION[condition],
             "expected_labels": list(frozen.labels_by_case[case_id]),
             "predicted_labels": list(prediction),
         }
@@ -97,8 +109,10 @@ def _summary(
             ),
         }
     scenario_indices: Dict[str, List[int]] = defaultdict(list)
+    occurrence_indices: Dict[str, List[int]] = defaultdict(list)
     for index, row in enumerate(rows):
         scenario_indices[str(row["scenario"])].append(index)
+        occurrence_indices[str(row["occurrence_pattern"])].append(index)
     true_positive = sum(
         label in actual and label in observed
         for actual, observed in zip(expected, predicted)
@@ -130,6 +144,21 @@ def _summary(
             "mean_predicted_roots": _mean(len(row) for row in predicted),
         },
         "by_root_cardinality": by_cardinality,
+        "by_occurrence_pattern": {
+            pattern: {
+                "sample_count": len(indices),
+                "exact_set_accuracy": _exact(
+                    [expected[index] for index in indices],
+                    [predicted[index] for index in indices],
+                ),
+                "component_f1": _component_f1(
+                    [expected[index] for index in indices],
+                    [predicted[index] for index in indices],
+                    labels,
+                ),
+            }
+            for pattern, indices in sorted(occurrence_indices.items())
+        },
         "by_scenario": {
             scenario: {
                 "sample_count": len(indices),
@@ -381,8 +410,6 @@ def run(
                     "scenario identities in both training and evaluation partitions; it "
                     "measures repeated-block diagnosis, not unseen-scenario transfer."
                 ),
-                "diagnostic_leave_one_scenario_out_opdiag_exact_mean": 0.7151515151515153,
-                "diagnostic_is_not_reported_as_main_result": True,
             },
             "comparability": (
                 "All evaluated methods use the same 660 cases, six outer folds, and root labels. "

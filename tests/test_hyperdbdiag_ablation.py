@@ -31,7 +31,7 @@ from sql_semantic_evidence import SemanticObservation
 class HyperDBDiagAblationTests(unittest.TestCase):
     def test_dbmags_uses_only_registered_replicate_holdout(self):
         cards, _ = _load_root_mechanism_cards()
-        root = Path("data/dbmags_interaction_v10_metric_only")
+        root = Path("data/dbmags_interaction_v11_frozen")
         dataset = _load_dbmags(root, cards)
         self.assertEqual(len(dataset.splits), 6)
         self.assertTrue(
@@ -42,10 +42,23 @@ class HyperDBDiagAblationTests(unittest.TestCase):
             dataset.metadata["outer_split"],
             "leave_one_replicate_index_out",
         )
-        self.assertEqual(dataset.metadata["semantic_evidence"]["case_count"], 396)
+        self.assertEqual(dataset.metadata["semantic_evidence"]["case_count"], 660)
         self.assertEqual(
             dataset.metadata["semantic_evidence"]["case_inventory_count"], 660
         )
+
+    def test_mechanism_cards_distinguish_direct_and_contextual_runtime_evidence(self):
+        cards, _ = _load_root_mechanism_cards()
+        lock_roles = {
+            item["atom"]: item["role"]
+            for item in cards["record_lock"]["semantic_observables"]
+        }
+        index_roles = {
+            item["atom"]: item["role"]
+            for item in cards["missing_index"]["semantic_observables"]
+        }
+        self.assertEqual(lock_roles["row_lock_wait"], "direct")
+        self.assertEqual(index_roles["broad_filtered_scan"], "contextual")
 
     def test_direct_handoff_uses_hypergraph_pool_without_local_evidence(self):
         model = types.SimpleNamespace(

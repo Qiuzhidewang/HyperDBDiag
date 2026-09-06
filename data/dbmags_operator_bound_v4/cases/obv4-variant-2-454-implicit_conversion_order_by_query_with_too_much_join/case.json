@@ -1,0 +1,49 @@
+{
+  "case_id": "obv4-variant-2-454-implicit_conversion_order_by_query_with_too_much_join",
+  "labels": [
+    "implicit_conversion",
+    "order_by",
+    "query_with_too_much_join"
+  ],
+  "template_variant": "variant-2",
+  "status": "collected",
+  "operator_evaluable": true,
+  "candidate_count": 12,
+  "target_operator_count": 3,
+  "window_seconds": 5.0,
+  "mechanism_checks": {
+    "implicit_conversion": {
+      "passed": true,
+      "evidence": {
+        "implicit_numeric_comparison_in_condition": true,
+        "target_used_key_part_count": 2,
+        "string_control_used_key_part_count": 3,
+        "target_estimated_rows": 6036.0,
+        "string_control_estimated_rows": 3.0
+      }
+    },
+    "order_by": {
+      "passed": true,
+      "evidence": {
+        "has_ordering_operator": true,
+        "uses_filesort": true,
+        "mean_rows_examined": 1244953.0
+      }
+    },
+    "query_with_too_much_join": {
+      "passed": true,
+      "evidence": {
+        "has_nested_loop": true,
+        "plan_table_count": 6,
+        "minimum_table_count": 6,
+        "mean_rows_examined": 67932.0,
+        "minimum_rows_examined": 10000
+      }
+    }
+  },
+  "recovery": {
+    "data_lock_count": 0,
+    "pending_metadata_lock_count": 0,
+    "clean": true
+  }
+}

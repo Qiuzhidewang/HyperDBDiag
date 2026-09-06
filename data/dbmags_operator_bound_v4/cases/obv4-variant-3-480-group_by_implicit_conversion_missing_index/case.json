@@ -1,0 +1,47 @@
+{
+  "case_id": "obv4-variant-3-480-group_by_implicit_conversion_missing_index",
+  "labels": [
+    "group_by",
+    "implicit_conversion",
+    "missing_index"
+  ],
+  "template_variant": "variant-3",
+  "status": "collected",
+  "operator_evaluable": true,
+  "candidate_count": 12,
+  "target_operator_count": 3,
+  "window_seconds": 5.0,
+  "mechanism_checks": {
+    "group_by": {
+      "passed": true,
+      "evidence": {
+        "has_grouping_operator": true,
+        "uses_temporary_table": true,
+        "created_tmp_tables_delta": 52.0
+      }
+    },
+    "implicit_conversion": {
+      "passed": true,
+      "evidence": {
+        "implicit_numeric_comparison_in_condition": true,
+        "target_used_key_part_count": 2,
+        "string_control_used_key_part_count": 3,
+        "target_estimated_rows": 5398.0,
+        "string_control_estimated_rows": 2.0
+      }
+    },
+    "missing_index": {
+      "passed": true,
+      "evidence": {
+        "has_full_scan": true,
+        "mean_rows_examined": 1243953.0,
+        "minimum_rows_examined": 500000
+      }
+    }
+  },
+  "recovery": {
+    "data_lock_count": 0,
+    "pending_metadata_lock_count": 0,
+    "clean": true
+  }
+}

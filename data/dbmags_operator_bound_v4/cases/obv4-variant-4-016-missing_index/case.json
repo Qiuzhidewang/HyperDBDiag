@@ -1,0 +1,27 @@
+{
+  "case_id": "obv4-variant-4-016-missing_index",
+  "labels": [
+    "missing_index"
+  ],
+  "template_variant": "variant-4",
+  "status": "collected",
+  "operator_evaluable": true,
+  "candidate_count": 12,
+  "target_operator_count": 1,
+  "window_seconds": 5.0,
+  "mechanism_checks": {
+    "missing_index": {
+      "passed": true,
+      "evidence": {
+        "has_full_scan": true,
+        "mean_rows_examined": 1243953.0,
+        "minimum_rows_examined": 500000
+      }
+    }
+  },
+  "recovery": {
+    "data_lock_count": 0,
+    "pending_metadata_lock_count": 0,
+    "clean": true
+  }
+}

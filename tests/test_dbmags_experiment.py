@@ -19,7 +19,7 @@ class DBMAGSExperimentTests(unittest.TestCase):
             all(row["evaluation_count"] == 110 for row in dataset["folds"])
         )
         self.assertEqual(len(method["results"]), 660)
-        self.assertAlmostEqual(method["overall"]["exact_set_accuracy"], 0.906060606060606)
+        self.assertAlmostEqual(method["overall"]["exact_set_accuracy"], 0.5757575757575758)
 
     def test_canonical_prediction_rejects_seed_mismatch(self):
         with self.assertRaisesRegex(RuntimeError, "seeds differ"):
@@ -34,7 +34,7 @@ class DBMAGSExperimentTests(unittest.TestCase):
         method, dataset = _canonical_method(report, 20260802, "hyperdbdiag")
         self.assertEqual(len(dataset["folds"]), 6)
         self.assertEqual(len(method["results"]), 660)
-        self.assertAlmostEqual(method["overall"]["exact_set_accuracy"], 0.9196969696969697)
+        self.assertAlmostEqual(method["overall"]["exact_set_accuracy"], 0.6545454545454545)
 
     def test_ablation_report_does_not_split_single_and_mixed_roots(self):
         dataset = self.report["datasets"]["dbmags_sql_interaction_subset"]
@@ -53,6 +53,25 @@ class DBMAGSExperimentTests(unittest.TestCase):
         self.assertNotIn("not_evaluated", report)
         for method in report["methods"].values():
             self.assertEqual(set(method["by_root_cardinality"]), {"1", "2"})
+
+    def test_main_comparison_reports_registered_occurrence_patterns(self):
+        report = json.loads(
+            Path("runs/dbmags-main-comparison/full_report.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        for method in report["methods"].values():
+            self.assertEqual(
+                set(method["by_occurrence_pattern"]),
+                {"single_root", "sequential", "overlap"},
+            )
+            self.assertEqual(
+                sum(
+                    row["sample_count"]
+                    for row in method["by_occurrence_pattern"].values()
+                ),
+                660,
+            )
             self.assertEqual(len(method["results"]), 660)
 
 

@@ -43,13 +43,15 @@ The main registered results are:
 
 | Experiment | Result |
 | --- | --- |
-| Root-cause Exact: OpDiag / DBAIOps / HyperDBDiag | 84.85% / 85.00% / 91.97% |
+| Root-cause Exact: OpDiag / DBAIOps / HyperDBDiag | 42.58% / 33.33% / 65.45% |
 | SQL Hit@1: OpDiag / HyperDBDiag | 50.87% / 93.75% |
 | Operator Hit@1: OpDiag / HyperDBDiag | 75.00% / 91.67% |
-| Hypergraph relation reduction | 62.04% |
+| Hypergraph relation reduction | 79.90% |
 
 Traversal time is machine-dependent; the registered comparison reports a
-56.82% reduction.
+79.77% reduction. On the same held-out predictions, HyperDBDiag reaches 63.26%
+Exact for single-root cases, 67.80% for sequential multi-root cases, and 65.15%
+for overlapping multi-root cases.
 
 ## Individual Entrypoints
 

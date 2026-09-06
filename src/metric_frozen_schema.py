@@ -7,7 +7,7 @@ import json
 from typing import Any, Dict
 
 
-FROZEN_PROTOCOL = "dbmags-interaction-benchmark-v10-metric-only-frozen"
+FROZEN_PROTOCOL = "dbmags-interaction-benchmark-v11-window-complete-frozen"
 FEATURE_SCHEMA_VERSION = "dbmags-metric-time-schema-v1"
 
 # These are the only values a frozen predictor may receive from a raw trace.
