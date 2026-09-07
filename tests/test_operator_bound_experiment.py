@@ -57,6 +57,9 @@ class OperatorBoundExperimentTests(unittest.TestCase):
             {
                 "case_id": "c1", "root_cardinality": 2, "root": root,
                 "sql_hit_at_1": True, "operator_hit_at_1": True,
+                "sql_hit_at_2": True, "target_sql_rank": 1,
+                "sql_ranking_mistake": False, "target_operator_rank": 1,
+                "joint_sql_operator_hit_at_1": True,
                 "all_sql_hit_at_1": True, "all_chain_hit_at_1": True,
             }
             for root in ("group_by", "missing_index")
@@ -64,10 +67,11 @@ class OperatorBoundExperimentTests(unittest.TestCase):
         report = _summarize_rows(rows)
         self.assertEqual(report["case_count"], 1)
         self.assertEqual(report["by_root_cardinality"]["2"]["case_count"], 1)
-        self.assertEqual(
-            report["root_sql_pairs"], {"denominator": 2, "hit_at_1": 1.0}
-        )
-        self.assertNotIn("hit_at_2", report["root_sql_pairs"])
+        self.assertEqual(report["root_sql_pairs"]["denominator"], 2)
+        self.assertEqual(report["root_sql_pairs"]["hit_at_1"], 1.0)
+        self.assertEqual(report["root_sql_pairs"]["hit_at_2"], 1.0)
+        self.assertEqual(report["root_sql_pairs"]["average_target_rank"], 1.0)
+        self.assertEqual(report["root_sql_pairs"]["ranking_mistake_ratio"], 0.0)
 
     def test_ranker_does_not_accept_test_truth(self):
         cases, _ = load_cases(self.SOURCE)

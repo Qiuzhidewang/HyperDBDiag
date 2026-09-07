@@ -1009,19 +1009,69 @@ def _rank_of(ranking: Sequence[Mapping[str, Any]], key: str, targets: Iterable[s
     return None
 
 
-def _hit_summary(hits: Sequence[bool]) -> Dict[str, Any]:
+def _hit_summary(
+    hits: Sequence[bool],
+    *,
+    hit_at_2: Optional[Sequence[bool]] = None,
+    ranks: Optional[Sequence[Optional[int]]] = None,
+    mistakes: Optional[Sequence[bool]] = None,
+) -> Dict[str, Any]:
     materialized = [bool(value) for value in hits]
-    return {
+    result: Dict[str, Any] = {
         "denominator": len(materialized),
         "hit_at_1": sum(materialized) / float(len(materialized) or 1),
     }
+    if hit_at_2 is not None:
+        values = [bool(value) for value in hit_at_2]
+        result["hit_at_2"] = sum(values) / float(len(values) or 1)
+    if ranks is not None:
+        values = [int(value) for value in ranks if value is not None]
+        result["rank_denominator"] = len(values)
+        result["average_target_rank"] = sum(values) / float(len(values) or 1)
+    if mistakes is not None:
+        values = [bool(value) for value in mistakes]
+        result["ranking_mistake_ratio"] = sum(values) / float(len(values) or 1)
+    return result
+
+
+def _normal_control_ids(cases: Sequence[OperatorBoundCase]) -> Dict[str, set]:
+    """Return the six frozen non-target controls for each SQL-template variant."""
+    target_ids_by_variant: Dict[str, set] = defaultdict(set)
+    candidate_ids_by_variant: Dict[str, set] = {}
+    for case in cases:
+        variant = str(case.truth.get("template_variant") or "")
+        target_ids_by_variant[variant].update(
+            str(value) for value in case.truth["target_sql_ids"].values()
+        )
+        ids = {str(row["sql_id"]) for row in case.blind["candidates"]}
+        if variant in candidate_ids_by_variant and candidate_ids_by_variant[variant] != ids:
+            raise ValueError(f"{variant}: SQL candidate inventory is not uniform")
+        candidate_ids_by_variant[variant] = ids
+    controls = {
+        variant: ids - target_ids_by_variant[variant]
+        for variant, ids in candidate_ids_by_variant.items()
+    }
+    if any(len(ids) != 6 for ids in controls.values()):
+        raise ValueError("each SQL-template variant must provide six non-target controls")
+    return controls
 
 
 def _summarize_rows(rows: Sequence[Mapping[str, Any]]) -> Dict[str, Any]:
     case_rows = {str(row["case_id"]): row for row in rows}
     summary = {
-        "root_sql_pairs": _hit_summary([row["sql_hit_at_1"] for row in rows]),
-        "root_operator_pairs": _hit_summary([row["operator_hit_at_1"] for row in rows]),
+        "root_sql_pairs": _hit_summary(
+            [row["sql_hit_at_1"] for row in rows],
+            hit_at_2=[row["sql_hit_at_2"] for row in rows],
+            ranks=[row["target_sql_rank"] for row in rows],
+            mistakes=[row["sql_ranking_mistake"] for row in rows],
+        ),
+        "root_operator_pairs": _hit_summary(
+            [row["operator_hit_at_1"] for row in rows],
+            ranks=[row["target_operator_rank"] for row in rows],
+        ),
+        "joint_sql_operator": _hit_summary(
+            [row["joint_sql_operator_hit_at_1"] for row in rows]
+        ),
         "case_count": len(case_rows),
         "case_full_sql_coverage_at_1": sum(row["all_sql_hit_at_1"] for row in case_rows.values())
         / float(len(case_rows) or 1),
@@ -1034,8 +1084,19 @@ def _summarize_rows(rows: Sequence[Mapping[str, Any]]) -> Dict[str, Any]:
         selected_cases = {str(row["case_id"]): row for row in selected}
         by_cardinality[str(cardinality)] = {
             "case_count": len(selected_cases),
-            "root_sql_pairs": _hit_summary([row["sql_hit_at_1"] for row in selected]),
-            "root_operator_pairs": _hit_summary([row["operator_hit_at_1"] for row in selected]),
+            "root_sql_pairs": _hit_summary(
+                [row["sql_hit_at_1"] for row in selected],
+                hit_at_2=[row["sql_hit_at_2"] for row in selected],
+                ranks=[row["target_sql_rank"] for row in selected],
+                mistakes=[row["sql_ranking_mistake"] for row in selected],
+            ),
+            "root_operator_pairs": _hit_summary(
+                [row["operator_hit_at_1"] for row in selected],
+                ranks=[row["target_operator_rank"] for row in selected],
+            ),
+            "joint_sql_operator": _hit_summary(
+                [row["joint_sql_operator_hit_at_1"] for row in selected]
+            ),
             "case_full_sql_coverage_at_1": sum(
                 row["all_sql_hit_at_1"] for row in selected_cases.values()
             ) / float(len(selected_cases) or 1),
@@ -1064,6 +1125,7 @@ def _evaluate(
 ) -> Dict[str, Any]:
     rows: List[Dict[str, Any]] = []
     fold_metadata = []
+    normal_controls = _normal_control_ids(cases)
     for fold in (0, 1):
         training = [case for case in cases if _case_fold(case) != fold]
         evaluation = [case for case in cases if _case_fold(case) == fold]
@@ -1095,20 +1157,38 @@ def _evaluate(
                 target_operator_ranking = ranked["operator_rankings_by_sql"].get(
                     target_sql, []
                 )
-                sql_hit_at_1 = _rank_of(
-                    ranked["sql_ranking"], "sql_id", {target_sql}
-                ) == 1
-                operator_hit_at_1 = _rank_of(
+                target_sql_rank = _rank_of(ranked["sql_ranking"], "sql_id", {target_sql})
+                target_operator_rank = _rank_of(
                     target_operator_ranking, "operator_key", target_operators
-                ) == 1
+                )
+                normal_sql_ranks = {
+                    sql_id: _rank_of(ranked["sql_ranking"], "sql_id", {sql_id})
+                    for sql_id in sorted(normal_controls[str(case.truth["template_variant"])])
+                }
+                sql_ranking_mistake = (
+                    target_sql_rank is None
+                    or any(
+                        rank is not None and rank < target_sql_rank
+                        for rank in normal_sql_ranks.values()
+                    )
+                )
+                sql_hit_at_1 = target_sql_rank == 1
+                sql_hit_at_2 = target_sql_rank is not None and target_sql_rank <= 2
+                operator_hit_at_1 = target_operator_rank == 1
                 local_rows.append({
                     "case_id": case.case_id,
                     "fold": fold,
                     "root_cardinality": len(case.roots),
                     "root": root,
                     "sql_hit_at_1": sql_hit_at_1,
+                    "sql_hit_at_2": sql_hit_at_2,
+                    "target_sql_rank": target_sql_rank,
+                    "sql_ranking_mistake": sql_ranking_mistake,
                     "operator_hit_at_1": operator_hit_at_1,
-                    "top_sql_ids": [row["sql_id"] for row in ranked["sql_ranking"][:1]],
+                    "target_operator_rank": target_operator_rank,
+                    "joint_sql_operator_hit_at_1": sql_hit_at_2 and operator_hit_at_1,
+                    "normal_sql_ranks": normal_sql_ranks,
+                    "top_sql_ids": [row["sql_id"] for row in ranked["sql_ranking"][:2]],
                     "top_operator_keys": [
                         row["operator_key"] for row in target_operator_ranking[:1]
                     ],
@@ -1174,7 +1254,10 @@ def run(
                 "SQL/operator attribution after root detection; this 5-second extension is not "
                 "merged with the 75-second 660-case root benchmark"
             ),
-            "metrics": "root-SQL and root-operator Hit@1, and per-case full coverage@1",
+            "metrics": (
+                "SQL Hit@1/Hit@2, SQL ranking-mistake ratio, average target SQL rank, "
+                "average target operator rank, joint SQL-Top-2/operator-Top-1, and per-case coverage@1"
+            ),
             "operator_metric_scope": (
                 "Operator Hit@1 is conditional on the ground-truth SQL plan, matching OpDiag's "
                 "hierarchical operator-ranking stage; it is not an end-to-end operator metric"

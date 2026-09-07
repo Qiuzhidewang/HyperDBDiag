@@ -45,7 +45,9 @@ The main registered results are:
 | --- | --- |
 | Root-cause Exact: OpDiag / DBAIOps / HyperDBDiag | 42.58% / 33.33% / 65.45% |
 | SQL Hit@1: OpDiag / HyperDBDiag | 50.87% / 93.75% |
+| SQL Hit@2: OpDiag / HyperDBDiag | 80.21% / 99.13% |
 | Operator Hit@1: OpDiag / HyperDBDiag | 75.00% / 91.67% |
+| Joint SQL-Top-2/operator-Top-1: OpDiag / HyperDBDiag | 57.29% / 90.80% |
 | Hypergraph relation reduction | 79.90% |
 
 Traversal time is machine-dependent; the registered comparison reports a
