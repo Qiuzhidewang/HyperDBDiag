@@ -1,0 +1,105 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "customer_record_lock_query_whole_table__block_03__single_a",
+  "collected_at": "2026-09-05T19:58:15.606956+00:00",
+  "collection": {
+    "table": "customer",
+    "replicate_index": 3,
+    "condition": "single_a",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        12791,
+        12796,
+        12798,
+        12799,
+        12801,
+        12802,
+        12804,
+        12805,
+        12807,
+        12808,
+        12810,
+        12811,
+        12813,
+        12814,
+        12816,
+        12817,
+        12819,
+        12820,
+        12822,
+        12823,
+        12825,
+        12826,
+        12828,
+        12829,
+        12831,
+        12832,
+        12834,
+        12835,
+        12837,
+        12838,
+        12840,
+        12841,
+        12843,
+        12844,
+        12846,
+        12847,
+        12849,
+        12850,
+        12852,
+        12853,
+        12855,
+        12856,
+        12858,
+        12859,
+        12861,
+        12862,
+        12864,
+        12865
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

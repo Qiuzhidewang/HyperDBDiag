@@ -1,0 +1,133 @@
+{
+  "select count(*) from customer where c_state=? and c_w_id=?": {
+    "sql": "SELECT COUNT(*) FROM customer WHERE c_state='ZZ' AND c_w_id=3",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "5379.26"
+        },
+        "table": {
+          "table_name": "customer",
+          "access_type": "ref",
+          "possible_keys": [
+            "PRIMARY",
+            "idx_customer_name"
+          ],
+          "key": "PRIMARY",
+          "used_key_parts": [
+            "c_w_id"
+          ],
+          "key_length": "4",
+          "ref": [
+            "const"
+          ],
+          "rows_examined_per_scan": 53100,
+          "rows_produced_per_join": 5310,
+          "filtered": "10.00",
+          "cost_info": {
+            "read_cost": "69.27",
+            "eval_cost": "531.00",
+            "prefix_cost": "5379.27",
+            "data_read_per_join": "12M"
+          },
+          "used_columns": [
+            "c_w_id",
+            "c_state"
+          ],
+          "attached_condition": "(`tpcc10_test`.`customer`.`c_state` = 'ZZ')"
+        }
+      }
+    }
+  },
+  "select c_balance, c_discount from customer where c_w_id=? and c_d_id=? and c_id=?": {
+    "sql": "SELECT c_balance, c_discount FROM customer WHERE c_w_id=4 AND c_d_id=8 AND c_id=1145",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "1.00"
+        },
+        "table": {
+          "table_name": "customer",
+          "access_type": "const",
+          "possible_keys": [
+            "PRIMARY",
+            "idx_customer_name"
+          ],
+          "key": "PRIMARY",
+          "used_key_parts": [
+            "c_w_id",
+            "c_d_id",
+            "c_id"
+          ],
+          "key_length": "12",
+          "ref": [
+            "const",
+            "const",
+            "const"
+          ],
+          "rows_examined_per_scan": 1,
+          "rows_produced_per_join": 1,
+          "filtered": "100.00",
+          "cost_info": {
+            "read_cost": "0.00",
+            "eval_cost": "0.10",
+            "prefix_cost": "0.00",
+            "data_read_per_join": "2K"
+          },
+          "used_columns": [
+            "c_w_id",
+            "c_d_id",
+            "c_id",
+            "c_discount",
+            "c_balance"
+          ]
+        }
+      }
+    }
+  },
+  "select s_quantity from stock where s_w_id=? and s_i_id=?": {
+    "sql": "SELECT s_quantity FROM stock WHERE s_w_id=3 AND s_i_id=84095",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "1.00"
+        },
+        "table": {
+          "table_name": "stock",
+          "access_type": "const",
+          "possible_keys": [
+            "PRIMARY",
+            "s_i_id"
+          ],
+          "key": "PRIMARY",
+          "used_key_parts": [
+            "s_w_id",
+            "s_i_id"
+          ],
+          "key_length": "8",
+          "ref": [
+            "const",
+            "const"
+          ],
+          "rows_examined_per_scan": 1,
+          "rows_produced_per_join": 1,
+          "filtered": "100.00",
+          "cost_info": {
+            "read_cost": "0.00",
+            "eval_cost": "0.10",
+            "prefix_cost": "0.00",
+            "data_read_per_join": "1K"
+          },
+          "used_columns": [
+            "s_w_id",
+            "s_i_id",
+            "s_quantity"
+          ]
+        }
+      }
+    }
+  }
+}

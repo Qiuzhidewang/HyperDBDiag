@@ -1,0 +1,367 @@
+{
+  "scope": "Post-run descriptive breakdown; no settings changed or new model calls selected.",
+  "arms": {
+    "clean": {
+      "accepted_selection_n": 101,
+      "accepted_correct": 95,
+      "fallback_n": 19,
+      "fallback_correct": 11,
+      "changes_vs_clean": []
+    },
+    "identical_support": {
+      "accepted_selection_n": 103,
+      "accepted_correct": 95,
+      "fallback_n": 17,
+      "fallback_correct": 9,
+      "changes_vs_clean": [
+        {
+          "case_id": "case-0522",
+          "fold": "leave_replicate_index_out:2",
+          "expected_labels": [
+            "group_by",
+            "missing_index"
+          ],
+          "local_prediction": [
+            "group_by",
+            "missing_index"
+          ],
+          "predicted_labels": [
+            "missing_index",
+            "query_whole_table"
+          ],
+          "status": "accepted_selection",
+          "clean_prediction": [
+            "group_by",
+            "missing_index"
+          ],
+          "clean_status": "accepted_abstain"
+        },
+        {
+          "case_id": "case-0605",
+          "fold": "leave_replicate_index_out:3",
+          "expected_labels": [
+            "order_by"
+          ],
+          "local_prediction": [
+            "order_by"
+          ],
+          "predicted_labels": [
+            "missing_index",
+            "order_by"
+          ],
+          "status": "accepted_selection",
+          "clean_prediction": [
+            "order_by"
+          ],
+          "clean_status": "accepted_selection"
+        }
+      ]
+    },
+    "empty_counterevidence": {
+      "accepted_selection_n": 101,
+      "accepted_correct": 93,
+      "fallback_n": 19,
+      "fallback_correct": 11,
+      "changes_vs_clean": [
+        {
+          "case_id": "case-0637",
+          "fold": "leave_replicate_index_out:2",
+          "expected_labels": [
+            "missing_index",
+            "query_with_too_much_join"
+          ],
+          "local_prediction": [
+            "missing_index",
+            "query_with_too_much_join"
+          ],
+          "predicted_labels": [
+            "query_with_too_much_join"
+          ],
+          "status": "accepted_selection",
+          "clean_prediction": [
+            "missing_index",
+            "query_with_too_much_join"
+          ],
+          "clean_status": "accepted_selection"
+        },
+        {
+          "case_id": "case-0629",
+          "fold": "leave_replicate_index_out:6",
+          "expected_labels": [
+            "missing_index",
+            "query_with_too_much_join"
+          ],
+          "local_prediction": [
+            "missing_index",
+            "query_with_too_much_join"
+          ],
+          "predicted_labels": [
+            "query_with_too_much_join"
+          ],
+          "status": "accepted_selection",
+          "clean_prediction": [
+            "missing_index",
+            "query_with_too_much_join"
+          ],
+          "clean_status": "accepted_selection"
+        }
+      ]
+    },
+    "shuffled_evidence": {
+      "accepted_selection_n": 102,
+      "accepted_correct": 93,
+      "fallback_n": 18,
+      "fallback_correct": 11,
+      "changes_vs_clean": [
+        {
+          "case_id": "case-0568",
+          "fold": "leave_replicate_index_out:1",
+          "expected_labels": [
+            "missing_index",
+            "query_whole_table"
+          ],
+          "local_prediction": [
+            "query_whole_table"
+          ],
+          "predicted_labels": [
+            "query_whole_table"
+          ],
+          "status": "accepted_selection",
+          "clean_prediction": [
+            "missing_index",
+            "query_whole_table"
+          ],
+          "clean_status": "accepted_selection"
+        },
+        {
+          "case_id": "case-0047",
+          "fold": "leave_replicate_index_out:2",
+          "expected_labels": [
+            "group_by",
+            "record_lock"
+          ],
+          "local_prediction": [
+            "query_whole_table",
+            "record_lock"
+          ],
+          "predicted_labels": [
+            "group_by",
+            "record_lock"
+          ],
+          "status": "accepted_selection",
+          "clean_prediction": [
+            "query_whole_table",
+            "record_lock"
+          ],
+          "clean_status": "accepted_abstain"
+        },
+        {
+          "case_id": "case-0078",
+          "fold": "leave_replicate_index_out:3",
+          "expected_labels": [
+            "group_by",
+            "missing_index"
+          ],
+          "local_prediction": [
+            "group_by",
+            "missing_index"
+          ],
+          "predicted_labels": [
+            "missing_index",
+            "query_whole_table"
+          ],
+          "status": "accepted_selection",
+          "clean_prediction": [
+            "group_by",
+            "missing_index"
+          ],
+          "clean_status": "accepted_abstain"
+        },
+        {
+          "case_id": "case-0262",
+          "fold": "leave_replicate_index_out:6",
+          "expected_labels": [
+            "missing_index",
+            "record_lock"
+          ],
+          "local_prediction": [
+            "query_whole_table",
+            "record_lock"
+          ],
+          "predicted_labels": [
+            "query_whole_table",
+            "record_lock"
+          ],
+          "status": "accepted_selection",
+          "clean_prediction": [
+            "missing_index",
+            "record_lock"
+          ],
+          "clean_status": "accepted_selection"
+        }
+      ]
+    },
+    "order_only": {
+      "accepted_selection_n": 103,
+      "accepted_correct": 93,
+      "fallback_n": 17,
+      "fallback_correct": 9,
+      "changes_vs_clean": [
+        {
+          "case_id": "case-0641",
+          "fold": "leave_replicate_index_out:1",
+          "expected_labels": [
+            "implicit_conversion"
+          ],
+          "local_prediction": [
+            "implicit_conversion",
+            "missing_index"
+          ],
+          "predicted_labels": [
+            "implicit_conversion",
+            "missing_index"
+          ],
+          "status": "accepted_selection",
+          "clean_prediction": [
+            "implicit_conversion"
+          ],
+          "clean_status": "accepted_selection"
+        },
+        {
+          "case_id": "case-0637",
+          "fold": "leave_replicate_index_out:2",
+          "expected_labels": [
+            "missing_index",
+            "query_with_too_much_join"
+          ],
+          "local_prediction": [
+            "missing_index",
+            "query_with_too_much_join"
+          ],
+          "predicted_labels": [
+            "query_with_too_much_join"
+          ],
+          "status": "accepted_selection",
+          "clean_prediction": [
+            "missing_index",
+            "query_with_too_much_join"
+          ],
+          "clean_status": "accepted_selection"
+        },
+        {
+          "case_id": "case-0001",
+          "fold": "leave_replicate_index_out:3",
+          "expected_labels": [
+            "missing_index",
+            "record_lock"
+          ],
+          "local_prediction": [
+            "query_with_too_much_join",
+            "record_lock"
+          ],
+          "predicted_labels": [
+            "query_with_too_much_join",
+            "record_lock"
+          ],
+          "status": "accepted_abstain",
+          "clean_prediction": [
+            "missing_index",
+            "record_lock"
+          ],
+          "clean_status": "accepted_selection"
+        },
+        {
+          "case_id": "case-0145",
+          "fold": "leave_replicate_index_out:4",
+          "expected_labels": [
+            "group_by",
+            "record_lock"
+          ],
+          "local_prediction": [
+            "query_whole_table",
+            "record_lock"
+          ],
+          "predicted_labels": [
+            "group_by",
+            "record_lock"
+          ],
+          "status": "accepted_selection",
+          "clean_prediction": [
+            "query_whole_table",
+            "record_lock"
+          ],
+          "clean_status": "accepted_abstain"
+        },
+        {
+          "case_id": "case-0316",
+          "fold": "leave_replicate_index_out:4",
+          "expected_labels": [
+            "missing_index",
+            "record_lock"
+          ],
+          "local_prediction": [
+            "missing_index",
+            "record_lock"
+          ],
+          "predicted_labels": [
+            "group_by",
+            "record_lock"
+          ],
+          "status": "accepted_selection",
+          "clean_prediction": [
+            "missing_index",
+            "record_lock"
+          ],
+          "clean_status": "accepted_selection"
+        },
+        {
+          "case_id": "case-0629",
+          "fold": "leave_replicate_index_out:6",
+          "expected_labels": [
+            "missing_index",
+            "query_with_too_much_join"
+          ],
+          "local_prediction": [
+            "missing_index",
+            "query_with_too_much_join"
+          ],
+          "predicted_labels": [
+            "query_with_too_much_join"
+          ],
+          "status": "accepted_selection",
+          "clean_prediction": [
+            "missing_index",
+            "query_with_too_much_join"
+          ],
+          "clean_status": "accepted_selection"
+        }
+      ]
+    },
+    "out_of_pool_lure": {
+      "accepted_selection_n": 104,
+      "accepted_correct": 97,
+      "fallback_n": 16,
+      "fallback_correct": 8,
+      "changes_vs_clean": [
+        {
+          "case_id": "case-0202",
+          "fold": "leave_replicate_index_out:2",
+          "expected_labels": [
+            "group_by"
+          ],
+          "local_prediction": [
+            "group_by"
+          ],
+          "predicted_labels": [
+            "query_whole_table"
+          ],
+          "status": "accepted_selection",
+          "clean_prediction": [
+            "group_by"
+          ],
+          "clean_status": "accepted_abstain"
+        }
+      ]
+    }
+  }
+}

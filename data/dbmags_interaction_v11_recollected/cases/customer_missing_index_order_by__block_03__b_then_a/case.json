@@ -1,0 +1,75 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "customer_missing_index_order_by__block_03__b_then_a",
+  "collected_at": "2026-09-05T18:43:03.706933+00:00",
+  "collection": {
+    "table": "customer",
+    "replicate_index": 3,
+    "condition": "b_then_a",
+    "schedule": [
+      {
+        "root": "order_by",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      },
+      {
+        "root": "missing_index",
+        "offset_seconds": 30.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "missing_index",
+      "order_by"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "order_by",
+      "execution_count": 409,
+      "connection_ids": [
+        11134
+      ],
+      "lock_wait_observed": false,
+      "errors": []
+    },
+    {
+      "root": "missing_index",
+      "execution_count": 451,
+      "connection_ids": [
+        11138
+      ],
+      "lock_wait_observed": false,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "missing_index": true,
+      "order_by": true
+    },
+    "observed_atoms": [
+      "broad_filtered_scan",
+      "filtered_relation_read",
+      "ordering_clause",
+      "range_or_comparison_predicate"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

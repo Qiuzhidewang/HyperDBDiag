@@ -1,0 +1,80 @@
+{
+  "select sum(o_ol_cnt) from orders": {
+    "sql": "SELECT SUM(o_ol_cnt) FROM orders",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "12118.15"
+        },
+        "table": {
+          "table_name": "orders",
+          "access_type": "ALL",
+          "rows_examined_per_scan": 119979,
+          "rows_produced_per_join": 119979,
+          "filtered": "100.00",
+          "cost_info": {
+            "read_cost": "120.25",
+            "eval_cost": "11997.90",
+            "prefix_cost": "12118.15",
+            "data_read_per_join": "4M"
+          },
+          "used_columns": [
+            "o_ol_cnt"
+          ]
+        }
+      }
+    }
+  },
+  "select o_id, o_entry_d from orders where o_w_id=? and o_d_id=? and o_c_id=? order by o_id desc limit ?": {
+    "sql": "SELECT o_id, o_entry_d FROM orders WHERE o_w_id=3 AND o_d_id=10 AND o_c_id=307 ORDER BY o_id DESC LIMIT 1",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "0.35"
+        },
+        "ordering_operation": {
+          "using_filesort": false,
+          "table": {
+            "table_name": "orders",
+            "access_type": "ref",
+            "possible_keys": [
+              "PRIMARY",
+              "o_w_id"
+            ],
+            "key": "o_w_id",
+            "used_key_parts": [
+              "o_w_id",
+              "o_d_id",
+              "o_c_id"
+            ],
+            "key_length": "12",
+            "ref": [
+              "const",
+              "const",
+              "const"
+            ],
+            "rows_examined_per_scan": 1,
+            "rows_produced_per_join": 1,
+            "filtered": "100.00",
+            "backward_index_scan": true,
+            "cost_info": {
+              "read_cost": "0.25",
+              "eval_cost": "0.10",
+              "prefix_cost": "0.35",
+              "data_read_per_join": "40"
+            },
+            "used_columns": [
+              "o_w_id",
+              "o_d_id",
+              "o_id",
+              "o_c_id",
+              "o_entry_d"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

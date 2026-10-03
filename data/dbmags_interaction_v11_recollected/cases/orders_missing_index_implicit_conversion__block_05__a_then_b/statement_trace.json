@@ -1,0 +1,105 @@
+{
+  "baseline": {
+    "select c_balance, c_discount from customer where c_w_id=? and c_d_id=? and c_id=?": {
+      "sql": "SELECT c_balance, c_discount FROM customer WHERE c_w_id=4 AND c_d_id=6 AND c_id=2392",
+      "count": 1092,
+      "total_seconds": 1.5338061278744135,
+      "rows_seen": 1092,
+      "errors": 0
+    },
+    "select count(*) from order_line where ol_w_id=? and ol_d_id=? and ol_o_id between ? and ?": {
+      "sql": "SELECT COUNT(*) FROM order_line WHERE ol_w_id=1 AND ol_d_id=3 AND ol_o_id BETWEEN 1585 AND 1595",
+      "count": 1065,
+      "total_seconds": 1.6232737999089295,
+      "rows_seen": 1065,
+      "errors": 0
+    },
+    "select o_id, o_entry_d from orders where o_w_id=? and o_d_id=? and o_c_id=? order by o_id desc limit ?": {
+      "sql": "SELECT o_id, o_entry_d FROM orders WHERE o_w_id=4 AND o_d_id=1 AND o_c_id=2178 ORDER BY o_id DESC LIMIT 1",
+      "count": 1090,
+      "total_seconds": 1.6223281592247076,
+      "rows_seen": 1090,
+      "errors": 0
+    },
+    "select s_quantity from stock where s_w_id=? and s_i_id=?": {
+      "sql": "SELECT s_quantity FROM stock WHERE s_w_id=4 AND s_i_id=3530",
+      "count": 1140,
+      "total_seconds": 1.5665548137185397,
+      "rows_seen": 1140,
+      "errors": 0
+    }
+  },
+  "anomaly": {
+    "select c_balance, c_discount from customer where c_w_id=? and c_d_id=? and c_id=?": {
+      "sql": "SELECT c_balance, c_discount FROM customer WHERE c_w_id=1 AND c_d_id=9 AND c_id=1018",
+      "count": 1359,
+      "total_seconds": 1.5688696451252326,
+      "rows_seen": 1359,
+      "errors": 0
+    },
+    "select count(*) from order_line where ol_w_id=? and ol_d_id=? and ol_o_id between ? and ?": {
+      "sql": "SELECT COUNT(*) FROM order_line WHERE ol_w_id=3 AND ol_d_id=2 AND ol_o_id BETWEEN 1780 AND 1790",
+      "count": 1406,
+      "total_seconds": 1.650936297242879,
+      "rows_seen": 1406,
+      "errors": 0
+    },
+    "select count(*) from orders where o_carrier_id=?": {
+      "sql": "SELECT COUNT(*) FROM orders WHERE o_carrier_id=25",
+      "count": 440,
+      "total_seconds": 6.584720171769732,
+      "rows_seen": 440,
+      "errors": 0
+    },
+    "select count(*) from orders where o_entry_d=?": {
+      "sql": "SELECT COUNT(*) FROM orders WHERE o_entry_d=20250101000005",
+      "count": 422,
+      "total_seconds": 7.2445567160175415,
+      "rows_seen": 422,
+      "errors": 0
+    },
+    "select o_id, o_entry_d from orders where o_w_id=? and o_d_id=? and o_c_id=? order by o_id desc limit ?": {
+      "sql": "SELECT o_id, o_entry_d FROM orders WHERE o_w_id=2 AND o_d_id=10 AND o_c_id=2576 ORDER BY o_id DESC LIMIT 1",
+      "count": 1345,
+      "total_seconds": 1.599875144995167,
+      "rows_seen": 1345,
+      "errors": 0
+    },
+    "select s_quantity from stock where s_w_id=? and s_i_id=?": {
+      "sql": "SELECT s_quantity FROM stock WHERE s_w_id=2 AND s_i_id=19434",
+      "count": 1391,
+      "total_seconds": 1.5685967578174314,
+      "rows_seen": 1391,
+      "errors": 0
+    }
+  },
+  "selected_anomalous": [
+    {
+      "signature": "select count(*) from orders where o_entry_d=?",
+      "score": 5.0535924118043205,
+      "sql": "SELECT COUNT(*) FROM orders WHERE o_entry_d=20250101000005",
+      "count": 422,
+      "total_seconds": 7.2445567160175415,
+      "rows_seen": 422,
+      "errors": 0
+    },
+    {
+      "signature": "select count(*) from orders where o_carrier_id=?",
+      "score": 4.968014329646482,
+      "sql": "SELECT COUNT(*) FROM orders WHERE o_carrier_id=25",
+      "count": 440,
+      "total_seconds": 6.584720171769732,
+      "rows_seen": 440,
+      "errors": 0
+    },
+    {
+      "signature": "select count(*) from order_line where ol_w_id=? and ol_d_id=? and ol_o_id between ? and ?",
+      "score": 0.172869780864812,
+      "sql": "SELECT COUNT(*) FROM order_line WHERE ol_w_id=3 AND ol_d_id=2 AND ol_o_id BETWEEN 1780 AND 1790",
+      "count": 1406,
+      "total_seconds": 1.650936297242879,
+      "rows_seen": 1406,
+      "errors": 0
+    }
+  ]
+}

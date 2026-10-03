@@ -1,0 +1,123 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "orders_record_lock_order_by__block_02__b_then_a",
+  "collected_at": "2026-09-05T17:32:35.196047+00:00",
+  "collection": {
+    "table": "orders",
+    "replicate_index": 2,
+    "condition": "b_then_a",
+    "schedule": [
+      {
+        "root": "order_by",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      },
+      {
+        "root": "record_lock",
+        "offset_seconds": 30.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "order_by",
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "order_by",
+      "execution_count": 388,
+      "connection_ids": [
+        9644
+      ],
+      "lock_wait_observed": false,
+      "errors": []
+    },
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        9648,
+        9649,
+        9651,
+        9652,
+        9654,
+        9655,
+        9657,
+        9658,
+        9660,
+        9661,
+        9663,
+        9664,
+        9666,
+        9667,
+        9669,
+        9670,
+        9672,
+        9673,
+        9675,
+        9676,
+        9678,
+        9679,
+        9681,
+        9682,
+        9684,
+        9685,
+        9687,
+        9688,
+        9690,
+        9691,
+        9693,
+        9694,
+        9696,
+        9697,
+        9699,
+        9700,
+        9702,
+        9703,
+        9705,
+        9706,
+        9708,
+        9709,
+        9711,
+        9712,
+        9714,
+        9715,
+        9717,
+        9718
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "order_by": true,
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "broad_filtered_scan",
+      "filtered_relation_read",
+      "ordering_clause",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

@@ -1,0 +1,138 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "created_at": "2026-09-05T09:33:48.018919+00:00",
+  "seed": 20260802,
+  "replicate_count": 6,
+  "tables": [
+    "customer",
+    "orders"
+  ],
+  "root_pairs": [
+    [
+      "missing_index",
+      "implicit_conversion"
+    ],
+    [
+      "missing_index",
+      "query_with_too_much_join"
+    ],
+    [
+      "missing_index",
+      "order_by"
+    ],
+    [
+      "missing_index",
+      "group_by"
+    ],
+    [
+      "missing_index",
+      "query_whole_table"
+    ],
+    [
+      "record_lock",
+      "implicit_conversion"
+    ],
+    [
+      "record_lock",
+      "query_with_too_much_join"
+    ],
+    [
+      "record_lock",
+      "order_by"
+    ],
+    [
+      "record_lock",
+      "group_by"
+    ],
+    [
+      "record_lock",
+      "query_whole_table"
+    ],
+    [
+      "record_lock",
+      "missing_index"
+    ]
+  ],
+  "conditions": [
+    "single_a",
+    "single_b",
+    "a_then_b",
+    "b_then_a",
+    "overlap"
+  ],
+  "timing": {
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "root_duration_seconds": 30.0,
+    "overlap_seconds": 15.0,
+    "recovery_seconds": 5.0,
+    "sample_interval_seconds": 1.0
+  },
+  "metric_schema": {
+    "metrics": [
+      "mysql_data_locks",
+      "mysql_data_lock_waits",
+      "mysql_innodb_row_lock_current_waits",
+      "mysql_threads_running",
+      "mysql_active_sessions"
+    ],
+    "time_bins_seconds": [
+      [
+        0.0,
+        3.0
+      ],
+      [
+        3.0,
+        15.0
+      ],
+      [
+        15.0,
+        30.0
+      ],
+      [
+        30.0,
+        60.0
+      ],
+      [
+        60.0,
+        75.0
+      ]
+    ]
+  },
+  "evidence_policy": {
+    "statement_selection": "phase-rate delta over instrumented runtime statements",
+    "semantic_extraction_inputs": [
+      "selected_statement",
+      "EXPLAIN FORMAT=JSON",
+      "runtime lock-wait observation"
+    ],
+    "forbidden_inputs": [
+      "root label",
+      "scenario",
+      "condition",
+      "case ID"
+    ]
+  },
+  "environment": {
+    "mysql_version": "8.0.46",
+    "mysql_version_comment": "MySQL Community Server - GPL",
+    "performance_schema_enabled": true,
+    "database": "tpcc10_test",
+    "tables": [
+      {
+        "table": "customer",
+        "estimated_rows": 115286
+      },
+      {
+        "table": "order_line",
+        "estimated_rows": 1195987
+      },
+      {
+        "table": "orders",
+        "estimated_rows": 119979
+      }
+    ],
+    "workload_worker_count": 4,
+    "credential_storage": "not persisted"
+  }
+}

@@ -1,0 +1,76 @@
+Refitting and calibrating leave_replicate_index_out:1
+  verified 110/660 cases; all regenerated requests matched
+Refitting and calibrating leave_replicate_index_out:2
+  verified 220/660 cases; all regenerated requests matched
+Refitting and calibrating leave_replicate_index_out:3
+  verified 330/660 cases; all regenerated requests matched
+Refitting and calibrating leave_replicate_index_out:4
+  verified 440/660 cases; all regenerated requests matched
+Refitting and calibrating leave_replicate_index_out:5
+  verified 550/660 cases; all regenerated requests matched
+Refitting and calibrating leave_replicate_index_out:6
+  verified 660/660 cases; all regenerated requests matched
+{
+  "complete": true,
+  "verification": {
+    "status": "passed",
+    "cases": 660,
+    "fresh_unique_model_fits": 21,
+    "calibration_folds_rebuilt_and_matched": 6,
+    "all_deterministic_predictions_and_pools_match": true,
+    "exact_primary_request_replays": 1320,
+    "unique_primary_requests_reused": 855,
+    "new_model_calls": 0,
+    "repeat_draws_used": 0,
+    "primary_statuses": {
+      "full": {
+        "accepted_selection": 565,
+        "accepted_abstain": 89,
+        "fallback_transport": 2,
+        "fallback_invalid_response": 4
+      },
+      "filtered": {
+        "accepted_selection": 571,
+        "accepted_abstain": 83,
+        "fallback_transport": 2,
+        "fallback_invalid_response": 4
+      }
+    },
+    "execution_seconds_not_llm_latency": 84.38108575,
+    "input_integrity": {
+      "experimental_files_checked": 77,
+      "completed_inference_files_checked": 20,
+      "historical_source_archive_sha256": "f4cc2c03ea08fd2018744c088acd845c2ebd26ca43769a52087040d0f9ed7ff1",
+      "frozen_protocol_sha256": "7c930abd1aa9d002f8c50da889bc291b87d9d476017f43c9d838660c95981634"
+    }
+  },
+  "main": {
+    "opdiag": {
+      "sample_count": 660,
+      "exact_set_accuracy": 0.4257575757575758,
+      "component_precision": 0.6602316602316602,
+      "component_recall": 0.6477272727272727,
+      "component_f1": 0.6539196940726577,
+      "full_root_coverage": 0.43636363636363634,
+      "mean_predicted_roots": 1.5696969696969696
+    },
+    "dbaiops": {
+      "sample_count": 660,
+      "exact_set_accuracy": 0.3333333333333333,
+      "component_precision": 0.609360076408787,
+      "component_recall": 0.6041666666666666,
+      "component_f1": 0.6067522586780789,
+      "full_root_coverage": 0.3787878787878788,
+      "mean_predicted_roots": 1.5863636363636364
+    },
+    "hyperdbdiag": {
+      "sample_count": 660,
+      "exact_set_accuracy": 0.8787878787878788,
+      "component_precision": 0.948076923076923,
+      "component_recall": 0.9337121212121212,
+      "component_f1": 0.9408396946564884,
+      "full_root_coverage": 0.8939393939393939,
+      "mean_predicted_roots": 1.5757575757575757
+    }
+  }
+}

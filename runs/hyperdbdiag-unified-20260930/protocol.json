@@ -1,0 +1,43 @@
+{
+  "name": "hyperdbdiag_ecsa_v2",
+  "seed": 20260802,
+  "model": "gpt-5.5",
+  "reasoning_effort": "xhigh",
+  "evaluation": "six fixed replicate folds; 550 training and 110 evaluation cases per fold",
+  "calibration": "five training-only inner groups; refitted models; unchanged frozen selection rule",
+  "arbitration": "all evaluation cases; no test-call budget or selected-case gate",
+  "full_method_fallback": "calibrated local prediction",
+  "llm_without_local_fallback": "upstream top-1",
+  "pool_effect_supplement": "both arms use upstream top-1 fallback; kept separate from complete method",
+  "llm_execution": "exact frozen primary-input replay including original failures; no repeat substitution",
+  "new_model_calls": 0,
+  "limitations": [
+    "same development dataset and known scenarios; not a new independent test set",
+    "changes from historical main include local policy, arbitration coverage and prompt/transport",
+    "replay duration is not end-to-end inference latency"
+  ],
+  "instructions_sha256": "5b927a76462dce07e6ecd268c4961224a5d7becb8ccdab71c30ecefff0fbfde5",
+  "schema_sha256": "b4d77192188e85830cfd5412061cdc475aad3b1d9c557fbe02a620c25eaafb66",
+  "source_sha256": {
+    "src/ecsa_experiment.py": "ba3f149fe137060d39613ad2ca3f9d3e8c2e984f2caa00360eb1ea3433d4a043",
+    "src/ecsa_pipeline.py": "92a846dad784358eefd55ee26d0c2ca74e2c00e97f483366d22ef7950e752578",
+    "src/ecsa_arbitration.py": "112fd09e52dbc760dc827353d186be1c0d27d806b80ed6f897e492997fbada12",
+    "src/conservative_evidence_judge.py": "ec19e1ae576ddae9a90ccbad287369df5b2329cbb24e0f2a26c1143a55c55308",
+    "src/structured_evidence_judge.py": "4ad30be66f9906f6fb4f4c5995a4752b25dcde435f76e1069ee2d85a138d30bc",
+    "src/hyperdbdiag_ablation.py": "f3cce0aa2164b7af7cc179d126409745453d8988a248b9113673ec0211f4b01d",
+    "src/hyperdbdiag_pipeline.py": "9fbf16f6cd794f635972fccdf1a733e8bbe5ca3c1be0450bb15bf29b84548fa4",
+    "src/hypergraph_core.py": "1856762a39eb59149aeff243edd7b0c4eaf795e24e9e7bca4b1a4c8ce9686b7c",
+    "src/dbmags_experiment.py": "e17b98cd8a168e2a90d9c6539406f10b29f9a778107daa2ad1dd426162d5685b",
+    "src/metric_frozen_dataset.py": "93ea7e9c0aaf2346d7b190988c0d78e7c6f7c693de7bbe334dc4169cff63b2ee",
+    "src/metric_frozen_schema.py": "359f733ac056c2d3f17fe1bfe4898b1e401afe99c6e87dc2ee3c79b73bf59365",
+    "src/sql_semantic_evidence.py": "4fcc0028aad39e6c8724edf082835cc9d2d025c9456ecf261ea27285ebb4f564",
+    "src/opdiag_baseline.py": "3557ce0a7fd763e7ad94baf5e144303bc6c2282c9da689a5e5b8d9e100403668",
+    "src/dbaiops_baseline.py": "0be070d8f1e64d4a84bf499190aca584f827f13ed21608c8b1b830b3ab623e90"
+  },
+  "frozen_inputs": {
+    "experimental_files_checked": 77,
+    "completed_inference_files_checked": 20,
+    "historical_source_archive_sha256": "f4cc2c03ea08fd2018744c088acd845c2ebd26ca43769a52087040d0f9ed7ff1",
+    "frozen_protocol_sha256": "7c930abd1aa9d002f8c50da889bc291b87d9d476017f43c9d838660c95981634"
+  }
+}

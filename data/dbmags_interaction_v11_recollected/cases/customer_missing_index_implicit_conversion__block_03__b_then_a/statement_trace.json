@@ -1,0 +1,105 @@
+{
+  "baseline": {
+    "select c_balance, c_discount from customer where c_w_id=? and c_d_id=? and c_id=?": {
+      "sql": "SELECT c_balance, c_discount FROM customer WHERE c_w_id=2 AND c_d_id=3 AND c_id=668",
+      "count": 1047,
+      "total_seconds": 1.2448623799427878,
+      "rows_seen": 1047,
+      "errors": 0
+    },
+    "select count(*) from order_line where ol_w_id=? and ol_d_id=? and ol_o_id between ? and ?": {
+      "sql": "SELECT COUNT(*) FROM order_line WHERE ol_w_id=4 AND ol_d_id=10 AND ol_o_id BETWEEN 698 AND 708",
+      "count": 1062,
+      "total_seconds": 1.3370260110023082,
+      "rows_seen": 1062,
+      "errors": 0
+    },
+    "select o_id, o_entry_d from orders where o_w_id=? and o_d_id=? and o_c_id=? order by o_id desc limit ?": {
+      "sql": "SELECT o_id, o_entry_d FROM orders WHERE o_w_id=2 AND o_d_id=10 AND o_c_id=403 ORDER BY o_id DESC LIMIT 1",
+      "count": 1060,
+      "total_seconds": 1.3085147819692793,
+      "rows_seen": 1060,
+      "errors": 0
+    },
+    "select s_quantity from stock where s_w_id=? and s_i_id=?": {
+      "sql": "SELECT s_quantity FROM stock WHERE s_w_id=2 AND s_i_id=55533",
+      "count": 1025,
+      "total_seconds": 1.1918230800474703,
+      "rows_seen": 1025,
+      "errors": 0
+    }
+  },
+  "anomaly": {
+    "select c_balance, c_discount from customer where c_w_id=? and c_d_id=? and c_id=?": {
+      "sql": "SELECT c_balance, c_discount FROM customer WHERE c_w_id=3 AND c_d_id=5 AND c_id=1808",
+      "count": 1303,
+      "total_seconds": 1.46147938694412,
+      "rows_seen": 1303,
+      "errors": 0
+    },
+    "select count(*) from customer where c_state=? and c_w_id=?": {
+      "sql": "SELECT COUNT(*) FROM customer WHERE c_state='ZZ' AND c_w_id=3",
+      "count": 451,
+      "total_seconds": 4.9860056650031765,
+      "rows_seen": 451,
+      "errors": 0
+    },
+    "select count(*) from customer where c_w_id=? and c_d_id=? and c_last=?": {
+      "sql": "SELECT COUNT(*) FROM customer WHERE c_w_id=3 AND c_d_id=9 AND c_last=90003",
+      "count": 513,
+      "total_seconds": 1.5641583260148764,
+      "rows_seen": 513,
+      "errors": 0
+    },
+    "select count(*) from order_line where ol_w_id=? and ol_d_id=? and ol_o_id between ? and ?": {
+      "sql": "SELECT COUNT(*) FROM order_line WHERE ol_w_id=4 AND ol_d_id=5 AND ol_o_id BETWEEN 2330 AND 2340",
+      "count": 1279,
+      "total_seconds": 1.5410267210136226,
+      "rows_seen": 1279,
+      "errors": 0
+    },
+    "select o_id, o_entry_d from orders where o_w_id=? and o_d_id=? and o_c_id=? order by o_id desc limit ?": {
+      "sql": "SELECT o_id, o_entry_d FROM orders WHERE o_w_id=4 AND o_d_id=7 AND o_c_id=667 ORDER BY o_id DESC LIMIT 1",
+      "count": 1296,
+      "total_seconds": 1.5761581159604248,
+      "rows_seen": 1296,
+      "errors": 0
+    },
+    "select s_quantity from stock where s_w_id=? and s_i_id=?": {
+      "sql": "SELECT s_quantity FROM stock WHERE s_w_id=3 AND s_i_id=37122",
+      "count": 1378,
+      "total_seconds": 1.526250535993313,
+      "rows_seen": 1378,
+      "errors": 0
+    }
+  },
+  "selected_anomalous": [
+    {
+      "signature": "select count(*) from customer where c_state=? and c_w_id=?",
+      "score": 4.6987856518221225,
+      "sql": "SELECT COUNT(*) FROM customer WHERE c_state='ZZ' AND c_w_id=3",
+      "count": 451,
+      "total_seconds": 4.9860056650031765,
+      "rows_seen": 451,
+      "errors": 0
+    },
+    {
+      "signature": "select count(*) from customer where c_w_id=? and c_d_id=? and c_last=?",
+      "score": 3.5992597682875975,
+      "sql": "SELECT COUNT(*) FROM customer WHERE c_w_id=3 AND c_d_id=9 AND c_last=90003",
+      "count": 513,
+      "total_seconds": 1.5641583260148764,
+      "rows_seen": 513,
+      "errors": 0
+    },
+    {
+      "signature": "select s_quantity from stock where s_w_id=? and s_i_id=?",
+      "score": 0.6034204616958527,
+      "sql": "SELECT s_quantity FROM stock WHERE s_w_id=3 AND s_i_id=37122",
+      "count": 1378,
+      "total_seconds": 1.526250535993313,
+      "rows_seen": 1378,
+      "errors": 0
+    }
+  ]
+}

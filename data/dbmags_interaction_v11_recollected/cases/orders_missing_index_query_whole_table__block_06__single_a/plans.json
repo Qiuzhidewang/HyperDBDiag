@@ -1,0 +1,162 @@
+{
+  "select count(*) from orders where o_carrier_id=?": {
+    "sql": "SELECT COUNT(*) FROM orders WHERE o_carrier_id=26",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "12118.15"
+        },
+        "table": {
+          "table_name": "orders",
+          "access_type": "ALL",
+          "rows_examined_per_scan": 119979,
+          "rows_produced_per_join": 11997,
+          "filtered": "10.00",
+          "cost_info": {
+            "read_cost": "10918.36",
+            "eval_cost": "1199.79",
+            "prefix_cost": "12118.15",
+            "data_read_per_join": "468K"
+          },
+          "used_columns": [
+            "o_carrier_id"
+          ],
+          "attached_condition": "(`tpcc10_test`.`orders`.`o_carrier_id` = 26)"
+        }
+      }
+    }
+  },
+  "select count(*) from order_line where ol_w_id=? and ol_d_id=? and ol_o_id between ? and ?": {
+    "sql": "SELECT COUNT(*) FROM order_line WHERE ol_w_id=2 AND ol_d_id=8 AND ol_o_id BETWEEN 498 AND 508",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "22.02"
+        },
+        "table": {
+          "table_name": "order_line",
+          "access_type": "range",
+          "possible_keys": [
+            "PRIMARY",
+            "ol_supply_w_id"
+          ],
+          "key": "PRIMARY",
+          "used_key_parts": [
+            "ol_w_id",
+            "ol_d_id",
+            "ol_o_id"
+          ],
+          "key_length": "12",
+          "rows_examined_per_scan": 106,
+          "rows_produced_per_join": 106,
+          "filtered": "100.00",
+          "using_index": true,
+          "cost_info": {
+            "read_cost": "11.42",
+            "eval_cost": "10.60",
+            "prefix_cost": "22.02",
+            "data_read_per_join": "14K"
+          },
+          "used_columns": [
+            "ol_w_id",
+            "ol_d_id",
+            "ol_o_id"
+          ],
+          "attached_condition": "((`tpcc10_test`.`order_line`.`ol_d_id` = 8) and (`tpcc10_test`.`order_line`.`ol_w_id` = 2) and (`tpcc10_test`.`order_line`.`ol_o_id` between 498 and 508))"
+        }
+      }
+    }
+  },
+  "select s_quantity from stock where s_w_id=? and s_i_id=?": {
+    "sql": "SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=8772",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "1.00"
+        },
+        "table": {
+          "table_name": "stock",
+          "access_type": "const",
+          "possible_keys": [
+            "PRIMARY",
+            "s_i_id"
+          ],
+          "key": "PRIMARY",
+          "used_key_parts": [
+            "s_w_id",
+            "s_i_id"
+          ],
+          "key_length": "8",
+          "ref": [
+            "const",
+            "const"
+          ],
+          "rows_examined_per_scan": 1,
+          "rows_produced_per_join": 1,
+          "filtered": "100.00",
+          "cost_info": {
+            "read_cost": "0.00",
+            "eval_cost": "0.10",
+            "prefix_cost": "0.00",
+            "data_read_per_join": "1K"
+          },
+          "used_columns": [
+            "s_w_id",
+            "s_i_id",
+            "s_quantity"
+          ]
+        }
+      }
+    }
+  },
+  "select c_balance, c_discount from customer where c_w_id=? and c_d_id=? and c_id=?": {
+    "sql": "SELECT c_balance, c_discount FROM customer WHERE c_w_id=4 AND c_d_id=4 AND c_id=1943",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "1.00"
+        },
+        "table": {
+          "table_name": "customer",
+          "access_type": "const",
+          "possible_keys": [
+            "PRIMARY",
+            "idx_customer_name"
+          ],
+          "key": "PRIMARY",
+          "used_key_parts": [
+            "c_w_id",
+            "c_d_id",
+            "c_id"
+          ],
+          "key_length": "12",
+          "ref": [
+            "const",
+            "const",
+            "const"
+          ],
+          "rows_examined_per_scan": 1,
+          "rows_produced_per_join": 1,
+          "filtered": "100.00",
+          "cost_info": {
+            "read_cost": "0.00",
+            "eval_cost": "0.10",
+            "prefix_cost": "0.00",
+            "data_read_per_join": "2K"
+          },
+          "used_columns": [
+            "c_w_id",
+            "c_d_id",
+            "c_id",
+            "c_discount",
+            "c_balance"
+          ]
+        }
+      }
+    }
+  }
+}

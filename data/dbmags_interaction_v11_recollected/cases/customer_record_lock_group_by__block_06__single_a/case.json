@@ -1,0 +1,105 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "customer_record_lock_group_by__block_06__single_a",
+  "collected_at": "2026-09-06T08:41:29.239410+00:00",
+  "collection": {
+    "table": "customer",
+    "replicate_index": 6,
+    "condition": "single_a",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        28029,
+        28030,
+        28032,
+        28033,
+        28035,
+        28036,
+        28038,
+        28039,
+        28041,
+        28042,
+        28044,
+        28045,
+        28047,
+        28048,
+        28050,
+        28051,
+        28053,
+        28054,
+        28056,
+        28057,
+        28059,
+        28060,
+        28062,
+        28063,
+        28065,
+        28066,
+        28068,
+        28069,
+        28071,
+        28072,
+        28074,
+        28075,
+        28077,
+        28078,
+        28080,
+        28081,
+        28083,
+        28084,
+        28086,
+        28087,
+        28089,
+        28090,
+        28092,
+        28093,
+        28095,
+        28096,
+        28098,
+        28099
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

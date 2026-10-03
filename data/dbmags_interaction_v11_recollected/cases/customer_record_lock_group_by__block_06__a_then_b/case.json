@@ -1,0 +1,123 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "customer_record_lock_group_by__block_06__a_then_b",
+  "collected_at": "2026-09-06T08:46:11.093750+00:00",
+  "collection": {
+    "table": "customer",
+    "replicate_index": 6,
+    "condition": "a_then_b",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      },
+      {
+        "root": "group_by",
+        "offset_seconds": 30.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "group_by",
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        28128,
+        28129,
+        28131,
+        28132,
+        28134,
+        28135,
+        28137,
+        28138,
+        28140,
+        28141,
+        28143,
+        28144,
+        28146,
+        28147,
+        28149,
+        28150,
+        28152,
+        28153,
+        28155,
+        28156,
+        28158,
+        28159,
+        28161,
+        28162,
+        28164,
+        28165,
+        28167,
+        28168,
+        28170,
+        28171,
+        28173,
+        28174,
+        28176,
+        28177,
+        28179,
+        28180,
+        28182,
+        28183,
+        28185,
+        28186,
+        28188,
+        28189,
+        28191,
+        28192,
+        28194,
+        28195,
+        28197,
+        28198
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    },
+    {
+      "root": "group_by",
+      "execution_count": 330,
+      "connection_ids": [
+        28200
+      ],
+      "lock_wait_observed": false,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "group_by": true,
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "aggregation_clause",
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "row_lock_wait",
+      "unrestricted_relation_read"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

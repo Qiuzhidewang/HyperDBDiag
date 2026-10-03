@@ -1,0 +1,294 @@
+{
+  "analysis_type": "post-run descriptive analysis; no parameter reselection",
+  "definitions": {
+    "missing_only": "predicted roots are a strict subset of the true root set",
+    "extra_only": "predicted roots are a strict superset of the true root set",
+    "substitution": "both extra and missing roots"
+  },
+  "configurations": {
+    "reported": {
+      "error_types": {
+        "correct": 580,
+        "substitution": 43,
+        "missing_only": 27,
+        "extra_only": 10
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 48,
+        "accepted_abstain": 29,
+        "fallback_invalid_response": 3
+      }
+    },
+    "alpha=0": {
+      "error_types": {
+        "correct": 564,
+        "substitution": 49,
+        "missing_only": 33,
+        "extra_only": 14
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 62,
+        "accepted_abstain": 34
+      }
+    },
+    "alpha=0.2": {
+      "error_types": {
+        "correct": 568,
+        "substitution": 46,
+        "missing_only": 34,
+        "extra_only": 12
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 58,
+        "accepted_abstain": 33,
+        "fallback_invalid_response": 1
+      }
+    },
+    "alpha=0.4": {
+      "error_types": {
+        "correct": 582,
+        "substitution": 43,
+        "missing_only": 26,
+        "extra_only": 9
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 46,
+        "accepted_abstain": 30,
+        "fallback_invalid_response": 2
+      }
+    },
+    "alpha=0.6": {
+      "error_types": {
+        "correct": 587,
+        "substitution": 42,
+        "missing_only": 23,
+        "extra_only": 8
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 41,
+        "accepted_abstain": 29,
+        "fallback_invalid_response": 3
+      }
+    },
+    "alpha=0.8": {
+      "error_types": {
+        "correct": 585,
+        "substitution": 43,
+        "missing_only": 23,
+        "extra_only": 9
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 44,
+        "accepted_abstain": 28,
+        "fallback_invalid_response": 2,
+        "fallback_transport": 1
+      }
+    },
+    "alpha=1": {
+      "error_types": {
+        "correct": 587,
+        "substitution": 44,
+        "missing_only": 22,
+        "extra_only": 7
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 42,
+        "accepted_abstain": 28,
+        "fallback_invalid_response": 2,
+        "fallback_transport": 1
+      }
+    },
+    "beta=0": {
+      "error_types": {
+        "correct": 530,
+        "substitution": 99,
+        "missing_only": 27,
+        "extra_only": 4
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 93,
+        "fallback_invalid_response": 4,
+        "accepted_abstain": 33
+      }
+    },
+    "beta=0.2": {
+      "error_types": {
+        "correct": 562,
+        "substitution": 69,
+        "missing_only": 25,
+        "extra_only": 4
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 64,
+        "fallback_invalid_response": 4,
+        "accepted_abstain": 30
+      }
+    },
+    "beta=0.4": {
+      "error_types": {
+        "correct": 586,
+        "substitution": 47,
+        "missing_only": 22,
+        "extra_only": 5
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 43,
+        "fallback_invalid_response": 4,
+        "accepted_abstain": 27
+      }
+    },
+    "beta=0.6": {
+      "error_types": {
+        "correct": 561,
+        "substitution": 39,
+        "missing_only": 44,
+        "extra_only": 16
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 69,
+        "accepted_abstain": 28,
+        "fallback_invalid_response": 2
+      }
+    },
+    "beta=0.8": {
+      "error_types": {
+        "correct": 510,
+        "substitution": 38,
+        "missing_only": 99,
+        "extra_only": 13
+      },
+      "wrong_prediction_statuses": {
+        "accepted_abstain": 32,
+        "accepted_selection": 113,
+        "fallback_invalid_response": 5
+      }
+    },
+    "beta=1": {
+      "error_types": {
+        "correct": 462,
+        "missing_only": 179,
+        "extra_only": 11,
+        "substitution": 8
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 182,
+        "accepted_abstain": 13,
+        "fallback_invalid_response": 3
+      }
+    },
+    "theta=0.5": {
+      "error_types": {
+        "correct": 585,
+        "substitution": 45,
+        "missing_only": 20,
+        "extra_only": 10
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 41,
+        "accepted_abstain": 32,
+        "fallback_invalid_response": 2
+      }
+    },
+    "theta=0.75": {
+      "error_types": {
+        "correct": 574,
+        "substitution": 48,
+        "missing_only": 26,
+        "extra_only": 12
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 49,
+        "accepted_abstain": 36,
+        "fallback_invalid_response": 1
+      }
+    },
+    "theta=1.25": {
+      "error_types": {
+        "correct": 574,
+        "substitution": 47,
+        "missing_only": 25,
+        "extra_only": 14
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 49,
+        "accepted_abstain": 34,
+        "fallback_invalid_response": 3
+      }
+    },
+    "theta=1.5": {
+      "error_types": {
+        "correct": 579,
+        "substitution": 44,
+        "missing_only": 27,
+        "extra_only": 10
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 50,
+        "accepted_abstain": 31
+      }
+    },
+    "K=1": {
+      "error_types": {
+        "correct": 380,
+        "substitution": 249,
+        "missing_only": 25,
+        "extra_only": 6
+      },
+      "wrong_prediction_statuses": {
+        "analytic_single_candidate": 280
+      }
+    },
+    "K=2": {
+      "error_types": {
+        "correct": 515,
+        "substitution": 112,
+        "missing_only": 22,
+        "extra_only": 11
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 94,
+        "accepted_abstain": 51
+      }
+    },
+    "K=3": {
+      "error_types": {
+        "correct": 566,
+        "substitution": 66,
+        "missing_only": 20,
+        "extra_only": 8
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 50,
+        "accepted_abstain": 43,
+        "fallback_invalid_response": 1
+      }
+    },
+    "K=6": {
+      "error_types": {
+        "correct": 558,
+        "substitution": 36,
+        "missing_only": 49,
+        "extra_only": 17
+      },
+      "wrong_prediction_statuses": {
+        "accepted_abstain": 30,
+        "accepted_selection": 69,
+        "fallback_invalid_response": 3
+      }
+    },
+    "K=8": {
+      "error_types": {
+        "correct": 525,
+        "substitution": 33,
+        "missing_only": 85,
+        "extra_only": 17
+      },
+      "wrong_prediction_statuses": {
+        "accepted_selection": 105,
+        "accepted_abstain": 28,
+        "fallback_transport": 1,
+        "fallback_invalid_response": 1
+      }
+    }
+  }
+}

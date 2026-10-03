@@ -1,0 +1,85 @@
+{
+  "select count(*) from customer where c_state=? and c_w_id=?": {
+    "sql": "SELECT COUNT(*) FROM customer WHERE c_state='ZZ' AND c_w_id=4",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "5562.31"
+        },
+        "table": {
+          "table_name": "customer",
+          "access_type": "ref",
+          "possible_keys": [
+            "PRIMARY",
+            "idx_customer_name"
+          ],
+          "key": "PRIMARY",
+          "used_key_parts": [
+            "c_w_id"
+          ],
+          "key_length": "4",
+          "ref": [
+            "const"
+          ],
+          "rows_examined_per_scan": 54898,
+          "rows_produced_per_join": 5489,
+          "filtered": "10.00",
+          "cost_info": {
+            "read_cost": "72.51",
+            "eval_cost": "548.98",
+            "prefix_cost": "5562.31",
+            "data_read_per_join": "13M"
+          },
+          "used_columns": [
+            "c_w_id",
+            "c_state"
+          ],
+          "attached_condition": "(`tpcc10_test`.`customer`.`c_state` = 'ZZ')"
+        }
+      }
+    }
+  },
+  "select count(*) from order_line where ol_w_id=? and ol_d_id=? and ol_o_id between ? and ?": {
+    "sql": "SELECT COUNT(*) FROM order_line WHERE ol_w_id=3 AND ol_d_id=3 AND ol_o_id BETWEEN 22 AND 32",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "22.47"
+        },
+        "table": {
+          "table_name": "order_line",
+          "access_type": "range",
+          "possible_keys": [
+            "PRIMARY",
+            "ol_supply_w_id"
+          ],
+          "key": "PRIMARY",
+          "used_key_parts": [
+            "ol_w_id",
+            "ol_d_id",
+            "ol_o_id"
+          ],
+          "key_length": "12",
+          "rows_examined_per_scan": 108,
+          "rows_produced_per_join": 108,
+          "filtered": "100.00",
+          "using_index": true,
+          "cost_info": {
+            "read_cost": "11.67",
+            "eval_cost": "10.80",
+            "prefix_cost": "22.47",
+            "data_read_per_join": "14K"
+          },
+          "used_columns": [
+            "ol_w_id",
+            "ol_d_id",
+            "ol_o_id"
+          ],
+          "attached_condition": "((`tpcc10_test`.`order_line`.`ol_d_id` = 3) and (`tpcc10_test`.`order_line`.`ol_w_id` = 3) and (`tpcc10_test`.`order_line`.`ol_o_id` between 22 and 32))"
+        }
+      }
+    }
+  }
+}

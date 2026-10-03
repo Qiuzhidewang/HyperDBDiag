@@ -1,0 +1,122 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "customer_record_lock_query_with_too_much_join__block_03__a_then_b",
+  "collected_at": "2026-09-05T19:27:42.543277+00:00",
+  "collection": {
+    "table": "customer",
+    "replicate_index": 3,
+    "condition": "a_then_b",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      },
+      {
+        "root": "query_with_too_much_join",
+        "offset_seconds": 30.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "query_with_too_much_join",
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        11798,
+        11803,
+        11805,
+        11806,
+        11808,
+        11809,
+        11811,
+        11812,
+        11814,
+        11815,
+        11817,
+        11818,
+        11820,
+        11821,
+        11823,
+        11824,
+        11826,
+        11827,
+        11829,
+        11830,
+        11832,
+        11833,
+        11835,
+        11836,
+        11838,
+        11839,
+        11841,
+        11842,
+        11844,
+        11845,
+        11847,
+        11848,
+        11850,
+        11851,
+        11853,
+        11854,
+        11856,
+        11857,
+        11859,
+        11860,
+        11862,
+        11863,
+        11865,
+        11866,
+        11868,
+        11869,
+        11871,
+        11872
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    },
+    {
+      "root": "query_with_too_much_join",
+      "execution_count": 490,
+      "connection_ids": [
+        11874
+      ],
+      "lock_wait_observed": false,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "query_with_too_much_join": true,
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "filtered_relation_read",
+      "multi_table_join",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

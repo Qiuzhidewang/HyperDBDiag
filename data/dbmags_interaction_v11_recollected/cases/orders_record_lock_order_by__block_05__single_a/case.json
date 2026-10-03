@@ -1,0 +1,105 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "orders_record_lock_order_by__block_05__single_a",
+  "collected_at": "2026-09-06T06:20:40.419577+00:00",
+  "collection": {
+    "table": "orders",
+    "replicate_index": 5,
+    "condition": "single_a",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        25043,
+        25048,
+        25050,
+        25051,
+        25053,
+        25054,
+        25056,
+        25057,
+        25059,
+        25060,
+        25062,
+        25063,
+        25065,
+        25066,
+        25068,
+        25069,
+        25071,
+        25072,
+        25074,
+        25075,
+        25077,
+        25078,
+        25080,
+        25081,
+        25083,
+        25084,
+        25086,
+        25087,
+        25089,
+        25090,
+        25092,
+        25093,
+        25095,
+        25096,
+        25098,
+        25099,
+        25101,
+        25102,
+        25104,
+        25105,
+        25107,
+        25108,
+        25110,
+        25111,
+        25113,
+        25114,
+        25116,
+        25117
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

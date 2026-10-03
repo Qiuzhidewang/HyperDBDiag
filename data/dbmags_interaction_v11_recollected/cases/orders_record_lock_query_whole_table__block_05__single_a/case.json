@@ -1,0 +1,105 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "orders_record_lock_query_whole_table__block_05__single_a",
+  "collected_at": "2026-09-06T06:44:10.234440+00:00",
+  "collection": {
+    "table": "orders",
+    "replicate_index": 5,
+    "condition": "single_a",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        25779,
+        25780,
+        25782,
+        25783,
+        25785,
+        25786,
+        25788,
+        25789,
+        25791,
+        25792,
+        25794,
+        25795,
+        25797,
+        25798,
+        25800,
+        25801,
+        25803,
+        25804,
+        25806,
+        25807,
+        25809,
+        25810,
+        25812,
+        25813,
+        25815,
+        25816,
+        25818,
+        25819,
+        25821,
+        25822,
+        25824,
+        25825,
+        25827,
+        25828,
+        25830,
+        25831,
+        25833,
+        25834,
+        25836,
+        25837,
+        25839,
+        25840,
+        25842,
+        25843,
+        25845,
+        25846,
+        25848,
+        25849
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

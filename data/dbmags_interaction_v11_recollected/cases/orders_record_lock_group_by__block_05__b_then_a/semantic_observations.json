@@ -1,0 +1,50 @@
+{
+  "observations": [
+    {
+      "atoms": [
+        "aggregation_clause",
+        "unrestricted_relation_read"
+      ],
+      "source_channels": [
+        "instrumented_statement_history",
+        "execution_plan"
+      ],
+      "statement_signature_sha256": "5b93dc51eb4ae16ae2c79765a34bd96b1d314f8ae81b33b9fb48275a34103d57",
+      "anomaly_score": 5.59316363079744
+    },
+    {
+      "atoms": [
+        "filtered_relation_read",
+        "range_or_comparison_predicate"
+      ],
+      "source_channels": [
+        "instrumented_statement_history",
+        "execution_plan"
+      ],
+      "statement_signature_sha256": "335eddcbe986898d45a55417df282ce229930286ebd8eeb538022cee7058ef87",
+      "anomaly_score": 0.11645706445881324
+    },
+    {
+      "atoms": [
+        "filtered_relation_read",
+        "range_or_comparison_predicate"
+      ],
+      "source_channels": [
+        "instrumented_statement_history",
+        "execution_plan"
+      ],
+      "statement_signature_sha256": "5f96b078a15cd746909f43c63fed1eecf517669ee29d7c4546bd32a94bb8a1d0",
+      "anomaly_score": 0.08530570984495262
+    },
+    {
+      "atoms": [
+        "row_lock_wait"
+      ],
+      "source_channels": [
+        "performance_schema.data_lock_waits"
+      ],
+      "statement_signature_sha256": null,
+      "anomaly_score": null
+    }
+  ]
+}

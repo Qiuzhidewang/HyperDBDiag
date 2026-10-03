@@ -1,0 +1,58 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "customer_missing_index_query_with_too_much_join__block_06__single_b",
+  "collected_at": "2026-09-06T07:21:41.014930+00:00",
+  "collection": {
+    "table": "customer",
+    "replicate_index": 6,
+    "condition": "single_b",
+    "schedule": [
+      {
+        "root": "query_with_too_much_join",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "query_with_too_much_join"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "query_with_too_much_join",
+      "execution_count": 502,
+      "connection_ids": [
+        26615
+      ],
+      "lock_wait_observed": false,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "query_with_too_much_join": true
+    },
+    "observed_atoms": [
+      "filtered_relation_read",
+      "multi_table_join",
+      "range_or_comparison_predicate"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

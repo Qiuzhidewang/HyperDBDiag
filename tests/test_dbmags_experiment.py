@@ -2,7 +2,8 @@ import json
 import unittest
 from pathlib import Path
 
-from dbmags_experiment import _canonical_method
+from dbmags_experiment import _canonical_method, compare_saved_predictions
+from metric_frozen_dataset import load_frozen_metric_dataset
 
 
 class DBMAGSExperimentTests(unittest.TestCase):
@@ -73,6 +74,24 @@ class DBMAGSExperimentTests(unittest.TestCase):
                 660,
             )
             self.assertEqual(len(method["results"]), 660)
+
+    def test_saved_baselines_reject_duplicate_or_missing_cases(self):
+        import copy
+        ablation = json.loads(Path('runs/dbmags-ablation/full_report_llm_xhigh.json').read_text())
+        baseline = json.loads(Path('runs/dbmags-main-comparison/full_report_llm_xhigh.json').read_text())
+        frozen = load_frozen_metric_dataset(Path('data/dbmags_interaction_v11_frozen'))
+        corrupted = copy.deepcopy(baseline)
+        corrupted['methods']['opdiag']['results'][-1] = corrupted['methods']['opdiag']['results'][0]
+        with self.assertRaisesRegex(ValueError, 'duplicate or missing'):
+            compare_saved_predictions(ablation, corrupted, frozen, bootstrap_repetitions=100)
+
+    def test_saved_predictions_reject_changed_evaluation_labels(self):
+        ablation = json.loads(Path('runs/dbmags-ablation/full_report_llm_xhigh.json').read_text())
+        baseline = json.loads(Path('runs/dbmags-main-comparison/full_report_llm_xhigh.json').read_text())
+        frozen = load_frozen_metric_dataset(Path('data/dbmags_interaction_v11_frozen'))
+        baseline['methods']['opdiag']['results'][0]['expected_labels'] = ['invented']
+        with self.assertRaisesRegex(ValueError, 'evaluation labels differ'):
+            compare_saved_predictions(ablation, baseline, frozen, bootstrap_repetitions=100)
 
 
 if __name__ == "__main__":

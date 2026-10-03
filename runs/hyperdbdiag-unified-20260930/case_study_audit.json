@@ -1,0 +1,690 @@
+{
+  "missed_diagnosis": {
+    "status": "historical scenario identified; unique original sample ID is not recorded",
+    "history_source": "rollout-2026-08-12T14-30-30-019ff4aa-5200-7301-ae6d-390b5a6d987c.jsonl:13458",
+    "policy": "audit every current mixed-root case in the named scenario; do not silently replace the original with a successful case",
+    "current_scenario_cases": [
+      {
+        "case_id": "case-0108",
+        "condition": "a_then_b",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "missing_index"
+        ],
+        "new_prediction": [
+          "missing_index"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": false,
+        "new_correct": false
+      },
+      {
+        "case_id": "case-0113",
+        "condition": "a_then_b",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "new_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": false,
+        "new_correct": true
+      },
+      {
+        "case_id": "case-0129",
+        "condition": "b_then_a",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "new_prediction": [
+          "implicit_conversion"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "implicit_conversion",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": true,
+        "new_correct": false
+      },
+      {
+        "case_id": "case-0207",
+        "condition": "b_then_a",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "new_prediction": [
+          "implicit_conversion"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "implicit_conversion",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": true,
+        "new_correct": false
+      },
+      {
+        "case_id": "case-0210",
+        "condition": "a_then_b",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "order_by"
+        ],
+        "new_prediction": [
+          "implicit_conversion"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": false,
+        "new_correct": false
+      },
+      {
+        "case_id": "case-0229",
+        "condition": "b_then_a",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "new_prediction": [
+          "implicit_conversion"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": true,
+        "new_correct": false
+      },
+      {
+        "case_id": "case-0235",
+        "condition": "overlap",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "order_by"
+        ],
+        "new_prediction": [
+          "implicit_conversion"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": false,
+        "new_correct": false
+      },
+      {
+        "case_id": "case-0267",
+        "condition": "b_then_a",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "new_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": true,
+        "new_correct": true
+      },
+      {
+        "case_id": "case-0269",
+        "condition": "b_then_a",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "new_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "implicit_conversion"
+        },
+        "old_correct": true,
+        "new_correct": true
+      },
+      {
+        "case_id": "case-0325",
+        "condition": "overlap",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "new_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": true,
+        "new_correct": true
+      },
+      {
+        "case_id": "case-0332",
+        "condition": "overlap",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "new_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": true,
+        "new_correct": true
+      },
+      {
+        "case_id": "case-0449",
+        "condition": "b_then_a",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "new_prediction": [
+          "implicit_conversion"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": true,
+        "new_correct": false
+      },
+      {
+        "case_id": "case-0451",
+        "condition": "overlap",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "new_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": true,
+        "new_correct": true
+      },
+      {
+        "case_id": "case-0468",
+        "condition": "overlap",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "order_by"
+        ],
+        "new_prediction": [
+          "implicit_conversion"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": false,
+        "new_correct": false
+      },
+      {
+        "case_id": "case-0575",
+        "condition": "a_then_b",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "implicit_conversion"
+        ],
+        "new_prediction": [
+          "implicit_conversion"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": false,
+        "new_correct": false
+      },
+      {
+        "case_id": "case-0578",
+        "condition": "a_then_b",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "group_by"
+        ],
+        "new_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": false,
+        "new_correct": true
+      },
+      {
+        "case_id": "case-0625",
+        "condition": "overlap",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "order_by"
+        ],
+        "new_prediction": [
+          "implicit_conversion"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": false,
+        "new_correct": false
+      },
+      {
+        "case_id": "case-0642",
+        "condition": "a_then_b",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "old_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "new_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "baseline_top1_from_saved_scores": {
+          "opdiag": "missing_index",
+          "dbaiops": "missing_index"
+        },
+        "old_correct": true,
+        "new_correct": true
+      }
+    ],
+    "warning": "single-output baseline description differs from the adapted multi-root main comparison"
+  },
+  "misdiagnosis": {
+    "status": "original sample recovered and prediction verified",
+    "case_id": "case-0017",
+    "history_source": "rollout-2026-08-12T14-30-30-019ff4aa-5200-7301-ae6d-390b5a6d987c.jsonl:27693",
+    "expected_labels": [
+      "query_whole_table",
+      "record_lock"
+    ],
+    "old_hyperdbdiag": [
+      "query_whole_table",
+      "record_lock"
+    ],
+    "new_hyperdbdiag": [
+      "query_whole_table",
+      "record_lock"
+    ],
+    "baselines": {
+      "opdiag": [
+        "record_lock",
+        "group_by"
+      ],
+      "dbaiops": [
+        "record_lock",
+        "group_by"
+      ]
+    },
+    "condition": "b_then_a",
+    "wording_note": "the recorded case is sequential (b_then_a), not temporally overlapping"
+  },
+  "sql_operator": {
+    "status": "unchanged conditional localization stage; saved query and rank records checked",
+    "matching_records": [
+      {
+        "case_id": "obv4-variant-4-230-implicit_conversion_missing_index",
+        "target_sql": {
+          "implicit_conversion": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last=0 OR c_last=1)",
+          "missing_index": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_delivery_d IS NOT NULL"
+        },
+        "rankings": {
+          "opdiag_dbmags_reproduction": [
+            {
+              "case_id": "obv4-variant-4-230-implicit_conversion_missing_index",
+              "fold": 1,
+              "root_cardinality": 2,
+              "root": "implicit_conversion",
+              "sql_hit_at_1": true,
+              "sql_hit_at_2": true,
+              "target_sql_rank": 1,
+              "sql_ranking_mistake": false,
+              "operator_hit_at_1": true,
+              "target_operator_rank": 1,
+              "joint_sql_operator_hit_at_1": true,
+              "normal_sql_ranks": {
+                "sql-2e9016e6fe06db66": 12,
+                "sql-3ccace0117a48081": 8,
+                "sql-6af98a52db33a4ec": 9,
+                "sql-9bcc043d95fae8eb": 11,
+                "sql-ba7fb486729cde23": 7,
+                "sql-cac1b486d230fc2a": 10
+              },
+              "top_sql_ids": [
+                "sql-5b137fd03585ac0c",
+                "sql-e60702bb955ebcff"
+              ],
+              "top_operator_keys": [
+                "sql-5b137fd03585ac0c::op-41e498a265e255df"
+              ],
+              "all_sql_hit_at_1": false,
+              "all_chain_hit_at_1": false
+            },
+            {
+              "case_id": "obv4-variant-4-230-implicit_conversion_missing_index",
+              "fold": 1,
+              "root_cardinality": 2,
+              "root": "missing_index",
+              "sql_hit_at_1": false,
+              "sql_hit_at_2": false,
+              "target_sql_rank": 3,
+              "sql_ranking_mistake": false,
+              "operator_hit_at_1": true,
+              "target_operator_rank": 1,
+              "joint_sql_operator_hit_at_1": false,
+              "normal_sql_ranks": {
+                "sql-2e9016e6fe06db66": 12,
+                "sql-3ccace0117a48081": 8,
+                "sql-6af98a52db33a4ec": 9,
+                "sql-9bcc043d95fae8eb": 11,
+                "sql-ba7fb486729cde23": 7,
+                "sql-cac1b486d230fc2a": 10
+              },
+              "top_sql_ids": [
+                "sql-5b137fd03585ac0c",
+                "sql-ed61a8dc273bc592"
+              ],
+              "top_operator_keys": [
+                "sql-e60702bb955ebcff::op-f59b880ca7332868"
+              ],
+              "all_sql_hit_at_1": false,
+              "all_chain_hit_at_1": false
+            }
+          ],
+          "hyperdbdiag": [
+            {
+              "case_id": "obv4-variant-4-230-implicit_conversion_missing_index",
+              "fold": 1,
+              "root_cardinality": 2,
+              "root": "implicit_conversion",
+              "sql_hit_at_1": true,
+              "sql_hit_at_2": true,
+              "target_sql_rank": 1,
+              "sql_ranking_mistake": false,
+              "operator_hit_at_1": true,
+              "target_operator_rank": 1,
+              "joint_sql_operator_hit_at_1": true,
+              "normal_sql_ranks": {
+                "sql-2e9016e6fe06db66": 3,
+                "sql-3ccace0117a48081": 5,
+                "sql-6af98a52db33a4ec": 6,
+                "sql-9bcc043d95fae8eb": 7,
+                "sql-ba7fb486729cde23": 9,
+                "sql-cac1b486d230fc2a": 10
+              },
+              "top_sql_ids": [
+                "sql-5b137fd03585ac0c",
+                "sql-8b38e1e6571b83e3"
+              ],
+              "top_operator_keys": [
+                "sql-5b137fd03585ac0c::op-41e498a265e255df"
+              ],
+              "all_sql_hit_at_1": true,
+              "all_chain_hit_at_1": true
+            },
+            {
+              "case_id": "obv4-variant-4-230-implicit_conversion_missing_index",
+              "fold": 1,
+              "root_cardinality": 2,
+              "root": "missing_index",
+              "sql_hit_at_1": true,
+              "sql_hit_at_2": true,
+              "target_sql_rank": 1,
+              "sql_ranking_mistake": false,
+              "operator_hit_at_1": true,
+              "target_operator_rank": 1,
+              "joint_sql_operator_hit_at_1": true,
+              "normal_sql_ranks": {
+                "sql-2e9016e6fe06db66": 5,
+                "sql-3ccace0117a48081": 3,
+                "sql-6af98a52db33a4ec": 8,
+                "sql-9bcc043d95fae8eb": 10,
+                "sql-ba7fb486729cde23": 11,
+                "sql-cac1b486d230fc2a": 12
+              },
+              "top_sql_ids": [
+                "sql-e60702bb955ebcff",
+                "sql-b2d23a9e2de01dbc"
+              ],
+              "top_operator_keys": [
+                "sql-e60702bb955ebcff::op-f59b880ca7332868"
+              ],
+              "all_sql_hit_at_1": true,
+              "all_chain_hit_at_1": true
+            }
+          ]
+        }
+      },
+      {
+        "case_id": "obv4-variant-4-231-implicit_conversion_missing_index",
+        "target_sql": {
+          "implicit_conversion": "SELECT COUNT(*) FROM tpcc10_test.customer WHERE c_w_id=4 AND c_d_id=7 AND (c_last=0 OR c_last=1)",
+          "missing_index": "SELECT COUNT(*) FROM tpcc10_test.order_line WHERE ol_delivery_d IS NOT NULL"
+        },
+        "rankings": {
+          "opdiag_dbmags_reproduction": [
+            {
+              "case_id": "obv4-variant-4-231-implicit_conversion_missing_index",
+              "fold": 1,
+              "root_cardinality": 2,
+              "root": "implicit_conversion",
+              "sql_hit_at_1": true,
+              "sql_hit_at_2": true,
+              "target_sql_rank": 1,
+              "sql_ranking_mistake": false,
+              "operator_hit_at_1": true,
+              "target_operator_rank": 1,
+              "joint_sql_operator_hit_at_1": true,
+              "normal_sql_ranks": {
+                "sql-2e9016e6fe06db66": 12,
+                "sql-3ccace0117a48081": 8,
+                "sql-6af98a52db33a4ec": 9,
+                "sql-9bcc043d95fae8eb": 11,
+                "sql-ba7fb486729cde23": 7,
+                "sql-cac1b486d230fc2a": 10
+              },
+              "top_sql_ids": [
+                "sql-5b137fd03585ac0c",
+                "sql-e60702bb955ebcff"
+              ],
+              "top_operator_keys": [
+                "sql-5b137fd03585ac0c::op-41e498a265e255df"
+              ],
+              "all_sql_hit_at_1": false,
+              "all_chain_hit_at_1": false
+            },
+            {
+              "case_id": "obv4-variant-4-231-implicit_conversion_missing_index",
+              "fold": 1,
+              "root_cardinality": 2,
+              "root": "missing_index",
+              "sql_hit_at_1": false,
+              "sql_hit_at_2": false,
+              "target_sql_rank": 3,
+              "sql_ranking_mistake": false,
+              "operator_hit_at_1": true,
+              "target_operator_rank": 1,
+              "joint_sql_operator_hit_at_1": false,
+              "normal_sql_ranks": {
+                "sql-2e9016e6fe06db66": 12,
+                "sql-3ccace0117a48081": 8,
+                "sql-6af98a52db33a4ec": 9,
+                "sql-9bcc043d95fae8eb": 11,
+                "sql-ba7fb486729cde23": 7,
+                "sql-cac1b486d230fc2a": 10
+              },
+              "top_sql_ids": [
+                "sql-ed61a8dc273bc592",
+                "sql-5b137fd03585ac0c"
+              ],
+              "top_operator_keys": [
+                "sql-e60702bb955ebcff::op-f59b880ca7332868"
+              ],
+              "all_sql_hit_at_1": false,
+              "all_chain_hit_at_1": false
+            }
+          ],
+          "hyperdbdiag": [
+            {
+              "case_id": "obv4-variant-4-231-implicit_conversion_missing_index",
+              "fold": 1,
+              "root_cardinality": 2,
+              "root": "implicit_conversion",
+              "sql_hit_at_1": true,
+              "sql_hit_at_2": true,
+              "target_sql_rank": 1,
+              "sql_ranking_mistake": false,
+              "operator_hit_at_1": true,
+              "target_operator_rank": 1,
+              "joint_sql_operator_hit_at_1": true,
+              "normal_sql_ranks": {
+                "sql-2e9016e6fe06db66": 3,
+                "sql-3ccace0117a48081": 5,
+                "sql-6af98a52db33a4ec": 6,
+                "sql-9bcc043d95fae8eb": 7,
+                "sql-ba7fb486729cde23": 9,
+                "sql-cac1b486d230fc2a": 10
+              },
+              "top_sql_ids": [
+                "sql-5b137fd03585ac0c",
+                "sql-8b38e1e6571b83e3"
+              ],
+              "top_operator_keys": [
+                "sql-5b137fd03585ac0c::op-41e498a265e255df"
+              ],
+              "all_sql_hit_at_1": true,
+              "all_chain_hit_at_1": true
+            },
+            {
+              "case_id": "obv4-variant-4-231-implicit_conversion_missing_index",
+              "fold": 1,
+              "root_cardinality": 2,
+              "root": "missing_index",
+              "sql_hit_at_1": true,
+              "sql_hit_at_2": true,
+              "target_sql_rank": 1,
+              "sql_ranking_mistake": false,
+              "operator_hit_at_1": true,
+              "target_operator_rank": 1,
+              "joint_sql_operator_hit_at_1": true,
+              "normal_sql_ranks": {
+                "sql-2e9016e6fe06db66": 3,
+                "sql-3ccace0117a48081": 5,
+                "sql-6af98a52db33a4ec": 7,
+                "sql-9bcc043d95fae8eb": 9,
+                "sql-ba7fb486729cde23": 11,
+                "sql-cac1b486d230fc2a": 12
+              },
+              "top_sql_ids": [
+                "sql-e60702bb955ebcff",
+                "sql-ed61a8dc273bc592"
+              ],
+              "top_operator_keys": [
+                "sql-e60702bb955ebcff::op-f59b880ca7332868"
+              ],
+              "all_sql_hit_at_1": true,
+              "all_chain_hit_at_1": true
+            }
+          ]
+        }
+      }
+    ],
+    "new_llm_calls": 0
+  }
+}

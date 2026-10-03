@@ -1,0 +1,72 @@
+{
+  "name": "ecsa_all660_fixed_policy_v1",
+  "seed": 20260802,
+  "workers": 8,
+  "model": "gpt-5.5",
+  "reasoning_effort": "xhigh",
+  "transport": "official Codex CLI / ChatGPT login",
+  "scope": "all 660 cases, same six 550-train/110-test outer folds; no test call budget or selected-case gate",
+  "policy": "unchanged conservative local calibration and original comparator from previous frozen experiment",
+  "primary_interpretation": "compare all methods on all 660; complete flow uses calibrated local fallback; report common upstream fallback separately to isolate pool effect",
+  "arms": [
+    "llm_full_pool",
+    "original_filtered_pool",
+    "conservative_filtered_pool"
+  ],
+  "repeat_audit": {
+    "cases_per_fold": 10,
+    "seed": 20260930,
+    "selection": "fixed hash order among cases whose conservative candidate pool differs from full pool; no outcomes/labels used",
+    "arms": [
+      "llm_full_pool",
+      "conservative_filtered_pool"
+    ],
+    "draws": "one additional fresh draw, never used to select a preferred answer"
+  },
+  "reuse": "same primary packet, prompt, schema, and model settings reuse earliest valid stored draw; repeat namespace always fresh",
+  "singleton": "no new inference when one candidate equals fallback; all possible valid decisions give the same prediction; explicitly mark analytical resolution",
+  "failure_policy": "retain every planned case; abstention/failure fallback; stop an apparent transport outage after eight consecutive transport failures",
+  "latency_note": "workers increased from four to eight for this expansion; no cross-run latency claim",
+  "development_note": "expanded inference coverage on the same v11 dataset, not newly collected independent data; no policy changes during this run",
+  "instructions_sha256": "5b927a76462dce07e6ecd268c4961224a5d7becb8ccdab71c30ecefff0fbfde5",
+  "schema_sha256": "b4d77192188e85830cfd5412061cdc475aad3b1d9c557fbe02a620c25eaafb66",
+  "source_sha256": {
+    "/Users/chuan/RCA/hyperdbdiag-artifact/src/ecsa_fullcoverage_experiment.py": "88403ef41f90bf995d94778aede58faf74655457a3af7724b537cc7e2b707f70",
+    "src/conservative_evidence_judge.py": "ec19e1ae576ddae9a90ccbad287369df5b2329cbb24e0f2a26c1143a55c55308",
+    "src/ecsa_conservative_experiment.py": "6279a8a30d6efb651ea36e35ae176befc539fd08bb49b0d329e65a9b92886852",
+    "src/ecsa_isolation_experiment.py": "f55394ae1ef3910201227ef0f2bbabc55d809b5f0101fcd26e25d363a775300d",
+    "src/hyperdbdiag_ablation.py": "20d7908c788f2d236b9cfc110be1133d9e6b080a9a31ddc31b42d259e2f8c96d",
+    "src/hyperdbdiag_pipeline.py": "9fbf16f6cd794f635972fccdf1a733e8bbe5ca3c1be0450bb15bf29b84548fa4",
+    "src/structured_evidence_judge.py": "4ad30be66f9906f6fb4f4c5995a4752b25dcde435f76e1069ee2d85a138d30bc",
+    "src/hypergraph_core.py": "1856762a39eb59149aeff243edd7b0c4eaf795e24e9e7bca4b1a4c8ce9686b7c"
+  },
+  "protected_sha256": {
+    "main.tex": "39cf043b3826f64db28a320fe31f682bf7afb8a2ae571712cdb2838bff3cc0cb",
+    "HyperDBDiag2.docx": "c52d92e7b8f5119bce240f036177f9577719393c8a542891c1d822853ee64ba7",
+    "runs/dbmags-ablation/full_report_llm_xhigh.json": "3d322a0d2e628ddfc2aafffab764177755b36161f0a7282b43ff316ba2215d0b",
+    "figures/1.png": "17fc415ed482529c8d4bb09bb7598dffb19793b816e4e16b0e4512c13daffacc",
+    "figures/2.png": "777089c20078411e98e548f2d6cdf583d6974f2d77a0c29f42fe5fa95200708a",
+    "figures/3.png": "24a51daf8813c6c330ccf2d15cd78f11f32cb18f75e17b77714576e44a2e6744",
+    "figures/4.png": "22c1ae39f6c6e7494d6a745156b7e8afd0e331ac642bc7aa91b6b45c2008e35b",
+    "figures/5.png": "7ab4adeb89f1f76e95eefa68d8c7e9726b38b4ea24aebb036ef61914d4121eeb",
+    "figures/6.png": "dc3b1bf29e08ba85c1d18a3deef0f2089833b673225a66725da7ebcbd992b828"
+  },
+  "data_sha256": {
+    "data/dbmags_interaction_v11_frozen/source_audit.json": "ad28f41d04141be81613ba27c97c56cea79577e67e59d98a1ae9bf927bf92807",
+    "data/dbmags_interaction_v11_frozen/fold_manifest.json": "8a9dba37bde2c1429bd1c5ca951715afe46d7108cc49fe13bb1f2b46c0e2dc51",
+    "data/dbmags_interaction_v11_frozen/semantic_evidence.json": "f2e561605bd73649a0a8ba72b27473712962da62b6ae92d78229404e250e4b88",
+    "data/dbmags_interaction_v11_frozen/frozen_inputs.json": "a2759e752a42995b72d8dee12fbb509961b5a3787eebe4fedfbeb68cd76d0dac",
+    "data/dbmags_interaction_v11_frozen/ground_truth.json": "19b075b9d20192f669cfee5be0da3bcd70ba63bdcd8386277be5503250cc15e0",
+    "data/dbmags_interaction_v11_frozen/dataset_manifest.json": "e471baacf5389dd820f111936ff8be3109f05671b57ad4c01bdf12234fa6f125",
+    "data/dbmags_interaction_v11_frozen/provenance_case_map.json": "3134c49e5c4ec97c67a2aa8dd7f244d30ef12c9d09030fbb222b36f3d752df8c"
+  },
+  "prior_sha256": {
+    "runs/ecsa-conservative-20260929/protocol.json": "a3df5bee4ff7d8319988e56b029a01fed24784583e5184d63025c8325fdfc2a8",
+    "runs/ecsa-conservative-20260929/prepared.json": "7a470a295baee0da3e7013724e4ff2e85f6f88075fa6d4c8f94abd951288e9a3",
+    "runs/ecsa-conservative-20260929/new_model_calls.jsonl": "0b89d76c6bfe991203670477e6754733bc34f691c03717be5a0a89896a789634",
+    "runs/ecsa-conservative-20260929/decisions.json": "386632c4e567790752eab2c86593a98fca7f427e77ad529bcb87e74391089b81",
+    "runs/ecsa-isolation-20260929/protocol.json": "a5adc8b143b4a846dd22eea51cf5d0fccf3d6877f9ab0dfb475994201a451117",
+    "runs/ecsa-isolation-20260929/prepared.json": "dee1c2db6211c6b4b7922b65d4b6417454798a68f6a66ecca09ec7f7dbf71205",
+    "runs/ecsa-isolation-20260929/llm_decisions.jsonl": "57b4962a6ba290d5da346d609f87c68c3168bab8ac6d456c23523c4b4d59b585"
+  }
+}

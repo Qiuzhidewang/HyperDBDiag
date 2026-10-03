@@ -1,0 +1,105 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "orders_record_lock_order_by__block_01__single_a",
+  "collected_at": "2026-09-05T13:07:09.061110+00:00",
+  "collection": {
+    "table": "orders",
+    "replicate_index": 1,
+    "condition": "single_a",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        4265,
+        4269,
+        4271,
+        4272,
+        4274,
+        4275,
+        4277,
+        4278,
+        4280,
+        4281,
+        4283,
+        4284,
+        4286,
+        4287,
+        4289,
+        4290,
+        4292,
+        4293,
+        4295,
+        4296,
+        4298,
+        4299,
+        4301,
+        4302,
+        4304,
+        4305,
+        4307,
+        4308,
+        4310,
+        4311,
+        4313,
+        4314,
+        4316,
+        4317,
+        4319,
+        4320,
+        4322,
+        4323,
+        4325,
+        4326,
+        4328,
+        4329,
+        4331,
+        4332,
+        4334,
+        4335,
+        4337,
+        4338
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

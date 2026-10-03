@@ -1,4 +1,4 @@
-"""Run the single six-row HyperDBDiag ablation on frozen DB-MAGS data.
+"""Shared HyperDBDiag components and the current six-row ablation entry point.
 
 The registered report has an ordinary binary graph, a higher-order hypergraph,
 a local structured judge, direct hypergraph-to-LLM review, and the complete
@@ -57,7 +57,7 @@ from structured_evidence_judge import (
     StructuredCandidateConflict,
     StructuredEvidenceJudge,
 )
-DEFAULT_OUTPUT = Path("runs/dbmags-ablation/full_report.json")
+DEFAULT_OUTPUT = Path("runs/hyperdbdiag-unified-20260930/ablation.json")
 DEFAULT_DBMAGS_ROOT = Path("data/dbmags_interaction_v11_frozen")
 DEFAULT_SEED = 20260802
 ROOT_MECHANISM_CARD_PATH = (
@@ -2773,32 +2773,12 @@ def run(
     output_path: Path = DEFAULT_OUTPUT,
     seed: int = DEFAULT_SEED,
 ) -> Dict[str, Any]:
-    mechanism_cards, mechanism_card_metadata = _load_root_mechanism_cards()
-    requested = (_load_dbmags(Path(dbmags_root), mechanism_cards),)
-    report = {
-        "protocol": {
-            "name": "hyperdbdiag_dbmags_retrieve_contract_arbitrate_v11_epdg",
-            "seed": int(seed),
-            "stage_order": [
-                "ordinary_binary_graph",
-                "hypergraph_without_epdg",
-                "hypergraph",
-                "hypergraph_local_judge",
-                "hypergraph_llm",
-                "hyperdbdiag",
-            ],
-            "no_posthoc_data_filtering": True,
-            "llm_authority": (
-                "may only choose between a hypergraph fallback and one candidate challenger; the direct ablation "
-                "uses the training-OOF-sized top pair without local-judge decisions, while the complete method "
-                "uses the locally retained structured-evidence pair; both require relation-specific stable "
-                "positive grouped-OOF calibration and fail closed otherwise"
-            ),
-            "root_mechanism_card_registry": mechanism_card_metadata,
-        },
-        "datasets": {item.name: _run_dataset(item, seed) for item in requested},
-    }
-    _write_json(Path(output_path), report)
+    from ecsa_experiment import run as run_current
+    if int(seed) != DEFAULT_SEED or Path(dbmags_root).resolve() != DEFAULT_DBMAGS_ROOT.resolve():
+        raise ValueError('frozen primary replay requires the registered seed and dataset')
+    report = run_current(Path(output_path).parent)
+    if Path(output_path).name != 'ablation.json':
+        _write_json(Path(output_path), report)
     return report
 
 

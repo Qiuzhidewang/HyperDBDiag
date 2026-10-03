@@ -1,0 +1,4163 @@
+{
+  "analysis_type": "post-run descriptive audit; no new calls, no changed outcomes or primary metrics",
+  "unique_call_statuses": {
+    "accepted_selection": 3948,
+    "accepted_abstain": 580,
+    "fallback_invalid_response": 37,
+    "fallback_transport": 2
+  },
+  "raw_validation_error_counts": {
+    "unknown citation": 30,
+    "invalid set relation": 6,
+    "out of pool selection": 1
+  },
+  "misleading_error_name_cases": [
+    {
+      "case_id": "case-0515",
+      "arm": "clean_repeat",
+      "job_id": "repeat:96211a84d378ff9138c48a7b6739bf65b78b24fa4c92e3a9a544711ede47bdac",
+      "validation_error": "out of pool selection",
+      "raw_response": "{\"action\":\"SELECT_CANDIDATE\",\"candidate_id\":\"C01\",\"comparison_candidate_id\":\"C03\",\"evidence_ids\":[\"query-trajectory\",\"semantic-observation:01\",\"semantic-observation:02\",\"candidate-card-C01\",\"candidate-card-C03\",\"training-profile:group_by\",\"training-profile:missing_index\",\"training-profile:query_whole_table\",\"mechanism-card:group_by\",\"mechanism-card:missing_index\",\"mechanism-card:query_whole_table\"],\"reason_code\":\"insufficient_evidence\",\"relation_type\":\"UNRESOLVED\",\"recommendation\":\"NO_CHANGE\"}",
+      "interpreted_failure": "selection_with_insufficient_evidence; both candidate IDs are in pool"
+    }
+  ],
+  "prediction_changes": {
+    "identical_support": [
+      {
+        "case_id": "case-0084",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:6c9ee1b17be84ca791d923827c047dca71c323aa0afad07029a5ce7124e55d92",
+        "packet_sha256": "6c9ee1b17be84ca791d923827c047dca71c323aa0afad07029a5ce7124e55d92",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0247",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:6faa7f4c47963dc3fbb1ba423eb2d56c49116f8e1a351de41e9c910502b8b813",
+        "packet_sha256": "6faa7f4c47963dc3fbb1ba423eb2d56c49116f8e1a351de41e9c910502b8b813",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0457",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:3828cc42f93a0ab3510537030159e082b918d2e80c9173cdb6e45c441d089b03",
+        "packet_sha256": "3828cc42f93a0ab3510537030159e082b918d2e80c9173cdb6e45c441d089b03",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0536",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:d376f92f7107bb12b7775099dc763e370eb8dd5cc8e52f6efd183452d1ea168a",
+        "packet_sha256": "d376f92f7107bb12b7775099dc763e370eb8dd5cc8e52f6efd183452d1ea168a",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0544",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "group_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:9e3f2aa911b2a49be93bd93a04a85d0024e2cc0168f63b6397de6a1602ddd258",
+        "packet_sha256": "9e3f2aa911b2a49be93bd93a04a85d0024e2cc0168f63b6397de6a1602ddd258",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0575",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:79241c94d95b7c22e8cc15afe4bde83ce1fc74337f4dce5906207fa613ee91fa",
+        "packet_sha256": "79241c94d95b7c22e8cc15afe4bde83ce1fc74337f4dce5906207fa613ee91fa",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0614",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:7299570a52a14aef794c8e65c92cc6dd11bd2ed63ad9eaf755fb1f5bf9ea42bf",
+        "packet_sha256": "7299570a52a14aef794c8e65c92cc6dd11bd2ed63ad9eaf755fb1f5bf9ea42bf",
+        "clean_prediction": [
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0129",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:8d25e06b0e704e1a03a805460c7f80c3fd3cd5c0dd9479392bc53e8162b18eb2",
+        "packet_sha256": "8d25e06b0e704e1a03a805460c7f80c3fd3cd5c0dd9479392bc53e8162b18eb2",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0175",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:b6e5657b921f6e4353dc845766fa1efe9bdabe908580047f2d8606ec30507fb4",
+        "packet_sha256": "b6e5657b921f6e4353dc845766fa1efe9bdabe908580047f2d8606ec30507fb4",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0522",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:c2ff41de44bc8f347cd43f01ebf11a50c3a0b68d6264fa2beb653b7a643b4fe4",
+        "packet_sha256": "c2ff41de44bc8f347cd43f01ebf11a50c3a0b68d6264fa2beb653b7a643b4fe4",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0459",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "group_by"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "primary:444c306a372170ed2523a7583ab781043dc6540f02119d35264e8ef9529f828b",
+        "packet_sha256": "444c306a372170ed2523a7583ab781043dc6540f02119d35264e8ef9529f828b",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "group_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0605",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:4a1ed32869703269fa59120e9fb858b437f240bdb61cc703782b619416b06b0c",
+        "packet_sha256": "4a1ed32869703269fa59120e9fb858b437f240bdb61cc703782b619416b06b0c",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "order_by"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0087",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:d8e95bb6f4b5be75c91c5cacc6e30ba1e4c69d6c095bd782b8cf8cf8da973345",
+        "packet_sha256": "d8e95bb6f4b5be75c91c5cacc6e30ba1e4c69d6c095bd782b8cf8cf8da973345",
+        "clean_prediction": [
+          "group_by",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0187",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "fallback_transport",
+        "job_id": "primary:9d67de88fa16e19781bcacff51e467b1c4a616c0fd4034ff3f4e05ee8311b05c",
+        "packet_sha256": "9d67de88fa16e19781bcacff51e467b1c4a616c0fd4034ff3f4e05ee8311b05c",
+        "clean_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": false,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0254",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "group_by"
+        ],
+        "predicted_labels": [
+          "group_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:9d7d400f844fc53b449ca15311c8f19a22a6f3ea36be6fae5722bec894fc4b15",
+        "packet_sha256": "9d7d400f844fc53b449ca15311c8f19a22a6f3ea36be6fae5722bec894fc4b15",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0521",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:58a1a4ffba6152a5bd15ad9f257bad19cd9566f5bff761b12d9faf056eedae92",
+        "packet_sha256": "58a1a4ffba6152a5bd15ad9f257bad19cd9566f5bff761b12d9faf056eedae92",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "order_by"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0624",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:4db875ad1c08baed5d03cd86b053a0cff0457cc4d1b3b614bf4c0478761832f6",
+        "packet_sha256": "4db875ad1c08baed5d03cd86b053a0cff0457cc4d1b3b614bf4c0478761832f6",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0053",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:659b70b0246a91c2d61d6755a298d9440d26dee11eca95cb015c03b9de408c8b",
+        "packet_sha256": "659b70b0246a91c2d61d6755a298d9440d26dee11eca95cb015c03b9de408c8b",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0249",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:b3058e52e123646bf69c0d75c0d2faf637c79fe755f349802776f5a5bbf47749",
+        "packet_sha256": "b3058e52e123646bf69c0d75c0d2faf637c79fe755f349802776f5a5bbf47749",
+        "clean_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0420",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:b767140ecbb452df8d2b1ca596d47b5af883ce13a86d67ded5100435f1ef398f",
+        "packet_sha256": "b767140ecbb452df8d2b1ca596d47b5af883ce13a86d67ded5100435f1ef398f",
+        "clean_prediction": [
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0430",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:122cb92581d004dba5c63887354f33b04da9108add03e7a1d1e9f673009f4a94",
+        "packet_sha256": "122cb92581d004dba5c63887354f33b04da9108add03e7a1d1e9f673009f4a94",
+        "clean_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0402",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "group_by"
+        ],
+        "predicted_labels": [
+          "group_by"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "primary:daab5aa2d99c80e168a7a3e28ed5bd30a5e01cd5621e3e524ccdd634878fd66c",
+        "packet_sha256": "daab5aa2d99c80e168a7a3e28ed5bd30a5e01cd5621e3e524ccdd634878fd66c",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "group_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0415",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:ed9862a664a6fff21856e1c2c1df847bb9a2f3c1c5a3646a4fd39f6567aea83e",
+        "packet_sha256": "ed9862a664a6fff21856e1c2c1df847bb9a2f3c1c5a3646a4fd39f6567aea83e",
+        "clean_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0564",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:4adf9fdbda8ff5b64f5d1f85a3c744d05a9cee5c217b829c62966a76886ff06c",
+        "packet_sha256": "4adf9fdbda8ff5b64f5d1f85a3c744d05a9cee5c217b829c62966a76886ff06c",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0582",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:5c85eed42ab7fe4205808237dfb65eba107162a61115e48be1dccc334af62eb9",
+        "packet_sha256": "5c85eed42ab7fe4205808237dfb65eba107162a61115e48be1dccc334af62eb9",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      }
+    ],
+    "empty_counterevidence": [
+      {
+        "case_id": "case-0084",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:621db886301e9f298e572bf8ae486948f446e07e6b0db9dd91a6ccb474cd6006",
+        "packet_sha256": "621db886301e9f298e572bf8ae486948f446e07e6b0db9dd91a6ccb474cd6006",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0283",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:73acea0e4ead7d5f8a0b94f287bea8da50f1e537fc63341cd9b7bf56c715c3e7",
+        "packet_sha256": "73acea0e4ead7d5f8a0b94f287bea8da50f1e537fc63341cd9b7bf56c715c3e7",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0341",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "order_by",
+          "record_lock"
+        ],
+        "status": "fallback_invalid_response",
+        "job_id": "primary:daddbc44bba7e7f5e4cffb50199bb48a288c48adecc78ab875146491d9febab2",
+        "packet_sha256": "daddbc44bba7e7f5e4cffb50199bb48a288c48adecc78ab875146491d9febab2",
+        "clean_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0364",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:014c557471d97ad19f571c40b23bd24e60b0c07c6aa44b63ce52a5bfbaf2d875",
+        "packet_sha256": "014c557471d97ad19f571c40b23bd24e60b0c07c6aa44b63ce52a5bfbaf2d875",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0441",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:5c6ba0683a3188fdccf0d3acd970888bc1f4bba9ec883aaa9902b95fcca08ce3",
+        "packet_sha256": "5c6ba0683a3188fdccf0d3acd970888bc1f4bba9ec883aaa9902b95fcca08ce3",
+        "clean_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0457",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:bc60fc30daa9b75516bcdb70a1d05a60b6d969b7117d8f8a95412ca3d48d237e",
+        "packet_sha256": "bc60fc30daa9b75516bcdb70a1d05a60b6d969b7117d8f8a95412ca3d48d237e",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0614",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:1172539ff09ab62982d991a8550e3fbcf8db225bac532a2d31c2184dea1e6fc1",
+        "packet_sha256": "1172539ff09ab62982d991a8550e3fbcf8db225bac532a2d31c2184dea1e6fc1",
+        "clean_prediction": [
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0615",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:6d05ef42d5215dd3eca302c03752f96aca6d19f7616d629e05f8df12e127506e",
+        "packet_sha256": "6d05ef42d5215dd3eca302c03752f96aca6d19f7616d629e05f8df12e127506e",
+        "clean_prediction": [
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0175",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:7de4de506c0e593a7b61e321e30ab8ac5cadc045237533d78946224ea56934f1",
+        "packet_sha256": "7de4de506c0e593a7b61e321e30ab8ac5cadc045237533d78946224ea56934f1",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0358",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:b80d9592f953948b434bba6d4582d90e3b70c0b7b7ef8ae2da70ea4312616c51",
+        "packet_sha256": "b80d9592f953948b434bba6d4582d90e3b70c0b7b7ef8ae2da70ea4312616c51",
+        "clean_prediction": [
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0448",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:38aa028af04860413d82514b7d9d2e4a77c64e0a222bdb2689968f13616d149a",
+        "packet_sha256": "38aa028af04860413d82514b7d9d2e4a77c64e0a222bdb2689968f13616d149a",
+        "clean_prediction": [
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0565",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "missing_index",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "primary:041088905d1c30e3544eac4d65bb803525b3d89c067722b2ad448693a15e279b",
+        "packet_sha256": "041088905d1c30e3544eac4d65bb803525b3d89c067722b2ad448693a15e279b",
+        "clean_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0602",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "missing_index",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:63541bf7ae5907087d7bf834658ac6be3c50630094e8c5e1dcbd25028b8efb67",
+        "packet_sha256": "63541bf7ae5907087d7bf834658ac6be3c50630094e8c5e1dcbd25028b8efb67",
+        "clean_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0637",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:1d06a3fe0e3e580945805975c8275f9f421fa7d72289391d3b040e20b3721a06",
+        "packet_sha256": "1d06a3fe0e3e580945805975c8275f9f421fa7d72289391d3b040e20b3721a06",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0656",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "missing_index",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join",
+          "record_lock"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "primary:0fc726e5db40b85aaf4d4a71d16ee374ac6869f8a6fbab03284ec383b60af6f2",
+        "packet_sha256": "0fc726e5db40b85aaf4d4a71d16ee374ac6869f8a6fbab03284ec383b60af6f2",
+        "clean_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0036",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:d27dbf27f76df1e14e6ff4028741f3c3fcbbe0bd5d5e8a63c54cdf4e5eff879b",
+        "packet_sha256": "d27dbf27f76df1e14e6ff4028741f3c3fcbbe0bd5d5e8a63c54cdf4e5eff879b",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0191",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:15151d358393a84902da51235a9a5b629c1573a3e087f87e850011c655763eb7",
+        "packet_sha256": "15151d358393a84902da51235a9a5b629c1573a3e087f87e850011c655763eb7",
+        "clean_prediction": [
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0303",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:b8da65cf6f0238dd00b8c567b70654688ebcfae74448a408c737925e8d9eb499",
+        "packet_sha256": "b8da65cf6f0238dd00b8c567b70654688ebcfae74448a408c737925e8d9eb499",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0101",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:59432594c054c251e78ddc3242685bce3195ff0fdcd1ad9b4df2a21791411c01",
+        "packet_sha256": "59432594c054c251e78ddc3242685bce3195ff0fdcd1ad9b4df2a21791411c01",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0187",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "primary:3c15e97c8ac948265ab063dbbe1df75efd994f9202d67d7fe94ce23268df277b",
+        "packet_sha256": "3c15e97c8ac948265ab063dbbe1df75efd994f9202d67d7fe94ce23268df277b",
+        "clean_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": false,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0521",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:f993dab3f7681b667e293993bd92ebc05e3f9ea20bd350283521244a8b56f8b0",
+        "packet_sha256": "f993dab3f7681b667e293993bd92ebc05e3f9ea20bd350283521244a8b56f8b0",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "order_by"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0624",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:01acf81ebfcfc62b49df5e21acbd0ae6100ec7c72ebeffd193c36acbc216f8c5",
+        "packet_sha256": "01acf81ebfcfc62b49df5e21acbd0ae6100ec7c72ebeffd193c36acbc216f8c5",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0018",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:693bab59fb56d35e7e7b9b4815e2e6d3dd5cc9fa2b0c5b3d8503fc4702021bd3",
+        "packet_sha256": "693bab59fb56d35e7e7b9b4815e2e6d3dd5cc9fa2b0c5b3d8503fc4702021bd3",
+        "clean_prediction": [
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0238",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:dd4de7df43a50ecfaa3635d33fbfe5e41cb1165b367a238c5cb5a808906afe40",
+        "packet_sha256": "dd4de7df43a50ecfaa3635d33fbfe5e41cb1165b367a238c5cb5a808906afe40",
+        "clean_prediction": [
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0244",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:11222d2f8bfc5049116b179cd6e79a107819fea4804a951f14f33338aaf7715b",
+        "packet_sha256": "11222d2f8bfc5049116b179cd6e79a107819fea4804a951f14f33338aaf7715b",
+        "clean_prediction": [
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0249",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:f0c3cff92e55eb96f3cbdd91b6b8fbd1f342a184f54b49b1f2a47ba9ecb447c5",
+        "packet_sha256": "f0c3cff92e55eb96f3cbdd91b6b8fbd1f342a184f54b49b1f2a47ba9ecb447c5",
+        "clean_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0269",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:c1e4dd526c05f6ecae242748f0475ca2543c258c59708d4953e364ecbc4f5ac1",
+        "packet_sha256": "c1e4dd526c05f6ecae242748f0475ca2543c258c59708d4953e364ecbc4f5ac1",
+        "clean_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0660",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "missing_index",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:b29485eb6897b8fc7cd1e2b49e2e071b1ef328f6e2bf20297ae4c130de831ab4",
+        "packet_sha256": "b29485eb6897b8fc7cd1e2b49e2e071b1ef328f6e2bf20297ae4c130de831ab4",
+        "clean_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0178",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:cde38b779bc5f169107dc399c1fb110de5a1f61e71574f93c54de349bb584c18",
+        "packet_sha256": "cde38b779bc5f169107dc399c1fb110de5a1f61e71574f93c54de349bb584c18",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "order_by"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0267",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:27b66b2858d7f68fb92d5ea4fd78a6675e420da9f57af002c99b76a6d77cdf90",
+        "packet_sha256": "27b66b2858d7f68fb92d5ea4fd78a6675e420da9f57af002c99b76a6d77cdf90",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0298",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "predicted_labels": [
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:82b298497faf017afd5b5ad9534808d82d879132333b2b499745c5cb389057ea",
+        "packet_sha256": "82b298497faf017afd5b5ad9534808d82d879132333b2b499745c5cb389057ea",
+        "clean_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0402",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "group_by"
+        ],
+        "predicted_labels": [
+          "group_by"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "primary:376a1efb15cb084ba8a07ed59bf7459c33e246305ada2e0595b0089b9eb9d8f6",
+        "packet_sha256": "376a1efb15cb084ba8a07ed59bf7459c33e246305ada2e0595b0089b9eb9d8f6",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "group_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0415",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:92cdd5528be8577946f6f665580ad5e8f9cc35bc8649530bcac2bb304b7681a2",
+        "packet_sha256": "92cdd5528be8577946f6f665580ad5e8f9cc35bc8649530bcac2bb304b7681a2",
+        "clean_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0437",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:e52d66514e60f8c248d4c9115f5b36e0bc992bf2ad30be6a2f2567d8e2a6dd32",
+        "packet_sha256": "e52d66514e60f8c248d4c9115f5b36e0bc992bf2ad30be6a2f2567d8e2a6dd32",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "query_whole_table"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0582",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:3357b68e90a07998fefb24aa3ff067107756143eebd6d41f4666680ee52a486a",
+        "packet_sha256": "3357b68e90a07998fefb24aa3ff067107756143eebd6d41f4666680ee52a486a",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0629",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:f2845dd8ae43ecb26282d82ab2677ea3f4611bbd9dd208250bc1be6355c68eb6",
+        "packet_sha256": "f2845dd8ae43ecb26282d82ab2677ea3f4611bbd9dd208250bc1be6355c68eb6",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      }
+    ],
+    "shuffled_evidence": [
+      {
+        "case_id": "case-0084",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:6155a6c795df805a12211790022543e60fdd6182a6bc9d05bad700f345b1b522",
+        "packet_sha256": "6155a6c795df805a12211790022543e60fdd6182a6bc9d05bad700f345b1b522",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0164",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:e533c214d1830fd695869762a00750b7bada5994f33b4f370dc885da1a6ff22c",
+        "packet_sha256": "e533c214d1830fd695869762a00750b7bada5994f33b4f370dc885da1a6ff22c",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "order_by"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0229",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:cfe22b4044ea08abf4df42593af916cb90019ec8bbc6b76a1cae4e3a6fd4b9dc",
+        "packet_sha256": "cfe22b4044ea08abf4df42593af916cb90019ec8bbc6b76a1cae4e3a6fd4b9dc",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0247",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:7bf8e230432e7625c4e3e1ae0d54111364347bfb0115cd321d781de6925ff45d",
+        "packet_sha256": "7bf8e230432e7625c4e3e1ae0d54111364347bfb0115cd321d781de6925ff45d",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0283",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:0ac6ab58d189752748589d49d9b26b147dc25141e03a1555f0d6f25c27566cdd",
+        "packet_sha256": "0ac6ab58d189752748589d49d9b26b147dc25141e03a1555f0d6f25c27566cdd",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0364",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:5d3944f202dda7e8896592cbbe6cdf2bf6ce2ac15dedaac0ddde8ecb6c6ac4a1",
+        "packet_sha256": "5d3944f202dda7e8896592cbbe6cdf2bf6ce2ac15dedaac0ddde8ecb6c6ac4a1",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0457",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:127d0fa6e4ea57a0d0a15d61e313d85990d6d5de368ca37cba1755dc56e101df",
+        "packet_sha256": "127d0fa6e4ea57a0d0a15d61e313d85990d6d5de368ca37cba1755dc56e101df",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0544",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:18edc5995bb0984c4b7588d109542a0f2f7b6574200e40177b4c180bbf931a73",
+        "packet_sha256": "18edc5995bb0984c4b7588d109542a0f2f7b6574200e40177b4c180bbf931a73",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0568",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:5b8d3659d98e96841e81a902769577e5bd42e0e7dd657d5d2e1070252ba5088b",
+        "packet_sha256": "5b8d3659d98e96841e81a902769577e5bd42e0e7dd657d5d2e1070252ba5088b",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "query_whole_table"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0614",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:e64a0c72d37df3f4167797761e5003e37a7867911bc34f607f2e01d4e0846db6",
+        "packet_sha256": "e64a0c72d37df3f4167797761e5003e37a7867911bc34f607f2e01d4e0846db6",
+        "clean_prediction": [
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0047",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:ecd1f788596e873f0eb7a43a296bc3f4bb1977003dcd686f8e7948f510d9d97f",
+        "packet_sha256": "ecd1f788596e873f0eb7a43a296bc3f4bb1977003dcd686f8e7948f510d9d97f",
+        "clean_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0129",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:ff6b1db2eef565e015706c7dd7f50811805d7d3654e26814e83474884885d7f5",
+        "packet_sha256": "ff6b1db2eef565e015706c7dd7f50811805d7d3654e26814e83474884885d7f5",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0448",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:d19c473edf652a3253af3cf4370f0845d2b8cc92d848289e560348b519d7eeac",
+        "packet_sha256": "d19c473edf652a3253af3cf4370f0845d2b8cc92d848289e560348b519d7eeac",
+        "clean_prediction": [
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0078",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:b7232ce0fa16b954b3ea3bd87d25fe07d4ecbfa357ac99dcb1e81009d6850ef0",
+        "packet_sha256": "b7232ce0fa16b954b3ea3bd87d25fe07d4ecbfa357ac99dcb1e81009d6850ef0",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0191",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:2480ba6ec5ee3c75b3704f08f2c273b7a109db60b709b91edbe3f5c8b9ade4a7",
+        "packet_sha256": "2480ba6ec5ee3c75b3704f08f2c273b7a109db60b709b91edbe3f5c8b9ade4a7",
+        "clean_prediction": [
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0449",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:bf31929ac2eab13358f013e374557080ffd39bd963e7ca13d0bf02464f61561f",
+        "packet_sha256": "bf31929ac2eab13358f013e374557080ffd39bd963e7ca13d0bf02464f61561f",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0459",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:0dcd40fac6bdaa707c1d1cf6a22158b567e8fff988cfb7d586f262d48a3a9ccb",
+        "packet_sha256": "0dcd40fac6bdaa707c1d1cf6a22158b567e8fff988cfb7d586f262d48a3a9ccb",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "group_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0539",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "group_by"
+        ],
+        "predicted_labels": [
+          "group_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:20628f632644a03dab121455b2c8f6b46cea237f415243713443c676507ef4e6",
+        "packet_sha256": "20628f632644a03dab121455b2c8f6b46cea237f415243713443c676507ef4e6",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "group_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0187",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "primary:f60ffb18717d37adfdf8a8ea99e64b0b165d31c500f25944766ffc6b552fdc0c",
+        "packet_sha256": "f60ffb18717d37adfdf8a8ea99e64b0b165d31c500f25944766ffc6b552fdc0c",
+        "clean_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": false,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0207",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:ec10d964f6b91e65f03dccb274e89c47eabac43d131f65e5a3c39f388f6d476b",
+        "packet_sha256": "ec10d964f6b91e65f03dccb274e89c47eabac43d131f65e5a3c39f388f6d476b",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0495",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:ad84a0696ef51aa50bba8cb63388e9b9c5f960e0106cf92a84d0629bc662e4b0",
+        "packet_sha256": "ad84a0696ef51aa50bba8cb63388e9b9c5f960e0106cf92a84d0629bc662e4b0",
+        "clean_prediction": [
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0521",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:9529e289c2f078ba07f6df095c956c3e2a075e2c2eb58e2adf9a342ed8afda1c",
+        "packet_sha256": "9529e289c2f078ba07f6df095c956c3e2a075e2c2eb58e2adf9a342ed8afda1c",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "order_by"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0172",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:98666386708a5e80f4c8feb9a9c11e53143174fc113eb0a9ae3c7ad6b06cd21e",
+        "packet_sha256": "98666386708a5e80f4c8feb9a9c11e53143174fc113eb0a9ae3c7ad6b06cd21e",
+        "clean_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0260",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:983d864bc94d012f95e9b9c7a2e0faa36fafa5d14ac509aaa76a978ddb2fd500",
+        "packet_sha256": "983d864bc94d012f95e9b9c7a2e0faa36fafa5d14ac509aaa76a978ddb2fd500",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0269",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:6d3486863ef90a7c01f69e1a005f73d18d6a2a1cf1c8f9f2864692a33f66a253",
+        "packet_sha256": "6d3486863ef90a7c01f69e1a005f73d18d6a2a1cf1c8f9f2864692a33f66a253",
+        "clean_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0469",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:5473d2c3ef0ec6cb11b0d0d9b133700f963ba6f02600beb6b668cd411d213dbc",
+        "packet_sha256": "5473d2c3ef0ec6cb11b0d0d9b133700f963ba6f02600beb6b668cd411d213dbc",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "clean_correct": false,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0212",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "predicted_labels": [
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:f5cf79bd054cd8e60f92317f31c32acb72c385dfea10d5371c9a2794927403c0",
+        "packet_sha256": "f5cf79bd054cd8e60f92317f31c32acb72c385dfea10d5371c9a2794927403c0",
+        "clean_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "order_by"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0262",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "missing_index",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:63e4f6fed7b6cfe8741ce1220a17662e25f94535692e544f28a6e08f36f2264f",
+        "packet_sha256": "63e4f6fed7b6cfe8741ce1220a17662e25f94535692e544f28a6e08f36f2264f",
+        "clean_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0298",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "predicted_labels": [
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:483064951a3f16096e2db57186b7c1bc514fe99721ec8f2da70f5a83e369fbcf",
+        "packet_sha256": "483064951a3f16096e2db57186b7c1bc514fe99721ec8f2da70f5a83e369fbcf",
+        "clean_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0402",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "group_by"
+        ],
+        "predicted_labels": [
+          "group_by"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "primary:f74993bf2c024df1b10d710d33a8fdef6a36b12c65a6b4b6c896d119ed099325",
+        "packet_sha256": "f74993bf2c024df1b10d710d33a8fdef6a36b12c65a6b4b6c896d119ed099325",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "group_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0415",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:2dc2a53b3baa727013f9d893ad5f2a01fb882f2f950055c96f579b1c266380aa",
+        "packet_sha256": "2dc2a53b3baa727013f9d893ad5f2a01fb882f2f950055c96f579b1c266380aa",
+        "clean_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0582",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:8a51f1314a02a64d1cb90683f09c20d890cb974fa8c423ca61ed425da6a9eee1",
+        "packet_sha256": "8a51f1314a02a64d1cb90683f09c20d890cb974fa8c423ca61ed425da6a9eee1",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      }
+    ],
+    "order_only": [
+      {
+        "case_id": "case-0028",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "group_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:9a5d303baa6c9b4b9436a9844569dfba39c774078cffdb2786760577ad8a3222",
+        "packet_sha256": "9a5d303baa6c9b4b9436a9844569dfba39c774078cffdb2786760577ad8a3222",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0084",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:b830f9e9d30fb83703d9754fee94477dbb4ef0814d63bbdd1b74478f500128b0",
+        "packet_sha256": "b830f9e9d30fb83703d9754fee94477dbb4ef0814d63bbdd1b74478f500128b0",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0253",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:e1692cd994e68cfc79c147287d7a4a9d28bada6f73fb914e95becade9841f52e",
+        "packet_sha256": "e1692cd994e68cfc79c147287d7a4a9d28bada6f73fb914e95becade9841f52e",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0341",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "order_by",
+          "record_lock"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "primary:88a71cfbfb5d8bc3b273ffa52eda527de2e307913cccb8a81d46c206f57255ef",
+        "packet_sha256": "88a71cfbfb5d8bc3b273ffa52eda527de2e307913cccb8a81d46c206f57255ef",
+        "clean_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0364",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:12d42ef2a284c0431dae8ac700f448c55d4066663cc461dfc5803344909f2d1f",
+        "packet_sha256": "12d42ef2a284c0431dae8ac700f448c55d4066663cc461dfc5803344909f2d1f",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0457",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:4786959532ff1b5ee0cf229bf796d9916382310605f3c8e4a572804adaebb382",
+        "packet_sha256": "4786959532ff1b5ee0cf229bf796d9916382310605f3c8e4a572804adaebb382",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0641",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:c590d4f6bf3660a59d90192e0eb46f259fb0baa00331b6e35ee7daaec9be9cac",
+        "packet_sha256": "c590d4f6bf3660a59d90192e0eb46f259fb0baa00331b6e35ee7daaec9be9cac",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0129",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:ea278193779aff61f3aec03e7dd9b3cfa372a4f07b968c8d22fa468b0c314b88",
+        "packet_sha256": "ea278193779aff61f3aec03e7dd9b3cfa372a4f07b968c8d22fa468b0c314b88",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0175",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:d8ad70935dabb5b874aed5433ef2cf2658acd48ae13e88646f32c925258d0442",
+        "packet_sha256": "d8ad70935dabb5b874aed5433ef2cf2658acd48ae13e88646f32c925258d0442",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0322",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:7752e42ec3a49cf5f25fa958a4fbdfc61741c0cc5e650acb145c1f036fa2918a",
+        "packet_sha256": "7752e42ec3a49cf5f25fa958a4fbdfc61741c0cc5e650acb145c1f036fa2918a",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0399",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:b532b22ee1ae9e4027e95635d7938a6f56c99e16b5fa67eae49881bff5c75930",
+        "packet_sha256": "b532b22ee1ae9e4027e95635d7938a6f56c99e16b5fa67eae49881bff5c75930",
+        "clean_prediction": [
+          "group_by",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0467",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:0aa643af2c38ecd3f7f1b1e636b0a144ca089cd7e8e0a2cadfc4f2ff3d0b7613",
+        "packet_sha256": "0aa643af2c38ecd3f7f1b1e636b0a144ca089cd7e8e0a2cadfc4f2ff3d0b7613",
+        "clean_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0637",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:9fc3ac24d1b75d90964b6a7824e547b937a2d09253e5efa5c38f5f66dd659383",
+        "packet_sha256": "9fc3ac24d1b75d90964b6a7824e547b937a2d09253e5efa5c38f5f66dd659383",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0001",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "missing_index",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join",
+          "record_lock"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "primary:9a3fd818d6c480ce98fc28bde7add590f16e225db5e1ecaa17c7b0ec70f4dce5",
+        "packet_sha256": "9a3fd818d6c480ce98fc28bde7add590f16e225db5e1ecaa17c7b0ec70f4dce5",
+        "clean_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0036",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:fa4bdf93e61460739d4a0cb4b21fc26fb562442b12dcf2dabf91ec6dd09c0209",
+        "packet_sha256": "fa4bdf93e61460739d4a0cb4b21fc26fb562442b12dcf2dabf91ec6dd09c0209",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0443",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:0e9115eaa8d21ea2642d5e75e594a97f7dd18679d9b603571b30aa15c1c644cf",
+        "packet_sha256": "0e9115eaa8d21ea2642d5e75e594a97f7dd18679d9b603571b30aa15c1c644cf",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0449",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:5b257cd7bf2f1475df9df97379f51a28d3347e5300a645dff9a478c321448f42",
+        "packet_sha256": "5b257cd7bf2f1475df9df97379f51a28d3347e5300a645dff9a478c321448f42",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0459",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:f1e7955859e9302fb28a434e4b5404bfc6f3b739426a38aa5c66df44bface5de",
+        "packet_sha256": "f1e7955859e9302fb28a434e4b5404bfc6f3b739426a38aa5c66df44bface5de",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "group_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0145",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:18adfc6a4e07ab166df128991e4fc6eb509350638bfe1f02ed423b41d8be9a65",
+        "packet_sha256": "18adfc6a4e07ab166df128991e4fc6eb509350638bfe1f02ed423b41d8be9a65",
+        "clean_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0207",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:0ef5f03346bc85764f58cf57711b7c274990913c3288cf1bf0e5f22080e88c56",
+        "packet_sha256": "0ef5f03346bc85764f58cf57711b7c274990913c3288cf1bf0e5f22080e88c56",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0316",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "missing_index",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:f6c5efed52b385573632f7796ca144bc8e63e6b61fdae9ca28e272ff69de2b42",
+        "packet_sha256": "f6c5efed52b385573632f7796ca144bc8e63e6b61fdae9ca28e272ff69de2b42",
+        "clean_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0521",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:5458dc11ca9998040dca9d3602fd8c79b33a14861f5b0fca67d35cdefa0dac88",
+        "packet_sha256": "5458dc11ca9998040dca9d3602fd8c79b33a14861f5b0fca67d35cdefa0dac88",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "order_by"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0172",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:30161fedf60241df256c31fc1ffbba31331825de5eed1baae6bceef5bf561f4e",
+        "packet_sha256": "30161fedf60241df256c31fc1ffbba31331825de5eed1baae6bceef5bf561f4e",
+        "clean_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0260",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:91183b4d70e73e6e17632375ba6d66dc6ea349b11112b5eecc7f61d200f564c4",
+        "packet_sha256": "91183b4d70e73e6e17632375ba6d66dc6ea349b11112b5eecc7f61d200f564c4",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0491",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:efc5f60beaac8f2dfc9e82d62965fbe5affe0bca810290f2a198f683f769d1b9",
+        "packet_sha256": "efc5f60beaac8f2dfc9e82d62965fbe5affe0bca810290f2a198f683f769d1b9",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "query_whole_table"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0139",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "missing_index",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:de5efe8d1b144544e3c4f6d5aaeb0f1ab30f02e51427719f7f42bd84522ad6b8",
+        "packet_sha256": "de5efe8d1b144544e3c4f6d5aaeb0f1ab30f02e51427719f7f42bd84522ad6b8",
+        "clean_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0160",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:4e69d61e24bbc491f0e53ba0ae5c5a98be844a9c5578a067a319508dc2864878",
+        "packet_sha256": "4e69d61e24bbc491f0e53ba0ae5c5a98be844a9c5578a067a319508dc2864878",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0178",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:7d2184d392c489dcbb259d43b2cb6810337fd5b95f401b4ad1f3fb24d9a9a5d4",
+        "packet_sha256": "7d2184d392c489dcbb259d43b2cb6810337fd5b95f401b4ad1f3fb24d9a9a5d4",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "order_by"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0402",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "group_by"
+        ],
+        "predicted_labels": [
+          "group_by"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "primary:23cf0f90fb362386e335f04fbd33a684f3bccc65cd98f40d023aff786fba897b",
+        "packet_sha256": "23cf0f90fb362386e335f04fbd33a684f3bccc65cd98f40d023aff786fba897b",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "group_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0415",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:1729d6d850ea5bb147e3cd24e51fdd032b5fd080648211457ccadec672ce07fa",
+        "packet_sha256": "1729d6d850ea5bb147e3cd24e51fdd032b5fd080648211457ccadec672ce07fa",
+        "clean_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0437",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:0dd5588f8ad1b82a41846ca066517f6896854c8c58f671c7d4aaf1f877d824f5",
+        "packet_sha256": "0dd5588f8ad1b82a41846ca066517f6896854c8c58f671c7d4aaf1f877d824f5",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "query_whole_table"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0582",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:33b1cad5bade66e35d17ae324b86c51f5aec45801bae8397fc48eee7ae43a594",
+        "packet_sha256": "33b1cad5bade66e35d17ae324b86c51f5aec45801bae8397fc48eee7ae43a594",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0629",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:b0ce34f93f1faece52a20ea797f34a12110ae562ec4ec21b7d1df5d108c280c2",
+        "packet_sha256": "b0ce34f93f1faece52a20ea797f34a12110ae562ec4ec21b7d1df5d108c280c2",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      }
+    ],
+    "out_of_pool_lure": [
+      {
+        "case_id": "case-0239",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:8628ec14c7913622f82ea066ba90e309367b4088522992c1ccd3689e51110efc",
+        "packet_sha256": "8628ec14c7913622f82ea066ba90e309367b4088522992c1ccd3689e51110efc",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0283",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:31dd25d3dfa881edb7bdc56eeb39aae844ea2039f03c359c433009274b1fb56b",
+        "packet_sha256": "31dd25d3dfa881edb7bdc56eeb39aae844ea2039f03c359c433009274b1fb56b",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0364",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:44dac82dea53cc5ad9a9d124fcf563f343c6c2a4e66d3900da5b6561d9aa5c34",
+        "packet_sha256": "44dac82dea53cc5ad9a9d124fcf563f343c6c2a4e66d3900da5b6561d9aa5c34",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0614",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:ec5a8284dec8c12a3f3a3bb41ab119b54b085586a57a7add84fc2d14b204ed6b",
+        "packet_sha256": "ec5a8284dec8c12a3f3a3bb41ab119b54b085586a57a7add84fc2d14b204ed6b",
+        "clean_prediction": [
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0175",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:ad326e576f6b0cdfd8ce551da4a5bd6cac715537b90e05354a6ffd65c17ddf31",
+        "packet_sha256": "ad326e576f6b0cdfd8ce551da4a5bd6cac715537b90e05354a6ffd65c17ddf31",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0202",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "group_by"
+        ],
+        "predicted_labels": [
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:b95386beab344337b13c98a68e38ddefee01f8777c51345cbdab19c79e35fa80",
+        "packet_sha256": "b95386beab344337b13c98a68e38ddefee01f8777c51345cbdab19c79e35fa80",
+        "clean_prediction": [
+          "group_by"
+        ],
+        "repeat_prediction": [
+          "group_by"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0467",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:0518fb9208c4dcebed5d9be86e0a3097996044e1ea92b907db45fb9e3bbba673",
+        "packet_sha256": "0518fb9208c4dcebed5d9be86e0a3097996044e1ea92b907db45fb9e3bbba673",
+        "clean_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0036",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:3f8bb9cd5e8dd36a9d87f549d2978da50c9beeeac6ea1f1f6f6878b7033794fd",
+        "packet_sha256": "3f8bb9cd5e8dd36a9d87f549d2978da50c9beeeac6ea1f1f6f6878b7033794fd",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0191",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:7c8ed26f30c2284690ffafac3d1b70dc63cb5bf483353659dbd404480ba8f3cf",
+        "packet_sha256": "7c8ed26f30c2284690ffafac3d1b70dc63cb5bf483353659dbd404480ba8f3cf",
+        "clean_prediction": [
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0449",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:e47b0d8ec20c98d25c14456b0029ad7383ef57f4b1bfd40060cdf324f0fd2843",
+        "packet_sha256": "e47b0d8ec20c98d25c14456b0029ad7383ef57f4b1bfd40060cdf324f0fd2843",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0029",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "group_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:ce7a31ed80c7ce448350fb2aff913ceb2c6fa5f01cff3d9004d065bc0a6947c5",
+        "packet_sha256": "ce7a31ed80c7ce448350fb2aff913ceb2c6fa5f01cff3d9004d065bc0a6947c5",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0101",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "group_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:3fa333d4daf75dbc5045a059e909f2a31fc7a1fa2891a0fd945e4e1239382c99",
+        "packet_sha256": "3fa333d4daf75dbc5045a059e909f2a31fc7a1fa2891a0fd945e4e1239382c99",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0127",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:727749097e2f9e6148071791f807b07975a8d156eddc13da5daf8f959126a5f6",
+        "packet_sha256": "727749097e2f9e6148071791f807b07975a8d156eddc13da5daf8f959126a5f6",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0187",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "primary:df013bc5721378f244ba36d491754f11ce6a1a8f1dfc69e57bb9ad03c7c5cbb9",
+        "packet_sha256": "df013bc5721378f244ba36d491754f11ce6a1a8f1dfc69e57bb9ad03c7c5cbb9",
+        "clean_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": false,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0207",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:7dc216f6cccafd85f69bb3732215aab438b750be002ee60f114abace25f6a783",
+        "packet_sha256": "7dc216f6cccafd85f69bb3732215aab438b750be002ee60f114abace25f6a783",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0521",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:89c597a3716f288292fac2c7d38074d450328acd2074d623ca74d25a49dc0e08",
+        "packet_sha256": "89c597a3716f288292fac2c7d38074d450328acd2074d623ca74d25a49dc0e08",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "order_by"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0249",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:e6435c92015f12672a387c9f411e9e581139b60312eed0cc686c7fea398c2ab4",
+        "packet_sha256": "e6435c92015f12672a387c9f411e9e581139b60312eed0cc686c7fea398c2ab4",
+        "clean_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0260",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:6538dbde545ee542999ccc1d15d85a30f319277cedade226423f88312b93d7eb",
+        "packet_sha256": "6538dbde545ee542999ccc1d15d85a30f319277cedade226423f88312b93d7eb",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0269",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:2027fee31c2c2b8e5191449cf6308bbd103a41b20cae5d5f837a2a1f70eb882c",
+        "packet_sha256": "2027fee31c2c2b8e5191449cf6308bbd103a41b20cae5d5f837a2a1f70eb882c",
+        "clean_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0393",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:6c1311f217d563a33a11d329ae4581f952e25647a610fc6eda94715d1711cf69",
+        "packet_sha256": "6c1311f217d563a33a11d329ae4581f952e25647a610fc6eda94715d1711cf69",
+        "clean_prediction": [
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0420",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:75a5948507f1f8c0b73a35068f2d62545c39d3bea49b160224729f48ba30008b",
+        "packet_sha256": "75a5948507f1f8c0b73a35068f2d62545c39d3bea49b160224729f48ba30008b",
+        "clean_prediction": [
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0042",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "group_by"
+        ],
+        "predicted_labels": [
+          "group_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:2896eb9e304dfbe09aaa5810a011710f599b42fb6b10bb83e3db6264925e0778",
+        "packet_sha256": "2896eb9e304dfbe09aaa5810a011710f599b42fb6b10bb83e3db6264925e0778",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0151",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:db13849b029cc54d482803ff04def46517dc7388195974286ca3c279153e6ea8",
+        "packet_sha256": "db13849b029cc54d482803ff04def46517dc7388195974286ca3c279153e6ea8",
+        "clean_prediction": [
+          "group_by",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0298",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "predicted_labels": [
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:5036ea78eb716d4078bbe948bab28c162655aabe6f2d2ce5a4743ef2cc2f1d67",
+        "packet_sha256": "5036ea78eb716d4078bbe948bab28c162655aabe6f2d2ce5a4743ef2cc2f1d67",
+        "clean_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0402",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "group_by"
+        ],
+        "predicted_labels": [
+          "group_by"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "primary:26bed17d50ca5b9106640b2d7fb7af16535aa99eb573846ca2fefa136864f866",
+        "packet_sha256": "26bed17d50ca5b9106640b2d7fb7af16535aa99eb573846ca2fefa136864f866",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "group_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0415",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:8f2c7a0edec015d123a64de2ac683e6a3a831e86d29ad50b66b321b9bdf839e9",
+        "packet_sha256": "8f2c7a0edec015d123a64de2ac683e6a3a831e86d29ad50b66b321b9bdf839e9",
+        "clean_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0582",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "primary:7ead45298dab5a1d0d54436f943bab9fae6337219c8c74ae8879b54fc2fcc402",
+        "packet_sha256": "7ead45298dab5a1d0d54436f943bab9fae6337219c8c74ae8879b54fc2fcc402",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      }
+    ],
+    "clean_repeat": [
+      {
+        "case_id": "case-0028",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "group_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:4b07c073798f009ee58eda220262825802944210acb612ddb74e4700e0e679dc",
+        "packet_sha256": "4b07c073798f009ee58eda220262825802944210acb612ddb74e4700e0e679dc",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0084",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:e0da2e47d6662de67a09c13072a041755cd271a7adb0dd97b67ca76e58684e3f",
+        "packet_sha256": "e0da2e47d6662de67a09c13072a041755cd271a7adb0dd97b67ca76e58684e3f",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0283",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:bea5697e203fb6ac5ce834706bfff3c691eab20a0d54b08ced6cbb5feccd314d",
+        "packet_sha256": "bea5697e203fb6ac5ce834706bfff3c691eab20a0d54b08ced6cbb5feccd314d",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0364",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:1ff72f323786d536817f4cb2b234a483b43a9c2e2552efa14e18faeb97040fec",
+        "packet_sha256": "1ff72f323786d536817f4cb2b234a483b43a9c2e2552efa14e18faeb97040fec",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0457",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:2779525e338797f50793802db4444c12cd47156703c6e23bbcea504d3fa79c57",
+        "packet_sha256": "2779525e338797f50793802db4444c12cd47156703c6e23bbcea504d3fa79c57",
+        "clean_prediction": [
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0568",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:d85edc656ebfdc1ed1ff9402c8cbcce9dcb7e39c2136bec0cd0717dfea925de2",
+        "packet_sha256": "d85edc656ebfdc1ed1ff9402c8cbcce9dcb7e39c2136bec0cd0717dfea925de2",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "query_whole_table"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0575",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:43160e4122287b124a9a250f8d5e160544ec1c12f1e14f5b497d3affd4e5a702",
+        "packet_sha256": "43160e4122287b124a9a250f8d5e160544ec1c12f1e14f5b497d3affd4e5a702",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0641",
+        "fold": "leave_replicate_index_out:1",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:5583a587ebcab91b0c2eb735670f9743e4fea4152503d42fd242c087cd262ee7",
+        "packet_sha256": "5583a587ebcab91b0c2eb735670f9743e4fea4152503d42fd242c087cd262ee7",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0129",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:fd34832d57364a0ba577af38843be0c69aaec130ce9bfc27e7edf59a6de95afe",
+        "packet_sha256": "fd34832d57364a0ba577af38843be0c69aaec130ce9bfc27e7edf59a6de95afe",
+        "clean_prediction": [
+          "implicit_conversion"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0292",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "group_by",
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:db9ce11176da7a853226ec3158aa1c7f13010e1a1ec71e64711a831023de90cf",
+        "packet_sha256": "db9ce11176da7a853226ec3158aa1c7f13010e1a1ec71e64711a831023de90cf",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0565",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "missing_index",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "status": "fallback_invalid_response",
+        "job_id": "repeat:99a33af1de0b8a007d7b6d5cb99292883eba5709414b9fedbed7e01f37081c53",
+        "packet_sha256": "99a33af1de0b8a007d7b6d5cb99292883eba5709414b9fedbed7e01f37081c53",
+        "clean_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "query_whole_table",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0637",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:c03f84f220869aac0249880157ac89cf64c0a02499879a773ad0eeae7a8f6116",
+        "packet_sha256": "c03f84f220869aac0249880157ac89cf64c0a02499879a773ad0eeae7a8f6116",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0656",
+        "fold": "leave_replicate_index_out:2",
+        "expected_labels": [
+          "missing_index",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join",
+          "record_lock"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "repeat:76333cde2a16bc7955b7f0b918cc9cead440085faad3a2e3622448930b3eb17b",
+        "packet_sha256": "76333cde2a16bc7955b7f0b918cc9cead440085faad3a2e3622448930b3eb17b",
+        "clean_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0443",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:949116263fda3b99c813a2c7e043b21ca061d4b90f1bdb3d8b62f1ba951815f9",
+        "packet_sha256": "949116263fda3b99c813a2c7e043b21ca061d4b90f1bdb3d8b62f1ba951815f9",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0459",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "group_by"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "repeat:780b183132ef5992baa5763dcb6c73d306757bc5fc5db76da71ecfd786da3c7c",
+        "packet_sha256": "780b183132ef5992baa5763dcb6c73d306757bc5fc5db76da71ecfd786da3c7c",
+        "clean_prediction": [
+          "group_by",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "group_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0539",
+        "fold": "leave_replicate_index_out:3",
+        "expected_labels": [
+          "group_by"
+        ],
+        "predicted_labels": [
+          "group_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:405e01cbaf2b571441bcd43c34c69e68c5d1fb7ac012af2e8b2b051f10833cf1",
+        "packet_sha256": "405e01cbaf2b571441bcd43c34c69e68c5d1fb7ac012af2e8b2b051f10833cf1",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "group_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0029",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "group_by"
+        ],
+        "predicted_labels": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:c91d2088dad56e5a9b2931528f4d896490e16a9f86de76baf1e150faf22bb429",
+        "packet_sha256": "c91d2088dad56e5a9b2931528f4d896490e16a9f86de76baf1e150faf22bb429",
+        "clean_prediction": [
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0187",
+        "fold": "leave_replicate_index_out:4",
+        "expected_labels": [
+          "missing_index"
+        ],
+        "predicted_labels": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "repeat:94c8e3c13bbbb7a3af85bc8451ba3cab1ea816e8b6b802dc8850c95667d3e506",
+        "packet_sha256": "94c8e3c13bbbb7a3af85bc8451ba3cab1ea816e8b6b802dc8850c95667d3e506",
+        "clean_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "clean_correct": false,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0660",
+        "fold": "leave_replicate_index_out:5",
+        "expected_labels": [
+          "missing_index",
+          "record_lock"
+        ],
+        "predicted_labels": [
+          "group_by",
+          "record_lock"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:77078e64bdd01ad3706d1c92554fbc5666f0fe11296a5360016b8b0a1b39e9f2",
+        "packet_sha256": "77078e64bdd01ad3706d1c92554fbc5666f0fe11296a5360016b8b0a1b39e9f2",
+        "clean_prediction": [
+          "missing_index",
+          "record_lock"
+        ],
+        "repeat_prediction": [
+          "group_by",
+          "record_lock"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0212",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "missing_index",
+          "order_by"
+        ],
+        "predicted_labels": [
+          "order_by"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:09666115c4cd78a5220b5158acfefd2f55602958361a1cff19011de69461df73",
+        "packet_sha256": "09666115c4cd78a5220b5158acfefd2f55602958361a1cff19011de69461df73",
+        "clean_prediction": [
+          "missing_index",
+          "order_by"
+        ],
+        "repeat_prediction": [
+          "order_by"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      },
+      {
+        "case_id": "case-0402",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "group_by"
+        ],
+        "predicted_labels": [
+          "group_by"
+        ],
+        "status": "accepted_abstain",
+        "job_id": "repeat:0ed5873dbc2fd377f881276ba339481501651f5491e642d38eb1d0fde7862a66",
+        "packet_sha256": "0ed5873dbc2fd377f881276ba339481501651f5491e642d38eb1d0fde7862a66",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "group_by"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0415",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "implicit_conversion"
+        ],
+        "predicted_labels": [
+          "implicit_conversion"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:d705e06a9caa547060f775a0d2035822f52a611d60e4d45a0d5087e7c924994b",
+        "packet_sha256": "d705e06a9caa547060f775a0d2035822f52a611d60e4d45a0d5087e7c924994b",
+        "clean_prediction": [
+          "implicit_conversion",
+          "missing_index"
+        ],
+        "repeat_prediction": [
+          "implicit_conversion"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0582",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "query_whole_table"
+        ],
+        "predicted_labels": [
+          "query_whole_table"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:50f718e3b2fd741008387fdfbfcaf59331948fe6bbda6280f71399fcb021a902",
+        "packet_sha256": "50f718e3b2fd741008387fdfbfcaf59331948fe6bbda6280f71399fcb021a902",
+        "clean_prediction": [
+          "missing_index",
+          "query_whole_table"
+        ],
+        "repeat_prediction": [
+          "query_whole_table"
+        ],
+        "clean_correct": false,
+        "condition_correct": true
+      },
+      {
+        "case_id": "case-0629",
+        "fold": "leave_replicate_index_out:6",
+        "expected_labels": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "predicted_labels": [
+          "query_with_too_much_join"
+        ],
+        "status": "accepted_selection",
+        "job_id": "repeat:e12c203cfbb87f48a4324601e616c27c5cb8db456c3dd80943d3910c407270eb",
+        "packet_sha256": "e12c203cfbb87f48a4324601e616c27c5cb8db456c3dd80943d3910c407270eb",
+        "clean_prediction": [
+          "missing_index",
+          "query_with_too_much_join"
+        ],
+        "repeat_prediction": [
+          "query_with_too_much_join"
+        ],
+        "clean_correct": true,
+        "condition_correct": false
+      }
+    ]
+  },
+  "audit_source_sha256": {
+    "scripts/audit_ecsa_stress_fullcoverage.py": "da1bae39bd9da1759f308a5e6dc8a755e0e8b9351679492155c752ae2599ca21",
+    "scripts/run_ecsa_stress_fullcoverage.py": "196cc3fe926f67f6ab0057f4b07b3fc3cbabbe11f4211fa63dbd0f629302ec93",
+    "src/ecsa_arbitration.py": "112fd09e52dbc760dc827353d186be1c0d27d806b80ed6f897e492997fbada12"
+  }
+}

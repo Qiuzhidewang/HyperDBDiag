@@ -1,0 +1,123 @@
+{
+  "baseline": {
+    "select c_balance, c_discount from customer where c_w_id=? and c_d_id=? and c_id=?": {
+      "sql": "SELECT c_balance, c_discount FROM customer WHERE c_w_id=4 AND c_d_id=3 AND c_id=499",
+      "count": 1040,
+      "total_seconds": 1.7206126768287504,
+      "rows_seen": 1040,
+      "errors": 0
+    },
+    "select count(*) from order_line where ol_w_id=? and ol_d_id=? and ol_o_id between ? and ?": {
+      "sql": "SELECT COUNT(*) FROM order_line WHERE ol_w_id=1 AND ol_d_id=3 AND ol_o_id BETWEEN 2170 AND 2180",
+      "count": 1051,
+      "total_seconds": 1.8076240550581133,
+      "rows_seen": 1051,
+      "errors": 0
+    },
+    "select o_id, o_entry_d from orders where o_w_id=? and o_d_id=? and o_c_id=? order by o_id desc limit ?": {
+      "sql": "SELECT o_id, o_entry_d FROM orders WHERE o_w_id=3 AND o_d_id=6 AND o_c_id=2043 ORDER BY o_id DESC LIMIT 1",
+      "count": 1050,
+      "total_seconds": 1.8272319630195852,
+      "rows_seen": 1050,
+      "errors": 0
+    },
+    "select s_quantity from stock where s_w_id=? and s_i_id=?": {
+      "sql": "SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=99919",
+      "count": 1020,
+      "total_seconds": 1.6575440180822625,
+      "rows_seen": 1020,
+      "errors": 0
+    }
+  },
+  "anomaly": {
+    "select c_balance, c_discount from customer where c_w_id=? and c_d_id=? and c_id=?": {
+      "sql": "SELECT c_balance, c_discount FROM customer WHERE c_w_id=3 AND c_d_id=10 AND c_id=2878",
+      "count": 1303,
+      "total_seconds": 2.001672829828749,
+      "rows_seen": 1303,
+      "errors": 0
+    },
+    "select count(*) from customer c join orders o on o.o_w_id=c.c_w_id and o.o_d_id=c.c_d_id and o.o_c_id=c.c_id join order_line ol on ol.ol_w_id=o.o_w_id and ol.ol_d_id=o.o_d_id and ol.ol_o_id=o.o_id join stock s on s.s_w_id=ol.ol_supply_w_id and s.s_i_id=ol.ol_i_id join item i on i.i_id=s.s_i_id where c.c_w_id=? and c.c_d_id=? and c.c_id between ? and ?": {
+      "sql": "SELECT COUNT(*) FROM customer c JOIN orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN item i ON i.i_id=s.s_i_id WHERE c.c_w_id=3 AND c.c_d_id=9 AND c.c_id BETWEEN 1 AND 120",
+      "count": 471,
+      "total_seconds": 3.550043600043864,
+      "rows_seen": 471,
+      "errors": 0
+    },
+    "select count(*) from order_line where ol_w_id=? and ol_d_id=? and ol_o_id between ? and ?": {
+      "sql": "SELECT COUNT(*) FROM order_line WHERE ol_w_id=3 AND ol_d_id=7 AND ol_o_id BETWEEN 2475 AND 2485",
+      "count": 1296,
+      "total_seconds": 2.13878573688271,
+      "rows_seen": 1296,
+      "errors": 0
+    },
+    "select o_id, o_entry_d from orders where o_w_id=? and o_d_id=? and o_c_id=? order by o_id desc limit ?": {
+      "sql": "SELECT o_id, o_entry_d FROM orders WHERE o_w_id=3 AND o_d_id=9 AND o_c_id=1671 ORDER BY o_id DESC LIMIT 1",
+      "count": 1320,
+      "total_seconds": 2.1427895658562193,
+      "rows_seen": 1320,
+      "errors": 0
+    },
+    "select s_quantity from stock where s_w_id=? and s_i_id=?": {
+      "sql": "SELECT s_quantity FROM stock WHERE s_w_id=2 AND s_i_id=36037",
+      "count": 1292,
+      "total_seconds": 1.9287427299350384,
+      "rows_seen": 1292,
+      "errors": 0
+    },
+    "update orders set o_carrier_id=o_carrier_id where o_w_id=? and o_d_id=? and o_id=?": {
+      "sql": "UPDATE orders SET o_carrier_id=o_carrier_id WHERE o_w_id=3 AND o_d_id=9 AND o_id=1192",
+      "count": 48,
+      "total_seconds": 29.490234832075657,
+      "rows_seen": 0,
+      "errors": 0
+    }
+  },
+  "selected_anomalous": [
+    {
+      "signature": "update orders set o_carrier_id=o_carrier_id where o_w_id=? and o_d_id=? and o_id=?",
+      "score": 6.026335961778708,
+      "sql": "UPDATE orders SET o_carrier_id=o_carrier_id WHERE o_w_id=3 AND o_d_id=9 AND o_id=1192",
+      "count": 48,
+      "total_seconds": 29.490234832075657,
+      "rows_seen": 0,
+      "errors": 0
+    },
+    {
+      "signature": "select count(*) from customer c join orders o on o.o_w_id=c.c_w_id and o.o_d_id=c.c_d_id and o.o_c_id=c.c_id join order_line ol on ol.ol_w_id=o.o_w_id and ol.ol_d_id=o.o_d_id and ol.ol_o_id=o.o_id join stock s on s.s_w_id=ol.ol_supply_w_id and s.s_i_id=ol.ol_i_id join item i on i.i_id=s.s_i_id where c.c_w_id=? and c.c_d_id=? and c.c_id between ? and ?",
+      "score": 4.374416196830589,
+      "sql": "SELECT COUNT(*) FROM customer c JOIN orders o ON o.o_w_id=c.c_w_id AND o.o_d_id=c.c_d_id AND o.o_c_id=c.c_id JOIN order_line ol ON ol.ol_w_id=o.o_w_id AND ol.ol_d_id=o.o_d_id AND ol.ol_o_id=o.o_id JOIN stock s ON s.s_w_id=ol.ol_supply_w_id AND s.s_i_id=ol.ol_i_id JOIN item i ON i.i_id=s.s_i_id WHERE c.c_w_id=3 AND c.c_d_id=9 AND c.c_id BETWEEN 1 AND 120",
+      "count": 471,
+      "total_seconds": 3.550043600043864,
+      "rows_seen": 471,
+      "errors": 0
+    },
+    {
+      "signature": "select s_quantity from stock where s_w_id=? and s_i_id=?",
+      "score": 0.05107511587818245,
+      "sql": "SELECT s_quantity FROM stock WHERE s_w_id=2 AND s_i_id=36037",
+      "count": 1292,
+      "total_seconds": 1.9287427299350384,
+      "rows_seen": 1292,
+      "errors": 0
+    },
+    {
+      "signature": "select o_id, o_entry_d from orders where o_w_id=? and o_d_id=? and o_c_id=? order by o_id desc limit ?",
+      "score": 0.02382754495108154,
+      "sql": "SELECT o_id, o_entry_d FROM orders WHERE o_w_id=3 AND o_d_id=9 AND o_c_id=1671 ORDER BY o_id DESC LIMIT 1",
+      "count": 1320,
+      "total_seconds": 2.1427895658562193,
+      "rows_seen": 1320,
+      "errors": 0
+    },
+    {
+      "signature": "select c_balance, c_discount from customer where c_w_id=? and c_d_id=? and c_id=?",
+      "score": 0.009805178288320972,
+      "sql": "SELECT c_balance, c_discount FROM customer WHERE c_w_id=3 AND c_d_id=10 AND c_id=2878",
+      "count": 1303,
+      "total_seconds": 2.001672829828749,
+      "rows_seen": 1303,
+      "errors": 0
+    }
+  ]
+}

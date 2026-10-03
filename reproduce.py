@@ -1,199 +1,58 @@
 #!/usr/bin/env python3
-"""Run and verify every paper-facing HyperDBDiag experiment."""
-
+"""Verify saved results or refit the current model with frozen LLM replay."""
 from __future__ import annotations
 
 import argparse
-import json
-import math
 import os
+from pathlib import Path
 import subprocess
 import sys
-from pathlib import Path
-from typing import Any, Mapping, Sequence
-
 
 ROOT = Path(__file__).resolve().parent
-SRC = ROOT / "src"
-DEFAULT_OUTPUT = ROOT / "reproduced"
 
 
-def _environment() -> dict[str, str]:
-    env = dict(os.environ)
-    for name in tuple(env):
-        if name.startswith("HYPERDBDIAG_LLM_") or name in {
-            "OPENAI_API_KEY",
-            "OPENAI_BASE_URL",
-            "OPENAI_MODEL",
-            "OPENAI_REASONING_EFFORT",
-        }:
-            env.pop(name, None)
-    env.update(
-        {
-            "PYTHONDONTWRITEBYTECODE": "1",
-            "PYTHONHASHSEED": "0",
-            "PYTHONPATH": str(SRC),
-        }
-    )
-    return env
-
-
-def _run(arguments: Sequence[str], env: Mapping[str, str]) -> None:
-    command = [sys.executable, *arguments]
-    print("$", " ".join(command), flush=True)
-    subprocess.run(command, cwd=ROOT, env=dict(env), check=True)
-
-
-def _load(path: Path) -> Mapping[str, Any]:
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-def _check(name: str, actual: float, expected: float) -> None:
-    if not math.isclose(float(actual), float(expected), rel_tol=0.0, abs_tol=1e-12):
-        raise AssertionError(f"{name}: expected {expected}, received {actual}")
-
-
-def _verify(output: Path) -> Mapping[str, Any]:
-    ablation = _load(output / "ablation.json")
-    ablation_methods = next(iter(ablation["datasets"].values()))["methods"]
-    expected_ablation = {
-        "ordinary_binary_graph": (0.28484848484848485, 0.640076886112446),
-        "hypergraph_without_epdg": (0.40606060606060607, 0.630820931349016),
-        "hypergraph": (0.5757575757575758, 0.7417345471969333),
-        "hypergraph_local_judge": (0.5757575757575758, 0.7417345471969333),
-    }
-    for method, (exact, f1) in expected_ablation.items():
-        overall = ablation_methods[method]["overall"]
-        _check(f"ablation/{method}/exact", overall["exact_set_accuracy"], exact)
-        _check(f"ablation/{method}/f1", overall["component_f1"], f1)
-    for method in ("hypergraph_llm", "hyperdbdiag"):
-        status = ablation_methods[method]["stage"]["estimand_status"]
-        if status != "not_run_missing_explicit_llm_configuration":
-            raise AssertionError(f"deterministic {method} unexpectedly used an LLM")
-
-    main = _load(output / "main_registered_llm.json")["methods"]
-    expected_main = {
-        "opdiag": (0.4257575757575758, 0.6539196940726577),
-        "dbaiops": (0.3333333333333333, 0.6067522586780789),
-        "hyperdbdiag": (0.6545454545454545, 0.7927237912876974),
-    }
-    for method, (exact, f1) in expected_main.items():
-        overall = main[method]["overall"]
-        _check(f"main/{method}/exact", overall["exact_set_accuracy"], exact)
-        _check(f"main/{method}/f1", overall["component_f1"], f1)
-
-    operator = _load(output / "operator.json")["methods"]
-    opdiag = operator["opdiag_dbmags_reproduction"]["metrics"]
-    hyperdbdiag = operator["hyperdbdiag"]["metrics"]
-    _check("operator/opdiag/sql", opdiag["root_sql_pairs"]["hit_at_1"], 0.5086805555555556)
-    _check("operator/opdiag/operator", opdiag["root_operator_pairs"]["hit_at_1"], 0.75)
-    _check("operator/hyperdbdiag/sql", hyperdbdiag["root_sql_pairs"]["hit_at_1"], 0.9375)
-    _check(
-        "operator/hyperdbdiag/operator",
-        hyperdbdiag["root_operator_pairs"]["hit_at_1"],
-        0.9166666666666666,
-    )
-
-    structure = _load(output / "structure.json")["aggregate"]
-    _check("structure/hypergraph_relations", structure["mean_hypergraph_incidence_count"], 3783.1666666666665)
-    _check("structure/pairwise_relations", structure["mean_equivalent_pairwise_occurrence_count"], 18825.833333333332)
-    _check("structure/relation_reduction", structure["relation_item_reduction"], 0.7990438670266921)
-
-    return {
-        "status": "verified",
-        "main_exact": {
-            method: values["overall"]["exact_set_accuracy"]
-            for method, values in main.items()
-        },
-        "fine_grained_hit_at_1": {
-            "opdiag_sql": opdiag["root_sql_pairs"]["hit_at_1"],
-            "opdiag_operator": opdiag["root_operator_pairs"]["hit_at_1"],
-            "hyperdbdiag_sql": hyperdbdiag["root_sql_pairs"]["hit_at_1"],
-            "hyperdbdiag_operator": hyperdbdiag["root_operator_pairs"]["hit_at_1"],
-        },
-        "structure": structure,
-    }
+def validate_output(output: Path) -> Path:
+    """Require a fresh directory outside the recorded inputs and source tree."""
+    output = output.resolve()
+    protected = [ROOT / name for name in
+                 ('runs', 'data', 'src', 'scripts', 'tests', 'docs', 'archives', '.git')]
+    if (output == ROOT or output in ROOT.parents or
+            any(path == output or path in output.parents for path in protected)):
+        raise ValueError('Use a new output directory outside frozen runs, data, and source.')
+    if output.exists() and (not output.is_dir() or any(output.iterdir())):
+        raise ValueError('Output directory is not empty; choose a new directory.')
+    return output
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
-    parser.add_argument("--skip-tests", action="store_true")
+    parser.add_argument('--output', type=Path, help='new output directory, or existing main run to verify')
+    parser.add_argument('--verify-existing', action='store_true', help='read-only checks; no refitting')
+    parser.add_argument('--skip-tests', action='store_true')
     args = parser.parse_args()
-    output = args.output.resolve()
-    output.mkdir(parents=True, exist_ok=True)
-    env = _environment()
+    default = 'runs/hyperdbdiag-unified-20260930' if args.verify_existing else 'reproduced/current'
+    output = (ROOT / (args.output or default)).resolve()
+    if not args.verify_existing:
+        output = validate_output(output)
+    env = dict(os.environ)
+    for name in tuple(env):
+        if name.startswith('HYPERDBDIAG_LLM_') or name in {
+                'OPENAI_API_KEY', 'OPENAI_BASE_URL', 'OPENAI_MODEL', 'OPENAI_REASONING_EFFORT'}:
+            env.pop(name, None)
+    env.update(PYTHONDONTWRITEBYTECODE='1', PYTHONHASHSEED='0', PYTHONPATH=str(ROOT / 'src'))
+
+    def run(*arguments):
+        command = [sys.executable, *map(str, arguments)]
+        print('$', ' '.join(command), flush=True)
+        subprocess.run(command, cwd=ROOT, env=env, check=True)
 
     if not args.skip_tests:
-        _run(["-m", "unittest", "discover", "-s", "tests", "-v"], env)
-    _run(
-        [
-            "src/hyperdbdiag_ablation.py",
-            "--seed",
-            "20260802",
-            "--output",
-            str(output / "ablation.json"),
-        ],
-        env,
-    )
-    _run(
-        [
-            "src/dbmags_experiment.py",
-            "--seed",
-            "20260802",
-            "--canonical-method",
-            "epdg_hypergraph",
-            "--ablation-report",
-            str(output / "ablation.json"),
-            "--output",
-            str(output / "main_deterministic.json"),
-        ],
-        env,
-    )
-    _run(
-        [
-            "src/dbmags_experiment.py",
-            "--seed",
-            "20260802",
-            "--canonical-method",
-            "hyperdbdiag",
-            "--ablation-report",
-            "runs/dbmags-ablation/full_report_llm_xhigh.json",
-            "--output",
-            str(output / "main_registered_llm.json"),
-        ],
-        env,
-    )
-    _run(
-        [
-            "src/operator_bound_experiment.py",
-            "--dataset-root",
-            "data/dbmags_operator_bound_v4",
-            "--audit-only",
-        ],
-        env,
-    )
-    _run(
-        [
-            "src/operator_bound_experiment.py",
-            "--dataset-root",
-            "data/dbmags_operator_bound_v4",
-            "--output",
-            str(output / "operator.json"),
-        ],
-        env,
-    )
-    _run(
-        [
-            "src/structure_efficiency_experiment.py",
-            "--output",
-            str(output / "structure.json"),
-        ],
-        env,
-    )
-    print(json.dumps(_verify(output), indent=2, sort_keys=True))
+        run('-m', 'unittest', 'discover', '-s', 'tests', '-v')
+    if not args.verify_existing:
+        run('src/ecsa_experiment.py', '--output', output)
+    run('scripts/verify_artifact.py', '--main', output)
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     raise SystemExit(main())

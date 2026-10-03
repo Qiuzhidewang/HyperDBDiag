@@ -1,0 +1,114 @@
+{
+  "baseline": {
+    "select c_balance, c_discount from customer where c_w_id=? and c_d_id=? and c_id=?": {
+      "sql": "SELECT c_balance, c_discount FROM customer WHERE c_w_id=4 AND c_d_id=10 AND c_id=93",
+      "count": 1068,
+      "total_seconds": 1.769690708060807,
+      "rows_seen": 1068,
+      "errors": 0
+    },
+    "select count(*) from order_line where ol_w_id=? and ol_d_id=? and ol_o_id between ? and ?": {
+      "sql": "SELECT COUNT(*) FROM order_line WHERE ol_w_id=1 AND ol_d_id=9 AND ol_o_id BETWEEN 1268 AND 1278",
+      "count": 1036,
+      "total_seconds": 1.8029350810247706,
+      "rows_seen": 1036,
+      "errors": 0
+    },
+    "select o_id, o_entry_d from orders where o_w_id=? and o_d_id=? and o_c_id=? order by o_id desc limit ?": {
+      "sql": "SELECT o_id, o_entry_d FROM orders WHERE o_w_id=1 AND o_d_id=3 AND o_c_id=1271 ORDER BY o_id DESC LIMIT 1",
+      "count": 1039,
+      "total_seconds": 1.8341942851620843,
+      "rows_seen": 1039,
+      "errors": 0
+    },
+    "select s_quantity from stock where s_w_id=? and s_i_id=?": {
+      "sql": "SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=46225",
+      "count": 1023,
+      "total_seconds": 1.6516049859128543,
+      "rows_seen": 1023,
+      "errors": 0
+    }
+  },
+  "anomaly": {
+    "select c_balance, c_discount from customer where c_w_id=? and c_d_id=? and c_id=?": {
+      "sql": "SELECT c_balance, c_discount FROM customer WHERE c_w_id=3 AND c_d_id=6 AND c_id=162",
+      "count": 1295,
+      "total_seconds": 1.5996033469346003,
+      "rows_seen": 1295,
+      "errors": 0
+    },
+    "select count(*) from order_line where ol_w_id=? and ol_d_id=? and ol_o_id between ? and ?": {
+      "sql": "SELECT COUNT(*) FROM order_line WHERE ol_w_id=4 AND ol_d_id=7 AND ol_o_id BETWEEN 1817 AND 1827",
+      "count": 1319,
+      "total_seconds": 1.7342318430237356,
+      "rows_seen": 1319,
+      "errors": 0
+    },
+    "select o_carrier_id, count(*), sum(o_ol_cnt) from orders group by o_carrier_id": {
+      "sql": "SELECT o_carrier_id, COUNT(*), SUM(o_ol_cnt) FROM orders GROUP BY o_carrier_id",
+      "count": 370,
+      "total_seconds": 9.180132704968855,
+      "rows_seen": 4440,
+      "errors": 0
+    },
+    "select o_id, o_entry_d from orders where o_w_id=? and o_d_id=? and o_c_id=? order by o_id desc limit ?": {
+      "sql": "SELECT o_id, o_entry_d FROM orders WHERE o_w_id=4 AND o_d_id=5 AND o_c_id=1488 ORDER BY o_id DESC LIMIT 1",
+      "count": 1275,
+      "total_seconds": 1.6026649001141777,
+      "rows_seen": 1275,
+      "errors": 0
+    },
+    "select s_quantity from stock where s_w_id=? and s_i_id=?": {
+      "sql": "SELECT s_quantity FROM stock WHERE s_w_id=2 AND s_i_id=27606",
+      "count": 1352,
+      "total_seconds": 1.6374847948682145,
+      "rows_seen": 1352,
+      "errors": 0
+    },
+    "update orders set o_carrier_id=o_carrier_id where o_w_id=? and o_d_id=? and o_id=?": {
+      "sql": "UPDATE orders SET o_carrier_id=o_carrier_id WHERE o_w_id=4 AND o_d_id=2 AND o_id=1589",
+      "count": 48,
+      "total_seconds": 29.535661208014062,
+      "rows_seen": 0,
+      "errors": 0
+    }
+  },
+  "selected_anomalous": [
+    {
+      "signature": "update orders set o_carrier_id=o_carrier_id where o_w_id=? and o_d_id=? and o_id=?",
+      "score": 6.027871262058087,
+      "sql": "UPDATE orders SET o_carrier_id=o_carrier_id WHERE o_w_id=4 AND o_d_id=2 AND o_id=1589",
+      "count": 48,
+      "total_seconds": 29.535661208014062,
+      "rows_seen": 0,
+      "errors": 0
+    },
+    {
+      "signature": "select o_carrier_id, count(*), sum(o_ol_cnt) from orders group by o_carrier_id",
+      "score": 5.608154919811151,
+      "sql": "SELECT o_carrier_id, COUNT(*), SUM(o_ol_cnt) FROM orders GROUP BY o_carrier_id",
+      "count": 370,
+      "total_seconds": 9.180132704968855,
+      "rows_seen": 4440,
+      "errors": 0
+    },
+    {
+      "signature": "select s_quantity from stock where s_w_id=? and s_i_id=?",
+      "score": 0.17035298108538108,
+      "sql": "SELECT s_quantity FROM stock WHERE s_w_id=2 AND s_i_id=27606",
+      "count": 1352,
+      "total_seconds": 1.6374847948682145,
+      "rows_seen": 1352,
+      "errors": 0
+    },
+    {
+      "signature": "select count(*) from order_line where ol_w_id=? and ol_d_id=? and ol_o_id between ? and ?",
+      "score": 0.06940793414956993,
+      "sql": "SELECT COUNT(*) FROM order_line WHERE ol_w_id=4 AND ol_d_id=7 AND ol_o_id BETWEEN 1817 AND 1827",
+      "count": 1319,
+      "total_seconds": 1.7342318430237356,
+      "rows_seen": 1319,
+      "errors": 0
+    }
+  ]
+}

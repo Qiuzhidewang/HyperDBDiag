@@ -23,8 +23,9 @@ from opdiag_baseline import OpDiagRootCauseClassifier
 
 
 DEFAULT_DBMAGS_ROOT = Path("data/dbmags_interaction_v11_frozen")
-DEFAULT_ABLATION_REPORT = Path("runs/dbmags-ablation/full_report_llm_xhigh.json")
-DEFAULT_OUTPUT = Path("runs/dbmags-main-comparison/full_report_llm_xhigh.json")
+DEFAULT_ABLATION_REPORT = Path("runs/hyperdbdiag-unified-20260930/ablation.json")
+DEFAULT_OUTPUT = Path("runs/hyperdbdiag-unified-20260930/main_comparison.json")
+REGISTERED_BASELINE_REPORT = Path("runs/dbmags-main-comparison/full_report_llm_xhigh.json")
 DEFAULT_SEED = 20260802
 OPDIAG_SEED = 42
 OCCURRENCE_PATTERN_BY_CONDITION = {
@@ -243,6 +244,55 @@ def _canonical_method(
     return method, dataset
 
 
+def compare_saved_predictions(report, baseline_report, frozen, seed=DEFAULT_SEED,
+                              bootstrap_repetitions=5000):
+    """Recompute all summaries from aligned held-out predictions, without refitting baselines."""
+    import copy
+    canonical, dataset = _canonical_method(report, seed, "hyperdbdiag")
+    if int(baseline_report['protocol']['seed']) != seed:
+        raise ValueError('baseline report seed differs')
+    if baseline_report['protocol']['feature_schema_sha256'] != FEATURE_SCHEMA_SHA256:
+        raise ValueError('baseline feature schema differs')
+    expected_folds = {f'leave_replicate_index_out:{i}' for i in range(1, frozen.replicate_count + 1)}
+    if {r['outer_split'] for r in dataset['folds']} != expected_folds:
+        raise ValueError('canonical fold inventory differs')
+    if {r['outer_split'] for r in baseline_report['folds']} != expected_folds:
+        raise ValueError('baseline fold inventory differs')
+    for fold in baseline_report['folds']:
+        if (fold['train_count'], fold['evaluation_count'], fold['train_evaluation_id_overlap']) != (550, 110, []):
+            raise ValueError('baseline split contract differs')
+    methods = {}
+    for name in ('opdiag', 'dbaiops', 'hyperdbdiag'):
+        source = canonical if name == 'hyperdbdiag' else baseline_report['methods'][name]
+        saved = source['results']
+        by_id = {r['case_id']: r for r in saved}
+        if len(by_id) != len(saved) or set(by_id) != set(frozen.case_ids):
+            raise ValueError(f'{name}: duplicate or missing case predictions')
+        for case_id, row in by_id.items():
+            if set(row['expected_labels']) != set(frozen.labels_by_case[case_id]):
+                raise ValueError(f'{name}: evaluation labels differ')
+        rows = _case_rows(frozen, frozen.case_ids,
+                          [by_id[c]['predicted_labels'] for c in frozen.case_ids])
+        metadata = ({'display_name': 'HyperDBDiag', 'pipeline': canonical['stage'],
+                     'uses_llm': True, 'uses_epdg_evidence': True}
+                    if name == 'hyperdbdiag' else source['method_metadata'])
+        methods[name] = _summary(rows, frozen.labels, metadata)
+    protocol = copy.deepcopy(baseline_report['protocol'])
+    protocol.update(name='hyperdbdiag_ecsa_v2_main_comparison',
+                    canonical_protocol=report['protocol'],
+                    baseline_policy='reuse unchanged registered held-out predictions; recompute all summaries',
+                    inference_policy='calibrated conservative local readout, full-coverage pool arbitration, local fallback')
+    folds = copy.deepcopy(baseline_report['folds'])
+    for fold in folds:
+        fold['canonical_method'] = canonical['stage']
+    return {'protocol': protocol, 'folds': folds, 'methods': methods,
+            'paired_comparisons': {
+                f'hyperdbdiag_minus_{name}': _paired_bootstrap(
+                    methods[name]['results'], methods['hyperdbdiag']['results'], seed + offset,
+                    bootstrap_repetitions)
+                for name, offset in [('opdiag', 11), ('dbaiops', 12)]}}
+
+
 def run(
     dbmags_root: Path = DEFAULT_DBMAGS_ROOT,
     ablation_report_path: Path = DEFAULT_ABLATION_REPORT,
@@ -257,6 +307,13 @@ def run(
         raise ValueError("bootstrap repetitions must be at least 100")
     frozen = load_frozen_metric_dataset(dbmags_root)
     report = json.loads(ablation_report_path.read_text(encoding="utf-8"))
+    if canonical_method == 'hyperdbdiag' and report['protocol']['name'] == 'hyperdbdiag_ecsa_v2':
+        from ecsa_experiment import verify_frozen_inputs
+        verify_frozen_inputs()
+        baselines = json.loads(REGISTERED_BASELINE_REPORT.read_text())
+        output = compare_saved_predictions(report, baselines, frozen, seed, bootstrap_repetitions)
+        _write_json(output_path, output)
+        return output
     specification = CANONICAL_METHODS[canonical_method]
     canonical, canonical_dataset = _canonical_method(
         report, seed, specification["ablation_method"]

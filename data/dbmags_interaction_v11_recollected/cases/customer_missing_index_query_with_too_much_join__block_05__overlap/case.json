@@ -1,0 +1,75 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "customer_missing_index_query_with_too_much_join__block_05__overlap",
+  "collected_at": "2026-09-06T03:10:39.985619+00:00",
+  "collection": {
+    "table": "customer",
+    "replicate_index": 5,
+    "condition": "overlap",
+    "schedule": [
+      {
+        "root": "missing_index",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      },
+      {
+        "root": "query_with_too_much_join",
+        "offset_seconds": 15.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "missing_index",
+      "query_with_too_much_join"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "missing_index",
+      "execution_count": 466,
+      "connection_ids": [
+        21441
+      ],
+      "lock_wait_observed": false,
+      "errors": []
+    },
+    {
+      "root": "query_with_too_much_join",
+      "execution_count": 516,
+      "connection_ids": [
+        21442
+      ],
+      "lock_wait_observed": false,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "missing_index": true,
+      "query_with_too_much_join": true
+    },
+    "observed_atoms": [
+      "broad_filtered_scan",
+      "filtered_relation_read",
+      "multi_table_join",
+      "range_or_comparison_predicate"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

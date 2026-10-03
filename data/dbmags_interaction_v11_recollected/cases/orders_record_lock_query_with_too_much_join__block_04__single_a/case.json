@@ -1,0 +1,105 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "orders_record_lock_query_with_too_much_join__block_04__single_a",
+  "collected_at": "2026-09-06T01:50:46.286710+00:00",
+  "collection": {
+    "table": "orders",
+    "replicate_index": 4,
+    "condition": "single_a",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        19479,
+        19483,
+        19485,
+        19486,
+        19488,
+        19489,
+        19491,
+        19492,
+        19494,
+        19495,
+        19497,
+        19498,
+        19500,
+        19501,
+        19503,
+        19504,
+        19506,
+        19507,
+        19509,
+        19510,
+        19512,
+        19513,
+        19515,
+        19516,
+        19518,
+        19519,
+        19521,
+        19522,
+        19524,
+        19525,
+        19527,
+        19528,
+        19530,
+        19531,
+        19533,
+        19534,
+        19536,
+        19537,
+        19539,
+        19540,
+        19542,
+        19543,
+        19545,
+        19546,
+        19548,
+        19549,
+        19551,
+        19552
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

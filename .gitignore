@@ -9,4 +9,12 @@ __pycache__/
 .env.*
 !.env.example
 *.log
+# Frozen run logs are part of the recorded input hashes.
+!runs/**/*.log
 reproduced/
+
+# Rebuildable model caches and local credentials
+fit_cache/
+*.pickle
+*.pem
+*.key

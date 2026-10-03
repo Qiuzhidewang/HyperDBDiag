@@ -1,0 +1,76 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "customer_missing_index_group_by__block_02__overlap",
+  "collected_at": "2026-09-05T14:38:44.115626+00:00",
+  "collection": {
+    "table": "customer",
+    "replicate_index": 2,
+    "condition": "overlap",
+    "schedule": [
+      {
+        "root": "missing_index",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      },
+      {
+        "root": "group_by",
+        "offset_seconds": 15.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "group_by",
+      "missing_index"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "missing_index",
+      "execution_count": 474,
+      "connection_ids": [
+        6038
+      ],
+      "lock_wait_observed": false,
+      "errors": []
+    },
+    {
+      "root": "group_by",
+      "execution_count": 332,
+      "connection_ids": [
+        6042
+      ],
+      "lock_wait_observed": false,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "group_by": true,
+      "missing_index": true
+    },
+    "observed_atoms": [
+      "aggregation_clause",
+      "broad_filtered_scan",
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "unrestricted_relation_read"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

@@ -1,0 +1,122 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "orders_record_lock_missing_index__block_03__a_then_b",
+  "collected_at": "2026-09-05T22:23:57.977351+00:00",
+  "collection": {
+    "table": "orders",
+    "replicate_index": 3,
+    "condition": "a_then_b",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      },
+      {
+        "root": "missing_index",
+        "offset_seconds": 30.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "missing_index",
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        15854,
+        15856,
+        15858,
+        15859,
+        15861,
+        15862,
+        15864,
+        15865,
+        15867,
+        15868,
+        15870,
+        15871,
+        15873,
+        15874,
+        15876,
+        15877,
+        15879,
+        15880,
+        15882,
+        15883,
+        15885,
+        15886,
+        15888,
+        15889,
+        15891,
+        15892,
+        15894,
+        15895,
+        15897,
+        15898,
+        15900,
+        15901,
+        15903,
+        15904,
+        15906,
+        15907,
+        15909,
+        15910,
+        15912,
+        15913,
+        15915,
+        15916,
+        15918,
+        15919,
+        15921,
+        15922,
+        15924,
+        15925
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    },
+    {
+      "root": "missing_index",
+      "execution_count": 417,
+      "connection_ids": [
+        15927
+      ],
+      "lock_wait_observed": false,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "missing_index": true,
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "broad_filtered_scan",
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

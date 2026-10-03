@@ -1,0 +1,105 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "customer_record_lock_implicit_conversion__block_04__single_a",
+  "collected_at": "2026-09-05T23:29:46.124073+00:00",
+  "collection": {
+    "table": "customer",
+    "replicate_index": 4,
+    "condition": "single_a",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        16524,
+        16528,
+        16530,
+        16531,
+        16533,
+        16534,
+        16536,
+        16537,
+        16539,
+        16540,
+        16542,
+        16543,
+        16545,
+        16546,
+        16548,
+        16549,
+        16551,
+        16552,
+        16554,
+        16555,
+        16557,
+        16558,
+        16560,
+        16561,
+        16563,
+        16564,
+        16566,
+        16567,
+        16569,
+        16570,
+        16572,
+        16573,
+        16575,
+        16576,
+        16578,
+        16579,
+        16581,
+        16582,
+        16584,
+        16585,
+        16587,
+        16588,
+        16590,
+        16591,
+        16593,
+        16594,
+        16596,
+        16597
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

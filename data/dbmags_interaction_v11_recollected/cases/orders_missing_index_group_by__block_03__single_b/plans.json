@@ -1,0 +1,169 @@
+{
+  "select o_carrier_id, count(*), sum(o_ol_cnt) from orders group by o_carrier_id": {
+    "sql": "SELECT o_carrier_id, COUNT(*), SUM(o_ol_cnt) FROM orders GROUP BY o_carrier_id",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "12118.15"
+        },
+        "grouping_operation": {
+          "using_temporary_table": true,
+          "using_filesort": false,
+          "table": {
+            "table_name": "orders",
+            "access_type": "ALL",
+            "rows_examined_per_scan": 119979,
+            "rows_produced_per_join": 119979,
+            "filtered": "100.00",
+            "cost_info": {
+              "read_cost": "120.25",
+              "eval_cost": "11997.90",
+              "prefix_cost": "12118.15",
+              "data_read_per_join": "4M"
+            },
+            "used_columns": [
+              "o_w_id",
+              "o_d_id",
+              "o_id",
+              "o_carrier_id",
+              "o_ol_cnt"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "select c_balance, c_discount from customer where c_w_id=? and c_d_id=? and c_id=?": {
+    "sql": "SELECT c_balance, c_discount FROM customer WHERE c_w_id=2 AND c_d_id=5 AND c_id=2312",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "1.00"
+        },
+        "table": {
+          "table_name": "customer",
+          "access_type": "const",
+          "possible_keys": [
+            "PRIMARY",
+            "idx_customer_name"
+          ],
+          "key": "PRIMARY",
+          "used_key_parts": [
+            "c_w_id",
+            "c_d_id",
+            "c_id"
+          ],
+          "key_length": "12",
+          "ref": [
+            "const",
+            "const",
+            "const"
+          ],
+          "rows_examined_per_scan": 1,
+          "rows_produced_per_join": 1,
+          "filtered": "100.00",
+          "cost_info": {
+            "read_cost": "0.00",
+            "eval_cost": "0.10",
+            "prefix_cost": "0.00",
+            "data_read_per_join": "2K"
+          },
+          "used_columns": [
+            "c_w_id",
+            "c_d_id",
+            "c_id",
+            "c_discount",
+            "c_balance"
+          ]
+        }
+      }
+    }
+  },
+  "select s_quantity from stock where s_w_id=? and s_i_id=?": {
+    "sql": "SELECT s_quantity FROM stock WHERE s_w_id=1 AND s_i_id=72308",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "1.00"
+        },
+        "table": {
+          "table_name": "stock",
+          "access_type": "const",
+          "possible_keys": [
+            "PRIMARY",
+            "s_i_id"
+          ],
+          "key": "PRIMARY",
+          "used_key_parts": [
+            "s_w_id",
+            "s_i_id"
+          ],
+          "key_length": "8",
+          "ref": [
+            "const",
+            "const"
+          ],
+          "rows_examined_per_scan": 1,
+          "rows_produced_per_join": 1,
+          "filtered": "100.00",
+          "cost_info": {
+            "read_cost": "0.00",
+            "eval_cost": "0.10",
+            "prefix_cost": "0.00",
+            "data_read_per_join": "1K"
+          },
+          "used_columns": [
+            "s_w_id",
+            "s_i_id",
+            "s_quantity"
+          ]
+        }
+      }
+    }
+  },
+  "select count(*) from order_line where ol_w_id=? and ol_d_id=? and ol_o_id between ? and ?": {
+    "sql": "SELECT COUNT(*) FROM order_line WHERE ol_w_id=1 AND ol_d_id=8 AND ol_o_id BETWEEN 1007 AND 1017",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "21.41"
+        },
+        "table": {
+          "table_name": "order_line",
+          "access_type": "range",
+          "possible_keys": [
+            "PRIMARY",
+            "ol_supply_w_id"
+          ],
+          "key": "PRIMARY",
+          "used_key_parts": [
+            "ol_w_id",
+            "ol_d_id",
+            "ol_o_id"
+          ],
+          "key_length": "12",
+          "rows_examined_per_scan": 103,
+          "rows_produced_per_join": 103,
+          "filtered": "100.00",
+          "using_index": true,
+          "cost_info": {
+            "read_cost": "11.11",
+            "eval_cost": "10.30",
+            "prefix_cost": "21.41",
+            "data_read_per_join": "13K"
+          },
+          "used_columns": [
+            "ol_w_id",
+            "ol_d_id",
+            "ol_o_id"
+          ],
+          "attached_condition": "((`tpcc10_test`.`order_line`.`ol_d_id` = 8) and (`tpcc10_test`.`order_line`.`ol_w_id` = 1) and (`tpcc10_test`.`order_line`.`ol_o_id` between 1007 and 1017))"
+        }
+      }
+    }
+  }
+}

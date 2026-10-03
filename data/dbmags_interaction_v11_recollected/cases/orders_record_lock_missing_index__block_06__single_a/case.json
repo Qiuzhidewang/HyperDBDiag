@@ -1,0 +1,105 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "orders_record_lock_missing_index__block_06__single_a",
+  "collected_at": "2026-09-06T11:14:10.592484+00:00",
+  "collection": {
+    "table": "orders",
+    "replicate_index": 6,
+    "condition": "single_a",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        31371,
+        31373,
+        31375,
+        31376,
+        31378,
+        31379,
+        31381,
+        31382,
+        31384,
+        31385,
+        31387,
+        31388,
+        31390,
+        31391,
+        31393,
+        31394,
+        31396,
+        31397,
+        31399,
+        31400,
+        31402,
+        31403,
+        31405,
+        31406,
+        31408,
+        31409,
+        31411,
+        31412,
+        31414,
+        31415,
+        31417,
+        31418,
+        31420,
+        31421,
+        31423,
+        31424,
+        31426,
+        31427,
+        31429,
+        31430,
+        31432,
+        31433,
+        31435,
+        31436,
+        31438,
+        31439,
+        31441,
+        31442
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

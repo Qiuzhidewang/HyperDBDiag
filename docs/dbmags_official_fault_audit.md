@@ -73,6 +73,6 @@ and `Fault_Session` commits after five seconds without a `finally` cleanup
 (`single_anomaly.py:287-293`). It is a source of fault definitions, not a
 safe portable collector.
 
-The removed local compatibility collector changed several upstream mechanisms
-and is not part of the active artifact. Only the frozen v10 cohort and the
-upstream source audit remain.
+This audit records the collection environment at the date above. The current
+artifact uses the subsequent v11 recollected and frozen cohorts; see the
+[experiment protocol](experiment_protocol.md) for the active data and splits.

@@ -1,0 +1,105 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "customer_record_lock_query_with_too_much_join__block_03__single_a",
+  "collected_at": "2026-09-05T19:23:00.543870+00:00",
+  "collection": {
+    "table": "customer",
+    "replicate_index": 3,
+    "condition": "single_a",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        11697,
+        11700,
+        11702,
+        11703,
+        11705,
+        11706,
+        11708,
+        11709,
+        11711,
+        11712,
+        11714,
+        11715,
+        11717,
+        11718,
+        11720,
+        11721,
+        11723,
+        11724,
+        11726,
+        11727,
+        11729,
+        11730,
+        11732,
+        11733,
+        11735,
+        11736,
+        11738,
+        11739,
+        11741,
+        11742,
+        11744,
+        11745,
+        11747,
+        11748,
+        11750,
+        11751,
+        11753,
+        11754,
+        11756,
+        11757,
+        11759,
+        11760,
+        11762,
+        11763,
+        11765,
+        11766,
+        11768,
+        11769
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

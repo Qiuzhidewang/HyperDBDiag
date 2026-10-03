@@ -1,0 +1,50 @@
+{
+  "name": "ecsa_isolation_v1",
+  "seed": 20260802,
+  "budget_per_fold_per_arm": 12,
+  "dataset": "data/dbmags_interaction_v11_frozen",
+  "folds": "same six leave-replicate-index-out folds as historical v11",
+  "model": "gpt-5.5",
+  "reasoning_effort": "xhigh",
+  "workers": 2,
+  "selected_cases": "lowest upstream top-1/top-2 probability margin, ties by original row order; same cases in both arms",
+  "local_only_readout": "select unchanged local-rule challenger if nominated, otherwise upstream top-1",
+  "llm_full_pool": "all K upstream candidates with identical candidate-card construction",
+  "ecsa_filtered_pool": "historical local fallback plus at most one evidence-supported challenger",
+  "common_fallback": "upstream top-1 on abstention, validation/transport failure, or no scheduled call",
+  "calibration_gate": "disabled identically in both supplementary arms; no arm-specific OOF enable/disable gate",
+  "local_readout_scope": "local-only adapter on all 660 cases; full ECSA retains historical upstream fallback",
+  "retained_behavior_on_no_challenger": "singleton upstream fallback; still same scheduled API call opportunity",
+  "scope": "supplementary controlled budgeted experiment; not a replacement for historical calibrated production run",
+  "no_test_label_tuning": true,
+  "raw_sql_identifiers_or_labels_sent": false,
+  "instructions_sha256": "5b927a76462dce07e6ecd268c4961224a5d7becb8ccdab71c30ecefff0fbfde5",
+  "schema_sha256": "b4d77192188e85830cfd5412061cdc475aad3b1d9c557fbe02a620c25eaafb66",
+  "mechanism_cards": {
+    "schema_version": "hyperdbdiag-root-mechanism-cards-v5",
+    "sha256": "41cd87f48a0074c84b0278e3c76689efc661537aa696e001527ab4dbe6e2c573",
+    "card_count": 10,
+    "source": "data/root_mechanism_cards.json"
+  },
+  "code_sha256": {
+    "/Users/chuan/RCA/hyperdbdiag-artifact/src/ecsa_isolation_experiment.py": "cc920aa32bd112a5a92085345637d0120a3152b5cc050969c7df024111a7c77a",
+    "src/hyperdbdiag_ablation.py": "20d7908c788f2d236b9cfc110be1133d9e6b080a9a31ddc31b42d259e2f8c96d",
+    "src/structured_evidence_judge.py": "4ad30be66f9906f6fb4f4c5995a4752b25dcde435f76e1069ee2d85a138d30bc",
+    "src/hypergraph_core.py": "1856762a39eb59149aeff243edd7b0c4eaf795e24e9e7bca4b1a4c8ce9686b7c",
+    "src/hyperdbdiag_pipeline.py": "9fbf16f6cd794f635972fccdf1a733e8bbe5ca3c1be0450bb15bf29b84548fa4"
+  },
+  "data_sha256": {
+    "source_audit.json": "ad28f41d04141be81613ba27c97c56cea79577e67e59d98a1ae9bf927bf92807",
+    "fold_manifest.json": "8a9dba37bde2c1429bd1c5ca951715afe46d7108cc49fe13bb1f2b46c0e2dc51",
+    "semantic_evidence.json": "f2e561605bd73649a0a8ba72b27473712962da62b6ae92d78229404e250e4b88",
+    "frozen_inputs.json": "a2759e752a42995b72d8dee12fbb509961b5a3787eebe4fedfbeb68cd76d0dac",
+    "ground_truth.json": "19b075b9d20192f669cfee5be0da3bcd70ba63bdcd8386277be5503250cc15e0",
+    "dataset_manifest.json": "e471baacf5389dd820f111936ff8be3109f05671b57ad4c01bdf12234fa6f125",
+    "provenance_case_map.json": "3134c49e5c4ec97c67a2aa8dd7f244d30ef12c9d09030fbb222b36f3d752df8c"
+  },
+  "historical_report_sha256": "3d322a0d2e628ddfc2aafffab764177755b36161f0a7282b43ff316ba2215d0b",
+  "paper_sha256": {
+    "main.tex": "39cf043b3826f64db28a320fe31f682bf7afb8a2ae571712cdb2838bff3cc0cb",
+    "HyperDBDiag2.docx": "c52d92e7b8f5119bce240f036177f9577719393c8a542891c1d822853ee64ba7"
+  }
+}

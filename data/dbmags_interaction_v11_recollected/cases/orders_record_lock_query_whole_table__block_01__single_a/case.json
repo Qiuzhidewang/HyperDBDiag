@@ -1,0 +1,105 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "orders_record_lock_query_whole_table__block_01__single_a",
+  "collected_at": "2026-09-05T13:30:36.603516+00:00",
+  "collection": {
+    "table": "orders",
+    "replicate_index": 1,
+    "condition": "single_a",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        5000,
+        5002,
+        5004,
+        5005,
+        5007,
+        5008,
+        5010,
+        5011,
+        5013,
+        5014,
+        5016,
+        5017,
+        5019,
+        5020,
+        5022,
+        5023,
+        5025,
+        5026,
+        5028,
+        5029,
+        5031,
+        5032,
+        5034,
+        5035,
+        5037,
+        5038,
+        5040,
+        5041,
+        5043,
+        5044,
+        5046,
+        5047,
+        5049,
+        5050,
+        5052,
+        5053,
+        5055,
+        5056,
+        5058,
+        5059,
+        5061,
+        5062,
+        5064,
+        5065,
+        5067,
+        5068,
+        5070,
+        5071
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

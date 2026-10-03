@@ -1,0 +1,105 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "customer_record_lock_missing_index__block_01__single_a",
+  "collected_at": "2026-09-05T11:33:24.318299+00:00",
+  "collection": {
+    "table": "customer",
+    "replicate_index": 1,
+    "condition": "single_a",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        2763,
+        2768,
+        2770,
+        2771,
+        2773,
+        2774,
+        2776,
+        2777,
+        2779,
+        2780,
+        2782,
+        2783,
+        2785,
+        2786,
+        2788,
+        2789,
+        2791,
+        2792,
+        2794,
+        2795,
+        2797,
+        2798,
+        2800,
+        2801,
+        2803,
+        2804,
+        2806,
+        2807,
+        2809,
+        2810,
+        2812,
+        2813,
+        2815,
+        2816,
+        2818,
+        2819,
+        2821,
+        2822,
+        2824,
+        2825,
+        2827,
+        2828,
+        2830,
+        2831,
+        2833,
+        2834,
+        2836,
+        2837
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

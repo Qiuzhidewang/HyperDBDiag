@@ -1,0 +1,263 @@
+{
+  "name": "hyperdbdiag_one_factor_parameter_sensitivity_v1",
+  "registered_utc": "2026-09-30T04:31:30.126041+00:00",
+  "grids_fixed_before_new_outcomes": true,
+  "seed": 20260802,
+  "grids": {
+    "alpha": [
+      0.0,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0
+    ],
+    "beta": [
+      0.0,
+      0.2,
+      0.4,
+      0.5,
+      0.6,
+      0.8,
+      1.0
+    ],
+    "theta": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5
+    ],
+    "K": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8
+    ]
+  },
+  "configurations": [
+    {
+      "id": "reported",
+      "parameter": "reported",
+      "value": null
+    },
+    {
+      "id": "alpha=0",
+      "parameter": "alpha",
+      "value": 0.0
+    },
+    {
+      "id": "alpha=0.2",
+      "parameter": "alpha",
+      "value": 0.2
+    },
+    {
+      "id": "alpha=0.4",
+      "parameter": "alpha",
+      "value": 0.4
+    },
+    {
+      "id": "alpha=0.6",
+      "parameter": "alpha",
+      "value": 0.6
+    },
+    {
+      "id": "alpha=0.8",
+      "parameter": "alpha",
+      "value": 0.8
+    },
+    {
+      "id": "alpha=1",
+      "parameter": "alpha",
+      "value": 1.0
+    },
+    {
+      "id": "beta=0",
+      "parameter": "beta",
+      "value": 0.0
+    },
+    {
+      "id": "beta=0.2",
+      "parameter": "beta",
+      "value": 0.2
+    },
+    {
+      "id": "beta=0.4",
+      "parameter": "beta",
+      "value": 0.4
+    },
+    {
+      "id": "beta=0.6",
+      "parameter": "beta",
+      "value": 0.6
+    },
+    {
+      "id": "beta=0.8",
+      "parameter": "beta",
+      "value": 0.8
+    },
+    {
+      "id": "beta=1",
+      "parameter": "beta",
+      "value": 1.0
+    },
+    {
+      "id": "theta=0.5",
+      "parameter": "theta",
+      "value": 0.5
+    },
+    {
+      "id": "theta=0.75",
+      "parameter": "theta",
+      "value": 0.75
+    },
+    {
+      "id": "theta=1.25",
+      "parameter": "theta",
+      "value": 1.25
+    },
+    {
+      "id": "theta=1.5",
+      "parameter": "theta",
+      "value": 1.5
+    },
+    {
+      "id": "K=1",
+      "parameter": "K",
+      "value": 1
+    },
+    {
+      "id": "K=2",
+      "parameter": "K",
+      "value": 2
+    },
+    {
+      "id": "K=3",
+      "parameter": "K",
+      "value": 3
+    },
+    {
+      "id": "K=6",
+      "parameter": "K",
+      "value": 6
+    },
+    {
+      "id": "K=8",
+      "parameter": "K",
+      "value": 8
+    }
+  ],
+  "evaluation": "same frozen 660 cases and six replicate folds; 550 train / 110 test",
+  "estimand": "one-factor perturbation around each fold of the reported trained configuration",
+  "other_parameters": "retain each fold baseline alpha/beta/theta/K and trained local thresholds; no retuning after a perturbation",
+  "theta_training": "rebuild training-only incidence, cross-fitted features and both classifiers; retain baseline fusion weights and K",
+  "alpha_beta_training": "reuse exactly the same trained branch probabilities; change only the named fusion coefficient",
+  "K_definition": "number of upstream candidate root sets, before local filtering; not number of roots",
+  "reference_configuration": "training-selected alpha and beta, theta=1, training-selected K; exact per-case match to current main experiment required",
+  "LLM": {
+    "model": "gpt-5.5",
+    "reasoning_effort": "xhigh",
+    "instructions_sha256": "5b927a76462dce07e6ecd268c4961224a5d7becb8ccdab71c30ecefff0fbfde5",
+    "schema_sha256": "b4d77192188e85830cfd5412061cdc475aad3b1d9c557fbe02a620c25eaafb66",
+    "all_non_singleton_inputs": "exact previous primary input reuse or one new primary inference; no repeat substitution",
+    "singletons": "analytical final label only: valid selection and abstention/local fallback yield the same sole candidate; no invented LLM response or usage",
+    "fallback": "same calibrated local prediction as complete HyperDBDiag",
+    "new_request_order": "fixed seeded shuffle; exact input deduplication across configurations",
+    "workers": 8,
+    "application_attempts": 1
+  },
+  "metrics": [
+    "complete-method Exact and micro component F1",
+    "upstream/local Exact and F1",
+    "candidate-set coverage before/after filtering",
+    "mean candidate width",
+    "fold scores and paired correct/incorrect changes from reported configuration"
+  ],
+  "scope": "parameter sensitivity on existing known scenarios; not unseen-scenario or data-noise robustness",
+  "script_sha256": "ceee9badba05f67c222e240a2409102ba4e8afb175fd788cf5cfb2b667960b32",
+  "protected_sha256": {
+    "main.tex": "714cddf288997b3920fb9336754c13dcc0794205266a0330f0351d191203895e",
+    "HyperDBDiag2.docx": "16419fdc2fd30c842341eb41e25fa03623242ee88aeb73c0db2847abb02c4625",
+    "build/compile-input/main.tex": "714cddf288997b3920fb9336754c13dcc0794205266a0330f0351d191203895e",
+    "build/compiled-latest/main.pdf": "dd6fab6dcd38c0bd9e38398092ddb626afda2e2399e3f199fa153e9d5212d9dd",
+    "src/dbmags_experiment.py": "e17b98cd8a168e2a90d9c6539406f10b29f9a778107daa2ad1dd426162d5685b",
+    "src/dbmags_recollection.py": "300570df9dcb444ab08001115c257cd96adfca6d44e0b777628392d5e32dd3fb",
+    "src/structured_evidence_judge.py": "4ad30be66f9906f6fb4f4c5995a4752b25dcde435f76e1069ee2d85a138d30bc",
+    "src/structure_efficiency_experiment.py": "0bf6f51cc5b4b79f144e9e94ae449096a24b11724b17a8a8dcca1d4aca572edf",
+    "src/sql_semantic_evidence.py": "4fcc0028aad39e6c8724edf082835cc9d2d025c9456ecf261ea27285ebb4f564",
+    "src/hypergraph_core.py": "1856762a39eb59149aeff243edd7b0c4eaf795e24e9e7bca4b1a4c8ce9686b7c",
+    "src/freeze_dbmags_dataset.py": "2c381cbe2d2ca7a8dbdb0d10b31cd59f6bfe2aff192fa5dd599a262fdb24e7fb",
+    "src/opdiag_baseline.py": "3557ce0a7fd763e7ad94baf5e144303bc6c2282c9da689a5e5b8d9e100403668",
+    "src/ecsa_experiment.py": "ba3f149fe137060d39613ad2ca3f9d3e8c2e984f2caa00360eb1ea3433d4a043",
+    "src/dbaiops_baseline.py": "0be070d8f1e64d4a84bf499190aca584f827f13ed21608c8b1b830b3ab623e90",
+    "src/hyperdbdiag_pipeline.py": "9fbf16f6cd794f635972fccdf1a733e8bbe5ca3c1be0450bb15bf29b84548fa4",
+    "src/hyperdbdiag_ablation.py": "f3cce0aa2164b7af7cc179d126409745453d8988a248b9113673ec0211f4b01d",
+    "src/operator_bound_experiment.py": "221bf629f4b6520de5eb81d628fb66c756a426f35d5b3ee7595d9d3134773939",
+    "src/hyperdbdiag_llm.py": "3ddce4c6e5b73ecd601c6861f873ebcc64de397fb07deabce489aa0c081f7cef",
+    "src/ecsa_pipeline.py": "92a846dad784358eefd55ee26d0c2ca74e2c00e97f483366d22ef7950e752578",
+    "src/conservative_evidence_judge.py": "ec19e1ae576ddae9a90ccbad287369df5b2329cbb24e0f2a26c1143a55c55308",
+    "src/metric_frozen_dataset.py": "93ea7e9c0aaf2346d7b190988c0d78e7c6f7c693de7bbe334dc4169cff63b2ee",
+    "src/metric_frozen_schema.py": "359f733ac056c2d3f17fe1bfe4898b1e401afe99c6e87dc2ee3c79b73bf59365",
+    "src/ecsa_arbitration.py": "112fd09e52dbc760dc827353d186be1c0d27d806b80ed6f897e492997fbada12",
+    "tests/test_hyperdbdiag_ablation.py": "db3ae3101ad8298b7bde7b66b3d13b6719c40755c1fcfdc0482d701fb80619a3",
+    "tests/test_metric_frozen_dataset.py": "531f34994a9497e6e3c9062c70598f0844fa2a905266fcdf216c20691348f4e3",
+    "tests/test_operator_bound_experiment.py": "2d39d039a0417bc323120bf3f53fbad049be839fc03b95084bfd1d14482ef063",
+    "tests/test_ecsa_arbitration.py": "2200861037dc3059527b4c89409407941e177bc297521609fc1e1a023a3137f4",
+    "tests/test_hyperdbdiag_llm.py": "b3775b42d56c19ef62c374ce6091751fd4772ec2b58db3496e2c18734eb08f0b",
+    "tests/test_structure_efficiency_experiment.py": "342b6cdcf86914bc8aedd9d4ba9c5cad4b2cd78f417cb32e757e396dacec44ee",
+    "tests/test_structured_evidence_judge.py": "671858431b60278dc4fedd07095f9bd911c2151d14502b1842ae15895ae61d93",
+    "tests/test_sql_semantic_evidence.py": "b48fb19ed800bef543cf3397c7513cd45de0dc18c59752a4c13b0cec1ca72c1f",
+    "tests/test_parameter_sensitivity.py": "bdf3b7d9a6f67f53f68ae2f11f77318237e7b51920db169a8faed5a585e3d099",
+    "tests/test_dbmags_experiment.py": "53e74517da15241886e031170949b51465e4b316b5f31617ac6aa03ba65daff4",
+    "tests/test_conservative_evidence_judge.py": "08280abc29a80bb1f077225d896600ccf213a92f62864174a5641c1a0b4c7300",
+    "tests/test_dbaiops_baseline.py": "318186c52fb82aa96df6e62e569db63b725056a8944848539b0eab4c025001ff",
+    "tests/test_opdiag_baseline.py": "bc633be50cede0602f38bb613e37f27aa39cb474ad950a711213ca7f3228f369",
+    "tests/test_hyperdbdiag_pipeline.py": "4f0ba592a211fe4ecc5f1e14d549fda519ca21bea42aa9679e42858eea5df17e",
+    "tests/test_ecsa_pipeline.py": "f10c07d41777192fecf49297dd91f133dcfd594f768b42c80054ca9d1a8ba6cb",
+    "tests/test_hypergraph_core.py": "47d34e86353088d5cb67bfbc3eca96d0e6644d66ec07a23422ed6a27dc64eec2",
+    "figures/4.png": "22c1ae39f6c6e7494d6a745156b7e8afd0e331ac642bc7aa91b6b45c2008e35b",
+    "figures/5.png": "c2573f896d1e7bb8a2aa1354ca3a51f7a96f2463de9e96537aa44f7d7bc853d5",
+    "figures/5.pdf": "84cc180083098dfc8ff2503a2e664102ba48b93911009a808218bc777b9c64f9",
+    "figures/6.png": "dc3b1bf29e08ba85c1d18a3deef0f2089833b673225a66725da7ebcbd992b828",
+    "figures/2.png": "777089c20078411e98e548f2d6cdf583d6974f2d77a0c29f42fe5fa95200708a",
+    "figures/3.png": "24a51daf8813c6c330ccf2d15cd78f11f32cb18f75e17b77714576e44a2e6744",
+    "figures/1.png": "17fc415ed482529c8d4bb09bb7598dffb19793b816e4e16b0e4512c13daffacc",
+    "runs/hyperdbdiag-unified-20260930/figure5_updated.pdf": "84cc180083098dfc8ff2503a2e664102ba48b93911009a808218bc777b9c64f9",
+    "runs/hyperdbdiag-unified-20260930/figure5_updated.png": "c2573f896d1e7bb8a2aa1354ca3a51f7a96f2463de9e96537aa44f7d7bc853d5",
+    "runs/hyperdbdiag-unified-20260930/实验结果与核对说明.md": "b5ff937ef3d6bfeb6cdebec477a4f5d050c120dff40479ae1cf623dc54656753",
+    "runs/hyperdbdiag-unified-20260930/verification_run.log": "ab8ebbf6e7dfd857b5999344084a8ff62efb99959bde1fb89e98091b608435b0",
+    "runs/hyperdbdiag-unified-20260930/completion_manifest.json": "4914fbb75411ec0410d870ce468538ccb69f44e6ff932ebd182ba6b68e8dd31c",
+    "runs/hyperdbdiag-unified-20260930/predictions.csv": "03966d864eb0a89e32257fd89ee0e16b0ba8664c70a0b1b861d3f09087e5891e",
+    "runs/hyperdbdiag-unified-20260930/ablation.json": "747089d7a99e1e5a0c5ccecb5830f0b5fcd5a9812f91b67e6c329498554af0b2",
+    "runs/hyperdbdiag-unified-20260930/case_study_audit.json": "be6c4a10c857d262f5dcf3b3791d9e469c0d16866cb4bc7b4bfa2b8237132b09",
+    "runs/hyperdbdiag-unified-20260930/before_manifest.json": "a37d28a510dc67146466878e2f01f941150657fb2ba0a8916dd220ae188484da",
+    "runs/hyperdbdiag-unified-20260930/execution.log": "483f19b5c2f8d120d477927172aacab7e095b91153cf6a2ed359c9978c227a25",
+    "runs/hyperdbdiag-unified-20260930/figure5_data.json": "fa0ea63ebddb757643b8ff808e633e24060fcac75278859ea171dee93ac0283a",
+    "runs/hyperdbdiag-unified-20260930/cleanup_final.json": "75d00135bd3c8ae2ea675e7873d59102d2744a4132f58b610bfcfab085f47f88",
+    "runs/hyperdbdiag-unified-20260930/protocol.json": "c22d4a18ad5507923a2952ede136af2dbdfc71680253f29ca6171952ad0367d8",
+    "runs/hyperdbdiag-unified-20260930/tests.log": "a461ceedc9c6a1ae2153497a698b8bc0b6c3692df8b0c539284da28e8948e6c6",
+    "runs/hyperdbdiag-unified-20260930/verification.json": "3ca8b30e325c830bcdf62943acab89ec0b7f787c6353192908de49c4a02210c5",
+    "runs/hyperdbdiag-unified-20260930/independent_audit.json": "05c571831fb294f5c3ffd9e7e5351f50d55c35dcfb96c5e6cd5c24dc197d0fa7",
+    "runs/hyperdbdiag-unified-20260930/main_comparison.json": "176cd07d8298717eb7c6777081ebcb11d584093c47a8dc63955a5917176a00a1",
+    "runs/hyperdbdiag-unified-20260930/predictions.json": "ac5aab406229483f4356b419ee86c28197456d2682bfb352dc11ecc5d650f00c",
+    "runs/hyperdbdiag-unified-20260930/environment.json": "2efb364b483df7a4428f7c4d0dc62005534e90d72c6c8714fc221d5ffee163fd",
+    "runs/hyperdbdiag-unified-20260930/code_cleanup.json": "3e103a8aa25f89aa04760f2011b5bc3950e8b4309773710b9be7e7cb205573cc",
+    "runs/hyperdbdiag-unified-20260930/completion.json": "f47f15b8c19c11368835c96993a1b884749707c41dc3c3897804ab25bebe7fca",
+    "runs/hyperdbdiag-unified-20260930/entrypoint_check.log": "25ea435f23c1cf011ee078787ff9d1723754530be3b56381ef4451f2423132b3",
+    "runs/hyperdbdiag-unified-20260930/calibration/leave_replicate_index_out_1.json": "6cdc143ba35157e2fd8d6aa94b929258bd73633854fc2c931c2de04b947b3db9",
+    "runs/hyperdbdiag-unified-20260930/calibration/leave_replicate_index_out_6.json": "1840a55781ec30ade9ace03a6bd82f9c2797040afed5d5e1057ff0b7fa661fca",
+    "runs/hyperdbdiag-unified-20260930/calibration/leave_replicate_index_out_4.json": "1c721dcdf07ce2b1e9a6ff8ac58ce5f13c0d83a12ecae3561a951953e87740a6",
+    "runs/hyperdbdiag-unified-20260930/calibration/leave_replicate_index_out_5.json": "509fe426628921495412096e8df5ea069d9befd817a6e72ae6c3e3f8031195a0",
+    "runs/hyperdbdiag-unified-20260930/calibration/leave_replicate_index_out_2.json": "cae3fdb322ac8a9731ec890fa8346b4feeb97ec1db883b691b2f36307299e117",
+    "runs/hyperdbdiag-unified-20260930/calibration/leave_replicate_index_out_3.json": "b07c5f8f054cb4e6eab4bc5dafa3577bfdfaf03158cd3dbcef40eca82b5e3e99",
+    "runs/hyperdbdiag-unified-20260930/entrypoint_check/main_comparison.json": "176cd07d8298717eb7c6777081ebcb11d584093c47a8dc63955a5917176a00a1"
+  },
+  "frozen_input_verification": {
+    "experimental_files_checked": 77,
+    "completed_inference_files_checked": 20,
+    "historical_source_archive_sha256": "f4cc2c03ea08fd2018744c088acd845c2ebd26ca43769a52087040d0f9ed7ff1",
+    "frozen_protocol_sha256": "7c930abd1aa9d002f8c50da889bc291b87d9d476017f43c9d838660c95981634"
+  }
+}

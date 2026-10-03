@@ -1,0 +1,105 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "orders_record_lock_order_by__block_02__single_a",
+  "collected_at": "2026-09-05T17:25:32.176973+00:00",
+  "collection": {
+    "table": "orders",
+    "replicate_index": 2,
+    "condition": "single_a",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        9458,
+        9459,
+        9461,
+        9462,
+        9464,
+        9465,
+        9467,
+        9468,
+        9470,
+        9471,
+        9473,
+        9474,
+        9476,
+        9477,
+        9479,
+        9480,
+        9482,
+        9483,
+        9485,
+        9486,
+        9488,
+        9489,
+        9491,
+        9492,
+        9494,
+        9495,
+        9497,
+        9498,
+        9500,
+        9501,
+        9503,
+        9504,
+        9506,
+        9507,
+        9509,
+        9510,
+        9512,
+        9513,
+        9515,
+        9516,
+        9518,
+        9519,
+        9521,
+        9522,
+        9524,
+        9525,
+        9527,
+        9528
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

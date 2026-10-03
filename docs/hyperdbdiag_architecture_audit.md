@@ -27,6 +27,20 @@ The registered leave-one-replicate-index-out path is the only active outer proto
 
 The audited v11 rerun uses clean recovery between all 660 collections. On the shared KPI-only track, OpDiag, DBAIOps, and the hypergraph without EPDG reach 42.58%, 33.33%, and 40.61% Exact, respectively. Hypergraph Exact increases from 40.61% without EPDG to 57.58% with EPDG; component F1 increases from 63.08% to 74.17%. This latter gain includes registered anonymous SQL-shape and runtime lock-wait evidence and is not a pure structure-only comparison. EPDG corrects 127 cases and harms 15, with positive net gain in all six folds.
 
-The 396 multi-root cases are the relevant stress stratum: OpDiag reaches 33.33% Exact, DBAIOps 25.25%, the EPDG hypergraph 56.31%, and complete HyperDBDiag 66.92%. On the two mixed-root occurrence patterns, complete HyperDBDiag reaches 67.80% for sequential injection and 65.15% for overlapping injection. The registered replicate holdout repeats all scenario templates across train and evaluation; it is therefore not an unseen-combination generalization estimate.
+The current unified experiment uses the calibrated conservative local policy. Its
+local-only variant reaches 82.73% Exact / 90.12% Component F1; LLM arbitration
+without local filtering reaches 87.58% / 93.86%; and complete HyperDBDiag reaches
+87.88% / 94.08%. The complete method reaches 85.35% Exact on the 396 two-root
+cases, with 85.98% for sequential and 84.09% for overlapping occurrences.
 
-The local structured judge retains the 57.58% result while exposing evidence-supported challengers without inventing root sets. With the explicit `gpt-5.5`/`xhigh` Responses configuration, the direct hypergraph-LLM row reaches 57.73% Exact / 74.27% Component F1, and complete HyperDBDiag reaches 65.45% / 79.27%. Training-OOF calibration enabled the direct row in one outer fold and the complete row in all six. The direct path issued 12 test requests and received 12 valid responses; the complete path issued 72 and received 65. Complete arbitration corrected 52 predictions and harmed none. The post-diagnosis advisor used a fixed 24-case, truth-blinded sample: 18 recommendations passed schema and safety checks, five unsafe recommendations were rejected, and diagnosis mutation remained zero. Credentials and raw responses are not retained.
+Local calibration uses training-only inner groups. The LLM reviews each held-out
+case using the registered `gpt-5.5`/`xhigh` configuration. The unified runner
+refits the deterministic pipeline and replays exact saved primary inputs and
+responses; invalid or unavailable responses retain the calibrated local
+prediction. The separate LLM-only variant uses the upstream top-1 fallback.
+
+The older 65.45% Exact result and limited-call policy remain in the historical
+reports. Current main and ablation results are in
+`runs/hyperdbdiag-unified-20260930/`. Supplementary sensitivity and full-cohort
+evidence perturbations are linked from the root README. See
+[experiment_protocol.md](experiment_protocol.md) for reproduction boundaries.

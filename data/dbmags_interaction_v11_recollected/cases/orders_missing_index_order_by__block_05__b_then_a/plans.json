@@ -1,0 +1,75 @@
+{
+  "select o_id, o_entry_d from orders where o_w_id=? order by o_entry_d limit ?": {
+    "sql": "SELECT o_id, o_entry_d FROM orders WHERE o_w_id=1 ORDER BY o_entry_d LIMIT 2000",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "6027.15"
+        },
+        "ordering_operation": {
+          "using_filesort": true,
+          "table": {
+            "table_name": "orders",
+            "access_type": "ref",
+            "possible_keys": [
+              "PRIMARY",
+              "o_w_id"
+            ],
+            "key": "PRIMARY",
+            "used_key_parts": [
+              "o_w_id"
+            ],
+            "key_length": "4",
+            "ref": [
+              "const"
+            ],
+            "rows_examined_per_scan": 59989,
+            "rows_produced_per_join": 59989,
+            "filtered": "100.00",
+            "cost_info": {
+              "read_cost": "28.25",
+              "eval_cost": "5998.90",
+              "prefix_cost": "6027.15",
+              "data_read_per_join": "2M"
+            },
+            "used_columns": [
+              "o_w_id",
+              "o_d_id",
+              "o_id",
+              "o_entry_d"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "select count(*) from orders where o_carrier_id=?": {
+    "sql": "SELECT COUNT(*) FROM orders WHERE o_carrier_id=25",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "12118.15"
+        },
+        "table": {
+          "table_name": "orders",
+          "access_type": "ALL",
+          "rows_examined_per_scan": 119979,
+          "rows_produced_per_join": 11997,
+          "filtered": "10.00",
+          "cost_info": {
+            "read_cost": "10918.36",
+            "eval_cost": "1199.79",
+            "prefix_cost": "12118.15",
+            "data_read_per_join": "468K"
+          },
+          "used_columns": [
+            "o_carrier_id"
+          ],
+          "attached_condition": "(`tpcc10_test`.`orders`.`o_carrier_id` = 25)"
+        }
+      }
+    }
+  }
+}

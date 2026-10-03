@@ -1,0 +1,105 @@
+{
+  "protocol": "dbmags-interaction-v11-window-complete",
+  "case_id": "orders_record_lock_implicit_conversion__block_03__single_a",
+  "collected_at": "2026-09-05T21:20:30.882965+00:00",
+  "collection": {
+    "table": "orders",
+    "replicate_index": 3,
+    "condition": "single_a",
+    "schedule": [
+      {
+        "root": "record_lock",
+        "offset_seconds": 0.0,
+        "duration_seconds": 30.0
+      }
+    ],
+    "baseline_seconds": 60.0,
+    "observation_seconds": 75.0,
+    "recovery_seconds": 5.0,
+    "workload_worker_count": 4
+  },
+  "truth": {
+    "expected_labels": [
+      "record_lock"
+    ]
+  },
+  "runner_audit": [
+    {
+      "root": "record_lock",
+      "execution_count": 24,
+      "connection_ids": [
+        13932,
+        13938,
+        13940,
+        13941,
+        13943,
+        13944,
+        13946,
+        13947,
+        13949,
+        13950,
+        13952,
+        13953,
+        13955,
+        13956,
+        13958,
+        13959,
+        13961,
+        13962,
+        13964,
+        13965,
+        13967,
+        13968,
+        13970,
+        13971,
+        13973,
+        13974,
+        13976,
+        13977,
+        13979,
+        13980,
+        13982,
+        13983,
+        13985,
+        13986,
+        13988,
+        13989,
+        13991,
+        13992,
+        13994,
+        13995,
+        13997,
+        13998,
+        14000,
+        14001,
+        14003,
+        14004,
+        14006,
+        14007
+      ],
+      "lock_wait_observed": true,
+      "errors": []
+    }
+  ],
+  "workload_audit": {
+    "errors": [],
+    "passed": true
+  },
+  "recovery_audit": {
+    "data_lock_wait_count": 0,
+    "injector_session_count": 0,
+    "passed": true
+  },
+  "evidence_audit": {
+    "by_root": {
+      "record_lock": true
+    },
+    "observed_atoms": [
+      "filtered_relation_read",
+      "range_or_comparison_predicate",
+      "row_lock_wait"
+    ]
+  },
+  "status": "collected",
+  "collection_attempt": 1
+}

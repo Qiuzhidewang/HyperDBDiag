@@ -1,0 +1,90 @@
+{
+  "select c_id, c_balance from customer where c_w_id=? order by c_balance limit ?": {
+    "sql": "SELECT c_id, c_balance FROM customer WHERE c_w_id=3 ORDER BY c_balance LIMIT 2000",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "5385.27"
+        },
+        "ordering_operation": {
+          "using_filesort": true,
+          "table": {
+            "table_name": "customer",
+            "access_type": "ref",
+            "possible_keys": [
+              "PRIMARY",
+              "idx_customer_name"
+            ],
+            "key": "PRIMARY",
+            "used_key_parts": [
+              "c_w_id"
+            ],
+            "key_length": "4",
+            "ref": [
+              "const"
+            ],
+            "rows_examined_per_scan": 53100,
+            "rows_produced_per_join": 53100,
+            "filtered": "100.00",
+            "cost_info": {
+              "read_cost": "75.27",
+              "eval_cost": "5310.00",
+              "prefix_cost": "5385.27",
+              "data_read_per_join": "128M"
+            },
+            "used_columns": [
+              "c_w_id",
+              "c_d_id",
+              "c_id",
+              "c_balance"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "select s_quantity from stock where s_w_id=? and s_i_id=?": {
+    "sql": "SELECT s_quantity FROM stock WHERE s_w_id=2 AND s_i_id=31497",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "1.00"
+        },
+        "table": {
+          "table_name": "stock",
+          "access_type": "const",
+          "possible_keys": [
+            "PRIMARY",
+            "s_i_id"
+          ],
+          "key": "PRIMARY",
+          "used_key_parts": [
+            "s_w_id",
+            "s_i_id"
+          ],
+          "key_length": "8",
+          "ref": [
+            "const",
+            "const"
+          ],
+          "rows_examined_per_scan": 1,
+          "rows_produced_per_join": 1,
+          "filtered": "100.00",
+          "cost_info": {
+            "read_cost": "0.00",
+            "eval_cost": "0.10",
+            "prefix_cost": "0.00",
+            "data_read_per_join": "1K"
+          },
+          "used_columns": [
+            "s_w_id",
+            "s_i_id",
+            "s_quantity"
+          ]
+        }
+      }
+    }
+  }
+}
