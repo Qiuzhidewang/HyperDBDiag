@@ -75,7 +75,14 @@ of manuscript files that are outside this repository. Their original values
 are retained; current release verification checks the distributed experimental
 inputs without requiring those private manuscript snapshots.
 
-The only change to the unified experiment source in this repository update is
-archive-path resolution for relocated checkouts. Its original bytes and the
-old/new hashes are preserved in `docs/source_provenance.json`. Model fitting,
-calibration, request construction, and metric definitions are unchanged.
+The source-portability update preceding ICDE preparation changed only
+archive-path resolution in the unified experiment runner for relocated
+checkouts. Its original bytes and the old/new hashes are preserved in
+`docs/source_provenance.json`. Model fitting, calibration, request construction,
+and metric definitions are unchanged.
+
+The ICDE 2027 preparation updates the repository documentation and its release
+checksums. The frozen data, experiment source, saved model responses, numerical
+results, and historical protocols are unchanged. Table and figure references
+in the root README follow the ICDE manuscript; historical run directories and
+source archives keep their original contents.

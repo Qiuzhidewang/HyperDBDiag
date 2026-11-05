@@ -6,15 +6,28 @@ It combines an EPDG-enhanced metric hypergraph with evidence-constrained set
 arbitration (ECSA): a calibrated local discriminator filters candidate root
 sets, and an LLM arbitrates within the retained candidates.
 
-This repository contains the implementation, frozen data, experiment records,
-and reproduction tools for the **SIGMOD 2027 submission**. The current
-root-diagnosis results are in
+This public repository contains the implementation, frozen data, experiment
+records, and reproduction tools for the manuscript **HyperDBDiag: Multi-Root-Cause
+Identification and Operator-Level Localization for Database Performance
+Anomalies**, prepared for the **ICDE 2027 Research Track**.
+
+The current root-diagnosis results are in
 [`runs/hyperdbdiag-unified-20260930/`](runs/hyperdbdiag-unified-20260930/).
-Earlier runs are retained for provenance and are identified below.
+These records support the results reported in the ICDE manuscript. Earlier
+runs are retained for provenance and are identified below.
 
 ## Quick start
 
-Python **3.9.25** was used for validation. From the repository root:
+Download the repository using **Code → Download ZIP** on GitHub and extract it,
+or clone it without signing in:
+
+```bash
+git clone https://github.com/Qiuzhidewang/HyperDBDiag.git
+cd HyperDBDiag
+```
+
+Python **3.9.25** was used for validation. Run the following commands from the
+downloaded repository root:
 
 ```bash
 python3.9 -m venv .venv
@@ -135,15 +148,20 @@ the [evidence report](runs/ecsa-evidence-stress-full660-20260930-v1/results.json
 
 ## Paper-to-artifact map
 
+Table and figure numbers below follow the ICDE manuscript. The linked reports
+contain the recorded numerical results; plot files in historical run folders
+retain their original rendering.
+
 | Paper result | Recorded source |
 | --- | --- |
-| Table 1: diagnostic performance | [`main_comparison.json`](runs/hyperdbdiag-unified-20260930/main_comparison.json) |
-| Table 2 and Figure 5: temporal patterns and root cardinalities | `by_occurrence_pattern` and `by_root_cardinality` in the same report; [Figure 5](runs/hyperdbdiag-unified-20260930/figure5_updated.pdf) |
-| Figure 6: SQL/operator localization | [`full_report.json`](runs/dbmags-operator-bound-v4/full_report.json) |
-| Table 3: graph size and traversal | [`full_report.json`](runs/dbmags-structure-efficiency/full_report.json) |
-| Table 4: six component variants | [`ablation.json`](runs/hyperdbdiag-unified-20260930/ablation.json) |
+| Table I: root-cause diagnostic performance | [`main_comparison.json`](runs/hyperdbdiag-unified-20260930/main_comparison.json) |
+| Table I (SQL/operator columns) and Figure 6: SQL/operator localization | [`full_report.json`](runs/dbmags-operator-bound-v4/full_report.json) |
+| Table II: sequential and overlapping root causes | `by_occurrence_pattern` in [`main_comparison.json`](runs/hyperdbdiag-unified-20260930/main_comparison.json) |
+| Figure 5: single-root and mixed-root diagnosis | `by_root_cardinality` in [`main_comparison.json`](runs/hyperdbdiag-unified-20260930/main_comparison.json); [recorded plot](runs/hyperdbdiag-unified-20260930/figure5_updated.pdf) |
+| Table III: graph size and traversal | [`full_report.json`](runs/dbmags-structure-efficiency/full_report.json) |
+| Table IV: six component variants | [`ablation.json`](runs/hyperdbdiag-unified-20260930/ablation.json) |
 | Figure 7: parameter sensitivity | [`results.json`](runs/parameter-sensitivity-20260930-v1/results.json) |
-| Table 5: evidence perturbations | [`results.json`](runs/ecsa-evidence-stress-full660-20260930-v1/results.json) |
+| Table V: evidence perturbations | [`results.json`](runs/ecsa-evidence-stress-full660-20260930-v1/results.json) |
 
 ## Protocol and LLM records
 
@@ -222,6 +240,9 @@ DB-MAGS fault definitions were audited against the
 running database are not required for the frozen-data experiments. Code is
 provided under the [MIT License](LICENSE).
 
-This repository is maintained as a private working artifact. A separate
-accessible, anonymized snapshot is needed for double-anonymous review; the
-GitHub account URL and development history are not an anonymous submission link.
+This is the public artifact link for the ICDE manuscript. Access to the
+distributed files does not require a GitHub account. The supported offline
+workflow does not require an API key or model-service access after dependency
+installation. Historical files and commit messages retain their original
+dates and terminology; experiment records and their recorded hashes are
+preserved for traceability.
